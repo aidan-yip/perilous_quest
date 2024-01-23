@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#5905ff">
+    <link rel="stylesheet" href="./styles.css">
+    <title>RPG - Dragon Repeller</title>
+  </head>
+  <body>
+    <!-- Audio -->
+    <audio autoplay src="Lovely Town.wav" id="Lovely Town.wav"></audio>
+    <audio src="A.wav" id="A.wav"></audio>
+
+    <!-- Game -->
+    <div id="game">
+      <div id="stats">
+        <span class="stat">XP ✨: <strong><span id="xpText">0</span></strong></span>
+        <span class="stat">Health ♥️: <strong><span id="healthText">100</span></strong></span>
+        <span class="stat">Gold ⚜️: <strong><span id="goldText">50</span></strong></span>
+      </div>
+      <div id="controls">
+        <button id="button1">Go to store</button>
+        <button id="button2">Go to cave</button>
+        <button id="button3">Fight Ender dragon</button>
+      </div>
+      <div id="monsterStats">
+        <span class="stat">Monster Name: <strong><span id="monsterName"></span></strong></span>
+        <span class="stat">Health: <strong><span id="monsterHealth"></span></strong></span>
+      </div>
+      <div id="text">
+        Welcome to Ender Dragon Repeller. You must defeat the dragon that is preventing people from leaving the town. You are in the town square. Where do you want to go? Use the buttons above.
+      </div>
+
+      <h1>ENDER DRAGON REPELLER 🐉</h1>
+    </div>
+      <ul>~Credits~
+        <li>Original project idea by FreeCodeCamp</li>
+        <li>Mods and redesign by Aidan Y.</li>
+      </ul>
+        <ul>Music 🎧
+        <li>"Lovely Town" by Skremzy</li>
+      </ul>
+     
+    <script src="./script.js"></script>
+  </body>
+</html>
