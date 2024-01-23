@@ -13,7 +13,7 @@ This is a project idea originally from FreeCodeCamp. Mods and redesign are by me
 
 Original project idea by FreeCodeCamp
 Mods and redesign by Aidan Y.
-~Music 🎧~
+-Music 🎧-
 "Lovely Town" by Nait Welsh / Skremzy
 "TBD" by Tanner Marsh / Audiophobia
 
