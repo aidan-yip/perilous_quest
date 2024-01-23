@@ -7,7 +7,7 @@
 }
 
 body {
-    background-image: url('./public/dragon.png');
+    background-image: url("https://github.com/aidan-yip/dragon_slayer/blob/23eeb956074d450f16044551943695c242a0c1f0/public/dragon.png");
     background-size: 100% 100vh;
   }
 
