@@ -8,7 +8,7 @@ This is a project idea originally from FreeCodeCamp. Mods and redesign are by me
 
 # Credits
 
-Original project idea by FreeCodeCamp - Mods and redesign by Aidan Y. Music 🎧 "Lovely Town" by  Skremzy / Nait Welsh - "Boss Theme" by Audiophobia by Audiophobia (Tanner Marsh)
+Original project idea by FreeCodeCamp - Mods and redesign by Aidan Y. Music 🎧 "Lovely Town" by  Skremzy / Nait Welsh - "Boss Theme" by Audiophobia (Tanner Marsh).
 
 # Future ideas
 
