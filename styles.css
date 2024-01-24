@@ -17,6 +17,13 @@ body {
     
   }
 
+  h3 {
+    color: #ffffff;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding-right: 10px;
+  }
+
   #text {
     background-color: #4b4bf6;
     color: #ffffff;
@@ -28,7 +35,7 @@ body {
   #game {
     max-width: 1100px;
     min-width: 40%;
-    height: 700px;
+    height: 40%;
     background-color: #000000;
     color: #ffffff;
     margin: 30px auto 0px;
@@ -86,6 +93,13 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: large;
     font-weight: bolder;
+    padding-top: 50px;
+  }
+
+  .audio_players {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
   }
 
   @media only screen and (max-width: 700px) {
@@ -97,7 +111,13 @@ body {
     }
 
     .stat {
-      font-size: 20px;
+      font-size: 30px;
+    }
+
+    .audio_players {
+      display: flex;
+      justify-content: center;
+      padding-top: 30px;
     }
     
 
