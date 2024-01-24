@@ -1,6 +1,6 @@
 # Ender Dragon Slayer
 
-This is a project idea originally from FreeCodeCamp. Mods and redesign are by me. I've also expanded some of the functionality to include music and made the game more responsive so it can be played on most screen sizes.
+This is a project idea originally from FreeCodeCamp. Mods and redesign are by me. I've also expanded some of the functionality to include music, a background image, media player and made the game more responsive so it can be played on most screen sizes.
 
 # Version Alpha (latest)
 
