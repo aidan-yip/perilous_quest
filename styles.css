@@ -6,6 +6,8 @@
     box-sizing: border-box; 
 }
 
+/* main css */
+
 body {
     background-image: url("https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/dragon.png");
     background-size: 100% 100vh;
