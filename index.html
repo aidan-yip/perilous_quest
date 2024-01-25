@@ -3,40 +3,48 @@
   <head>
     <meta charset="utf-8">
     <meta name="theme-color" content="#5905ff">
+    <!-- CSS link --> 
     <link rel="stylesheet" href="./styles.css">
     <title>RPG - Dragon Repeller</title>
   </head>
   <body>
 
-    <!-- Game -->
+      <!-- Game -->
     <div id="game">
       <div id="stats">
         <span class="stat">XP ✨: <strong><span id="xpText">0</span></strong></span>
         <span class="stat">Health ♥️: <strong><span id="healthText">100</span></strong></span>
         <span class="stat">Gold ⚜️: <strong><span id="goldText">50</span></strong></span>
       </div>
+
+      <!-- Controls -->
       <div id="controls">
         <button id="button1">Go to shop</button>
         <button id="button2">Go to cave</button>
         <button id="button3">Fight Ender dragon</button>
       </div>
+
+       <!-- Stats -->
       <div id="monsterStats">
         <span class="stat">Monster Name: <strong><span id="monsterName"></span></strong></span>
         <span class="stat">Health: <strong><span id="monsterHealth"></span></strong></span>
       </div>
+
+      <!-- Info Text -->
       <div id="text">
         Welcome to Ender Dragon Repeller. You must defeat the dragon that is preventing people from leaving the town. You are in the town square. Where do you want to go? Use the buttons above.
       </div>
 
+      <!-- Game title header -->
       <h1>ENDER DRAGON REPELLER 🐉</h1>
     </div>
+
     <!-- Audio -->
     <div class="audio_players">
     <h3>Lovely Town</h3>
-    <audio autoplay loop controls src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/lovely_town.wav" id="lovely_town.wav"></audio>
+    <audio autoplay loop controls src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/lovely_town.wav" id="Lovely Town.wav"></audio>
     <h3>Boss Theme</h3>
-    <audio controls src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/boss_theme.wav" id="boss_theme.wav"></audio>
-
+    <audio controls src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/boss_theme.wav" id="A.wav"></audio>
     </div>
 
     <!-- Credits -->
@@ -49,6 +57,7 @@
         <li>"Boss Theme" by Audiophobia</li>
       </ul>
      
+    <!-- JS link -->  
     <script src="./script.js"></script>
   </body>
 </html>
