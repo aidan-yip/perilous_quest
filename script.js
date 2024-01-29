@@ -50,7 +50,7 @@ const locations = [
     name: "store",
     "button text": ["Buy 10 health ♥️ (10 gold)", "Buy weapon 🗡️ (30 gold)", "Your broke. Do the walk of shame"],
     "button functions": [buyHealth, buyWeapon, goTown],
-    text: 'You enter the shop. "RAAAH!!!"-Tanner the shop owner'
+    text: 'You enter the store. "RAAAH!!!"-Tanner the shop owner'
   },
   {
     name: "cave",
@@ -108,6 +108,9 @@ function update(location) {
 
 function goTown() {
   update(locations[0]);
+  boss_theme.pause();
+  boss_theme.currentTime = 0;
+  lovely_town.play();
 }
 
 function goStore() {
@@ -161,16 +164,13 @@ function sellWeapon() {
   }
 }
 
-// Music 
+/*
 
-
-function playMusic(audioName) {
-  let audio = new Audio(audioName); 
+function playMusic() {
+  let audio = new Audio(); 
   audio.loop = true;
   audio.play(); 
 }
-
-/*
 
 function stopMusic(audioName) {
   let audio = new Audio(audioName); 
@@ -185,29 +185,58 @@ function pauseMusic(audioName) {
 }
 */
 
+// Music
+
+//Boss theme
+let boss_theme = document.getElementById("boss_theme");
+
+function playboss() {
+  boss_theme.play();
+}
+
+function pauseboss() {
+  boss_theme.pause();
+  boss_theme.currentTime = 0;
+}
+
+//Town theme
+let lovely_town = document.getElementById("lovely_town");
+
+function playtown() {
+  lovely_town.play();
+}
+
+function pausetown() {
+  lovely_town.pause();
+}
 
 // Fight
 
 function fightSlime() {
   fighting = 0;
   goFight();
-  /* playMusic ("A.wav"); */
-  
-  
+  lovely_town.pause();
+  lovely_town.currentTime = 0;
+  boss_theme.play();
 }
 
 function fightBeast() {
   fighting = 1;
   goFight();
+  lovely_town.pause();
+  lovely_town.currentTime = 0;
+  boss_theme.play();
 }
 
 function fightDragon() {
   fighting = 2;
   goFight();
+  lovely_town.pause();
+  lovely_town.currentTime = 0;
+  boss_theme.play();
 }
 
-// End of monsters ^
-
+// Fight function
 function goFight() {
   update(locations[3]);
   monsterHealth = monsters[fighting].health;
@@ -216,6 +245,7 @@ function goFight() {
   monsterHealthText.innerText = monsterHealth;
 }
 
+// Attack function
 function attack() {
   text.innerText = "The " + monsters[fighting].name + " attacks.";
   text.innerText += " You attack it with your " + weapons[currentWeapon].name + ".";
@@ -292,6 +322,7 @@ function pickEight() {
   pick(8);
 }
 
+// Secret game
 function pick(guess) {
   const numbers = [];
   while (numbers.length < 10) {
