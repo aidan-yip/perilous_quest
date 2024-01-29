@@ -1,6 +1,6 @@
 let xp = 0;
-let health = 100;
-let gold = 50;
+let health = 200;
+let gold = 100;
 let currentWeapon = 0;
 let fighting;
 let monsterHealth;
@@ -26,17 +26,17 @@ const monsters = [
   {
     name: "slime",
     level: 2,
-    health: 15
+    health: 80
   },
   {
     name: "fanged beast",
     level: 8,
-    health: 60
+    health: 160
   },
   {
     name: "dragon",
     level: 20,
-    health: 300
+    health: 500
   }
 ]
 const locations = [
@@ -300,8 +300,8 @@ function winGame() {
 
 function restart() {
   xp = 0;
-  health = 100;
-  gold = 50;
+  health = 200;
+  gold = 100;
   currentWeapon = 0;
   inventory = ["stick"];
   goldText.innerText = gold;
@@ -312,6 +312,9 @@ function restart() {
 
 function easterEgg() {
   update(locations[7]);
+  boss_theme.pause();
+  boss_theme.currentTime = 0;
+  lovely_town.play();
 }
 
 function pickTwo() {
