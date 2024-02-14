@@ -260,6 +260,10 @@ body {
       padding: 13px;
     }
 
+    #gamelogo {
+      width: 60%;
+    }
+
     button {
       margin-left: 1px;
       margin-right: 1px;
