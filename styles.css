@@ -1,9 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 *,
 *::before,
 *::after { 
     margin: 0; 
     padding: 0; 
     box-sizing: border-box; 
+}
+
+:root {
+  --fontdefault: "Press Start 2P", system-ui;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
 }
 
 body {
@@ -15,13 +30,34 @@ body {
 
   h1 {
     text-align: center;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family: var(--fontdefault);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* fade in */
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
     
   }
 
+  h2 {
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(255, 255, 255, 0.5);
+    color: #000000;
+    font-family: var(--fontdefault);
+    margin-top: 90px;
+   
+  }
+
   h3 {
-    color: #ffffff;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000000;
+    font-family: var(--fontdefault);
     text-align: center;
     padding: 10px 10px 10px 10px;
 
@@ -29,40 +65,66 @@ body {
 
   #text {
     background-color: #4b4bf6;
+    border-radius: 25px;
     color: #ffffff;
-    padding: 10px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 30px;
+    margin-left: 14px;
+    margin-right: 14px;
+    font-family: var(--fontdefault);
     font-size: 30px;
+
+    /* fade in */
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
   }
   
   #game {
     max-width: 1100px;
     min-width: 40%;
     height: 40%;
-    background-color: #000000;
+    background: linear-gradient(0deg, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 35%, rgba(2,0,36,1) 100%);
     color: #ffffff;
     margin: 30px auto 0px;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 25px;
     
   }
   
-  #controls,
   #stats {
     display: flex;
     justify-content: center;
     justify-content: space-evenly;
-    border: 1px solid #0000ff;
-    padding: 5px;
+    border: 3px solid #7db4fb;
+    border-radius: 25px;
+    margin-left: 14px;
+    margin-right: 14px;
+    padding: 10px;
     color: #ffffff;
+    /* fade in */
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  #controls {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    color: #ffffff;
+
   }
   
   #monsterStats {
     display: none;
     border: 1px solid #0a0a23;
-    padding: 5px;
+    margin-left: 14px;
+    margin-right: 14px;
+    padding: 30px;
     color: #ffffff;
     background-color: #e51e1e;
+    border-radius: 25px;
     height: 150px;
     font-size: 30px;
   }
@@ -71,41 +133,102 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     font-size: 30px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family: var(--fontdefault);
+    /* fade in */
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
   }
   
   button {
     cursor: pointer;
     color: #ffffff;
     background-color: #03c7f8;
-    background-image: linear-gradient(#9ed2ff, #5905ff);
-    border: 3px solid #327dfe;
-    width: 35%;
+    background-image: linear-gradient(#86bdfb, #0f08d3);
+    border: 1px solid #327dfe;
+    width: 40%;
     height: 70px;
-    border-radius: 10px;
+    border-radius: 25px;
     font-size: 20px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--fontdefault);
     font-weight: bold;
     font-style: italic;
+    margin-left: 4px;
+    margin-right: 4px;
+    /* fade in */
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
   }
 
   ul {
     text-align: center;
     list-style: none;
     color: #ffffff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--fontdefault);
     font-size: large;
     font-weight: bolder;
     padding-top: 50px;
     padding-bottom: 30px;
   }
 
+  #gamelogo {
+    position: relative;
+    width: 15%;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
   .audio_players {
     display: flex;
     justify-content: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    flex-wrap: wrap;
+    width: 95%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: linear-gradient(180deg, rgb(0, 208, 255) 0%, rgb(9, 27, 87) 100%);
+    border-radius: 25px;
   }
+
+  /* Pop up logo */
+
+  /*
+  .popup {
+    position: fixed;
+    justify-content: center;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0px;
+    background-color: rgb(0, 0, 0, 50%);
+    width: 70%;
+    height: 100%;
+    z-index: 3;
+  }
+  
+  .popuplogo {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30%;
+    width: 300px;
+    height: 200px;
+    z-index: 3;
+  }
+
+  .popupimg {
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+  }
+  */
 
   @media only screen and (max-width: 700px) {
     
@@ -116,16 +239,37 @@ body {
     }
 
     .stat {
-      font-size: 18px;
+      font-size: 13px;
+    }
+
+    #stats {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    #monsterStats {
+      margin-left: 5px;
+      margin-right: 5px;
+      padding: 5px;
     }
 
     #text {
       font-size: 20px;
+      margin-left: 5px;
+      margin-right: 5px;
+      padding: 13px;
+    }
+
+    button {
+      margin-left: 1px;
+      margin-right: 1px;
+      width: 200px;
     }
 
     .audio_players {
       display: flex;
       flex-direction: column;
+      width: 100%;
       justify-content: center;
       align-items: center;
       padding-top: 30px;
