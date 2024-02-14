@@ -8,9 +8,9 @@ This version includes the base game and main title music. This is in development
 
 # Credits
 
-Original project idea by FreeCodeCamp - Mods and redesign by Aidan Y. - Music 🎧 "Lovely Town" by  Skremzy / Tristan Forrest - "Boss Theme" by Audiophobia (Tanner Marsh).
+Original project idea by FreeCodeCamp - Mods and redesign by Aidan Y. / - Music 🎧 "Lovely Town" by  Skremzy (Tristan Forrest) / - "Boss Theme" by Audiophobia (Tanner Marsh) / - "Shop" by Newave Oceans (Ade Y.).
 
 # Future ideas
 
-In the future there will be fight/boss music triggered upon entering a fight and location images. There will be a link to the soundtrack and artists who helped provided the amazing soundtrack. Older versions may remain avalible for download as they are released.
+In the future there will be cave and secret game music. Location images to be added in a future release. There will be a link to the soundtrack and artists who helped provided the amazing soundtrack. Older versions may remain avalible for download as they are released.
 
