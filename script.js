@@ -1,5 +1,5 @@
 let xp = 0;
-let health = 200;
+let health = 300;
 let gold = 100;
 let currentWeapon = 0;
 let fighting;
@@ -36,7 +36,7 @@ const monsters = [
   {
     name: "dragon",
     level: 20,
-    health: 500
+    health: 600
   }
 ]
 const locations = [
@@ -44,13 +44,13 @@ const locations = [
     name: "town square",
     "button text": ["Go to store", "Go to cave", "Fight Ender dragon"],
     "button functions": [goStore, goCave, fightDragon],
-    text: "You are in the town square. You see a sign that says \"Store\". Wow, what a surprise! 😒 NOT!!!"
+    text: "You are in the town square. You see a sign that says \"Shop\". Enter?"
   },
   {
     name: "store",
-    "button text": ["Buy 10 health ♥️ (10 gold)", "Buy weapon 🗡️ (30 gold)", "Your broke. Do the walk of shame"],
+    "button text": ["Buy 10 health ♥️ (10 gold)", "Buy weapon 🗡️ (30 gold)", "Your broke. Leave shop"],
     "button functions": [buyHealth, buyWeapon, goTown],
-    text: 'You enter the store. "RAAAH!!!"-Tanner the shop owner'
+    text: 'You enter the store. "Hello!" -Tanner the shop owner'
   },
   {
     name: "cave",
@@ -62,31 +62,31 @@ const locations = [
     name: "fight",
     "button text": ["Attack", "Dodge", "Run like a coward"],
     "button functions": [attack, dodge, goTown],
-    text: "You are fighting a monster. YAYAYAYAY!"
+    text: "You are fighting a monster. LETS GO!"
   },
   {
     name: "kill monster",
     "button text": ["Go to town square", "Go to town square", "Go to town square"],
     "button functions": [goTown, goTown, easterEgg],
-    text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold. GG\'s your a pro gamer!'
+    text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold. Nice! your a natural'
   },
   {
     name: "lose",
     "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
     "button functions": [restart, restart, restart],
-    text: "You died. ☠️ oof!"
+    text: "You died. ☠️ Respawn?"
   },
   { 
     name: "win", 
     "button text": ["REPLAY?", "REPLAY?", "REPLAY?"], 
     "button functions": [restart, restart, restart], 
-    text: "You defeat the dragon! YOU WIN THE GAME, GG'S 🎉! Have some cheese: 🧀" 
+    text: "You defeat the dragon! YOU WIN THE GAME, WOO 🎉! Have some cheese: 🧀" 
   },
   {
     name: "easter egg",
     "button text": ["2", "8", "Go to town square?"],
     "button functions": [pickTwo, pickEight, goTown],
-    text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win!"
+    text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win gold ⚜️!"
   }
 ];
 
@@ -110,11 +110,15 @@ function goTown() {
   update(locations[0]);
   boss_theme.pause();
   boss_theme.currentTime = 0;
+  shop.pause();
+  shop.currentTime = 0;
   lovely_town.play();
 }
 
 function goStore() {
   update(locations[1]);
+  lovely_town.pause();
+  shop.play();
 }
 
 function goCave() {
@@ -166,6 +170,8 @@ function sellWeapon() {
 
 /*
 
+legacy music code
+
 function playMusic() {
   let audio = new Audio(); 
   audio.loop = true;
@@ -187,6 +193,29 @@ function pauseMusic(audioName) {
 
 // Music
 
+//Town theme
+let lovely_town = document.getElementById("lovely_town");
+
+function playtown() {
+  lovely_town.play();
+}
+
+function pausetown() {
+  lovely_town.pause();
+}
+
+//Shop theme
+let shop = document.getElementById("shop");
+
+function playshop() {
+  shop.play();
+}
+
+function pauseshop() {
+  shop.pause();
+}
+
+
 //Boss theme
 let boss_theme = document.getElementById("boss_theme");
 
@@ -197,17 +226,6 @@ function playboss() {
 function pauseboss() {
   boss_theme.pause();
   boss_theme.currentTime = 0;
-}
-
-//Town theme
-let lovely_town = document.getElementById("lovely_town");
-
-function playtown() {
-  lovely_town.play();
-}
-
-function pausetown() {
-  lovely_town.pause();
 }
 
 // Fight
@@ -300,7 +318,7 @@ function winGame() {
 
 function restart() {
   xp = 0;
-  health = 200;
+  health = 300;
   gold = 100;
   currentWeapon = 0;
   inventory = ["stick"];
