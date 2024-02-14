@@ -2,16 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="theme-color" content="#5905ff">
+    <meta name="theme-color" content="0099ff">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS link --> 
     <link rel="stylesheet" href="./styles.css">
-    <title>RPG - Dragon Repeller</title>
+    <title>Perilous Quest</title>
 
     <!-- HTML style -->
     <style>
        body {
         background-image: url("https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/dragon.png");
+       }
+
+       #gamelogo {
+        background-image: url("https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/gamelogo.jpg");
        }
     </style>
   </head>
@@ -20,9 +24,9 @@
       <!-- Game -->
     <div id="game">
       <div id="stats">
-        <span class="stat">XP ✨: <strong><span id="xpText">0</span></strong></span>
-        <span class="stat">Health ♥️: <strong><span id="healthText">200</span></strong></span>
-        <span class="stat">Gold ⚜️: <strong><span id="goldText">100</span></strong></span>
+        <span class="stat">XP ✨ <strong><span id="xpText">0</span></strong></span>
+        <span class="stat">Health ♥️ <strong><span id="healthText">300</span></strong></span>
+        <span class="stat">Gold ⚜️ <strong><span id="goldText">100</span></strong></span>
       </div>
 
       <!-- Controls -->
@@ -44,26 +48,52 @@
       </div>
 
       <!-- Game title header -->
-      <h1>ENDER DRAGON REPELLER 🐉</h1>
+      <h1>PERILOUS QUEST</h1>
     </div>
 
     <!-- Credits -->
-      <ul>~Credits~
+    <h2>Credits</h2>
+
+      <div id="gamelogo">
+      </div>
+
+      <ul>
         <li>Original project idea by FreeCodeCamp</li>
         <li>Mods and redesign by Aidan Y.</li>
       </ul>
         <ul>Music 🎧
         <li>"Lovely Town" by Skremzy</li>
         <li>"Boss Theme" by Audiophobia</li>
+        <li>"Shop" by Newave Oceans</li>
       </ul>
 
     <!-- Audio -->
+    <h2>Music Zone</h2>
     <div class="audio_players">
+
       <h3>Lovely Town</h3>
-      <audio autoplay loop controls id="lovely_town" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/lovely_town.wav" id="Lovely Town.wav"></audio>
+      <audio utoplay loop controls id="lovely_town" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/lovely_town.wav" id="Lovely Town.wav"></audio>
+
       <h3>Boss Theme</h3>
-      <audio loop controls id="boss_theme" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/boss_theme.wav" id="A.wav"></audio>
+      <audio loop controls id="boss_theme" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/boss_theme.wav"></audio>
+
+      <h3>Shop</h3>
+      <audio loop controls id="shop" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/shop.wav"></audio>
+
       </div>
+
+
+      <!--Pop up logo
+      
+      <div class="popup" id="popup">
+
+        <div class="popuplogo" id="popuplogo">
+          <img class="popupimg" id="popupimg" src="public/newave.png">
+        </div>
+
+      </div> 
+      -->
+      
      
     <!-- JS link -->  
     <script src="./script.js"></script>
