@@ -20,7 +20,14 @@
     </style>
   </head>
   <body>
+
+    <!--Beta-->
+    <div id="beta">
+       <a href="https://github.com/aidan-yip/perilous_quest/issues" id="betalink">Report bugs</a>
+    </div>
+
   <div class="background">
+
       <!-- Game -->
     <div id="game">
       <div id="stats">
@@ -68,7 +75,7 @@
       </ul>
 
     <!-- Audio -->
-    <h2>Music Zone</h2>
+    <h2>Jukebox</h2>
     <div class="audio_players">
 
       <h3>Lovely Town</h3>
@@ -79,24 +86,17 @@
 
       <h3>Shop</h3>
       <audio loop controls id="shop" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/shop.wav"></audio>
-
-      </div>
-
-
-      <!--Pop up logo
-      
-      <div class="popup" id="popup">
-
-        <div class="popuplogo" id="popuplogo">
-          <img class="popupimg" id="popupimg" src="public/newave.png">
-        </div>
-
-      </div> 
-      -->
-      
-     
-    <!-- JS link -->  
-    <script src="./script.js"></script>
+ 
   </div>
+       
+  <!-- JS link -->  
+  <script src="./script.js"></script>
+
+  <script type="text/javascript">
+    window.onload = function(){ 
+                    alert("Welcome to Perilous Quest! This game is in alpha and is not yet ready for release. Please enjoy the game and report any bugs you see!");
+                    }
+    </script>
+
   </body>
 </html>
