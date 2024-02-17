@@ -52,11 +52,14 @@ body {
     color: #000000;
     font-family: var(--fontdefault);
     margin-top: 90px;
-   
+  }
+
+  h2:hover {
+    box-shadow: 0px 0px 50px rgb(255, 255, 255);
   }
 
   h3 {
-    color: #000000;
+    color: #ffffff;
     font-family: var(--fontdefault);
     text-align: center;
     padding: 10px 10px 10px 10px;
@@ -70,13 +73,17 @@ body {
     text-decoration: none;
   }
 
+  a, #betalink:hover {
+    color: #0495ba;
+  }
+
   #beta {
     padding-top: 30px;
     padding-left: 30px;
   }
 
   #text {
-    background-color: #4b4bf6;
+    background: linear-gradient(180deg, rgba(75,75,246,1) 0%, rgba(144,72,255,1) 100%);
     border-radius: 25px;
     color: #ffffff;
     padding: 30px;
@@ -84,23 +91,32 @@ body {
     margin-right: 14px;
     font-family: var(--fontdefault);
     font-size: 30px;
+    text-align: justify;
     text-justify: inter-word;
     /* fade in */
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
   }
+
+  #text:hover {
+    box-shadow: 0px 0px 25px rgb(124, 124, 255);
+  }
   
   #game {
     max-width: 1100px;
     min-width: 40%;
     height: 40%;
-    background: linear-gradient(0deg, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 35%, rgba(2,0,36,1) 100%);
+    background: linear-gradient(0deg, rgba(0,212,255,0.9) 0%, rgba(9,9,121,0.9) 35%, rgba(2,0,36,0.9) 100%);
     color: #ffffff;
     margin: 30px auto 0px;
     padding: 10px;
     border-radius: 25px;
     
+  }
+
+  #game:hover {
+    box-shadow: 0px 0px 25px #03c7f8;
   }
   
   #stats {
@@ -122,6 +138,7 @@ body {
   #controls {
     display: flex;
     justify-content: center;
+    align-items: center;
     justify-content: space-evenly;
     padding: 10px;
     color: #ffffff;
@@ -135,7 +152,7 @@ body {
     margin-right: 14px;
     padding: 30px;
     color: #ffffff;
-    background-color: #e51e1e;
+    background: linear-gradient(180deg, rgba(229,30,30,1) 0%, rgba(255,85,72,1) 100%);
     border-radius: 25px;
     height: 150px;
     font-size: 30px;
@@ -151,12 +168,15 @@ body {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
   }
+
+  .stat:hover {
+    text-shadow: 0px 0px 25px #ffe27b;
+  }
   
   button {
     cursor: pointer;
     color: #ffffff;
-    background-color: #03c7f8;
-    background-image: linear-gradient(#86bdfb, #0f08d3);
+    background-image: linear-gradient(#247de4, #08d3bf);
     border: 1px solid #327dfe;
     width: 40%;
     height: 70px;
@@ -173,6 +193,15 @@ body {
     animation-fill-mode: forwards;
   }
 
+  button:hover {
+    background-image: linear-gradient(#1d62b1, #079b8c);
+  }
+
+  button:active {
+    width: 37%;
+    height: 65px;
+  }
+
   ul {
     text-align: center;
     list-style: none;
@@ -182,6 +211,10 @@ body {
     font-weight: bolder;
     padding-top: 50px;
     padding-bottom: 30px;
+  }
+  
+  ul:hover {
+    color: #ffcf23;
   }
 
   #gamelogo {
@@ -196,6 +229,10 @@ body {
     background-repeat: no-repeat;
   }
 
+  #gamelogo:hover {
+    box-shadow: 0px 0px 25px #058aff;
+  }
+
   .audio_players {
     display: flex;
     justify-content: center;
@@ -206,8 +243,17 @@ body {
     margin-right: auto;
     padding-top: 50px;
     padding-bottom: 50px;
-    background: linear-gradient(180deg, rgb(0, 208, 255) 0%, rgb(9, 27, 87) 100%);
+    background: linear-gradient(180deg, rgba(0,140,255,1) 0%, rgb(114, 12, 255) 47%, rgb(106, 42, 13) 100%);
     border-radius: 25px;
+    box-shadow: 0px 0px 30px #6b18fa;
+  }
+
+  .audio_players:hover {
+    box-shadow: 0px 0px 30px #c19efd;
+  }
+
+  audio:hover {
+    box-shadow: 0px 0px 25px rgb(243, 126, 9);
   }
 
   @media only screen and (max-width: 700px) {
@@ -248,6 +294,10 @@ body {
       margin-left: 1px;
       margin-right: 1px;
       width: 200px;
+    }
+
+    li {
+      font-size: small;
     }
 
     .audio_players {
