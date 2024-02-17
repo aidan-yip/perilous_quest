@@ -66,20 +66,20 @@ const locations = [
   },
   {
     name: "kill monster",
-    "button text": ["Go to town square", "Go to town square", "Go to town square"],
-    "button functions": [goTown, goTown, easterEgg],
+    "button text": [" --> ", "Go to town square", "Go to town square"],
+    "button functions": [null, goTown, easterEgg],
     text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold. Nice! your a natural'
   },
   {
     name: "lose",
-    "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
-    "button functions": [restart, restart, restart],
+    "button text": [" --> ", "REPLAY?", "REPLAY?"],
+    "button functions": [null, restart, restart],
     text: "You died. ☠️ Respawn?"
   },
   { 
     name: "win", 
-    "button text": ["REPLAY?", "REPLAY?", "REPLAY?"], 
-    "button functions": [restart, restart, restart], 
+    "button text": [" --> ", "REPLAY?", "REPLAY?"], 
+    "button functions": [null, restart, restart], 
     text: "You defeat the dragon! YOU WIN THE GAME, WOO 🎉! Have some cheese: 🧀" 
   },
   {
@@ -118,7 +118,6 @@ function goTown() {
 function goStore() {
   update(locations[1]);
   lovely_town.pause();
-  lovely_town.currentTime = 0;
   shop.play();
 }
 
