@@ -115,9 +115,11 @@ function goTown() {
   lovely_town.play();
 }
 
+// Store functions
 function goStore() {
   update(locations[1]);
   lovely_town.pause();
+  lovely_town.currentTime = 0;
   shop.play();
 }
 
