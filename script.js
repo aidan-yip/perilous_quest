@@ -168,29 +168,6 @@ function sellWeapon() {
   }
 }
 
-/*
-
-legacy music code
-
-function playMusic() {
-  let audio = new Audio(); 
-  audio.loop = true;
-  audio.play(); 
-}
-
-function stopMusic(audioName) {
-  let audio = new Audio(audioName); 
-  audio.stop(); 
-}
-
-/*
-function pauseMusic(audioName) {
-  let audio = new Audio(audioName); 
-  audio.loop = true;
-  audio.pause();
-}
-*/
-
 // Music
 
 //Town theme
