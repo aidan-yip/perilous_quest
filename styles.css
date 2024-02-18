@@ -216,7 +216,7 @@ body {
     box-shadow: 0px 0px 30px #6b18fa;
   }
 
-  @media only screen and (min-width: 1000px) {
+  @media only screen and (min-width: 800px) {
 
     #game:hover {
       box-shadow: 0px 0px 25px #03c7f8;
@@ -261,6 +261,26 @@ body {
   }
 
   @media only screen and (max-width: 700px) {
+
+    #game {
+      box-shadow: 0px 0px 25px #03c7f8;
+    }
+
+    #text {
+      box-shadow: 0px 0px 25px rgb(124, 124, 255);
+    }
+
+    .stat {
+      text-shadow: 0px 0px 25px #ffe27b;
+    }
+
+    h2 {
+      box-shadow: 0px 0px 50px rgb(255, 255, 255);
+    }
+
+    audio {
+      box-shadow: 0px 0px 25px rgb(243, 126, 9);
+    }
     
     button {
       font-size: medium;
@@ -292,6 +312,10 @@ body {
 
     #gamelogo {
       width: 60%;
+    }
+
+    #gamelogo {
+      box-shadow: 0px 0px 25px #058aff;
     }
 
     button {
