@@ -54,10 +54,6 @@ body {
     margin-top: 90px;
   }
 
-  h2:hover {
-    box-shadow: 0px 0px 50px rgb(255, 255, 255);
-  }
-
   h3 {
     color: #ffffff;
     font-family: var(--fontdefault);
@@ -71,10 +67,6 @@ body {
     color: #03c7f8;
     font-family: var(--fontdefault);
     text-decoration: none;
-  }
-
-  a, #betalink:hover {
-    color: #0495ba;
   }
 
   #beta {
@@ -98,10 +90,6 @@ body {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
   }
-
-  #text:hover {
-    box-shadow: 0px 0px 25px rgb(124, 124, 255);
-  }
   
   #game {
     max-width: 1100px;
@@ -113,10 +101,6 @@ body {
     padding: 10px;
     border-radius: 25px;
     
-  }
-
-  #game:hover {
-    box-shadow: 0px 0px 25px #03c7f8;
   }
   
   #stats {
@@ -168,10 +152,6 @@ body {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
   }
-
-  .stat:hover {
-    text-shadow: 0px 0px 25px #ffe27b;
-  }
   
   button {
     cursor: pointer;
@@ -193,10 +173,6 @@ body {
     animation-fill-mode: forwards;
   }
 
-  button:hover {
-    background-image: linear-gradient(#1d62b1, #079b8c);
-  }
-
   button:active {
     width: 37%;
     height: 65px;
@@ -212,10 +188,6 @@ body {
     padding-top: 50px;
     padding-bottom: 30px;
   }
-  
-  ul:hover {
-    color: #ffcf23;
-  }
 
   #gamelogo {
     position: relative;
@@ -227,10 +199,6 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-  }
-
-  #gamelogo:hover {
-    box-shadow: 0px 0px 25px #058aff;
   }
 
   .audio_players {
@@ -248,12 +216,48 @@ body {
     box-shadow: 0px 0px 30px #6b18fa;
   }
 
-  .audio_players:hover {
-    box-shadow: 0px 0px 30px #c19efd;
-  }
+  @media only screen and (min-width: 1000px) {
 
-  audio:hover {
-    box-shadow: 0px 0px 25px rgb(243, 126, 9);
+    #game:hover {
+      box-shadow: 0px 0px 25px #03c7f8;
+    }
+
+    button:hover {
+      background-image: linear-gradient(#1d62b1, #079b8c);
+    }
+
+    .stat:hover {
+      text-shadow: 0px 0px 25px #ffe27b;
+    }
+
+    #text:hover {
+      box-shadow: 0px 0px 25px rgb(124, 124, 255);
+    }
+
+    a, #betalink:hover {
+      color: #0495ba;
+    }
+
+    h2:hover {
+      box-shadow: 0px 0px 50px rgb(255, 255, 255);
+    }
+
+    #gamelogo:hover {
+      box-shadow: 0px 0px 25px #058aff;
+    }
+
+    ul:hover {
+      color: #ffcf23;
+    }
+
+    .audio_players:hover {
+      box-shadow: 0px 0px 30px #c19efd;
+    }
+  
+    audio:hover {
+      box-shadow: 0px 0px 25px rgb(243, 126, 9);
+    }
+    
   }
 
   @media only screen and (max-width: 700px) {
