@@ -112,6 +112,8 @@ function update(location) {
   button2.onclick = location["button functions"][1];
   button3.onclick = location["button functions"][2];
   text.innerText = location.text;
+  selectfx.currentTime = 0;
+  selectfx.play();
 }
 
 function goTown() {
@@ -137,6 +139,8 @@ function goStore() {
   lovely_town.currentTime = 0;
   //Show
   shop.play();
+  selectfx.currentTime = 0;
+  selectfx.play();
 }
 
 function goCave() {
@@ -146,6 +150,8 @@ function goCave() {
   //Town
   lovely_town.pause();
   lovely_town.currentTime = 0;
+  selectfx.currentTime = 0;
+  selectfx.play();
 }
 
 function buyHealth() {
@@ -154,6 +160,8 @@ function buyHealth() {
     health += 10;
     goldText.innerText = gold;
     healthText.innerText = health;
+    selectfx.currentTime = 0;
+    selectfx.play();
   } else {
     text.innerText = "You do not have enough gold to buy health.";
   }
@@ -169,6 +177,8 @@ function buyWeapon() {
       text.innerText = "You now have a " + newWeapon + ".";
       inventory.push(newWeapon);
       text.innerText += " In your inventory you have: " + inventory;
+      selectfx.currentTime = 0;
+      selectfx.play();
     } else {
       text.innerText = "You do not have enough gold to buy a weapon.";
     }
@@ -186,9 +196,19 @@ function sellWeapon() {
     let currentWeapon = inventory.shift();
     text.innerText = "You sold a " + currentWeapon + ".";
     text.innerText += " In your inventory you have: " + inventory;
+    selectfx.currentTime = 0;
+    selectfx.play();
   } else {
     text.innerText = "Don't sell your only weapon!";
   }
+}
+
+//Sound FX
+
+let selectfx = document.getElementById("selectfx");
+
+function playselect() {
+  selectfx.play();
 }
 
 // Music 
@@ -380,14 +400,20 @@ function easterEgg() {
   boss_theme.pause();
   boss_theme.currentTime = 0;
   lovely_town.play();
+  selectfx.currentTime = 0;
+  selectfx.play();
 }
 
 function pickTwo() {
   pick(2);
+  selectfx.currentTime = 0;
+  selectfx.play();
 }
 
 function pickEight() {
   pick(8);
+  selectfx.currentTime = 0;
+  selectfx.play();
 }
 
 // Secret game
