@@ -258,6 +258,9 @@ function fightSlime() {
   //Town
   lovely_town.pause();
   lovely_town.currentTime = 0;
+  //Cave
+  cave_tune.pause();
+  cave_tune.currentTime = 0;
   //Boss
   boss_theme.play();
 }
@@ -268,6 +271,9 @@ function fightBeast() {
   //Town
   lovely_town.pause();
   lovely_town.currentTime = 0;
+  //Cave
+  cave_tune.pause();
+  cave_tune.currentTime = 0;
   //Boss
   boss_theme.play();
 }
@@ -278,6 +284,9 @@ function fightDragon() {
   //Town
   lovely_town.pause();
   lovely_town.currentTime = 0;
+  //Cave
+  cave_tune.pause();
+  cave_tune.currentTime = 0;
   //Boss
   boss_theme.play();
 }
