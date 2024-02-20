@@ -14,5 +14,5 @@ Original project idea by FreeCodeCamp - Mods and redesign by Aidan Y. / - Music 
 
 # Future ideas
 
-In the future there will be cave and secret game music. Location images to be added in a future release. There will be a link to the soundtrack and artists who helped provided the amazing soundtrack. Older versions may remain avalible for download as they are released.
+In the future there will be cave and secret game music. Location images to be added in a future release. There will be a link to the soundtrack and artists who helped provided the amazing soundtrack. Older versions may remain available for download as they are released.
 
