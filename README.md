@@ -1,5 +1,7 @@
 # Perilous Quest
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f312c3e8-98b6-4e22-ac50-3296bf34db80/deploy-status)](https://app.netlify.com/sites/perilous-quest/deploys)
+
 This is a project idea originally from FreeCodeCamp. Mods and redesign are by me. I've also expanded some of the functionality to include music, a background image, media player and made the game more responsive so it can be played on most screen sizes.
 
 # Version Alpha (latest)
