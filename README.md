@@ -10,7 +10,7 @@ This version includes the base game and main title music. This is in development
 
 # Credits
 
-Original project idea by FreeCodeCamp - Mods and redesign by Aidan Y. / - Music 🎧 "Lovely Town" by  Skremzy (Tristan Forrest) / - "Boss Theme" by Audiophobia (Tanner Marsh) / - "Shop" by Newave Oceans (Ade Y.).
+Original project idea by FreeCodeCamp - Mods and redesign by Aidan Y. / - Music 🎧 "Lovely Town" by  Skremzy (Tristan Forrest) / - "Boss Theme" by Audiophobia (Tanner Marsh) / - "Shop" and "Cave Tune" by Newave Oceans (Ade Y.).
 
 # Future ideas
 
