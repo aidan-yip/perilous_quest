@@ -4,6 +4,8 @@ window.onload = function(){
   alert("Welcome to Perilous Quest! This game is in alpha and is not yet ready for release. Please enjoy the game and report any bugs you see!");
 }
 
+// Variables
+
 let xp = 0;
 let health = 300;
 let gold = 100;
@@ -114,23 +116,36 @@ function update(location) {
 
 function goTown() {
   update(locations[0]);
+  //Boss
   boss_theme.pause();
   boss_theme.currentTime = 0;
+  //Shop
   shop.pause();
   shop.currentTime = 0;
+  //Cave
+  cave_tune.pause();
+  cave_tune.currentTime = 0;
+  //Town
   lovely_town.play();
 }
 
 // Store functions
 function goStore() {
   update(locations[1]);
+  //Town
   lovely_town.pause();
   lovely_town.currentTime = 0;
+  //Show
   shop.play();
 }
 
 function goCave() {
   update(locations[2]);
+  //Cave
+  cave_tune.play();
+  //Town
+  lovely_town.pause();
+  lovely_town.currentTime = 0;
 }
 
 function buyHealth() {
@@ -176,7 +191,18 @@ function sellWeapon() {
   }
 }
 
-// Music
+// Music 
+
+//Lose theme
+let lose_wav = document.getElementById("lose");
+
+function playlose() {
+  lose_wav.play();
+}
+
+function pauselose() {
+  lose_wav.pause();
+}
 
 //Town theme
 let lovely_town = document.getElementById("lovely_town");
@@ -200,6 +226,17 @@ function pauseshop() {
   shop.pause();
 }
 
+//Cave Tune
+let cave_tune = document.getElementById("cave_tune");
+
+function playcave() {
+  cave_tune.play();
+}
+
+function pausecave() {
+  cave_tune.pause();
+}
+
 
 //Boss theme
 let boss_theme = document.getElementById("boss_theme");
@@ -218,24 +255,30 @@ function pauseboss() {
 function fightSlime() {
   fighting = 0;
   goFight();
+  //Town
   lovely_town.pause();
   lovely_town.currentTime = 0;
+  //Boss
   boss_theme.play();
 }
 
 function fightBeast() {
   fighting = 1;
   goFight();
+  //Town
   lovely_town.pause();
   lovely_town.currentTime = 0;
+  //Boss
   boss_theme.play();
 }
 
 function fightDragon() {
   fighting = 2;
   goFight();
+  //Town
   lovely_town.pause();
   lovely_town.currentTime = 0;
+  //Boss
   boss_theme.play();
 }
 
@@ -295,6 +338,14 @@ function defeatMonster() {
 
 function lose() {
   update(locations[5]);
+  //Town
+  lovely_town.pause();
+  lovely_town.currentTime = 0;
+  //Boss
+  boss_theme.pause();
+  boss_theme.currentTime = 0;
+  //Lose
+  playlose();
 }
 
 function winGame() {
@@ -311,6 +362,8 @@ function restart() {
   healthText.innerText = health;
   xpText.innerText = xp;
   goTown();
+  pauselose();
+  lose_wav.currentTime = 0;
 }
 
 function easterEgg() {
