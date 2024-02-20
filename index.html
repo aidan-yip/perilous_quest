@@ -21,14 +21,6 @@
   </head>
   <body>
 
-    <!--Beta alert box-->
-
-    <script type="text/javascript">
-      window.onload = function(){ 
-                      alert("Welcome to Perilous Quest! This game is in Beta development and is not yet ready for release. Please enjoy the game and report any bugs you see!");
-                      }
-      </script>
-
     <!--Beta-->
     <div id="beta">
        <a href="https://github.com/aidan-yip/perilous_quest/issues" id="betalink">Report bugs</a>
@@ -82,7 +74,7 @@
         <ul>Music 🎧
         <li>"Lovely Town" by Skremzy</li>
         <li>"Boss Theme" by Audiophobia</li>
-        <li>"Shop" by Newave Oceans</li>
+        <li>"Shop" and "Cave Tune" by Newave Oceans</li>
       </ul>
 
     <!-- Audio -->
@@ -97,11 +89,17 @@
 
       <h3>Shop</h3>
       <audio loop controls id="shop" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/shop.wav"></audio>
+
+      <h3>Cave Tune</h3>
+      <audio loop controls id="cave_tune" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/cave_tune.wav"></audio>
+
+      <h3>Lose</h3>
+      <audio controls id="lose" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/lose.wav"></audio>
  
   </div>
        
   <!-- JS link -->  
-  <script src="./script.js" defer></script>
+  <script src="./script.js"></script>
 
   </body>
 </html>
