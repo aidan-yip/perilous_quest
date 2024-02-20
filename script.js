@@ -400,20 +400,14 @@ function easterEgg() {
   boss_theme.pause();
   boss_theme.currentTime = 0;
   lovely_town.play();
-  selectfx.currentTime = 0;
-  selectfx.play();
 }
 
 function pickTwo() {
   pick(2);
-  selectfx.currentTime = 0;
-  selectfx.play();
 }
 
 function pickEight() {
   pick(8);
-  selectfx.currentTime = 0;
-  selectfx.play();
 }
 
 // Secret game
