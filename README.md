@@ -16,7 +16,7 @@ Original project idea by FreeCodeCamp - Mods and redesign by Aidan Y. / - Music 
 
 In the future there will be secret game music. Location images to be added in a future release. There will be a link to the soundtrack and artists who helped provided the amazing soundtrack. Older versions may remain available for download as they are released.
 
-#macOS Safari web App install (requires macOS Sonoma)
+# macOS Safari web App install (requires macOS Sonoma)
 
 https://support.apple.com/en-ca/104996#:~:text=In%20Safari%2C%20open%20the%20webpage,use%20as%20a%20web%20app.&text=in%20the%20Safari%20toolbar%2C%20then,Dock%2C%20Launchpad%2C%20or%20Spotlight.
 
