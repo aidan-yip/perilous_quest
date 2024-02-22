@@ -32,21 +32,26 @@ const monsters = [
   },
   {
     name: "fanged beast",
-    level: 8,
+    level: 9,
     health: 160
   },
   {
     name: "dragon",
-    level: 20,
-    health: 600
+    level: 10,
+    health: 500
+  },
+  {
+    name: "Knight",
+    level: 8,
+    health: 250
   }
 ]
 const locations = [
   {
     name: "town square",
-    "button text": ["Go to store", "Go to cave", "Fight dragon"],
-    "button functions": [goStore, goCave, fightDragon],
-    text: "You are in the town square. You see a sign that says \"Shop\". Enter?"
+    "button text": ["Visit shop", "Walk to cave", "Enter castle"],
+    "button functions": [goStore, goCave, goCastle],
+    text: "You are in the town square. You see a sign that says \"Shop\". Select where you want to go."
   },
   {
     name: "store",
@@ -64,17 +69,17 @@ const locations = [
     name: "fight",
     "button text": ["Attack", "Dodge", "Run like a coward"],
     "button functions": [attack, dodge, goTown],
-    text: "You are fighting a monster. LET'S GO!"
+    text: "You are fighting a boss. LET'S GO!"
   },
   {
     name: "kill monster",
-    "button text": [" --> ", "Go to town square", "Go to town square"],
-    "button functions": [null, goTown, easterEgg],
-    text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold. Nice! your a natural'
+    "button text": [" --> ", "Go to town square", "Go to cave"],
+    "button functions": [null, goTown, goCave],
+    text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold. Nice! your a natural.'
   },
   {
     name: "lose",
-    "button text": [" --> ", "REPLAY?", "REPLAY?"],
+    "button text": [" --> ", "RESPAWN?", "RESPAWN?"],
     "button functions": [null, restart, restart],
     text: "You died. ☠️ Respawn?"
   },
@@ -89,13 +94,25 @@ const locations = [
     "button text": ["2", "8", "Go to town square?"],
     "button functions": [pickTwo, pickEight, goTown],
     text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win gold ⚜️!"
+  },
+  {
+    name: "castle",
+    "button text": ["Go left", "Go right", "Go back"],
+    "button functions": [goChasm, fightKnight, goTown],
+    text: "You enter a castle. There's a sign that says \"Danger\" to the left and the sound of iron clanging from the room to the right. Do you dare to continue?"
+  },
+  {
+    name: "chasm",
+    "button text": ["Jump across", "Fall into the chasm", "Go back"],
+    "button functions": [lose, easterEgg, fightDragon],
+    text: "There is a massive chasm ahead. You believe you may be able to jump across. You also hear the sound of wood burning behind you!"
   }
 ];
 
 // initialize buttons
 button1.onclick = goStore;
 button2.onclick = goCave;
-button3.onclick = fightDragon;
+button3.onclick = goCastle;
 
 function update(location) {
   monsterStats.style.display = "none";
@@ -133,17 +150,32 @@ function goStore() {
   lovely_town.currentTime = 0;
   //Show
   shop.play();
-  selectfx.currentTime = 0;
-  selectfx.play();
+}
+
+function goCastle() {
+  update(locations[8]);
+  //Town
+  lovely_town.pause();
+  lovely_town.currentTime = 0;
+  //Castle
+}
+
+function goChasm() {
+  update(locations[9]);
+  //Chasm
 }
 
 function goCave() {
   update(locations[2]);
-  //Cave
-  cave_tune.play();
+  //Boss
+  boss_theme.pause();
+  boss_theme.currentTime = 0;
   //Town
   lovely_town.pause();
   lovely_town.currentTime = 0;
+  //Cave
+  cave_tune.play();
+  //Select fx
   selectfx.currentTime = 0;
   selectfx.play();
 }
@@ -305,6 +337,19 @@ function fightDragon() {
   boss_theme.play();
 }
 
+function fightKnight() {
+  fighting = 3;
+  goFight();
+  //Town
+  lovely_town.pause();
+  lovely_town.currentTime = 0;
+  //Cave
+  cave_tune.pause();
+  cave_tune.currentTime = 0;
+  //Boss
+  boss_theme.play();
+}
+
 // Fight function
 function goFight() {
   update(locations[3]);
@@ -317,7 +362,7 @@ function goFight() {
 // Attack function
 function attack() {
   text.innerText = "The " + monsters[fighting].name + " attacks.";
-  text.innerText += " You attack it with your " + weapons[currentWeapon].name + ".";
+  text.innerText += " You attack with your " + weapons[currentWeapon].name + ".";
   health -= getMonsterAttackValue(monsters[fighting].level);
   if (isMonsterHit()) {
     monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1;    
