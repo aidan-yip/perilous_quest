@@ -20,7 +20,7 @@ Background art - Tanner Marsh.
 
 # Future ideas
 
-In the future there will be secret game music. Location images to be added in a future release. There will be a link to the soundtrack and artists who helped provided the amazing soundtrack. Older versions may remain available for download as they are released.
+In the future there will be secret game, castle music and chasm music. Location images to be added in a future release. Older versions may remain available for download as they are released.
 
 ## macOS Safari web App install (requires macOS Sonoma)
 
