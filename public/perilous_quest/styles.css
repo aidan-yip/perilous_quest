@@ -59,6 +59,7 @@ body {
     font-family: var(--fontdefault);
     text-align: center;
     padding: 10px 10px 10px 10px;
+    max-width: 1100px;
 
   }
 
@@ -92,7 +93,7 @@ body {
   }
   
   #game {
-    max-width: 1100px;
+    max-width: 1300px;
     min-width: 40%;
     height: 40%;
     background: linear-gradient(0deg, rgba(0,212,255,0.9) 0%, rgba(9,9,121,0.9) 35%, rgba(2,0,36,0.9) 100%);
@@ -183,7 +184,7 @@ body {
     list-style: none;
     color: #ffffff;
     font-family: var(--fontdefault);
-    font-size: large;
+    font-size: x-large;
     font-weight: bolder;
     padding-top: 50px;
     padding-bottom: 30px;
@@ -191,7 +192,7 @@ body {
 
   #gamelogo {
     position: relative;
-    width: 15%;
+    width: 200px;
     height: 200px;
     margin-left: auto;
     margin-right: auto;
@@ -324,6 +325,10 @@ body {
 
     li {
       font-size: small;
+    }
+
+    ul {
+      font-size: large;
     }
 
     .audio_players {
