@@ -4,7 +4,7 @@
 
 This is a project idea originally from FreeCodeCamp. Mods and redesign are by me. I've also expanded some of the functionality to include music, a background art, media player, added two new locations and an additional boss and made the game more responsive so it can be played on most screen sizes.
 
-## Version Alpha (latest)
+## Version Beta (latest)
 
 This version includes the base game and several game music tracks. This is in Beta development currently so any feedback is appreciated and can be left at "Issues". Gameplay is fully functional and working. The game's style is subject to change in future versions.
 
