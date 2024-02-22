@@ -12,13 +12,13 @@ This version includes the base game and several game music tracks. This is in Be
 
 Original project idea by FreeCodeCamp - Mods and redesign by Aidan Y.
 
-### Music
+## Music
 Music 🎧 "Lovely Town" by  Skremzy (Tristan Forrest) / - "Boss Theme" by Audiophobia (Tanner Marsh) / - "Shop" and "Cave Tune" by Newave Oceans (Ade Y.).
 
-### Art
+## Art
 Background art - Tanner Marsh.
 
-### Future ideas
+## Future ideas
 
 In the future there will be secret game, castle music and chasm music. Location images to be added in a future release. Older versions may remain available for download as they are released.
 
