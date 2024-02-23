@@ -12,6 +12,11 @@
   --fontdefault: "Press Start 2P", -apple-system,system-ui,BlinkMacSystemFont;
 }
 
+html, body {
+  cursor: url("/Public/favicon.ico"), default;
+  /* just change the cursor.ico path to your location */
+}
+
 @keyframes fadeInAnimation {
   0% {
       opacity: 0;
@@ -21,24 +26,39 @@
   }
 }
 
+body::-webkit-scrollbar {
+  display: none !important;
+}
+
+body {
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /* IE/Edge */
+}
+
 body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-color: #000000;
-  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
 
   h1 {
     text-align: center;
     font-family: var(--fontdefault);
+    font-size: 45px;
     margin-top: 30px;
     margin-bottom: 30px;
+    text-shadow: 0px 0px 10px #1fd2ff;
     /* fade in */
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     
-  }
+}
 
   h2 {
     text-align: center;
@@ -52,7 +72,7 @@ body {
     color: #000000;
     font-family: var(--fontdefault);
     margin-top: 90px;
-  }
+}
 
   h3 {
     color: #ffffff;
@@ -61,19 +81,27 @@ body {
     padding: 10px 10px 10px 10px;
     max-width: 1100px;
 
-  }
+}
 
   a, #betalink {
     justify-content: center;
     color: #03c7f8;
     font-family: var(--fontdefault);
     text-decoration: none;
+}
+
+  a, #artlink {
+    color: #22d3ff;
+  }
+
+  a, #artlink:hover {
+    color: #9bebff;
   }
 
   #beta {
     padding-top: 30px;
     padding-left: 30px;
-  }
+}
 
   #text {
     background: linear-gradient(180deg, rgba(75,75,246,1) 0%, rgba(144,72,255,1) 100%);
@@ -86,23 +114,24 @@ body {
     font-size: 30px;
     text-align: justify;
     text-justify: inter-word;
+    cursor: help;
     /* fade in */
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-  }
+}
   
   #game {
     max-width: 1300px;
     min-width: 40%;
     height: 40%;
-    background: linear-gradient(0deg, rgba(0,212,255,0.9) 0%, rgba(9,9,121,0.9) 35%, rgba(2,0,36,0.9) 100%);
+    background: linear-gradient(0deg, rgba(45, 220, 255, 0.8) 0%, rgba(10, 10, 127, 0.8) 35%, rgba(2, 0, 48, 0.8) 100%);
     color: #ffffff;
     margin: 30px auto 0px;
     padding: 10px;
     border-radius: 25px;
     
-  }
+}
   
   #stats {
     display: flex;
@@ -118,7 +147,7 @@ body {
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-  }
+}
 
   #controls {
     display: flex;
@@ -128,7 +157,7 @@ body {
     padding: 10px;
     color: #ffffff;
 
-  }
+}
   
   #monsterStats {
     display: none;
@@ -141,7 +170,7 @@ body {
     border-radius: 25px;
     height: 150px;
     font-size: 30px;
-  }
+}
   
   .stat {
     padding-left: 10px;
@@ -152,7 +181,7 @@ body {
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-  }
+}
   
   button {
     cursor: pointer;
@@ -168,16 +197,17 @@ body {
     font-style: italic;
     margin-left: 4px;
     margin-right: 4px;
+    cursor: cell;
     /* fade in */
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-  }
+}
 
   button:active {
     width: 37%;
     height: 65px;
-  }
+}
 
   ul {
     text-align: center;
@@ -188,7 +218,7 @@ body {
     font-weight: bolder;
     padding-top: 50px;
     padding-bottom: 30px;
-  }
+}
 
   #gamelogo {
     position: relative;
@@ -200,7 +230,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-  }
+}
 
   .audio_players {
     display: flex;
@@ -212,10 +242,10 @@ body {
     margin-right: auto;
     padding-top: 50px;
     padding-bottom: 50px;
-    background: linear-gradient(180deg, rgba(0,140,255,1) 0%, rgb(114, 12, 255) 47%, rgb(106, 42, 13) 100%);
+    background: linear-gradient(180deg, rgba(0,140,255,0.8) 0%, rgb(114, 12, 255,0.8) 47%, rgb(106, 42, 13,0.8) 100%);
     border-radius: 25px;
     box-shadow: 0px 0px 30px #6b18fa;
-  }
+}
   
   /* desktop */
   @media only screen and (min-width: 700px) {
@@ -260,7 +290,7 @@ body {
       box-shadow: 0px 0px 25px rgb(243, 126, 9);
     }
     
-  }
+}
 
   /* mobile */
   @media only screen and (max-width: 800px) {
@@ -275,6 +305,10 @@ body {
 
     .stat {
       text-shadow: 0px 0px 25px #ffe27b;
+    }
+
+    h1 {
+      font-size: xx-large;
     }
 
     h2 {
@@ -343,4 +377,4 @@ body {
     }
     
 
-  }
+}
