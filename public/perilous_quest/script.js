@@ -75,7 +75,7 @@ const locations = [
     name: "kill monster",
     "button text": [" --> ", "Go to town square", "Go to cave"],
     "button functions": [null, goTown, goCave],
-    text: 'The boss screams "Arg!" as it dies. You gain experience points and find gold. Nice! your a natural.'
+    text: 'The boss screams "ARG!" and withers away. You gain experience points and find gold. Nice! your a natural.'
   },
   {
     name: "lose",
