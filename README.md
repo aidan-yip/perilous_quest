@@ -38,5 +38,5 @@ https://support.google.com/chrome_webstore/answer/3060053?hl=en
 
 # Firefox web app install
 
-Unfortunately Firefox dropped support for web apps in 2021. Please use another web browser or older version of Firefox to install on your system.
+Unfortunately Firefox dropped support for web apps in 2021. Please use another web browser or an older version of Firefox to install on your system.
 
