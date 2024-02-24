@@ -24,7 +24,7 @@ Background art - Tanner Marsh.
 
 In the future there will be secret game, castle music and chasm music. Location images to be added in a future release. Older versions may remain available for download as they are released.
 
-# Web app install:
+# Web app install
 
 ## macOS Safari web app install (requires macOS Sonoma)
 
