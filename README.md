@@ -28,15 +28,15 @@ In the future there will be secret game, castle music and chasm music. Location 
 
 https://support.apple.com/en-ca/104996#:~:text=In%20Safari%2C%20open%20the%20webpage,use%20as%20a%20web%20app.&text=in%20the%20Safari%20toolbar%2C%20then,Dock%2C%20Launchpad%2C%20or%20Spotlight.
 
-# Windows web app install (works with Windows 10/11)
+# Windows web app install (works with Windows 10/11 or Edge for MacOS/ChromeOS/Linux)
 
 https://support.microsoft.com/en-us/topic/install-manage-or-uninstall-apps-in-microsoft-edge-0c156575-a94a-45e4-a54f-3a84846f6113#:~:text=Install%20an%20app%20in%20Microsoft%20Edge&text=Alternatively%2C%20you%20can%20install%20any,appear%20under%20edge%3A%2F%2Fapps.
 
-# ChromeOS web app and shortcut install (requires ChromeOS and/or the Chrome browser for MacOS/Windows/Linux
+# ChromeOS web app and shortcut install (requires ChromeOS and/or the Chrome browser for MacOS/Windows/Linux)
 
 https://support.google.com/chrome_webstore/answer/3060053?hl=en
 
-# Firefox web app install
+# Firefox web app install (N/A)
 
 Unfortunately Firefox dropped support for web apps in 2021. Please use another web browser or an older version of Firefox to install on your system.
 
