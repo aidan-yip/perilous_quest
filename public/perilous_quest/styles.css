@@ -135,7 +135,6 @@ body {
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    transition: 0.5s ease-out 0.4s;
 }
   
   #stats {
