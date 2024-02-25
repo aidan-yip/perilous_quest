@@ -72,6 +72,7 @@ body {
     font-family: var(--fontdefault);
     margin-top: 90px;
     box-shadow: 0px 0px 50px 0px #0a001d;
+    transition: 1s ease-in-out 0ms;
 }
 
   h3 {
@@ -83,11 +84,12 @@ body {
 
 }
 
-  a, #betalink {
+  a, #buglink {
     justify-content: center;
     color: #03c7f8;
     font-family: var(--fontdefault);
     text-decoration: none;
+    transition: 1s ease-in-out 0ms;
 }
 
   a, #artlink {
@@ -98,7 +100,7 @@ body {
     color: #9bebff;
   }
 
-  #beta {
+  #bug {
     padding-top: 30px;
     padding-left: 30px;
 }
@@ -120,6 +122,7 @@ body {
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    transition: font-size 1s ease-in-out 0ms;
 }
   
   #game {
@@ -135,6 +138,7 @@ body {
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    transition: width, height, 1s ease-in-out 0ms;
 }
   
   #stats {
@@ -152,6 +156,7 @@ body {
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    transition: width, height, 1s ease-in-out 0ms;
 }
 
   #controls {
@@ -189,6 +194,7 @@ body {
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    transition: 1s ease-in-out 0ms;
 }
   
   button {
@@ -211,6 +217,7 @@ body {
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    transition: width, height, 1s ease-in-out 0ms;
 }
 
   button:active {
@@ -239,6 +246,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    transition: 1s ease-in-out 0ms;
 }
 
   .audio_players {
@@ -311,6 +319,7 @@ body {
 
     #game {
       box-shadow: 0px 0px 25px #03c7f8;
+      margin-top: 10px;
     }
 
     #text {
@@ -355,6 +364,15 @@ body {
       margin-left: 5px;
       margin-right: 5px;
       padding: 13px;
+    }
+
+    #bug {
+      padding-top: 10px;
+      padding-left: 10px;
+  }
+
+    a, #buglink {
+      font-size: small;
     }
 
     #gamelogo {
