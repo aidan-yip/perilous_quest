@@ -72,7 +72,7 @@ body {
     font-family: var(--fontdefault);
     margin-top: 90px;
     box-shadow: 0px 0px 50px 0px #0a001d;
-    transition: 1s ease-in-out 0ms;
+    transition: margin, 1s ease-in-out 0ms;
 }
 
   h3 {
@@ -194,7 +194,7 @@ body {
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    transition: 1s ease-in-out 0ms;
+    transition: font-size 1s ease-in-out 0ms;
 }
   
   button {
@@ -217,12 +217,12 @@ body {
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    transition: width, height, 1s ease-in-out 0ms;
 }
 
   button:active {
     width: 37%;
     height: 65px;
+    cursor: wait;
 }
 
   ul {
