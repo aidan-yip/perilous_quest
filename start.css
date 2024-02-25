@@ -12,11 +12,6 @@
   --fontdefault: "Press Start 2P", -apple-system,system-ui,BlinkMacSystemFont;
 }
 
-html, body {
-  cursor: url("/Public/favicon.ico"), default;
-  /* just change the cursor.ico path to your location */
-}
-
 @keyframes fadeInAnimation {
   0% {
       opacity: 0;
@@ -26,387 +21,85 @@ html, body {
   }
 }
 
-body::-webkit-scrollbar {
-  display: none !important;
-}
-
 body {
-  scrollbar-width: none !important; /* Firefox */
-  -ms-overflow-style: none !important; /* IE/Edge */
+    background: rgb(12, 0, 85);
+    background: linear-gradient(90deg, rgba(181,0,223,1) 0%, rgba(177,52,5,1) 28%, rgba(9,10,121,1) 61%, rgba(0,251,255,1) 100%);
+    overflow: hidden; /* Hide scrollbars */
 }
 
-body {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #000000;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-  h1 {
-    text-align: center;
-    font-family: var(--fontdefault);
-    font-size: 45px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    text-shadow: 0px 0px 10px #1fd2ff;
-    /* fade in */
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-  h2 {
-    text-align: center;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 25px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: rgb(255, 255, 255, 0.5);
-    color: #000000;
-    font-family: var(--fontdefault);
-    margin-top: 90px;
-    box-shadow: 0px 0px 50px 0px #0a001d;
-    transition: 1s ease-in-out 0ms;
-}
-
-  h3 {
-    color: #ffffff;
-    font-family: var(--fontdefault);
-    text-align: center;
-    padding: 10px 10px 10px 10px;
-    max-width: 1100px;
-
-}
-
-  a, #buglink {
-    justify-content: center;
-    color: #03c7f8;
-    font-family: var(--fontdefault);
-    text-decoration: none;
-    transition: 1s ease-in-out 0ms;
-}
-
-  a, #artlink {
-    color: #22d3ff;
-  }
-
-  a, #artlink:hover {
-    color: #9bebff;
-  }
-
-  #bug {
-    padding-top: 30px;
-    padding-left: 30px;
-}
-
-  #text {
-    background: linear-gradient(180deg, rgba(75,75,246,1) 0%, rgba(144,72,255,1) 100%);
-    border-radius: 25px;
-    color: #ffffff;
-    padding: 30px;
-    margin-left: 14px;
-    margin-right: 14px;
-    font-family: var(--fontdefault);
-    font-size: 30px;
-    text-align: justify;
-    text-justify: inter-word;
-    box-shadow: 0px 0px 20px #000000;
-    cursor: help;
-    /* fade in */
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    transition: font-size 1s ease-in-out 0ms;
-}
-  
-  #game {
-    max-width: 1300px;
-    min-width: 40%;
-    height: 40%;
-    background: linear-gradient(0deg, rgba(45, 220, 255, 0.8) 0%, rgba(11, 11, 134, 0.8) 35%, rgba(24, 0, 71, 0.8) 100%);
-    color: #ffffff;
-    margin: 30px auto 0px;
-    padding: 10px;
-    border-radius: 25px;
-    /* fade in */
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    transition: width, height, 1s ease-in-out 0ms;
-}
-  
-  #stats {
-    display: flex;
-    justify-content: center;
-    justify-content: space-evenly;
-    border: 3px solid #7db4fb;
-    border-radius: 25px;
-    margin-left: 14px;
-    margin-right: 14px;
-    padding: 10px;
-    color: #ffffff;
-    box-shadow: 0px 0px 5px 3px #7db4fb;
-    /* fade in */
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    transition: width, height, 1s ease-in-out 0ms;
-}
-
-  #controls {
-    display: flex;
+div, .back {
     justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
-    padding: 10px;
-    color: #ffffff;
-    cursor: cell;
-
-}
-  
-  #monsterStats {
-    display: none;
-    border: 1px solid #0a0a23;
-    margin-left: 14px;
-    margin-right: 14px;
-    padding: 30px;
-    color: #ffffff;
-    background: linear-gradient(180deg, rgba(229,30,30,1) 0%, rgba(255,85,72,1) 100%);
-    border-radius: 25px;
-    box-shadow: 0px 0px 100px 30px #ff0000;
-    height: 150px;
-    font-size: 30px;
-    cursor: crosshair;
-}
-  
-  .stat {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 30px;
-    font-family: var(--fontdefault);
-    /* fade in */
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    transition: 1s ease-in-out 0ms;
-}
-  
-  button {
-    cursor: pointer;
-    color: #ffffff;
-    background-image: linear-gradient(#247de4, #08d3bf);
-    border: 1px solid #327dfe;
-    width: 40%;
-    height: 70px;
-    border-radius: 25px;
-    font-size: 20px;
-    font-family: var(--fontdefault);
-    font-weight: bold;
-    font-style: italic;
-    margin-left: 4px;
-    margin-right: 4px;
-    box-shadow: 0px 0px 10px #025678;
-    cursor: cell;
-    /* fade in */
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    transition: width, height, 1s ease-in-out 0ms;
+    background-color: rgba(255, 255, 255, 0.315);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100vw;
+    height: 100vh;
 }
 
-  button:active {
-    width: 37%;
-    height: 65px;
-}
-
-  ul {
+h1 {
     text-align: center;
-    list-style: none;
-    color: #ffffff;
+    padding-top: 20%;
+    padding-left: 5%;
+    padding-right: 5%;
     font-family: var(--fontdefault);
-    font-size: x-large;
-    font-weight: bolder;
-    padding-top: 50px;
-    padding-bottom: 30px;
-}
-
-  #gamelogo {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: 1s ease-in-out 0ms;
-}
-
-  .audio_players {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 95%;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background: linear-gradient(180deg, rgb(3, 66, 255) 0%, rgb(114, 12, 255,1) 47%, rgb(106, 42, 13,1) 100%);
-    border-radius: 25px;
-    box-shadow: 0px 0px 30px 5px #5a01ff;
-}
-  
-  /* desktop */
-  @media only screen and (min-width: 800px) {
-
-    #game:hover {
-      box-shadow: 0px 0px 25px #03c7f8;
-    }
-
-    button:hover {
-      background-image: linear-gradient(#6bb0ff, #91fff4);
-      box-shadow: 0px 0px 50px 30px #39bdfb;
-    }
-
-    .stat:hover {
-      text-shadow: 0px 0px 20px #ffe27b;
-    }
-
-    #monsterStats:hover {
-      box-shadow: 0px 0px 50px #ffffff;
-    }
-
-    #text:hover {
-      box-shadow: 0px 0px 25px rgb(124, 124, 255);
-    }
-
-    a, #betalink:hover {
-      color: #0495ba;
-    }
-
-    h2:hover {
-      box-shadow: 0px 0px 50px rgb(255, 255, 255);
-    }
-
-    #gamelogo:hover {
-      box-shadow: 0px 0px 25px #058aff;
-    }
-
-    ul:hover {
-      color: #ffcf23;
-    }
-
-    .audio_players:hover {
-      box-shadow: 0px 0px 30px #c19efd;
-    }
-  
-    audio:hover {
-      box-shadow: 0px 0px 25px rgb(243, 126, 9);
-    }
+    font-size: 100px;
+    color: rgb(73, 228, 255);
+    text-shadow: 0px 0px 25px #008296;
+    /* fade in */
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
     
-}
-
-  /* mobile */
-  @media only screen and (max-width: 800px) {
-
-    #game {
-      box-shadow: 0px 0px 25px #03c7f8;
-      margin-top: 10px;
-    }
-
-    #text {
-      box-shadow: 0px 0px 25px rgb(124, 124, 255);
-    }
-
-    .stat {
-      text-shadow: 0px 0px 25px #ffe27b;
-    }
-
-    h1 {
-      font-size: xx-large;
-    }
-
-    h2 {
-      box-shadow: 0px 0px 50px rgb(255, 255, 255);
-    }
-    
-    button {
-      font-size: medium;
-      font-size: 14px;
-
-    }
-
-    .stat {
-      font-size: 13px;
-    }
-
-    #stats {
-      margin-left: 5px;
-      margin-right: 5px;
-    }
-
-    #monsterStats {
-      margin-left: 5px;
-      margin-right: 5px;
-      padding: 5px;
-    }
-
-    #text {
-      font-size: 20px;
-      margin-left: 5px;
-      margin-right: 5px;
-      padding: 13px;
-    }
-
-    #bug {
-      padding-top: 10px;
-      padding-left: 10px;
   }
 
-    a, #buglink {
-      font-size: small;
+  p {
+    text-align: center;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-family: var(--fontdefault);
+    font-size: 20px;
+    color: rgb(73, 228, 255);
+    text-shadow: 0px 0px 25px #008296;
+    /* fade in */
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation: mymove 2s infinite;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
+@keyframes mymove {
+  50% {font-size: 30px;}
+}
+
+  a {
+    display: block;
+    text-decoration: none;
+  }
+
+  a:active {
+    cursor: progress;
+  }
+
+
+
+@media only screen and (max-width: 800px) {
+
+    h1 {
+        padding-top: 50%;
+        font-size: 40px;
     }
 
-    #gamelogo {
-      width: 60%;
+    p {
+        font-size: 10px;
     }
 
-    #gamelogo {
-      box-shadow: 0px 0px 25px #058aff;
+    @keyframes mymove {
+        50% {font-size: 15px;}
     }
-
-    button {
-      margin-left: 1px;
-      margin-right: 1px;
-      width: 200px;
-    }
-
-    li {
-      font-size: small;
-    }
-
-    ul {
-      font-size: large;
-    }
-
-    .audio_players {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      justify-content: center;
-      align-items: center;
-      padding-top: 30px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-
 }
