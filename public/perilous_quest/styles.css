@@ -57,7 +57,6 @@ body {
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    
 }
 
   h2 {
@@ -72,6 +71,7 @@ body {
     color: #000000;
     font-family: var(--fontdefault);
     margin-top: 90px;
+    box-shadow: 0px 0px 50px 0px #0a001d;
 }
 
   h3 {
@@ -114,6 +114,7 @@ body {
     font-size: 30px;
     text-align: justify;
     text-justify: inter-word;
+    box-shadow: 0px 0px 20px #000000;
     cursor: help;
     /* fade in */
     animation: fadeInAnimation ease 3s;
@@ -125,12 +126,16 @@ body {
     max-width: 1300px;
     min-width: 40%;
     height: 40%;
-    background: linear-gradient(0deg, rgba(45, 220, 255, 0.8) 0%, rgba(10, 10, 127, 0.8) 35%, rgba(2, 0, 48, 0.8) 100%);
+    background: linear-gradient(0deg, rgba(45, 220, 255, 0.8) 0%, rgba(11, 11, 134, 0.8) 35%, rgba(24, 0, 71, 0.8) 100%);
     color: #ffffff;
     margin: 30px auto 0px;
     padding: 10px;
     border-radius: 25px;
-    
+    /* fade in */
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transition: 0.5s ease-out 0.4s;
 }
   
   #stats {
@@ -143,6 +148,7 @@ body {
     margin-right: 14px;
     padding: 10px;
     color: #ffffff;
+    box-shadow: 0px 0px 5px 3px #7db4fb;
     /* fade in */
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
@@ -156,6 +162,7 @@ body {
     justify-content: space-evenly;
     padding: 10px;
     color: #ffffff;
+    cursor: cell;
 
 }
   
@@ -168,8 +175,10 @@ body {
     color: #ffffff;
     background: linear-gradient(180deg, rgba(229,30,30,1) 0%, rgba(255,85,72,1) 100%);
     border-radius: 25px;
+    box-shadow: 0px 0px 100px 30px #ff0000;
     height: 150px;
     font-size: 30px;
+    cursor: crosshair;
 }
   
   .stat {
@@ -181,6 +190,7 @@ body {
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    transition: 0.5s ease-out 0.4s;
 }
   
   button {
@@ -197,6 +207,7 @@ body {
     font-style: italic;
     margin-left: 4px;
     margin-right: 4px;
+    box-shadow: 0px 0px 10px #025678;
     cursor: cell;
     /* fade in */
     animation: fadeInAnimation ease 3s;
@@ -242,24 +253,29 @@ body {
     margin-right: auto;
     padding-top: 50px;
     padding-bottom: 50px;
-    background: linear-gradient(180deg, rgba(0,140,255,0.8) 0%, rgb(114, 12, 255,0.8) 47%, rgb(106, 42, 13,0.8) 100%);
+    background: linear-gradient(180deg, rgb(3, 66, 255) 0%, rgb(114, 12, 255,1) 47%, rgb(106, 42, 13,1) 100%);
     border-radius: 25px;
-    box-shadow: 0px 0px 30px #6b18fa;
+    box-shadow: 0px 0px 30px 5px #5a01ff;
 }
   
   /* desktop */
-  @media only screen and (min-width: 700px) {
+  @media only screen and (min-width: 800px) {
 
     #game:hover {
       box-shadow: 0px 0px 25px #03c7f8;
     }
 
     button:hover {
-      background-image: linear-gradient(#1d62b1, #079b8c);
+      background-image: linear-gradient(#6bb0ff, #91fff4);
+      box-shadow: 0px 0px 50px 30px #39bdfb;
     }
 
     .stat:hover {
-      text-shadow: 0px 0px 25px #ffe27b;
+      text-shadow: 0px 0px 20px #ffe27b;
+    }
+
+    #monsterStats:hover {
+      box-shadow: 0px 0px 50px #ffffff;
     }
 
     #text:hover {
