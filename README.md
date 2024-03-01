@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f312c3e8-98b6-4e22-ac50-3296bf34db80/deploy-status)](https://app.netlify.com/sites/perilous-quest/deploys)
 
-This is a project idea originally from FreeCodeCamp. Mods and flat UI redesign are by me. I've also expanded some of the functionality to include a start screen, a music soundtrack  player, music autoplay, background art, added two new locations and an additional boss, custom cursor and made the game more responsive so it can be played on most screen sizes.
+This is a project idea originally from FreeCodeCamp. Mods and flat UI redesign are by me. I've also expanded some of the functionality to include a start screen, a music soundtrack  player, sound-fx/sound design, autoplay, background art, added two new locations and an additional boss, custom cursor and made the game more responsive so it can be played on most screen sizes.
 
 <i>note: the game's code is stored in a sub folder of "public" if you'd like to explore it.</i>
 
