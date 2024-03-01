@@ -9,14 +9,19 @@
     <title>Perilous Quest</title>
 </head>
 <body>
-   <a href="public/perilous_quest/index.html">
-      <div class="back">
+   <a href="./public/perilous_quest/index.html">
+      <div tabindex="0" class="back">
         <h1>PERILOUS QUEST</h1>
         <p>CLICK/TAP TO START</p>
      </div>
    </a>
 
-   <script src="app_start.js" defer></script>
+   <div>
+   <audio loop tabindex="-1" id="titletrack" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/intermission.wav" preload="auto"></audio>
+</div>
+
+   <script src="./app_start.js" defer></script>
+   <script src="./music_start.js"></script>
     
 </body>
 </html>
