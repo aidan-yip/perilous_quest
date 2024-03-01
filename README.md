@@ -4,7 +4,7 @@
 
 This is a project idea originally from FreeCodeCamp. Mods and flat UI redesign are by me. I've also expanded some of the functionality to include a start screen, a music soundtrack  player, sound-fx/sound design, autoplay, background art, added two new locations and an additional boss, custom cursor and made the game more responsive so it can be played on most screen sizes.
 
-<i><b>Note: the game's code is stored in a sub folder of "public" if you'd like to explore it.</b></i>
+<i><b>Note: The game's code is stored in a sub folder of "public" if you'd like to explore it.</b></i>
 
 ## Version Beta (latest)
 
