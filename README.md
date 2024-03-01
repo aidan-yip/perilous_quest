@@ -18,7 +18,7 @@ Original project idea by FreeCodeCamp - Mods and redesign by Aidan Y.
 Music 🎧 "Lovely Town" by  Skremzy (Tristan Forrest) / - "Boss Theme" by Audiophobia (Tanner Marsh) / - "Shop" and "Cave Tune" by Newave Oceans (Ade Y.).
 
 ## Art
-Background art - Tanner Marsh.
+"Dragon" - Tanner Marsh.
 
 ## Future ideas
 
