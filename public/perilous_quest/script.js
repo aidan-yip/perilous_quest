@@ -1,3 +1,13 @@
+window.addEventListener("keydown", function(e) {
+  if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+      e.preventDefault();
+  }
+}, false);
+
+//Keyboard arrow move
+
+
+
 // Variables
 
 let xp = 0;
@@ -74,19 +84,19 @@ const locations = [
   {
     name: "kill monster",
     "button text": [" --> ", "Go to town square", "Go to cave"],
-    "button functions": [null, goTown, goCave],
+    "button functions": [playselectnull, goTown, goCave],
     text: 'The boss screams "ARG!" and withers away. You gain experience points and find gold. Nice! you\'re a natural.'
   },
   {
     name: "lose",
     "button text": [" --> ", "RESPAWN?", "RESPAWN?"],
-    "button functions": [null, restart, restart],
+    "button functions": [playselectnull, restart, restart],
     text: "You died. ☠️ Respawn?"
   },
   { 
     name: "win", 
     "button text": [" --> ", "REPLAY?", "REPLAY?"], 
-    "button functions": [null, restart, restart], 
+    "button functions": [playselectnull, restart, restart], 
     text: "You defeat the dragon! YOU WIN THE GAME, WOO 🎉! Have some cheese: 🧀" 
   },
   {
@@ -190,6 +200,7 @@ function buyHealth() {
     selectfx.play();
   } else {
     text.innerText = "You do not have enough gold to buy health.";
+    playselectnull();
   }
 }
 
@@ -207,6 +218,7 @@ function buyWeapon() {
       selectfx.play();
     } else {
       text.innerText = "You do not have enough gold to buy a weapon.";
+      playselectnull();
     }
   } else {
     text.innerText = "You already have the most powerful weapon!";
@@ -226,6 +238,7 @@ function sellWeapon() {
     selectfx.play();
   } else {
     text.innerText = "Don't sell your only weapon!";
+    playselectnull();
   }
 }
 
@@ -234,7 +247,15 @@ function sellWeapon() {
 let selectfx = document.getElementById("selectfx");
 
 function playselect() {
+  selectfx.currentTime = 0;
   selectfx.play();
+}
+
+let select_null = document.getElementById("select_null")
+
+function playselectnull() {
+  select_null.currentTime = 0;
+  select_null.play();
 }
 
 // Music 
@@ -402,6 +423,8 @@ function defeatMonster() {
   goldText.innerText = gold;
   xpText.innerText = xp;
   update(locations[4]);
+  boss_theme.pause();
+  boss_theme.currentTime = 0;
 }
 
 function lose() {
@@ -418,6 +441,7 @@ function lose() {
 
 function winGame() {
   update(locations[6]);
+  // document.getElementById('credits').click(); <-- Code to link to credits page in the future
 }
 
 function restart() {
@@ -469,6 +493,7 @@ function pick(guess) {
     health -= 10;
     healthText.innerText = health;
     const myTimeout = setTimeout(goTown, 3500);
+    playselectnull();
     if (health <= 0) {
       lose();
     }
