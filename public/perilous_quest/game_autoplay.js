@@ -1,2 +1,2 @@
-let lovely_town = document.getElementById("lovely_town");
-lovely_town.play();
+let lovely = document.getElementById("lovely_town");
+lovely.play();
