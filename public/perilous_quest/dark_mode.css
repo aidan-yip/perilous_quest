@@ -1,0 +1,98 @@
+@media (prefers-color-scheme: dark) {
+
+    .background {
+        filter: brightness(90%);
+        background-image: none;
+        background: rgba(11, 0, 85, 0.595);
+        background: linear-gradient(90deg, rgb(101, 0, 124) 0%, rgb(113, 30, 0) 28%, rgb(5, 6, 69) 61%, rgb(0, 118, 120));
+    }
+
+    h1 {
+        color: rgb(135, 237, 255);
+        text-shadow: 0px 0px 25px #008296;
+    }
+
+    h3 {
+        text-shadow: 0px 0px 10px #5a01ff;
+    }
+
+    .stat {
+       text-shadow: 0px 0px 10px #008296; 
+       color: rgb(196, 246, 255);
+       /* fade in */
+       animation: fadeInAnimation ease 3s;
+       animation-iteration-count: 1;
+       animation-fill-mode: forwards;
+       transition: width, height, 1s ease-in-out 0ms;
+    }
+
+    #stats {
+        background-color: #000000;
+    }
+
+    .monstat {
+        color: #ff0000;
+    }
+
+    #game {
+        background: linear-gradient(0deg, rgba(18, 0, 54, 0.9) 0%, rgba(2, 72, 52, 0.9) 35%, rgba(21, 1, 95, 0.9) 100%);
+        color: #ffffff;
+        border-radius: 25px;
+        border: 2px solid #1fd2ff;
+    }
+    
+    button {
+        color: #08d3bf;
+        background-image: linear-gradient(#08192c, #010605);
+        border: 3px solid #08d3bf;
+        border-radius: 25px;
+        box-shadow: 0px 0px 10px #025678;
+    }
+
+    #text {
+        background: linear-gradient(180deg, rgb(4, 4, 13) 0%, rgb(22, 11, 40) 100%);
+        border-radius: 25px;
+        border: 2px solid rgba(144,72,255,1);
+        color: rgba(144,72,255,1);
+        box-shadow: 0px 0px 60px #6f00ff;
+    }
+
+    #monsterStats {
+        border: 2px solid #ff0000;
+        color: #ff0000;
+        background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(68, 4, 4) 100%);
+        border-radius: 25px;
+        box-shadow: 0px 0px 100px 30px #ff0000;
+    }
+
+    .audio_players {
+        border: 2px solid #5a01ff;
+        background: #1a0052;
+    }
+
+    @media only screen and (min-width: 800px) {
+
+        button:hover {
+            background-image: linear-gradient(#1c4d89, #185751);
+            box-shadow: 0px 0px 50px 30px #06a2ea;
+          }
+        
+          button:focus {
+            background-image: linear-gradient(#1c4d89, #185751);
+            box-shadow: 0px 0px 50px 30px #06a2ea;
+          }
+
+          .stat:hover {
+            text-shadow: 0px 0px 20px #87efff;
+          }
+          
+      }
+
+      @media only screen and (max-width: 800px) {
+
+        .monstat {
+            font-size: 13px;
+        }
+    
+    }
+}
