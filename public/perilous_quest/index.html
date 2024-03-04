@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS link --> 
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./dark_mode.css">
     <title>Perilous Quest</title>
 
     <!-- HTML style -->
     <style>
-       body {
+       .background {
         background-image: url("https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/dragon2.png");
        }
 
@@ -22,12 +23,12 @@
   </head>
   <body>
 
-    <!--Beta-->
-    <div id="bug">
-       <a href="https://github.com/aidan-yip/perilous_quest/issues" target="_blank" id="buglink">Report bugs</a>
-    </div>
-
   <div class="background">
+
+      <!--Beta-->
+       <div id="bug">
+         <a href="https://github.com/aidan-yip/perilous_quest/issues" target="_blank" id="buglink">Report bugs</a>
+      </div>
 
       <!-- Game -->
     <div id="game">
@@ -53,8 +54,8 @@
 
        <!-- Stats -->
       <div id="monsterStats">
-        <span class="stat">Boss Name: <strong><span id="monsterName"></span></strong></span>
-        <span class="stat">Health: <strong><span id="monsterHealth"></span></strong></span>
+        <span class="monstat">Boss Name: <strong><span id="monsterName"></span></strong></span>
+        <span class="monstat">Health: <strong><span id="monsterHealth"></span></strong></span>
       </div>
 
       <!-- Info Text -->
@@ -117,10 +118,10 @@
       <audio tabindex="-1" id="select_null" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/select_null.wav"></audio>
  
   </div>
-       
+
   <!-- JS links -->  
   <script src="./script.js" defer></script>
-  <script src="./game_autoplay.js"></script>
+  <script src="game_autoplay.js"></script>
 
   </body>
 </html>
