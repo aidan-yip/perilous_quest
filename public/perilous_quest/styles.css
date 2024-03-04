@@ -374,6 +374,10 @@ body {
       font-size: 13px;
     }
 
+    .monstat {
+      font-size: 13px;
+  }
+
     #stats {
       margin-left: 5px;
       margin-right: 5px;
