@@ -110,3 +110,15 @@ h1 {
         50% {font-size: 15px;}
     }
 }
+
+@media (prefers-color-scheme: dark) {
+
+  body {
+    background: linear-gradient(90deg, rgb(101, 0, 124) 0%, rgb(113, 30, 0) 28%, rgb(5, 6, 69) 61%, rgb(0, 118, 120));
+  }
+
+  div, .back {
+    background-color: rgba(0, 0, 0, 0.8);
+  } 
+  
+}
