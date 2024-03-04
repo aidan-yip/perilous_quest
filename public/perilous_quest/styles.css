@@ -33,13 +33,15 @@ body::-webkit-scrollbar {
 body {
   scrollbar-width: none !important; /* Firefox */
   -ms-overflow-style: none !important; /* IE/Edge */
+  background-color: #009ec5;
 }
 
-body {
+.background {
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    background-color: #000000;
+    background-repeat: repeat;
+    padding-bottom: 50px;
+    height: auto;
 }
 
 ::-webkit-scrollbar {
@@ -113,6 +115,7 @@ body {
   #text {
     background: linear-gradient(180deg, rgba(75,75,246,1) 0%, rgba(144,72,255,1) 100%);
     border-radius: 25px;
+    border: 2px solid rgb(0, 0, 0);
     color: #ffffff;
     padding: 30px;
     margin-left: 14px;
@@ -184,11 +187,24 @@ body {
     color: #ffffff;
     background: linear-gradient(180deg, rgba(229,30,30,1) 0%, rgba(255,85,72,1) 100%);
     border-radius: 25px;
+    border: 2px solid #000000;
     box-shadow: 0px 0px 100px 30px #ff0000;
     height: 150px;
     font-size: 30px;
     cursor: crosshair;
 }
+
+  .monstat {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 30px;
+    font-family: var(--fontdefault);
+    /* fade in */
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transition: font-size 1s ease-in-out 0ms;
+  }
   
   .stat {
     padding-left: 10px;
@@ -261,6 +277,7 @@ body {
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 50px;
     padding-top: 50px;
     padding-bottom: 50px;
     background: linear-gradient(180deg, rgb(3, 66, 255) 0%, rgb(114, 12, 255,1) 47%, rgb(106, 42, 13,1) 100%);
