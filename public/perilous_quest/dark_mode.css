@@ -2,9 +2,7 @@
 
     .background {
         filter: brightness(90%);
-        background-image: none;
-        background: rgba(11, 0, 85, 0.595);
-        background: linear-gradient(90deg, rgb(101, 0, 124) 0%, rgb(113, 30, 0) 28%, rgb(5, 6, 69) 61%, rgb(0, 118, 120));
+        background-position: left;
     }
 
     h1 {
