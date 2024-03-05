@@ -1,12 +1,10 @@
+//Keyboard arrow move
+
 window.addEventListener("keydown", function(e) {
   if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
       e.preventDefault();
   }
 }, false);
-
-//Keyboard arrow move
-
-
 
 // Variables
 
@@ -150,6 +148,9 @@ function goTown() {
   cave_tune.currentTime = 0;
   //Town
   lovely_town.play();
+  //Defeat Boss
+  defeat_boss.pause();
+  defeat_boss.currentTime = 0;
 }
 
 // Store functions
@@ -188,6 +189,9 @@ function goCave() {
   //Select fx
   selectfx.currentTime = 0;
   selectfx.play();
+  //Defeat Boss
+  defeat_boss.pause();
+  defeat_boss.currentTime = 0;
 }
 
 function buyHealth() {
@@ -258,12 +262,25 @@ function playselectnull() {
   select_null.play();
 }
 
-// Music 
+// Music
+
+//Defeat Boss theme
+let defeat_boss = document.getElementById("defeat_boss");
+
+function playdefeat() {
+  defeat_boss.currentTime = 0;
+  defeat_boss.play();
+}
+
+function pausedefeat() {
+  defeat_boss.pause();
+}
 
 //Lose theme
 let lose_wav = document.getElementById("lose");
 
 function playlose() {
+  lose_wav.currentTime = 0;
   lose_wav.play();
 }
 
@@ -425,6 +442,8 @@ function defeatMonster() {
   update(locations[4]);
   boss_theme.pause();
   boss_theme.currentTime = 0;
+  defeat_boss.currentTime = 0;
+  defeat_boss.play();
 }
 
 function lose() {
