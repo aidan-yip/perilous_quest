@@ -13,7 +13,7 @@ Note: The game's code is stored in the sub folder "perilous_quest" of "public" i
 <ul>
   <li>-Start screen</li> 
   <li>-A music jukebox</li> 
-  <li>-Sound-fx/Sound design</li> 
+  <li>-Sound-FX/Sound design</li> 
   <li>-Music autoplay</li>
   <li>-Background art</li>
   <li>-Two new locations</li>
@@ -44,14 +44,26 @@ This version includes the base game and several game music tracks. This is in Be
 Original project idea by FreeCodeCamp - Mods and redesign by Aidan Y.
 
 ## Music
-Music 🎧 "Lovely Town" by  Skremzy (Tristan Forrest) / - "Boss Theme" by Audiophobia (Tanner Marsh) / - "Shop" and "Cave Tune" by Newave Oceans (Ade Y.).
+<ul>
+<i>Music 🎧 "Lovely Town" by  Skremzy (Tristan Forrest)</i> 
+<i>"Boss Theme" by Audiophobia (Tanner Marsh)</i>
+<i>"Shop" and "Cave Tune" by Newave Oceans (Ade Y.)</i>
+</ul>
 
 ## Art
-"Dragon" - Tanner Marsh.
+<ul>
+<i>"Dragon" - Tanner Marsh.</i>
+</ul>
 
 ## Future ideas
 
-In the future there will be secret game, castle music and chasm music. Location images to be added in a future release. Older versions may remain available for download as they are released.
+<ul>
+<i>In the future there will be secret game, castle music and chasm music.</i> 
+  
+<i>Location images to be added in a future release.</i>
+
+<i>Older versions may remain available for download as they are released.</i>
+</ul>
 
 # Web app install
 
