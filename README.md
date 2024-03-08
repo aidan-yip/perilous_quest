@@ -45,24 +45,24 @@ Original project idea by FreeCodeCamp - Mods and redesign by Aidan Y.
 
 ## Music
 <ul>
-<i>Music 🎧 "Lovely Town" by  Skremzy (Tristan Forrest)</i> 
-<i>"Boss Theme" by Audiophobia (Tanner Marsh)</i>
-<i>"Shop" and "Cave Tune" by Newave Oceans (Ade Y.)</i>
+<li>Music 🎧 "Lovely Town" by  Skremzy (Tristan Forrest)</li> 
+<li>"Boss Theme" by Audiophobia (Tanner Marsh)</li>
+<li>"Shop" and "Cave Tune" by Newave Oceans (Ade Y.)</li>
 </ul>
 
 ## Art
 <ul>
-<i>"Dragon" - Tanner Marsh.</i>
+<li>"Dragon" - Tanner Marsh.</li>
 </ul>
 
 ## Future ideas
 
 <ul>
-<i>In the future there will be secret game, castle music and chasm music.</i> 
+<li>In the future there will be secret game, castle music and chasm music.</li> 
   
-<i>Location images to be added in a future release.</i>
+<li>Location images to be added in a future release.</li>
 
-<i>Older versions may remain available for download as they are released.</i>
+<li>Older versions may remain available for download as they are released.</li>
 </ul>
 
 # Web app install
