@@ -4,11 +4,15 @@
 
 ## This is a project idea originally from FreeCodeCamp. 
 ## Mods, Flat UI redesign, Dark Mode and Expanded functionality are by me.
+
+<i><b>
+Note: The game's code is stored in the sub folder "perilous_quest" of "public" if you'd like to explore it. The Start/Titlescreen's code is stored in the root folder. The Dark Mode stylesheet is stored alongside the game code.
+</b></i>
   
 # Expanded functionality includes: 
 <ul>
   <li>-Start screen</li> 
-  <li>-A music jukebox<li> 
+  <li>-A music jukebox</li> 
   <li>-Sound-fx/sound design</li> 
   <li>-Music autoplay</li>
   <li>-Background art</li>
@@ -29,10 +33,6 @@
   <li>-Stats have an underline on hover</li>
   <li>-Text expands on hover</li>
 </ul>
-
-<i><b>
-Note: The game's code is stored in the sub folder "perilous_quest" of "public" if you'd like to explore it. The Start/Titlescreen's code is stored in the root folder. The Dark Mode stylesheet is stored alongside the game code.
-</b></i>
 
 ## Version Beta (latest)
 
