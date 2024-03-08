@@ -13,7 +13,7 @@ Note: The game's code is stored in the sub folder "perilous_quest" of "public" i
 <ul>
   <li>-Start screen</li> 
   <li>-A music jukebox</li> 
-  <li>-Sound-fx/sound design</li> 
+  <li>-Sound-fx/Sound design</li> 
   <li>-Music autoplay</li>
   <li>-Background art</li>
   <li>-Two new locations</li>
