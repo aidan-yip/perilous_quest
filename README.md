@@ -19,6 +19,7 @@ Note: The game's code is stored in the sub folder "perilous_quest" of "public" i
   <li>-Two new locations</li>
   <li>-Two new weapons</li>
   <li>-Seven additional enemeies</li>
+  <li>-The Dragon is harder to beat</li>
   <li>-Custom cursors on hover</li>
   <li>-Responsive Design so it can be played on most screen sizes</li>
   <li>-XP spend function to dodge</li>
