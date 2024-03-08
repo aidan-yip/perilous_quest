@@ -566,7 +566,7 @@ function dodge() {
   if(xp > 0) {
     xplose();
   } else {
-    text.innerText = "You've lost all your xp!"
+    text.innerText = "You dodge the attack from the " + monsters[fighting].name + "." + " You've lost all your xp!";
   }
 }
 
