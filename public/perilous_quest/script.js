@@ -14,11 +14,13 @@ let gold = 100;
 let currentWeapon = 0;
 let fighting;
 let monsterHealth;
+let monsterLevel;
 let inventory = ["stick"];
 
 const button1 = document.querySelector('#button1');
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
+const button4 = document.querySelector("#button4");
 const text = document.querySelector("#text");
 const xpText = document.querySelector("#xpText");
 const healthText = document.querySelector("#healthText");
@@ -26,110 +28,146 @@ const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
+const monsterLevelText = document.querySelector("#monsterLevel");
 const weapons = [
-  { name: 'stick', power: 5 },
-  { name: 'dagger', power: 30 },
-  { name: 'claw hammer', power: 50 },
-  { name: 'sword', power: 100 }
+  { name: 'Stick', power: 5 },
+  { name: 'Dagger', power: 30 },
+  { name: 'Claw Hammer', power: 50 },
+  { name: 'Viking Hammer', power: 75 },
+  { name: 'Sword', power: 100 },
+  { name: 'Wizard Staff', power: 200}
 ];
 const monsters = [
   {
-    name: "slime",
-    level: 2,
+    name: "Slime",
+    level: 3,
     health: 80
   },
   {
-    name: "fanged beast",
-    level: 9,
-    health: 160
+    name: "Fanged Beast",
+    level: 7,
+    health: 280
   },
   {
-    name: "dragon",
-    level: 10,
-    health: 500
+    name: "Dragon",
+    level: 12,
+    health: 700
   },
   {
     name: "Knight",
+    level: 6,
+    health: 220
+  },
+  {
+    name: "Corrupted Wizard",
+    level: 9,
+    health: 370
+  },
+  {
+    name: "Giant Spider",
     level: 8,
-    health: 250
+    health: 300
+  },
+  {
+    name: "Ghost",
+    level: 5,
+    health: 300
+  },
+  {
+    name: "Anglerfish",
+    level: 8,
+    health: 400
+  },
+  {
+    name: "Cave Troll",
+    level: 9,
+    health: 300
+  },
+  {
+    name: "Werewolf",
+    level: 8,
+    health: 500
   }
 ]
 const locations = [
   {
     name: "town square",
-    "button text": ["Visit shop", "Walk to cave", "Enter castle"],
-    "button functions": [goStore, goCave, goCastle],
+    "button text": ["Visit shop", "Walk to cave", "Fight Corrupt Wizard", "Enter castle"],
+    "button functions": [goStore, goCave, fightWizard, goCastle],
     text: "You are in the town square. You see a sign that says \"Shop\". Select where you want to go."
   },
   {
     name: "store",
-    "button text": ["Buy 10 health ♥️ (10 gold)", "Buy weapon 🗡️ (30 gold)", "Your broke. Leave shop"],
-    "button functions": [buyHealth, buyWeapon, goTown],
+    "button text": ["Buy 10 health ♥️ (10 gold)", "Buy weapon 🗡️ (30 gold)", "Sell weapon for 15 gold ⚜️", "Your broke. Leave shop"],
+    "button functions": [buyHealth, buyWeapon, sellWeapon, goTown],
     text: 'You enter the store. "Hello!" -Tanner the shop owner'
   },
   {
     name: "cave",
-    "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
-    "button functions": [fightSlime, fightBeast, goTown],
+    "button text": ["Fight Slime", "Fight Fanged beast", "Fight Spider", "Go to town square"],
+    "button functions": [fightSlime, fightBeast, fightSpider, goTown],
     text: "You enter the cave. You see some monsters... or is that your friend Nait?"
   },
   {
     name: "fight",
-    "button text": ["Attack", "Dodge", "Run like a coward"],
-    "button functions": [attack, dodge, goTown],
-    text: "You are fighting a boss. LET'S GO!"
+    "button text": ["Attack 🗡️", "Dodge 🛡️", "Surrender 🏳️", "Run like a coward ⮐"],
+    "button functions": [attack, dodge, surrender, goTown],
+    text: "You are fighting an enemy ⚔️. LET'S GO!"
   },
   {
     name: "kill monster",
-    "button text": [" --> ", "Go to town square", "Go to cave"],
-    "button functions": [playselectnull, goTown, goCave],
+    "button text": [" --> ", "Go to town square", "Go to cave", "Enter castle"],
+    "button functions": [playselectnull, goTown, goCave, easterEgg],
     text: 'The boss screams "ARG!" and withers away. You gain experience points and find gold. Nice! you\'re a natural.'
   },
   {
     name: "lose",
-    "button text": [" --> ", "RESPAWN?", "RESPAWN?"],
-    "button functions": [playselectnull, restart, restart],
+    "button text": [" --> ", "RESPAWN?", "RESPAWN?", "RESPAWN?"],
+    "button functions": [playselectnull, restart, restart, restart],
     text: "You died. ☠️ Respawn?"
   },
   { 
     name: "win", 
-    "button text": [" --> ", "REPLAY?", "REPLAY?"], 
-    "button functions": [playselectnull, restart, restart], 
+    "button text": [" --> ", "REPLAY?", "REPLAY?", "REPLAY?"], 
+    "button functions": [playselectnull, restart, restart, restart], 
     text: "You defeat the dragon! YOU WIN THE GAME, WOO 🎉! Have some cheese: 🧀" 
   },
   {
     name: "easter egg",
-    "button text": ["2", "8", "Go to town square?"],
-    "button functions": [pickTwo, pickEight, goTown],
+    "button text": ["2", "8", "6", "Go to town square?"],
+    "button functions": [pickTwo, pickEight, picksix, goTown],
     text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win gold ⚜️!"
   },
   {
     name: "castle",
-    "button text": ["Go left", "Go right", "Go back"],
-    "button functions": [goChasm, fightKnight, goTown],
-    text: "You enter a castle. There's a sign that says \"Danger\" to the left and the sound of iron clanging from the room to the right. Do you dare to continue?"
+    "button text": ["Go left", "Go forward", "Go right", "Go back"],
+    "button functions": [goChasm, fightghost, fightKnight, goTown],
+    text: "You enter a castle. There's a sign that says \"Danger\" to the left and the sound of iron clanging from the room to the right. Ahead you sense something cold and dark. Do you dare to continue?"
   },
   {
     name: "chasm",
-    "button text": ["Jump across", "Fall into the chasm", "Go back"],
-    "button functions": [lose, easterEgg, fightDragon],
-    text: "There is a massive chasm ahead. You believe you may be able to jump across. You also hear the sound of wood burning behind you!"
+    "button text": ["Jump across", "Wait for a bit", "Fall into the chasm", "Go back"],
+    "button functions": [fightTroll, fightWerewolf, fightAnglerfish, fightDragon],
+    text: "There is a massive chasm ahead. You believe you may be able to jump across. Looking down you faintly see some water. Suddenly you hear the sound of wood burning behind you!"
   }
 ];
 
 // initialize buttons
 button1.onclick = goStore;
 button2.onclick = goCave;
-button3.onclick = goCastle;
+button3.onclick = fightWizard;
+button4.onclick = goCastle;
 
 function update(location) {
   monsterStats.style.display = "none";
   button1.innerText = location["button text"][0];
   button2.innerText = location["button text"][1];
   button3.innerText = location["button text"][2];
+  button4.innerText = location["button text"][3];
   button1.onclick = location["button functions"][0];
   button2.onclick = location["button functions"][1];
   button3.onclick = location["button functions"][2];
+  button4.onclick = location["button functions"][3];
   text.innerText = location.text;
   selectfx.currentTime = 0;
   selectfx.play();
@@ -203,7 +241,7 @@ function buyHealth() {
     selectfx.currentTime = 0;
     selectfx.play();
   } else {
-    text.innerText = "You do not have enough gold to buy health.";
+    text.innerText = "You do not have enough gold ⚜️ to buy health ♥️.";
     playselectnull();
   }
 }
@@ -221,13 +259,12 @@ function buyWeapon() {
       selectfx.currentTime = 0;
       selectfx.play();
     } else {
-      text.innerText = "You do not have enough gold to buy a weapon.";
+      text.innerText = "You do not have enough gold ⚜️ to buy a weapon 🗡️.";
       playselectnull();
     }
   } else {
-    text.innerText = "You already have the most powerful weapon!";
-    button2.innerText = "Sell weapon for 15 gold";
-    button2.onclick = sellWeapon;
+    text.innerText = "You already have the most powerful weapon 🗡️!";
+    button2.onclick = listInventory();
   }
 }
 
@@ -241,9 +278,16 @@ function sellWeapon() {
     selectfx.currentTime = 0;
     selectfx.play();
   } else {
-    text.innerText = "Don't sell your only weapon!";
+    text.innerText = "Don't sell your only weapon 🗡️!";
     playselectnull();
   }
+}
+
+function listInventory() {
+      text.innerText += " In your inventory you have: " + inventory;
+      selectfx.currentTime = 0;
+      selectfx.play();
+
 }
 
 //Sound FX
@@ -388,13 +432,95 @@ function fightKnight() {
   boss_theme.play();
 }
 
+function fightWizard() {
+  fighting = 4;
+  goFight();
+  //Town
+  lovely_town.pause();
+  lovely_town.currentTime = 0;
+  //Cave
+  cave_tune.pause();
+  cave_tune.currentTime = 0;
+  //Boss
+  boss_theme.play();
+}
+
+function fightSpider() {
+  fighting = 5;
+  goFight();
+  //Town
+  lovely_town.pause();
+  lovely_town.currentTime = 0;
+  //Cave
+  cave_tune.pause();
+  cave_tune.currentTime = 0;
+  //Boss
+  boss_theme.play();
+}
+
+function fightghost() {
+  fighting = 6;
+  goFight();
+  //Town
+  lovely_town.pause();
+  lovely_town.currentTime = 0;
+  //Cave
+  cave_tune.pause();
+  cave_tune.currentTime = 0;
+  //Boss
+  boss_theme.play();
+}
+
+function fightAnglerfish() {
+  fighting = 7;
+  goFight();
+  //Town
+  lovely_town.pause();
+  lovely_town.currentTime = 0;
+  //Cave
+  cave_tune.pause();
+  cave_tune.currentTime = 0;
+  //Boss
+  boss_theme.play();
+}
+
+function fightTroll() {
+  fighting = 8;
+  goFight();
+  //Town
+  lovely_town.pause();
+  lovely_town.currentTime = 0;
+  //Cave
+  cave_tune.pause();
+  cave_tune.currentTime = 0;
+  //Boss
+  boss_theme.play();
+}
+
+function fightWerewolf() {
+  fighting = 9;
+  goFight();
+  //Town
+  lovely_town.pause();
+  lovely_town.currentTime = 0;
+  //Cave
+  cave_tune.pause();
+  cave_tune.currentTime = 0;
+  //Boss
+  boss_theme.play();
+}
+
+// document.getElementById("myDIV").style.display = "none";  SAMPLE CODE TO REMOVE BUTTON OPTION
+
 // Fight function
 function goFight() {
   update(locations[3]);
   monsterHealth = monsters[fighting].health;
+  monsterLevel = monsters[fighting].level
   monsterStats.style.display = "block";
   monsterName.innerText = monsters[fighting].name;
   monsterHealthText.innerText = monsterHealth;
+  monsterLevelText.innerText = monsterLevel;
 }
 
 // Attack function
@@ -430,9 +556,23 @@ function isMonsterHit() {
   return Math.random() > .2 || health < 20;
 }
 
+function xplose() {
+  xp -= 2;
+  xpText.innerText = xp;
+}
+
 function dodge() {
   text.innerText = "You dodge the attack from the " + monsters[fighting].name;
+  if(xp > 0) {
+    xplose();
+  } else {
+    text.innerText = "You've lost all your xp!"
+  }
 }
+
+ function surrender() {
+  lose();
+ }
 
 function defeatMonster() {
   gold += Math.floor(monsters[fighting].level * 6.7);
@@ -488,6 +628,10 @@ function pickTwo() {
   pick(2);
 }
 
+function picksix() {
+  pick(6);
+}
+
 function pickEight() {
   pick(8);
 }
@@ -503,12 +647,12 @@ function pick(guess) {
     text.innerText += numbers[i] + "\n";
   }
   if (numbers.includes(guess)) {
-    text.innerText += "Right! You win 20 gold!";
+    text.innerText += "Right! You win 20 gold ⚜️!";
     gold += 20;
     goldText.innerText = gold;
     const myTimeout = setTimeout(goTown, 3500);
   } else {
-    text.innerText += "Wrong! You lose 10 health!";
+    text.innerText += "Wrong! You lose 10 health 💔!";
     health -= 10;
     healthText.innerText = health;
     const myTimeout = setTimeout(goTown, 3500);
