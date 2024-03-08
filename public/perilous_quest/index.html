@@ -5,11 +5,11 @@
     <meta name="theme-color" content="#03c7f8">
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
     <!-- CSS link --> 
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./dark_mode.css">
     <title>Perilous Quest</title>
-
     <!-- HTML style -->
     <style>
        .background {
@@ -21,6 +21,7 @@
        }
     </style>
   </head>
+
   <body>
 
   <div class="background">
@@ -49,14 +50,17 @@
       <div id="controls">
         <button id="button1" class="move" tabindex="1">Visit shop</button>
         <button id="button2" class="move" tabindex="2">Walk to cave</button>
-        <button id="button3" class="move" tabindex="3">Enter castle</button>
+        <button id="button3" class="move" tabindex="3">Fight Wizard</button>
+        <button id="button4" class="move" tabindex="4">Enter castle</button>
       </div>
 
        <!-- Stats -->
       <div id="monsterStats">
-        <span class="monstat">Boss Name: <strong><span id="monsterName"></span></strong></span>
+        <span class="monstat">Enemy Name: <strong><span id="monsterName"></span></strong></span>
         <span class="monstat">Health: <strong><span id="monsterHealth"></span></strong></span>
+        <span class="monstat">Level: <strong><span id="monsterLevel"></span></strong></span>
       </div>
+      
 
       <!-- Info Text -->
       <div id="text">
@@ -73,7 +77,7 @@
       <div id="gamelogo">
       </div>
 
-      <ul>Newave Games Presents
+      <ul>👾 Newave Presents 👾
         <li>Perilous Quest</li>
         <br>
         <li>Original project idea by FreeCodeCamp</li>
@@ -84,46 +88,45 @@
         <h6></h6>
       </ul>
       
-      <ul>Music 🎧
-        <li>"Lovely Town" by <a href="https://soundcloud.com/skremzy" id="artlink">Skremzy</a></li>
-        <li>"Boss Theme" by <a href="https://soundcloud.com/audiophobiamusic" id="artlink">Audiophobia</a></li>
-        <li>"Shop" and "Cave Tune" by <a href="https://soundcloud.com/newaveoceans" id="artlink">Newave Oceans</a></li>
+      <ul>🎧 Music 🎧
+        <li>"Lovely Town" by <a href="https://soundcloud.com/skremzy" target="_blank" id="artlink">Skremzy</a></li>
+        <li>"Boss Theme" by <a href="https://soundcloud.com/audiophobiamusic" target="_blank" id="artlink">Audiophobia</a></li>
+        <li>"Shop" and "Cave Tune" by <a href="https://soundcloud.com/newaveoceans" target="_blank" id="artlink">Newave Oceans</a></li>
       </ul>
 
-      <ul>Art 🎨
+      <ul>🎨 Art 🎨
         <li>Marsh, Tanner. "Dragon" 2024</li>
       </ul>
 
 
     <!-- Audio -->
-    <h2>Jukebox</h2>
+    <h2>🎶 Jukebox 🎶</h2>
     <div class="audio_players">
 
       <h3>Lovely Town</h3>
-      <audio loop controls tabindex="-1" id="lovely_town" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/lovely_town.wav" id="Lovely Town.wav" preload="auto"></audio>
+      <audio loop controls tabindex="-1" class="audio" id="lovely_town" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/lovely_town.wav" id="Lovely Town.wav" preload="auto"></audio>
 
       <h3>Boss Theme</h3>
-      <audio loop controls tabindex="-1" id="boss_theme" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/boss_theme.wav"></audio>
+      <audio loop controls tabindex="-1" class="audio" id="boss_theme" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/boss_theme.wav"></audio>
 
       <h3>Shop</h3>
-      <audio loop controls tabindex="-1" id="shop" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/shop.wav"></audio>
+      <audio loop controls tabindex="-1" class="audio" id="shop" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/shop.wav"></audio>
 
       <h3>Cave Tune</h3>
-      <audio loop controls tabindex="-1" id="cave_tune" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/cave_tune.wav"></audio>
+      <audio loop controls tabindex="-1" class="audio" id="cave_tune" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/cave_tune.wav"></audio>
 
-      <audio tabindex="-1" id="lose" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/lose.wav"></audio>
+      <audio tabindex="-1" class="audio" id="lose" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/lose.wav"></audio>
 
-      <audio tabindex="-1" id="selectfx" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/selectfx.wav"></audio>
+      <audio tabindex="-1" class="audio" id="selectfx" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/selectfx.wav"></audio>
 
-      <audio tabindex="-1" id="select_null" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/select_null.wav"></audio>
+      <audio tabindex="-1" class="audio" id="select_null" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/select_null.wav"></audio>
 
-      <audio tabindex="-1" id="defeat_boss" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/defeat_boss.wav"></audio>
+      <audio tabindex="-1" class="audio" id="defeat_boss" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/defeat_boss.wav"></audio>
  
   </div>
 
   <!-- JS links -->  
-  <script src="./script.js" defer></script>
-  <script src="game_autoplay.js"></script>
+  <script src="./script.js" defer></script>  <script src="game_autoplay.js"></script>
 
   </body>
 </html>
