@@ -2,7 +2,33 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f312c3e8-98b6-4e22-ac50-3296bf34db80/deploy-status)](https://app.netlify.com/sites/perilous-quest/deploys)
 
-This is a project idea originally from FreeCodeCamp. Mods, flat UI redesign and Dark Mode are by me. I've also expanded some of the functionality to include a start screen, a music soundtrack  player, sound-fx/sound design, autoplay, background art, added two new locations and an additional boss, custom cursor and made the game more responsive so it can be played on most screen sizes.
+## This is a project idea originally from FreeCodeCamp. 
+## Mods, Flat UI redesign, Dark Mode and Expanded functionality are by me.
+  
+# Expanded functionality includes: 
+<ul>
+  <li>-Start screen</li> 
+  <li>-A music jukebox<li> 
+  <li>-Sound-fx/sound design</li> 
+  <li>-Music autoplay</li>
+  <li>-Background art</li>
+  <li>-Two new locations</li>
+  <li>-Two new weapons</li>
+  <li>-Seven additional enemeies</li>
+  <li>-Custom cursors on hover</li>
+  <li>-Responsive Design so it can be played on most screen sizes</li>
+  <li>-XP spend function to dodge</li>
+  <li>-View enemy level on battle stat display</li>
+  <li>-Relocating the Easter egg</li>
+  <li>-A fourth button option</li>
+  <li>-A new number you can guess in the Easter egg</li>
+  <li>-The sell weapon function is now self explanatory to the player</li>
+  <li>-Light/Dark Mode responds to the system theme</li>
+  <li>-New 3D redesign and text depth</li>
+  <li>-Added emoji’s for visual cues</li>
+  <li>-Stats have an underline on hover</li>
+  <li>-Text expands on hover</li>
+</ul>
 
 <i><b>
 Note: The game's code is stored in the sub folder "perilous_quest" of "public" if you'd like to explore it. The Start/Titlescreen's code is stored in the root folder. The Dark Mode stylesheet is stored alongside the game code.
