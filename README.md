@@ -34,6 +34,7 @@ Note: The game's code is stored in the sub folder "perilous_quest" of "public" i
   <li>Added emoji’s for visual cues</li>
   <li>Stats have an underline on hover</li>
   <li>Text expands on hover</li>
+  <li>Progressive Web Application support</li>
 </ul>
 
 ## Version Beta (latest)
