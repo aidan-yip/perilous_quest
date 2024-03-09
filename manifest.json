@@ -3,7 +3,9 @@
     "short_name": "Perilous Quest",
     "start_url": "https://perilous-quest.netlify.app",
     "display": "standalone",
+    "x-robots-tag": "index",
     "background_color": "#03c7f8",
+    "theme_color": "#03c7f8",
     "description": "A text-based 8-Bit RPG game. Journey, Fight, Discover a new world!",
     "shortcuts": [
       {
@@ -42,6 +44,11 @@
         {
           "src": "./public/icons/homescreen192.png",
           "sizes": "192x192",
+          "type": "image/png"
+        },
+        {
+          "src": "./public/icons/homescreen512.png",
+          "sizes": "512x512",
           "type": "image/png"
         }
       ]
