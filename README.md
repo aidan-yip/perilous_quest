@@ -4,6 +4,7 @@
 
 ## This is a project idea originally from FreeCodeCamp. 
 ## Mods, Flat UI redesign, Dark Mode and Expanded functionality are by me.
+## Perilous Quest supports being installed as Progressive Web Application through most browsers.
 
 <i><b>
 Note: The game's code is stored in the sub folder "perilous_quest" of "public" if you'd like to explore it. The Start/Titlescreen's code is stored in the root folder. The Dark Mode stylesheet is stored alongside the game code.
