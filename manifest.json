@@ -4,7 +4,7 @@
     "start_url": "https://perilous-quest.netlify.app",
     "display": "standalone",
     "background_color": "#03c7f8",
-    "description": "An 8-Bit RPG game.",
+    "description": "A text-based 8-Bit RPG game. Journey, Fight, Discover a new world!",
     "shortcuts": [
       {
         "name": "Skip Start",
@@ -36,7 +36,8 @@
         {
           "src": "./public/icons/homescreen168.png",
           "sizes": "168x168",
-          "type": "image/png"
+          "type": "image/png",
+          "purpose": "maskable"
         },
         {
           "src": "./public/icons/homescreen192.png",
