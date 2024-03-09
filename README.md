@@ -11,28 +11,28 @@ Note: The game's code is stored in the sub folder "perilous_quest" of "public" i
   
 # Expanded functionality includes: 
 <ul>
-  <li>-Start screen</li> 
-  <li>-A music jukebox</li> 
-  <li>-Sound-FX/Sound design</li> 
-  <li>-Music autoplay</li>
-  <li>-Background art</li>
-  <li>-Two new locations</li>
-  <li>-Two new weapons</li>
-  <li>-Seven additional enemeies</li>
-  <li>-The Dragon is harder to beat</li>
-  <li>-Custom cursors on hover</li>
-  <li>-Responsive Design so it can be played on most screen sizes</li>
-  <li>-XP spend function to dodge</li>
-  <li>-View enemy level on battle stat display</li>
-  <li>-Relocating the Easter egg</li>
-  <li>-A fourth button option</li>
-  <li>-A new number you can guess in the Easter egg</li>
-  <li>-The sell weapon function is now self explanatory to the player</li>
-  <li>-Light/Dark Mode responds to the system theme</li>
-  <li>-New 3D redesign and text depth</li>
-  <li>-Added emoji’s for visual cues</li>
-  <li>-Stats have an underline on hover</li>
-  <li>-Text expands on hover</li>
+  <li>Start screen</li> 
+  <li>A music jukebox</li> 
+  <li>Sound-FX/Sound design</li> 
+  <li>Music autoplay</li>
+  <li>Background art</li>
+  <li>Two new locations</li>
+  <li>Two new weapons</li>
+  <li>Seven additional enemeies</li>
+  <li>The Dragon is harder to beat</li>
+  <li>Custom cursors on hover</li>
+  <li>Responsive Design so it can be played on most screen sizes</li>
+  <li>XP spend function to dodge</li>
+  <li>View enemy level on battle stat display</li>
+  <li>Relocating the Easter egg</li>
+  <li>A fourth button option</li>
+  <li>A new number you can guess in the Easter egg</li>
+  <li>The sell weapon function is now self explanatory to the player</li>
+  <li>Light/Dark Mode responds to the system theme</li>
+  <li>New 3D redesign and text depth</li>
+  <li>Added emoji’s for visual cues</li>
+  <li>Stats have an underline on hover</li>
+  <li>Text expands on hover</li>
 </ul>
 
 ## Version Beta (latest)
