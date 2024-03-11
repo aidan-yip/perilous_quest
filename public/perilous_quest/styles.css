@@ -31,8 +31,6 @@ body::-webkit-scrollbar {
 }
 
 body {
-  scrollbar-width: none !important; /* Firefox */
-  -ms-overflow-style: none !important; /* IE/Edge */
   background-color: #009ec5;
 }
 
@@ -43,12 +41,6 @@ body {
     padding-bottom: 50px;
     height: auto;
 }
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-/*  */
 
   h1 {
     text-align: center;
