@@ -132,5 +132,14 @@ h1 {
   div, .back {
     background-color: rgba(0, 0, 0, 0.8);
   } 
+
+  body {
+    background: rgb(0, 0, 0);
+    overflow: hidden; /* Hide scrollbars */
+  }
+
+  button {
+    background: rgb(0, 0, 0);
+  }
   
 }
