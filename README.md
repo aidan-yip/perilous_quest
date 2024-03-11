@@ -3,7 +3,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f312c3e8-98b6-4e22-ac50-3296bf34db80/deploy-status)](https://app.netlify.com/sites/perilous-quest/deploys)
 
 ## Perilous Quest supports being installed as a Progressive Web Application through most desktop/mobile browsers.
-## Mods, Flat UI redesign, Dark Mode and Expanded functionality are by me.
 
 <i><b>
 Note: The game's main code is stored in the sub folder "perilous_quest" of "public" if you'd like to explore it. The Start/Titlescreen's code is stored in the root folder. The Dark Mode stylesheet is stored alongside the game code.
@@ -45,7 +44,10 @@ This version includes the base game and several game music tracks. This is in Be
 
 # Credits
 
-Original project idea by FreeCodeCamp - Mods and redesign by Aidan Y.
+<ul>
+<li>Original project idea by FreeCodeCamp</li>
+<li>Game mods, Flat UI redesign, Dark Mode, Notifications and Expanded functionality are by Aidan Y.</li>
+</ul>
 
 ## Music
 <ul>
