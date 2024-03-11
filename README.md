@@ -81,7 +81,7 @@ https://support.microsoft.com/en-us/topic/install-manage-or-uninstall-apps-in-mi
 
 ## ChromeOS web app and shortcut install (requires ChromeOS and/or the Chrome browser for MacOS/Windows/Linux)
 
-https://support.google.com/chrome_webstore/answer/3060053?hl=en
+https://support.google.com/chromebook/answer/9658361?hl=en&co=GENIE.Platform%3DDesktop#:~:text=On%20your%20computer%2C%20open%20Chrome,instructions%20to%20install%20the%20PWA.
 
 ## Firefox web app install (N/A)
 
