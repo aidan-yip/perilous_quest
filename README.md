@@ -9,6 +9,8 @@
 <i><b>
 Note: The game's code is stored in the sub folder "perilous_quest" of "public" if you'd like to explore it. The Start/Titlescreen's code is stored in the root folder. The Dark Mode stylesheet is stored alongside the game code.
 </b></i>
+
+![Perilous Quest poster](https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/pq_poster?raw=true)
   
 # Expanded functionality includes: 
 <ul>
