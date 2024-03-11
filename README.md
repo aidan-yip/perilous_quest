@@ -2,13 +2,16 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f312c3e8-98b6-4e22-ac50-3296bf34db80/deploy-status)](https://app.netlify.com/sites/perilous-quest/deploys)
 
-## This is a project idea originally from FreeCodeCamp. 
-## Mods, Flat UI redesign, Dark Mode and Expanded functionality are by me.
 ## Perilous Quest supports being installed as a Progressive Web Application through most desktop/mobile browsers.
+## Mods, Flat UI redesign, Dark Mode and Expanded functionality are by me.
 
 <i><b>
-Note: The game's code is stored in the sub folder "perilous_quest" of "public" if you'd like to explore it. The Start/Titlescreen's code is stored in the root folder. The Dark Mode stylesheet is stored alongside the game code.
+Note: The game's main code is stored in the sub folder "perilous_quest" of "public" if you'd like to explore it. The Start/Titlescreen's code is stored in the root folder. The Dark Mode stylesheet is stored alongside the game code.
 </b></i>
+
+## Version Beta (latest)
+
+This version includes the base game and several game music tracks. This is in Beta development currently so any feedback is appreciated and can be left at "Issues". Gameplay is fully functional and working. The game's style is subject to change in future versions.
 
 <img src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/pq_poster.jpg?raw=true" alt="Perilous Quest poster" width="300"/>
   
@@ -37,11 +40,8 @@ Note: The game's code is stored in the sub folder "perilous_quest" of "public" i
   <li>Stats have an underline on hover</li>
   <li>Text expands on hover</li>
   <li>Progressive Web Application support</li>
+  <li>System Notifications</li>
 </ul>
-
-## Version Beta (latest)
-
-This version includes the base game and several game music tracks. This is in Beta development currently so any feedback is appreciated and can be left at "Issues". Gameplay is fully functional and working. The game's style is subject to change in future versions.
 
 # Credits
 
