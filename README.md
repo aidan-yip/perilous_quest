@@ -17,7 +17,7 @@ This version includes the base game and several game music tracks. This is in Be
 # Expanded functionality includes: 
 <ul>
   <li>Start screen</li> 
-  <li>A music jukebox</li> 
+  <li>Music jukebox</li> 
   <li>Sound-FX/Sound design</li> 
   <li>Music autoplay</li>
   <li>Background art</li>
