@@ -13,6 +13,8 @@ window.onload = function(){
   })
   }
 
+//Button selector link to Notifications
+
 const button = document.querySelector ("button")
 
 button.addEventListener("click", () => {
@@ -28,6 +30,8 @@ button.addEventListener("click", () => {
     })
 })
 
+//Music Alert trigger when window not focused
+
 let notification
 
 document.addEventListener ("visibilitychange", () => {
@@ -41,4 +45,4 @@ document.addEventListener ("visibilitychange", () => {
         notification.close()
     }
 
-})
+})  
