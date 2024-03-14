@@ -39,7 +39,7 @@ body {
 
 h1 {
     text-align: center;
-    padding-top: 27vh;
+    padding-top: 30vh;
     padding-left: 5%;
     padding-right: 5%;
     margin-top: auto;
@@ -150,11 +150,11 @@ h1 {
     }
 
     button {
-        font-size: 7px;
+        font-size: 12px;
     }
 
     .version {
-       font-size: 10px;
+       font-size: 12px;
     }
 
     .hint {
@@ -163,7 +163,7 @@ h1 {
   
 
     @keyframes mymove {
-        50% {font-size: 12px;}
+        50% {font-size: 18px;}
     }
 }
 
