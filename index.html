@@ -10,6 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet preload" href="./start.css" as="style">
     <link rel="manifest" href="./manifest.json">
+    <!-- CSS preconnect font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>Perilous Quest</title>
 </head>
 <body>
@@ -28,6 +31,12 @@
    <div>
    <audio loop tabindex="-1" id="titletrack" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/intermission.wav" preload="auto"></audio>
 </div>
+
+   <script>
+      if ('serviceWorker' in navigator) {
+         navigator.serviceWorker.register("/service_worker.js");
+      }
+   </script>
 
    <script src="./app_start.js" defer></script>
    <script src="./music_start.js"></script>
