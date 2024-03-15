@@ -115,7 +115,7 @@ const locations = [
   },
   {
     name: "store",
-    "button text": ["Buy 10 health ♥️ (10 gold)", "Buy weapon 🗡️ (30 gold)", "Sell weapon for 15 gold ⚜️", "Your broke. Leave shop"],
+    "button text": ["Buy 10 health ❤️ (10 gold)", "Buy weapon 🗡️ (30 gold)", "Sell weapon for 15 gold ⚜️", "Your broke. Leave shop"],
     "button functions": [buyHealth, buyWeapon, sellWeapon, goTown],
     text: 'You enter the store. "Hello!" -Tanner the shop owner'
   },
@@ -258,7 +258,7 @@ function buyHealth() {
     selectfx.currentTime = 0;
     selectfx.play();
   } else {
-    text.innerText = "You do not have enough gold ⚜️ to buy health ♥️.";
+    text.innerText = "You do not have enough gold ⚜️ to buy health ❤️.";
     playselectnull();
   }
 }
