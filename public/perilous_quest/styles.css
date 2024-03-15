@@ -111,7 +111,7 @@ body {
     color: #9bebff;
   }
 
-  #bug {
+  #navbar {
     display: flex;
     flex-direction: row;
     padding-top: 30px;
@@ -475,8 +475,8 @@ h3 {
       padding: 13px;
     }
 
-    #bug {
-      padding-top: 10px;
+    #navbar {
+      padding-top: 40px;
       padding-left: 10px;
   }
 
