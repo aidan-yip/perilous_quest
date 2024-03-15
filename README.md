@@ -16,8 +16,13 @@ This version includes the base game and several game music tracks. This is in Be
   
 # Expanded functionality includes: 
 <ul>
-  <li>Start screen</li>
   <li>Splash screen for mobile devices</li> 
+   <li>Responsive Design so it can be played on most screen sizes</li>
+  <li>Progressive Web Application support</li>
+  <li>System Notifications</li>
+  <li>Light/Dark Mode responds to the system theme</li>
+  <li>New 3D redesign and text depth</li>
+   <li>Start screen</li>
   <li>Music jukebox</li> 
   <li>Sound-FX/Sound design</li> 
   <li>Music autoplay</li>
@@ -27,20 +32,15 @@ This version includes the base game and several game music tracks. This is in Be
   <li>Seven additional enemeies</li>
   <li>The Dragon is harder to beat</li>
   <li>Custom cursors on hover</li>
-  <li>Responsive Design so it can be played on most screen sizes</li>
   <li>XP spend function to dodge</li>
   <li>View enemy level on battle stat display</li>
   <li>Relocating the Easter egg</li>
   <li>A fourth button option</li>
   <li>A new number you can guess in the Easter egg</li>
   <li>The sell weapon function is now self explanatory to the player</li>
-  <li>Light/Dark Mode responds to the system theme</li>
-  <li>New 3D redesign and text depth</li>
   <li>Added emoji’s for visual cues</li>
   <li>Stats have an underline on hover</li>
   <li>Text expands on hover</li>
-  <li>Progressive Web Application support</li>
-  <li>System Notifications</li>
 </ul>
 
 # Credits
