@@ -17,6 +17,13 @@ html, body {
   /* just change the cursor.ico path to your location */
 }
 
+@supports(padding:max(0px)) {
+  body, header, footer {
+      padding-left: min(0vmin, env(safe-area-inset-left));
+      padding-right: min(0vmin, env(safe-area-inset-right));
+  }
+}
+
 @keyframes fadeInAnimation {
   0% {
       opacity: 0;
@@ -111,7 +118,7 @@ body {
     color: #9bebff;
   }
 
-  #bug {
+  #navbar {
     display: flex;
     flex-direction: row;
     padding-top: 30px;
@@ -475,8 +482,8 @@ h3 {
       padding: 13px;
     }
 
-    #bug {
-      padding-top: 10px;
+    #navbar {
+      padding-top: 40px;
       padding-left: 10px;
   }
 
