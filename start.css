@@ -12,6 +12,11 @@
   --fontdefault: "Press Start 2P", -apple-system,system-ui,BlinkMacSystemFont;
 }
 
+html, body {
+  cursor: url("/Public/favicon.ico"), default;
+  /* just change the cursor.ico path to your location */
+}
+
 @keyframes fadeInAnimation {
   0% {
       opacity: 0;
@@ -39,7 +44,7 @@ body {
 
 h1 {
     text-align: center;
-    padding-top: 30vh;
+    padding-top: 25vh;
     padding-left: 5%;
     padding-right: 5%;
     margin-top: auto;
@@ -72,17 +77,20 @@ h1 {
   }
 
   button {
-    text-align: center;
-    padding-top: 5%;
+    display: block;
+    margin: 0 auto;
+    padding-top: 3%;
     padding-left: 5%;
     padding-right: 5%;
-    padding-bottom: 5%;
+    padding-bottom: 3%;
+    margin-top: 5%;
     font-family: var(--fontdefault);
     font-size: 20px;
     color: rgb(73, 228, 255);
-    background-color: transparent;
-    border: solid 0px transparent;
+    background-color: #008296;
+    border: solid 3px #00ddff;
     text-shadow: 0px 0px 25px #008296;
+    cursor: cell;
     /* fade in */
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
@@ -113,26 +121,21 @@ h1 {
   50% {font-size: 30px;}
 }
 
-  a {
-    display: block;
-    text-decoration: none;
-  }
-
   a:active {
     cursor: progress;
   }
 
+
+
 /* Desktop */
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 800px) {
 
   h1 {
-    padding-top: 40vh;
+    padding-top: 25vh;
   }
 
   button:hover {
-    cursor: pointer;
-    border: solid 3px #49e4ff;
-    
+    background-color: #00ddff;
   }
 
   button:active {
@@ -151,6 +154,7 @@ h1 {
 
     button {
         font-size: 12px;
+        border: solid 2px #00ddff;
     }
 
     .version {
@@ -163,7 +167,7 @@ h1 {
   
 
     @keyframes mymove {
-        50% {font-size: 18px;}
+        50% {font-size: 17px;}
     }
 }
 
