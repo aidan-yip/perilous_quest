@@ -12,13 +12,6 @@
   --fontdefault: "Press Start 2P", -apple-system,system-ui,BlinkMacSystemFont;
 }
 
-@supports(padding:max(0px)) {
-  body, header, footer {
-      padding-left: min(0vmin, env(safe-area-inset-left));
-      padding-right: min(0vmin, env(safe-area-inset-right));
-  }
-}
-
 html, body {
   cursor: url("/Public/favicon.ico"), default;
   /* just change the cursor.ico path to your location */
