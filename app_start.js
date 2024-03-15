@@ -1,18 +1,5 @@
 // Notifications
 
-window.onload = function(){
-    Notification.requestPermission(). then (perm => {
-      if (perm === "granted") {
-        new Notification("Game Alert", {
-          body: "For the best in game experience please use a desktop",
-          icon: "homescreen192.png",
-          tag: "desktop",
-          vibrate: [200, 100, 200], 
-        })
-      }
-  })
-  }
-
 //Button selector link to Notifications
 
 const button = document.querySelector ("button")
@@ -46,3 +33,11 @@ document.addEventListener ("visibilitychange", () => {
     }
 
 })  
+
+//Click to start button
+
+    function visitPage(){
+        window.location='./public/perilous_quest/index.html';
+    }
+    
+   
