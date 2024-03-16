@@ -12,16 +12,16 @@
   --fontdefault: "Press Start 2P", -apple-system,system-ui,BlinkMacSystemFont;
 }
 
-html, body {
-  cursor: url("/Public/favicon.ico"), default;
-  /* just change the cursor.ico path to your location */
-}
-
 @supports(padding:max(0px)) {
   body, header, footer {
       padding-left: min(0vmin, env(safe-area-inset-left));
       padding-right: min(0vmin, env(safe-area-inset-right));
   }
+}
+
+html, body {
+  cursor: url("/Public/favicon.ico"), default;
+  /* just change the cursor.ico path to your location */
 }
 
 @keyframes fadeInAnimation {
@@ -343,7 +343,7 @@ h3 {
 }
   
   /* desktop */
-  @media only screen and (min-width: 800px) {
+  @media only screen and (min-width: 850px) {
 
     #game:hover {
       box-shadow: 0px 0px 25px #03c7f8;
@@ -371,6 +371,7 @@ h3 {
     button:hover {
       background-image: linear-gradient(#6bb0ff, #91fff4);
       box-shadow: 0px 0px 50px 30px #39bdfb;
+      border: 1px solid #3d6a66;
       border-bottom: 5px solid #3d6a66;
       transform: translateY(-5px);
     }
@@ -422,7 +423,7 @@ h3 {
 }
 
   /* mobile */
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 850px) {
 
     #game {
       box-shadow: 0px 0px 25px #03c7f8;
