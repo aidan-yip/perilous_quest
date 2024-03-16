@@ -181,6 +181,14 @@ h1 {
     }
 }
 
+@media only screen and (max-height: 375px) {
+
+    .version {
+      padding-top: 3%;
+    }
+
+}
+
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
 
