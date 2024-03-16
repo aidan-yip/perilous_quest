@@ -181,7 +181,7 @@ h1 {
     }
 }
 
-@media only screen and (min-height: 375px) {
+@media only screen and (min-height: 100px) {
 
     .version {
       padding-top: 3%;
