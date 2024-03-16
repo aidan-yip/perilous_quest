@@ -179,14 +179,14 @@ h1 {
     @keyframes mymove {
         50% {font-size: 17px;}
     }
-}
 
-@media only screen and (min-height: 100px) {
+    @media only screen and (min-height: 100px) {
 
-    .version {
-      padding-top: 3%;
-    }
-
+      .version {
+        padding-top: 8%;
+      }
+  
+  }
 }
 
 /* Dark mode */
