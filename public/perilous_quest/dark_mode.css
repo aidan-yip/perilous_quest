@@ -78,8 +78,9 @@
         border: 0.5px solid #5a01ff;
         background: #1a0052;
     }
-
-    @media only screen and (min-width: 850px) {
+    
+    /* Mobile */
+    @media only screen and (min-width: 900px) {
 
           button:hover {
             background-image: linear-gradient(#1c4d89, #185751);
@@ -94,11 +95,12 @@
           
       }
 
-      @media only screen and (max-width: 850px) {
+      @media only screen and (max-width: 900px) {
 
         .monstat {
             font-size: 13px;
         }
     
     }
+
 }
