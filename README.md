@@ -21,7 +21,7 @@ This version includes the base game and several game music tracks. This is in Be
   <li>Progressive Web Application support</li>
   <li>System Notifications</li>
   <li>Light/Dark Mode responds to the system theme</li>
-  <li>Support for offline functionality</li>
+  <li>Support for offline functionality (Chrome and Firefox only)</li>
   <li>Support for fullscreen on iPhones with the TrueDepth Camera/Dynamic Island</li>
   <li>New 3D redesign and text depth</li>
    <li>Start screen</li>
