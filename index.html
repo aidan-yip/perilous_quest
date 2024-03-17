@@ -72,10 +72,9 @@
 </div>
 
    <script>
-      if ('serviceWorker' in navigator) {
-         navigator.serviceWorker.register("/service_worker.js");
+      if (navigator.serviceWorker) {
+          navigator.serviceWorker.register('sw.js')
       }
-
    </script>
 
    <script src="./app_start.js" defer></script>
