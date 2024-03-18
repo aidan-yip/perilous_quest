@@ -94,12 +94,13 @@ body {
   font-size: 100px;
  }
 
-  a, #buglink {
+  a, #navlink {
     justify-content: center;
     color: #03c7f8;
     font-family: var(--fontdefault);
     text-decoration: none;
     padding: 5px;
+    padding-left: 50px;
     letter-spacing: normal;
     transition: 1s ease-in-out 0ms;
     text-shadow: 1px 1px #005c92,
@@ -112,6 +113,7 @@ body {
 
   a, #artlink {
     color: #22d3ff;
+    padding-left: 0px;
   }
 
   a, #artlink:hover {
@@ -121,8 +123,11 @@ body {
   #navbar {
     display: flex;
     flex-direction: row;
-    padding-top: 30px;
+    align-items: center;
+    padding-top: 10px;
     padding-left: 30px;
+    padding-bottom: 10px;
+    background-color: #ffffff1e;
 }
 
   #text {
@@ -330,7 +335,8 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 95%;
+    max-width: 1300px;
+    width: 90%;
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
@@ -388,11 +394,14 @@ h3 {
     }
 
     #text:hover {
-      box-shadow: 0px 0px 50px 1px rgb(85, 0, 255);
+      box-shadow: 0px 0px 50px 1px rgb(255, 255, 255);
     }
 
-    a, #betalink:hover {
-      color: #0495ba;
+    #navlink:hover {
+      color: #63e0ff;
+      text-decoration: underline;
+      text-decoration-color: #00d9ff;
+      text-decoration-thickness: 3px;
     }
 
     h2:hover {
@@ -424,6 +433,10 @@ h3 {
 
   /* mobile */
   @media only screen and (max-width: 900px) {
+
+    a, #navlink {
+      padding-left: 5px;
+    }
 
     #game {
       box-shadow: 0px 0px 25px #03c7f8;
@@ -485,11 +498,15 @@ h3 {
     }
 
     #navbar {
+      justify-content: space-evenly;
       padding-top: 40px;
-      padding-left: 10px;
-  }
+      padding-left: 0px;
+      padding-right: 0px;
+      padding-bottom: 5px;
+      background-color: transparent;
+    }
 
-    a, #buglink {
+    a, #link {
       font-size: small;
     }
 
