@@ -151,8 +151,8 @@ const locations = [
   },
   {
     name: "easter egg",
-    "button text": ["2", "8", "6", "Go to town square?"],
-    "button functions": [pickTwo, pickEight, picksix, goTown],
+    "button text": ["3", "1", "6", "Go to town square?"],
+    "button functions": [pickThree, pickOne, pickSix, goTown],
     text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win gold ⚜️!"
   },
   {
@@ -641,16 +641,16 @@ function easterEgg() {
   lovely_town.play();
 }
 
-function pickTwo() {
-  pick(2);
+function pickThree() {
+  pick(3);
 }
 
-function picksix() {
+function pickOne() {
+  pick(1);
+}
+
+function pickSix() {
   pick(6);
-}
-
-function pickEight() {
-  pick(8);
 }
 
 // Secret game
