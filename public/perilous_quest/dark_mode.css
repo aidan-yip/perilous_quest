@@ -76,7 +76,7 @@
 
     .audio_players {
         border: 0.5px solid #5a01ff;
-        background: #1a0052;
+        background: linear-gradient(0deg, rgba(18, 0, 54, 0.8) 0%, rgba(21, 1, 95, 0.8) 35%, rgba(2, 72, 52, 0.8) 100%);
     }
     
     /* Mobile */
