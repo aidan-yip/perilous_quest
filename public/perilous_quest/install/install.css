@@ -52,7 +52,7 @@ body {
   h1 {
     text-align: center;
     font-family: var(--fontdefault);
-    font-size: 45px;
+    font-size: 30px;
     margin-top: 30px;
     margin-bottom: 30px;
     text-shadow: 0px 0px 10px #1fd2ff,
@@ -83,7 +83,7 @@ body {
     ;
     color: #000000;
     font-family: var(--fontdefault);
-    margin-top: 90px;
+    margin-top: 40px;
     box-shadow: 0px 0px 50px 0px #0a001d;
     letter-spacing: normal;
     transition: margin, 1s ease-in-out 0ms;
@@ -242,7 +242,7 @@ h3 {
       color: #ffcf23;
     }
     
-}
+  }
 
   /* mobile */
   @media only screen and (max-width: 900px) {
@@ -263,7 +263,7 @@ h3 {
       }
 
     h1 {
-      font-size: xx-large;
+      font-size: 20px;
     }
 
     h2 {
@@ -301,4 +301,4 @@ h3 {
     }
     
 
-}
+  }
