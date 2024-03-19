@@ -10,7 +10,6 @@ const STATIC_ASSETS = [
     '/public/perilous_quest/script.js',
     '/public/perilous_quest/dark_mode.css',
     '/public/perilous_quest/game_autoplay.js',
-    '/public/favicon.ico',
     '/public/perilous_quest/install',
     '/public/perilous_quest/install/install.html',
     '/public/perilous_quest/install/install.css'
