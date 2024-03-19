@@ -206,6 +206,9 @@ function goTown() {
   //Defeat Boss
   defeat_boss.pause();
   defeat_boss.currentTime = 0;
+  //Castle
+  castle.pause();
+  castle.currentTime = 0;
 }
 
 // Store functions
@@ -224,6 +227,7 @@ function goCastle() {
   lovely_town.pause();
   lovely_town.currentTime = 0;
   //Castle
+  castle.play();
 }
 
 function goChasm() {
@@ -395,6 +399,20 @@ function pauseboss() {
   boss_theme.currentTime = 0;
 }
 
+//Castle
+let castle = document.getElementById('castle');
+
+function playcastle() {
+  castle.play();
+}
+
+function pausecastle() {
+  castle.pause();
+  castle.currentTime = 0;
+}
+
+
+
 // Fight
 
 function fightSlime() {
@@ -447,6 +465,9 @@ function fightKnight() {
   cave_tune.currentTime = 0;
   //Boss
   boss_theme.play();
+  //castle
+  castle.pause();
+  castle.currentTime = 0;
 }
 
 function fightWizard() {
@@ -486,6 +507,9 @@ function fightghost() {
   cave_tune.currentTime = 0;
   //Boss
   boss_theme.play();
+  //castle
+  castle.pause();
+  castle.currentTime = 0;
 }
 
 function fightAnglerfish() {
@@ -499,6 +523,9 @@ function fightAnglerfish() {
   cave_tune.currentTime = 0;
   //Boss
   boss_theme.play();
+  //castle
+  castle.pause();
+  castle.currentTime = 0;
 }
 
 function fightTroll() {
@@ -512,6 +539,9 @@ function fightTroll() {
   cave_tune.currentTime = 0;
   //Boss
   boss_theme.play();
+  //castle
+  castle.pause();
+  castle.currentTime = 0;
 }
 
 function fightWerewolf() {
@@ -525,6 +555,9 @@ function fightWerewolf() {
   cave_tune.currentTime = 0;
   //Boss
   boss_theme.play();
+  //castle
+  castle.pause();
+  castle.currentTime = 0;
 }
 
 // document.getElementById("myDIV").style.display = "none";  SAMPLE CODE TO REMOVE BUTTON OPTION
@@ -611,6 +644,9 @@ function lose() {
   //Boss
   boss_theme.pause();
   boss_theme.currentTime = 0;
+  //Castle
+  castle.pause();
+  castle.currentTime = 0;
   //Lose
   playlose();
 }
