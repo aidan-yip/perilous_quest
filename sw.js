@@ -9,12 +9,9 @@ const STATIC_ASSETS = [
     '/public/perilous_quest/script.js',
     '/public/perilous_quest/dark_mode.css',
     '/public/favicon.ico',
+    '/public/perilous_quest/install',
     '/public/perilous_quest/install/install.html',
-    '/public/perilous_quest/install/install.css',
-    '/public/perilous_quest/install/safari_desk.png',
-    '/public/perilous_quest/install/safari_mobile1.jpg',
-    '/public/perilous_quest/install/safari_mobile2.jpg',
-    '/public/perilous_quest/install/chrome.png',
+    '/public/perilous_quest/install/install.css'
 ]
 
 async function preCache() {
