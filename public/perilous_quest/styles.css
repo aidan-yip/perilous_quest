@@ -427,6 +427,7 @@ h3 {
 
     .audio {
       width: 90%;
+      margin-bottom: 40px;
     }
     
 }
@@ -541,6 +542,10 @@ h3 {
       padding-top: 30px;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    .audio {
+      margin-bottom: 30px;
     }
     
 
