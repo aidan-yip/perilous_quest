@@ -1,6 +1,6 @@
 # Perilous Quest
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f312c3e8-98b6-4e22-ac50-3296bf34db80/deploy-status)](https://app.netlify.com/sites/perilous-quest/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/05ef79ba-a166-4aeb-9e08-bba657c2d41a/deploy-status)](https://app.netlify.com/sites/perilous-quest/deploys)
 
 ## Perilous Quest supports being installed as a Progressive Web Application through most desktop/mobile browsers.
 
