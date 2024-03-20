@@ -458,6 +458,9 @@ function fightDragon() {
   cave_tune.currentTime = 0;
   //Boss
   boss_theme.play();
+  //Castle
+  castle.pause();
+  castle.currentTime = 0;
 }
 
 function fightKnight() {
