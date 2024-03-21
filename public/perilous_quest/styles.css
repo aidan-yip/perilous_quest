@@ -388,6 +388,7 @@ h3 {
 p {
   display: flex;
   justify-content: center;
+  color: #ffffff;
 }
   
   /* desktop */
