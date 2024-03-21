@@ -10,9 +10,9 @@ function hello() {
   let text;
   let person = prompt("Please enter your name:", "");
   if (person == null || person == "") {
-    text = "Welcome Guest! You're Player One";
+    text = "Hello Guest! You're Player One." + " Be strong, and let your heart take courage!\n";
  } else {
-   text = "Hello " + person + ". You're Player One!" + " Be strong, and let your heart take courage!\n";
+   text = "Hello " + person + ". You're Player One." + " Be strong, and let your heart take courage!\n";
  }
  document.getElementById("name").style.display = "block";
  document.getElementById("button0").style.display = "none";
