@@ -4,6 +4,21 @@
       event.returnValue = `Are you sure you want to leave?`;
     });
 
+//Enter Player Name prompt
+
+function hello() {
+  let text;
+  let person = prompt("Please enter your name:", "");
+  if (person == null || person == "") {
+    text = "Welcome Guest! You're Player One";
+ } else {
+   text = "Welcome " + person + "! You're Player One";
+ }
+ document.getElementById("name").style.display = "block";
+ document.getElementById("button0").style.display = "none";
+ document.getElementById("name").innerHTML = text;
+}
+
 // Notifications
 
 let notification

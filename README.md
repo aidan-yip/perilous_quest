@@ -16,15 +16,17 @@ This version includes the base game and several game music tracks. This is in Be
   
 # Expanded functionality includes: 
 <ul>
-  <li>Splash screen for mobile devices</li> 
-   <li>Responsive Design so it can be played on most screen sizes</li>
+  <li>Responsive Design so it can be played on most screen sizes</li>
   <li>Progressive Web Application support</li>
-  <li>System Notifications</li>
+  <li>System Notifications (Desktop/Laptop only)</li>
+  <li>Are you sure you want to leave? Prompt (Desktop/Laptop only)</li>
   <li>Light/Dark Mode responds to the system theme</li>
   <li>Support for temporary offline caching (Safari, Chrome and Firefox)*</li>
+  <li>Splash screen for mobile devices</li> 
   <li>Support for fullscreen on iPhones with the TrueDepth Camera/Dynamic Island</li>
+  <li>Name input field for player<li>
   <li>New 3D redesign and text depth</li>
-   <li>Start screen</li>
+  <li>Start screen</li>
   <li>Music jukebox</li> 
   <li>Sound-FX/Sound design</li> 
   <li>Music autoplay</li>
@@ -58,7 +60,7 @@ This version includes the base game and several game music tracks. This is in Be
 <ul>
 <li>Music 🎧 "Lovely Town" by  Skremzy (Tristan Forrest)</li> 
 <li>"Boss Theme" by Audiophobia (Tanner Marsh)</li>
-<li>"Shop" and "Cave Tune" by Newave Oceans (Ade Y.)</li>
+<li>Original Soundtrack by Newave Oceans (James Y.)</li>
 </ul>
 
 ## Art
@@ -80,15 +82,15 @@ This version includes the base game and several game music tracks. This is in Be
 
 ## macOS Safari web app install (requires macOS Sonoma)
 
-https://support.apple.com/en-ca/104996#:~:text=In%20Safari%2C%20open%20the%20webpage,use%20as%20a%20web%20app.&text=in%20the%20Safari%20toolbar%2C%20then,Dock%2C%20Launchpad%2C%20or%20Spotlight.
+https://support.apple.com/en-ca/104996
 
 ## Windows web app install (works with Windows 10/11 or Edge for MacOS/ChromeOS/Linux)
 
-https://support.microsoft.com/en-us/topic/install-manage-or-uninstall-apps-in-microsoft-edge-0c156575-a94a-45e4-a54f-3a84846f6113#:~:text=Install%20an%20app%20in%20Microsoft%20Edge&text=Alternatively%2C%20you%20can%20install%20any,appear%20under%20edge%3A%2F%2Fapps.
+https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/ux
 
 ## ChromeOS web app and shortcut install (requires ChromeOS and/or the Chrome browser for MacOS/Windows/Linux)
 
-https://support.google.com/chromebook/answer/9658361?hl=en&co=GENIE.Platform%3DDesktop#:~:text=On%20your%20computer%2C%20open%20Chrome,instructions%20to%20install%20the%20PWA.
+https://support.google.com/chrome/answer/9658361?hl=en&co=GENIE.Platform%3DDesktop
 
 ## Firefox web app install (N/A)
 

@@ -94,6 +94,38 @@ body {
   font-size: 100px;
  }
 
+  #namediv {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+  }
+
+  #button0 {
+    display: block;
+    width: 30%;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  #name {
+    display: none;
+    color: #00c9fb;
+    font-family: var(--fontdefault);
+    font-size: 20px;
+    padding: 15px;
+    transition: 1s ease-in-out 0ms;
+    text-shadow: 1px 1px #005c92,
+    1px 1px #005c92,
+    2px 2px #005c92,
+    3px 3px #005c92,
+    0px 0px 10px #ffffff
+    ;
+  }
+
   a, #navlink {
     justify-content: center;
     color: #03c7f8;
@@ -382,6 +414,11 @@ h3 {
       transform: translateY(-5px);
     }
 
+    #button0:hover {
+      transform: translateY(0px);
+      border: none;
+    }
+
     .stat:hover {
       text-shadow: 0px 0px 20px #ffe27b;
       text-decoration: underline;
@@ -469,6 +506,21 @@ h3 {
       font-size: medium;
       font-size: 11px;
 
+    }
+
+    #namediv {
+      flex-direction: row;
+      justify-content: center;
+      text-align: center;
+    }
+
+    #name {
+      font-size: 12px;
+    }
+
+    #button0 {
+      font-size: 12px;
+      width: 50%;
     }
 
     .stat {
