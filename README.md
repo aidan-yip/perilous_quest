@@ -24,7 +24,7 @@ This version includes the base game and several game music tracks. This is in Be
   <li>Support for temporary offline caching (Safari, Chrome and Firefox)*</li>
   <li>Splash screen for mobile devices</li> 
   <li>Support for fullscreen on iPhones with the TrueDepth Camera/Dynamic Island</li>
-  <li>Name input field for player<li>
+  <li>Name input field for player</li>
   <li>New 3D redesign and text depth</li>
   <li>Start screen</li>
   <li>Music jukebox</li> 
