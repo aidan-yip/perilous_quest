@@ -51,9 +51,10 @@ body {
   h1 {
     text-align: center;
     font-family: var(--fontdefault);
-    font-size: 45px;
+    font-size: 40px;
     margin-top: 30px;
     margin-bottom: 30px;
+    color: #ffffff;
     text-shadow: 0px 0px 10px #1fd2ff,
     1px 1px #1fd2ff,
     2px 2px #1fd2ff,
@@ -70,7 +71,7 @@ body {
   h2 {
     text-align: center;
     width: 50%;
-    max-width: 1300px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 25px;
@@ -177,7 +178,7 @@ body {
     margin-left: 14px;
     margin-right: 14px;
     font-family: var(--fontdefault);
-    font-size: 30px;
+    font-size: 25px;
     text-align: justify;
     text-justify: inter-word;
     box-shadow: 0px 0px 20px #000000;
@@ -195,12 +196,12 @@ body {
 }
   
   #game {
-    max-width: 1300px;
+    max-width: 1200px;
     min-width: 40%;
     height: 40%;
     background: linear-gradient(0deg, rgba(45, 220, 255, 0.8) 0%, rgba(11, 11, 134, 0.8) 35%, rgba(24, 0, 71, 0.8) 100%);
     color: #ffffff;
-    margin: 20px auto 0px;
+    margin: 15px auto 0px;
     padding: 10px;
     border-radius: 25px;
     /* fade in */
@@ -289,7 +290,7 @@ body {
   .stat {
     padding-left: 10px;
     padding-right: 10px;
-    font-size: 30px;
+    font-size: 25px;
     font-family: var(--fontdefault);
     color: #ffffff;
     /* fade in */
@@ -306,7 +307,7 @@ body {
     width: 40%;
     height: 70px;
     border-radius: 25px;
-    font-size: 20px;
+    font-size: 17px;
     font-family: var(--fontdefault);
     font-weight: bold;
     font-style: italic;
@@ -332,7 +333,7 @@ body {
     list-style: none;
     color: #ffffff;
     font-family: var(--fontdefault);
-    font-size: x-large;
+    font-size: 20px;
     font-weight: bolder;
     text-shadow: 1px 1px #000000,
     2px 2px #000000,
@@ -366,7 +367,7 @@ h3 {
         3px 3px #000000,
         4px 4px #000000
         ;
-  font-size: 30px;
+  font-size: 25px;
   padding: 30px 10px 30px 10px;
   max-width: 1100px;
   border-bottom: none;
@@ -384,7 +385,7 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 1300px;
+    max-width: 1200px;
     width: 90%;
     margin-top: 30px;
     margin-left: auto;
@@ -514,6 +515,7 @@ p {
     #game {
       box-shadow: 0px 0px 25px #03c7f8;
       margin-top: 5px;
+      padding-bottom: 0px;
     }
 
     #text {
@@ -555,6 +557,7 @@ p {
 
     #name {
       font-size: 12px;
+      padding-top: 0px;
     }
 
     #button0 {
@@ -596,7 +599,7 @@ p {
       padding-top: 40px;
       padding-left: 0px;
       padding-right: 0px;
-      padding-bottom: 5px;
+      padding-bottom: 2px;
       background-color: transparent;
     }
 
