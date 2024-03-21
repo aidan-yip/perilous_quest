@@ -12,7 +12,7 @@ function hello() {
   if (person == null || person == "") {
     text = "Welcome Guest! You're Player One";
  } else {
-   text = "Welcome " + person + "! You're Player One";
+   text = "Hello " + person + ". You're Player One!" + " Be strong, and let your heart take courage!\n";
  }
  document.getElementById("name").style.display = "block";
  document.getElementById("button0").style.display = "none";
