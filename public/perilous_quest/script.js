@@ -88,7 +88,7 @@ const monsters = [
   },
   {
     name: "Dragon",
-    level: 12,
+    level: 10,
     health: 700
   },
   {
@@ -168,7 +168,7 @@ const locations = [
     name: "win", 
     "button text": [" --> ", "REPLAY?", "REPLAY?", "REPLAY?"], 
     "button functions": [playselectnull, restart, restart, restart], 
-    text: "You defeat the dragon! YOU WIN THE GAME, WOO 🎉! Have some cheese: 🧀" 
+    text: "CONGRATULATIONS YOU WIN 🎉! You defeat the dragon! The darkness flees as the sun rises on the horizon. A new day is dawning. The mighty have fallen as the humble arise to take their place." 
   },
   {
     name: "easter egg",
@@ -350,6 +350,29 @@ function playselectnull() {
 
 // Music
 
+//Wonder main titles
+let wonder = document.getElementById("wonder");
+
+function playwonder() {
+  wonder.play();
+}
+
+function pausetown() {
+  wonder.pause();
+  wonder.currentTime = 0;
+}
+
+//Town theme
+let lovely_town = document.getElementById("lovely_town");
+
+function playtown() {
+  lovely_town.play();
+}
+
+function pausetown() {
+  lovely_town.pause();
+}
+
 //Defeat Boss theme
 let defeat_boss = document.getElementById("defeat_boss");
 
@@ -372,17 +395,6 @@ function playlose() {
 
 function pauselose() {
   lose_wav.pause();
-}
-
-//Town theme
-let lovely_town = document.getElementById("lovely_town");
-
-function playtown() {
-  lovely_town.play();
-}
-
-function pausetown() {
-  lovely_town.pause();
 }
 
 //Shop theme
@@ -677,6 +689,12 @@ function lose() {
 
 function winGame() {
   update(locations[6]);
+  //Boss
+  boss_theme.pause();
+  boss_theme.currentTime = 0;
+  //Wonder
+  wonder.play();
+  wonder.currentTime = 0;
   // document.getElementById('credits').click(); <-- Code to link to credits page in the future
 }
 
