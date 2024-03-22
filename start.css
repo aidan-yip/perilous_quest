@@ -106,6 +106,7 @@ h1 {
 }
 
 .music {
+    display: block;
     padding: 1%;
     margin-top: 5px;
     margin-bottom: 0px;
@@ -163,7 +164,7 @@ h1 {
 
     h1 {
         font-size: 40px;
-        padding-top: 20vh;
+        padding-top: 27vh;
     }
 
     button {
