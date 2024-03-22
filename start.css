@@ -52,7 +52,6 @@ body {
 
 h1 {
     text-align: center;
-    padding-top: 25vh;
     padding-left: 5%;
     padding-right: 5%;
     margin-top: auto;
@@ -106,6 +105,17 @@ h1 {
     animation: mymove 2s infinite;
 }
 
+.music {
+    padding: 1%;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-family: var(--fontdefault);
+    font-size: 12px;
+    color: rgb(73, 228, 255);
+    border: none;
+    animation: none
+}
+
 .version {
   color: #ffffff;
   font-family: var(--fontdefault);
@@ -135,7 +145,7 @@ h1 {
 @media only screen and (min-width: 900px) {
 
   h1 {
-    padding-top: 25vh;
+    padding-top: 20vh;
   }
 
   button:hover {
@@ -153,7 +163,7 @@ h1 {
 
     h1 {
         font-size: 40px;
-        padding-top: 30vh;
+        padding-top: 20vh;
     }
 
     button {
@@ -170,6 +180,11 @@ h1 {
     .hint {
       display: none;
     }
+
+    .music {
+      font-size: 10px;
+      padding-top: 30px;
+  }
   
 
     @keyframes mymove {
