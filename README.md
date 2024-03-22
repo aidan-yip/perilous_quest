@@ -22,6 +22,7 @@ This version includes the base game and several game music tracks. This is in Be
   <li>Are you sure you want to leave? Prompt (Desktop/Laptop only)</li>
   <li>Light/Dark Mode responds to the system theme</li>
   <li>Support for temporary offline caching (Safari, Chrome and Firefox)*</li>
+  <li>Installs a Service worker for PWA compatibility</li>
   <li>Splash screen for mobile devices</li> 
   <li>Support for fullscreen on iPhones with the TrueDepth Camera/Dynamic Island</li>
   <li>Name input field for player</li>
@@ -30,6 +31,7 @@ This version includes the base game and several game music tracks. This is in Be
   <li>Music jukebox</li> 
   <li>Sound-FX/Sound design</li> 
   <li>Music autoplay</li>
+  <li>Music play button on start screen for browsers that have autoplay off</li>
   <li>Background art</li>
   <li>Two new locations</li>
   <li>Two new weapons</li>
