@@ -61,6 +61,7 @@
       <div class="back">
           <p class="version">v1.0.0</p>
           <p class="hint">You can also use Tab + Enter</p>
+          <button onclick="playmusic();" class="music">Turn music on 🎧</button>
         <h1>PERILOUS QUEST</h1>
           <div class="buttondiv">
            <button class="startbutton" tabindex="0" onclick="visitPage();">CLICK/TAP TO START</button>
@@ -68,7 +69,7 @@
      </div>
 
    <div>
-   <audio autoplay loop crossorigin="anonymous" tabindex="-1" id="titletrack" src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/wonder.wav" preload="auto"></audio>
+   <audio autoplay controls loop crossorigin="anonymous" tabindex="-1" id="titletrack" src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/wonder.wav" preload="auto"></audio>
 </div>
 
   <script>
