@@ -29,6 +29,10 @@
        #gamelogo {
         background-image: url("https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/gamelogo.jpg");
        }
+
+       #cd {
+        background-image: url("/public/cd.png");
+       }
     </style>
   </head>
 
@@ -47,16 +51,16 @@
       <!-- Game -->
       <div id="game">
 
-      <!-- Display  -->
-      <div id="display">Display placeholder
-      </div> 
-
       <!-- Player stats -->
       <div id="stats">
         <span class="stat">XP ✨ <strong><span id="xpText">0</span></strong></span>
         <span class="stat">Health ❤️ <strong><span id="healthText">300</span></strong></span>
         <span class="stat">Gold ⚜️ <strong><span id="goldText">100</span></strong></span>
       </div>
+
+       <!-- Display  -->
+       <div id="display">Display placeholder
+      </div> 
 
       <!-- Controls -->
       <div id="controls">
@@ -94,28 +98,55 @@
      </div>
 
      <p id="machint">Use "⌘" + "-" or "+" on Mac/iPad to scale the game</p>
+     
+    
 
     <!-- Audio -->
     <h2>🎶 Jukebox 🎶</h2>
     <div class="audio_players">
 
+    <!--CD-->
+    <div id="cd">
+      <div id="cd_inner">
+        <div id="cd_center">
+
+        </div>
+      </div>
+    </div>
+
+    <!--CD slot-->
+    <div id="slot"></div>
+
+    <!--Audio players-->
+    <div class="audio_play_in">
       <h3>Wonder</h3>
       <audio loop controls controlsList="nodownload" crossorigin="anonymous" tabindex="-1" class="audio" id="wonder" src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/wonder.wav" preload="auto"></audio>
+    </div>
 
+    <div class="audio_play_in">
       <h3>Lovely Town</h3>
       <audio autoplay loop controls controlsList="nodownload" crossorigin="anonymous" tabindex="-1" class="audio" id="lovely_town" src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/lovely_town.wav" preload="auto"></audio>
+    </div>
 
+    <div class="audio_play_in">
       <h3>Shop</h3>
       <audio loop controls controlsList="nodownload" crossorigin="anonymous" tabindex="-1" class="audio" id="shop" src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/shop.wav" preload="auto"></audio>
+    </div>
 
+    <div class="audio_play_in">  
       <h3>Cave Tune</h3>
       <audio loop controls controlsList="nodownload" crossorigin="anonymous" tabindex="-1" class="audio" id="cave_tune" src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/cave_tune.wav" preload="auto"></audio>
+    </div>
 
+    <div class="audio_play_in">  
       <h3>Castle</h3>
       <audio loop controls controlsList="nodownload" crossorigin="anonymous" tabindex="-1" class="audio" id="castle" src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/castle.wav" preload="auto"></audio>
+    </div>
 
+      <div class="audio_play_in">  
       <h3>Boss Theme</h3>
       <audio loop controls controlsList="nodownload" crossorigin="anonymous" tabindex="-1" class="audio" id="boss_theme" src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/boss_theme.wav" preload="auto"></audio>
+    </div>
 
       <audio crossorigin="anonymous" tabindex="-1" class="audio" id="lose" src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/lose.wav" preload="auto"></audio>
 

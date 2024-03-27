@@ -23,12 +23,31 @@ html, body {
   cursor: url("/Public/favicon.ico"), default;
 }
 
+/* Keyframes */
+
 @keyframes fadeInAnimation {
   0% {
       opacity: 0;
   }
   100% {
       opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(1deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-1deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
   }
 }
 
@@ -69,6 +88,8 @@ body {
 }
 
   h2 {
+    position: relative;
+    z-index: 1;
     text-align: center;
     width: 50%;
     max-width: 1200px;
@@ -167,7 +188,7 @@ body {
     padding-left: 30px;
     padding-bottom: 10px;
     background-color: #72deff35;
-}
+  }
 
   #text {
     background: linear-gradient(167deg, rgba(182,72,255,1) 30%, rgba(74,97,250,1) 57%, rgba(75,75,246,1) 100%);
@@ -203,7 +224,7 @@ body {
     color: #ffffff;
     margin: 15px auto 0px;
     padding: 10px;
-    border-radius: 25px;
+    border-radius: 35px;
     /* fade in */
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
@@ -301,6 +322,7 @@ body {
     color: #ffffff;
     /* fade in */
     animation: fadeInAnimation ease 3s;
+    animation: shake none 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     transition: font-size 1s ease-in-out 0ms;
@@ -393,15 +415,22 @@ h3 {
     align-items: center;
     max-width: 1200px;
     width: 90%;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
     padding-top: 30px;
     padding-bottom: 50px;
     background: linear-gradient(207deg, rgba(0, 209, 255, 0.8) 0%, rgba(74,0,128,0.8) 100%);
-    border-radius: 25px;
-    box-shadow: 0px 0px 30px 5px #00d1ff;
+    border-radius: 35px;
+    box-shadow: 0px -10px 0px #ff3700,
+    0px -15px 0px #ffb300,
+    0px -20px 0px #00ff51,
+    0px -25px 0px #00ffee,
+    0px -30px 0px #2f00ff,
+    0px -35px 0px #8c00ff
+    ;
+    transition: width, height, 0.5s ease-in-out 0ms;
 }
 
 #machint {
@@ -420,6 +449,81 @@ p {
   font-family: var(--fontdefault);
   font-size: 12px;
   color: #ffffff;
+}
+
+.audio_play_in {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: linear-gradient(207deg, rgba(74,0,128,0.8) 0%, rgba(0, 209, 255, 0.8) 100%);
+  border-radius: 25px;
+  border: 10px double #ffffff;
+}
+
+#cd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #000000;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 400px;
+    border: 5px double #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: var(--fontdefault);
+    padding: none;
+    /* animatation */
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: running;
+}
+
+#cd_inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 200px;
+  border: 10px double #000000;
+  background-color: #000000a1;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#cd_center {
+  width: 50px;
+  height: 50px;
+  border-radius: 200px;
+  border: 5px double #ffffff;
+  background-color: rgba(84, 182, 220, 0.772);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#slot {
+  width: 50%;
+  height: 13px;
+  border-radius: 10px;
+  border: 3px double #989898;
+  background-color: #000000;
+  margin-bottom: 10px;
 }
   
   /* desktop */
@@ -466,7 +570,10 @@ p {
     }
 
     .stat:hover {
-      box-shadow: 0px 0px 5px 3px #1d7fff
+      box-shadow: 0px 0px 5px 3px #1d7fff;
+      /* animation */
+      animation: shake 0.5s ease-in-out;
+      animation-iteration-count: infinite;
     }
 
     #monsterStats:hover {
@@ -497,8 +604,18 @@ p {
       color: #ffcf23;
     }
 
+    #cd:hover {
+      animation-play-state: paused;
+    }
+
     .audio_players:hover {
-      box-shadow: 0px 0px 30px #c19efd;
+      box-shadow: 0px -20px 0px #ff3700,
+      0px -30px 0px #ffb300,
+      0px -40px 0px #00ff51,
+      0px -60px 0px #00ffee,
+      0px -80px 0px #2f00ff,
+      0px -100px 0px #8c00ff
+      ;
     }
   
     audio:hover {
@@ -630,6 +747,10 @@ p {
 
     ul {
       font-size: large;
+    }
+
+    #slot {
+      width: 90%;
     }
 
     .audio_players {

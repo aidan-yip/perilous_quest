@@ -127,8 +127,8 @@ body {
     padding-top: 10px;
     padding-left: 30px;
     padding-bottom: 10px;
-    background-color: #ffffff1e;
-}
+    background-color: #72deff35;
+  }
   
   #game {
     display: flex;
@@ -282,14 +282,14 @@ h3 {
         padding-top: 10px;
       }
 
-    #navbar {
-      justify-content: space-evenly;
-      padding-top: 40px;
-      padding-left: 0px;
-      padding-right: 0px;
-      padding-bottom: 5px;
-      background-color: transparent;
-    }
+      #navbar {
+        justify-content: space-evenly;
+        padding-top: 55px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 2px;
+        background-color: transparent;
+      }
 
     a, #link {
       font-size: small;
