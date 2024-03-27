@@ -55,7 +55,7 @@ body {
     margin-top: 30px;
     margin-bottom: 30px;
     color: #ffffff;
-    text-shadow: 0px 0px 10px #1fd2ff,
+    text-shadow: 0px 0px 30px #1fd2ff,
     1px 1px #1fd2ff,
     2px 2px #1fd2ff,
     3px 3px #1fd2ff,
@@ -142,11 +142,11 @@ body {
     padding-left: 50px;
     letter-spacing: normal;
     transition: 1s ease-in-out 0ms;
-    text-shadow: 1px 1px #005c92,
-    1px 1px #005c92,
-    2px 2px #005c92,
-    3px 3px #005c92,
-    0px 0px 10px #ffffff
+    text-shadow: 1px 1px #0077bc,
+    1px 1px #0077bc,
+    2px 2px #0077bc,
+    3px 3px #0077bc,
+    0px 0px 5px #ffffff
     ;
 }
 
@@ -166,11 +166,11 @@ body {
     padding-top: 10px;
     padding-left: 30px;
     padding-bottom: 10px;
-    background-color: #ffffff1e;
+    background-color: #72deff35;
 }
 
   #text {
-    background: linear-gradient(180deg, rgba(75,75,246,1) 0%, rgb(144, 72, 255) 100%);
+    background: linear-gradient(167deg, rgba(182,72,255,1) 30%, rgba(74,97,250,1) 57%, rgba(75,75,246,1) 100%);
     border-radius: 25px;
     border: 0.5px solid #b27fff;
     color: #ffffff;
@@ -215,15 +215,15 @@ body {
     display: flex;
     justify-content: center;
     justify-content: space-evenly;
-    border: 3px solid #7db4fb;
+    border: 3px solid #000000;
     border-radius: 25px;
+    margin-top: 10px;
     margin-left: 14px;
     margin-right: 14px;
     padding: 10px;
     color: #ffffff;
     background-color: #000000;
     text-shadow: #ffffff;
-    box-shadow: 0px 0px 5px 3px #7db4fb
     ;
     /* fade in */
     animation: fadeInAnimation ease 3s;
@@ -235,7 +235,9 @@ body {
  #display {
     width: 98%;
     height: 150px;
-    background-color: rgb(4, 0, 255);
+    text-align: center;
+    background-color: rgb(67, 64, 255);
+    box-shadow: inset 3px 3px 50px #000000;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
@@ -261,7 +263,7 @@ body {
     margin-bottom: 10px;
     padding: 30px;
     color: #ffffff;
-    background: linear-gradient(180deg, rgba(229,30,30,1) 0%, rgba(255,85,72,1) 100%);
+    background: linear-gradient(167deg, rgba(255,143,0,1) 0%, rgba(255,55,1,1) 57%, rgba(159,0,0,1) 100%);
     border-radius: 25px;
     border: 0.5px solid #fd5555;
     box-shadow: 0px 0px 100px 30px #ff0000;
@@ -288,8 +290,12 @@ body {
   }
   
   .stat {
+    text-shadow: 0px 0px 15px #ffe27b;
+    border-radius: 10px;
+    padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
+    padding-top: 4px;
     font-size: 25px;
     font-family: var(--fontdefault);
     color: #ffffff;
@@ -302,7 +308,7 @@ body {
   
   button {
     color: #ffffff;
-    background-image: linear-gradient(#247de4, #08d3bf);
+    background: linear-gradient(167deg, rgba(0,255,211,1) 0%, rgba(1,111,255,1) 57%, rgba(0,91,171,1) 100%);
     border: none;
     width: 40%;
     height: 70px;
@@ -393,9 +399,9 @@ h3 {
     margin-bottom: 50px;
     padding-top: 30px;
     padding-bottom: 50px;
-    background: linear-gradient(180deg, rgb(3, 66, 255, 0.8) 0%, rgb(114, 12, 255, 0.8) 47%, rgb(106, 42, 13, 0.8) 100%);
+    background: linear-gradient(207deg, rgba(0, 209, 255, 0.8) 0%, rgba(74,0,128,0.8) 100%);
     border-radius: 25px;
-    box-shadow: 0px 0px 30px 5px #5a01ff;
+    box-shadow: 0px 0px 30px 5px #00d1ff;
 }
 
 #machint {
@@ -438,12 +444,12 @@ p {
     h3:hover {
       letter-spacing: 5px;
       text-decoration: underline;
-      text-decoration-color: #4b00bb;
+      text-decoration-color: #844fff;
       text-decoration-thickness: 3px;
     }
 
     button:hover {
-      background-image: linear-gradient(#6bb0ff, #91fff4);
+      background: linear-gradient(167deg, rgb(161, 255, 239) 0%, rgb(155, 160, 255) 57%, rgb(181, 160, 255) 100%);
       box-shadow: 0px 0px 50px 30px #39bdfb;
       border: 1px solid #3d6a66;
       border-bottom: 5px solid #3d6a66;
@@ -455,11 +461,12 @@ p {
       border: none;
     }
 
+    #stats:hover {
+      box-shadow: 0px 0px 20px 10px #7db4fb
+    }
+
     .stat:hover {
-      text-shadow: 0px 0px 20px #ffe27b;
-      text-decoration: underline;
-      text-decoration-color: #00ddff;
-      text-decoration-thickness: 3px;
+      box-shadow: 0px 0px 5px 3px #1d7fff
     }
 
     #monsterStats:hover {
@@ -516,10 +523,6 @@ p {
       box-shadow: 0px 0px 25px #03c7f8;
       margin-top: 5px;
       padding-bottom: 0px;
-    }
-
-    #text {
-      box-shadow: 0px 0px 25px rgb(124, 124, 255);
     }
 
     .stat {
@@ -587,16 +590,16 @@ p {
     }
 
     #text {
-      font-size: 20px;
+      font-size: 15px;
       margin-left: 5px;
       margin-right: 5px;
       padding: 13px;
-      box-shadow: 0px 0px 50px 1px rgb(85, 0, 255);
+      box-shadow: 0px 0px 25px rgb(124, 124, 255);
     }
 
     #navbar {
       justify-content: space-evenly;
-      padding-top: 40px;
+      padding-top: 55px;
       padding-left: 0px;
       padding-right: 0px;
       padding-bottom: 2px;
