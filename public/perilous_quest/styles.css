@@ -749,6 +749,11 @@ p {
       font-size: large;
     }
 
+    #cd {
+      width: 300px;
+      height: 300px;
+    }
+
     #slot {
       width: 90%;
     }
