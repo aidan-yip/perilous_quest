@@ -605,7 +605,12 @@ p {
     }
 
     #cd:hover {
+      cursor: pointer;
+    }
+
+    #cd:active {
       animation-play-state: paused;
+      box-shadow: 0px 0px 30px #ffffff;
     }
 
     .audio_players:hover {
