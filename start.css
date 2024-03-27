@@ -99,6 +99,7 @@ h1 {
     font-size: 20px;
     color: rgb(73, 228, 255);
     background-color: transparent;
+    border-radius: 25px;
     border: solid 3px #4de7ff;
     text-shadow: 0px 0px 25px #008296;
     cursor: cell;
@@ -151,7 +152,7 @@ h1 {
   }
 
   button:hover {
-    background-color: #00abc6;
+    background: linear-gradient(167deg, rgba(0,255,211,1) 0%, rgba(1,111,255,1) 57%, rgba(0,91,171,1) 100%);
   }
 
   button:active {
