@@ -1,24 +1,3 @@
-// Quit prompt
-
-    window.addEventListener('beforeunload', (event) => {
-      event.returnValue = `Are you sure you want to leave?`;
-    });
-
-//Enter Player Name prompt
-
-function hello() {
-  let text;
-  let person = prompt("Please enter your name:", "");
-  if (person == null || person == "") {
-    text = "Hello Guest. You're Player One!" + " Be strong, and let your heart take courage!\n";
- } else {
-   text = "Hello " + person + ". You're Player One!" + " Be strong, and let your heart take courage!\n";
- }
- document.getElementById("name").style.display = "block";
- document.getElementById("button0").style.display = "none";
- document.getElementById("name").innerHTML = text;
-}
-
 // Notifications
 
 let notification
@@ -35,6 +14,27 @@ document.addEventListener ("visibilitychange", () => {
     }
 
 })
+
+// Quit prompt
+
+window.addEventListener('beforeunload', (event) => {
+  event.returnValue = `Are you sure you want to leave?`;
+});
+
+//Enter Player Name prompt
+
+function hello() {
+let text;
+let person = prompt("Please enter your name:", "");
+if (person == null || person == "") {
+text = "Hello Guest. You're Player One!" + " Be strong, and let your heart take courage!\n";
+} else {
+text = "Hello " + person + ". You're Player One!" + " Be strong, and let your heart take courage!\n";
+}
+document.getElementById("name").style.display = "block";
+document.getElementById("button0").style.display = "none";
+document.getElementById("name").innerHTML = text;
+}
 
 //Keyboard arrow move
 
