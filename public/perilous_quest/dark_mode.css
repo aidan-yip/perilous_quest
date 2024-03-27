@@ -27,7 +27,7 @@
     }
 
     .stat {
-       text-shadow: 0px 0px 10px #008296; 
+       text-shadow: 0px 0px 15px #00b9d5; 
        color: rgb(196, 246, 255);
        /* fade in */
        animation: fadeInAnimation ease 3s;
@@ -41,42 +41,51 @@
     }
 
     .monstat {
-        color: #ff0000;
+        color: #ffefe8;
     }
 
     #game {
         background: linear-gradient(0deg, rgba(18, 0, 54, 0.9) 0%, rgba(2, 72, 52, 0.9) 35%, rgba(21, 1, 95, 0.9) 100%);
         color: #ffffff;
         border-radius: 25px;
-        border: 0.1px solid #1fd2ff;
     }
+
+    #display {
+        box-shadow: inset 3px 3px 50px #000000;
+     }
     
     button {
-        color: #08d3bf;
-        background-image: linear-gradient(#08192c, #082d26);
+        color: #0bf5de;
+        background: linear-gradient(167deg, rgba(0,255,229,1) 0%, rgb(0, 71, 99) 57%, rgb(0, 33, 70) 100%);
         border-radius: none;
         box-shadow: 0px 0px 10px #025678;
     }
 
     #text {
-        background: linear-gradient(180deg, rgb(4, 4, 13) 0%, rgb(71, 35, 128) 100%);
+        background: linear-gradient(167deg, rgba(0,201,167,1) 0%, rgba(1,111,255,1) 33%, rgba(113,0,171,1) 73%);
         border-radius: 25px;
         border: 0.5px solid rgba(144,72,255,1);
-        color: rgba(144,72,255,1);
+        color: #f0e4ff;
         box-shadow: 0px 0px 60px #6f00ff;
     }
 
     #monsterStats {
         border: 0.5px solid #ff0000;
-        color: #ff0000;
-        background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(104, 6, 6) 100%);
+        background: linear-gradient(167deg, rgb(255, 143, 0) 0%, rgb(186, 41, 0) 57%, rgb(135, 0, 0)100%);
+        color: #ff8c00;
         border-radius: 25px;
         box-shadow: 0px 0px 100px 30px #ff0000;
     }
 
     .audio_players {
         border: 0.5px solid #5a01ff;
-        background: linear-gradient(0deg, rgba(18, 0, 54, 0.8) 0%, rgba(21, 1, 95, 0.8) 35%, rgba(2, 72, 52, 0.8) 100%);
+        background: linear-gradient(52deg, rgba(78,0,135,0.8) 0%, rgba(0, 170, 89, 0.8) 100%);
+        box-shadow: 0px 0px 30px 5px #5a01ff;
+        border: 0.5px solid #00aa59;
+    }
+
+    .audio_players:hover {
+        box-shadow: 0px 0px 30px 5px #00aa59;
     }
     
     /* Mobile */
