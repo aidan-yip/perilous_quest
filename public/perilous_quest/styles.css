@@ -629,6 +629,7 @@ p {
     }
 
     #cd:active {
+      cursor: not-allowed;
       animation-play-state: paused;
       box-shadow: 0px 0px 30px #ffffff;
     }
