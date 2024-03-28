@@ -79,7 +79,6 @@
     }
 
     .audio_play_in  {
-        border: 10px double #ffffff;
         background: linear-gradient(52deg, rgba(0, 170, 89, 0.8) 0%, rgba(78,0,135,0.8) 100%);
     }
 
