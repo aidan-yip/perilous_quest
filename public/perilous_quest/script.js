@@ -230,6 +230,9 @@ function goTown() {
   //Castle
   castle.pause();
   castle.currentTime = 0;
+  //Reprise
+  reprise.currentTime = 0;
+  reprise.pause();
 }
 
 // Store functions
@@ -357,7 +360,7 @@ function playwonder() {
   wonder.play();
 }
 
-function pausetown() {
+function pausewonder() {
   wonder.pause();
   wonder.currentTime = 0;
 }
@@ -395,6 +398,18 @@ function playlose() {
 
 function pauselose() {
   lose_wav.pause();
+}
+
+//Win (Wonder reprise)
+let reprise = document.getElementById("reprise");
+
+function playreprise() {
+  reprise.play();
+}
+
+function pausereprise() {
+  reprise.pause();
+  reprise.currentTime = 0;
 }
 
 //Shop theme
@@ -693,8 +708,8 @@ function winGame() {
   boss_theme.pause();
   boss_theme.currentTime = 0;
   //Wonder
-  wonder.play();
-  wonder.currentTime = 0;
+  reprise.currentTime = 0;
+  reprise.play();
   // document.getElementById('credits').click(); <-- Code to link to credits page in the future
 }
 
