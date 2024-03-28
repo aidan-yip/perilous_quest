@@ -29,6 +29,7 @@ This version includes the base game and several game music tracks. This is in Be
   <li>New 3D redesign and text depth</li>
   <li>Start screen</li>
   <li>Music jukebox</li> 
+  <li>CD Music Visualiser</li>
   <li>Sound-FX/Sound design</li> 
   <li>Music autoplay</li>
   <li>Music play button on start screen for browsers that have autoplay off</li>
