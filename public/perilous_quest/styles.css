@@ -547,7 +547,9 @@ p {
 }
 
 div {
+  text-align: center;
   font-family: var(--fontdefault);
+  font-size: 12px;
   color: #ffffff;
 }
   
