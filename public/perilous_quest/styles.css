@@ -547,6 +547,7 @@ p {
 }
 
 div {
+  font-family: var(--fontdefault);
   color: #ffffff;
 }
   
