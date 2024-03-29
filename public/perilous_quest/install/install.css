@@ -199,6 +199,10 @@ h3 {
   transition: width, height, 0.5s ease-in-out 0ms;
 
 }
+
+a .md {
+  font-size: 130%;
+}
   
   /* desktop */
   @media only screen and (min-width: 900px) {
