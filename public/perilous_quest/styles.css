@@ -537,7 +537,7 @@ p {
 #redlight {
   width: 80px;
   height: 5px;
-  background-color: rgb(255, 0, 0);
+  background-color: #ff0000;
   box-shadow: 0px 0px 15px 5px #ff4141;
   border-radius: 100px;
   margin: 1px;
@@ -708,7 +708,8 @@ p {
 
     #button0 {
       font-size: 12px;
-      width: 50%;
+      width: 55%;
+      padding-top: 10px;
       padding-left: 20px;
       padding-right: 20px;
     }
