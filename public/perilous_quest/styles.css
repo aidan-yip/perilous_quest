@@ -547,7 +547,15 @@ p {
 }
 
 span .md {
-  font-size: 30px;
+  font-size: 130%;
+}
+
+a .md {
+  font-size: 130%;
+}
+
+button .md {
+  font-size: 130%;
 }
   
   /* desktop */
@@ -677,7 +685,7 @@ span .md {
     }
 
     span .md {
-      font-size: 15px;
+      font-size: 130%;
     }
 
     h1 {
@@ -717,10 +725,8 @@ span .md {
     #button0 {
       font-size: 12px;
       width: 70%;
-      padding-top: 10px;
       padding-left: 20px;
       padding-right: 20px;
-      padding-bottom: 30px;
     }
 
     .stat {
