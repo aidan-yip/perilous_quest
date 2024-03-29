@@ -33,6 +33,12 @@ html, body {
   }
 }
 
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); }    
+}
+
 body {
     background: rgb(11, 0, 85);
     background: linear-gradient(90deg, rgba(181,0,223,1) 0%, rgba(177,52,5,1) 28%, rgba(9,10,121,1) 61%, rgba(0,251,255,1) 100%);
@@ -48,6 +54,14 @@ body {
     width: 100vw;
     height: 110vh;
     overflow: hidden; /* Hide scrollbars */
+}
+
+.titlediv {
+  background-color: transparent;
+  /* fade in */
+  animation: fadeInAnimation ease 15s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 h1 {
@@ -69,11 +83,11 @@ h1 {
     7px 7px #1fd2ff,
     8px 8px #1fd2ff
     ;
-    /* fade in */
-    animation: fadeInAnimation ease 15s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    
+    /* float */
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
   }
 
   div .buttondiv {
@@ -166,10 +180,11 @@ h1 {
 
     h1 {
         font-size: 40px;
-        padding-top: 27vh;
+        padding-top: 15vh;
     }
 
     button {
+        margin-top: 10%;
         font-size: 12px;
         border: solid 2px #00ddff;
     }
