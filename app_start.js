@@ -2,7 +2,7 @@
 
 //Button selector link to Notifications
 
-const button = document.querySelector ("button")
+const button = document.getElementById("startbutton")
 
 button.addEventListener("click", () => {
     Notification.requestPermission(). then (perm => {
