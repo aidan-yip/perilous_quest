@@ -36,8 +36,7 @@ This version includes the base game and several game music tracks. This is in Be
   <li>Background art</li>
   <li>Five new locations</li>
   <li>Three new weapons</li>
-  <li>Eleven new enemies</li>
-  <li>Seven additional enemeies</li>
+  <li>Eleven additional enemies</li>
   <li>The Dragon is harder to beat</li>
   <li>Custom cursors on hover</li>
   <li>XP spend function to dodge</li>
