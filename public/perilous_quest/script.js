@@ -498,6 +498,13 @@ function pausecave() {
   cave_tune.pause();
 }
 
+//Boss theme volume adjust
+
+let audio = document.getElementById("boss_theme");
+
+function setHalfVolume() { 
+  audio.volume = 0.5;
+} 
 
 //Boss theme
 let boss_theme = document.getElementById("boss_theme");
@@ -537,6 +544,7 @@ function fightSlime() {
   cave_tune.pause();
   cave_tune.currentTime = 0;
   //Boss
+  setHalfVolume();
   boss_theme.play();
 }
 
@@ -550,6 +558,7 @@ function fightBeast() {
   cave_tune.pause();
   cave_tune.currentTime = 0;
   //Boss
+  setHalfVolume();
   boss_theme.play();
 }
 
@@ -563,6 +572,7 @@ function fightDragon() {
   cave_tune.pause();
   cave_tune.currentTime = 0;
   //Boss
+  setHalfVolume();
   boss_theme.play();
   //Castle
   castle.pause();
@@ -579,6 +589,7 @@ function fightKnight() {
   cave_tune.pause();
   cave_tune.currentTime = 0;
   //Boss
+  setHalfVolume();
   boss_theme.play();
   //castle
   castle.pause();
@@ -595,6 +606,7 @@ function fightWizard() {
   cave_tune.pause();
   cave_tune.currentTime = 0;
   //Boss
+  setHalfVolume();
   boss_theme.play();
 }
 
@@ -608,6 +620,7 @@ function fightSpider() {
   cave_tune.pause();
   cave_tune.currentTime = 0;
   //Boss
+  setHalfVolume();
   boss_theme.play();
 }
 
@@ -621,6 +634,7 @@ function fightghost() {
   cave_tune.pause();
   cave_tune.currentTime = 0;
   //Boss
+  setHalfVolume();
   boss_theme.play();
   //castle
   castle.pause();
@@ -637,6 +651,7 @@ function fightAnglerfish() {
   cave_tune.pause();
   cave_tune.currentTime = 0;
   //Boss
+  setHalfVolume();
   boss_theme.play();
   //castle
   castle.pause();
@@ -653,6 +668,7 @@ function fightTroll() {
   cave_tune.pause();
   cave_tune.currentTime = 0;
   //Boss
+  setHalfVolume();
   boss_theme.play();
   //castle
   castle.pause();
@@ -669,6 +685,7 @@ function fightWerewolf() {
   cave_tune.pause();
   cave_tune.currentTime = 0;
   //Boss
+  setHalfVolume();
   boss_theme.play();
   //castle
   castle.pause();
@@ -685,6 +702,7 @@ function fightNightGhost() {
   cave_tune.pause();
   cave_tune.currentTime = 0;
   //Boss
+  setHalfVolume();
   boss_theme.play();
   //castle
   castle.pause();
@@ -701,6 +719,7 @@ function fightShadow() {
   cave_tune.pause();
   cave_tune.currentTime = 0;
   //Boss
+  setHalfVolume();
   boss_theme.play();
   //castle
   castle.pause();
@@ -717,6 +736,7 @@ function fightYeti() {
   cave_tune.pause();
   cave_tune.currentTime = 0;
   //Boss
+  setHalfVolume();
   boss_theme.play();
   //castle
   castle.pause();
@@ -733,6 +753,7 @@ function fightSnakes() {
   cave_tune.pause();
   cave_tune.currentTime = 0;
   //Boss
+  setHalfVolume();
   boss_theme.play();
   //castle
   castle.pause();
