@@ -25,7 +25,7 @@ window.addEventListener('beforeunload', (event) => {
 
 function hello() {
 let text;
-let person = prompt("Please enter your name:", "");
+let person = prompt("Enter a name for Player One:", "");
 if (person == null || person == "") {
 text = "Hello Guest. You're Player One!" + " Be strong, and let your heart take courage!\n";
 } else {
@@ -53,7 +53,7 @@ let currentWeapon = 0;
 let fighting;
 let monsterHealth;
 let monsterLevel;
-let inventory = ["stick"];
+let inventory = ["stick ᛓ "];
 
 const button1 = document.querySelector('#button1');
 const button2 = document.querySelector("#button2");
@@ -68,27 +68,28 @@ const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 const monsterLevelText = document.querySelector("#monsterLevel");
 const weapons = [
-  { name: 'Stick', power: 5 },
-  { name: 'Dagger', power: 30 },
-  { name: 'Claw Hammer', power: 50 },
-  { name: 'Viking Hammer', power: 75 },
-  { name: 'Sword', power: 100 },
-  { name: 'Wizard Staff', power: 200}
+  { name: 'Stick ᛓ ', power: 5 },
+  { name: 'Dagger ᛌ ', power: 30 },
+  { name: 'Claw Hammer ᛚ ', power: 50 },
+  { name: 'Viking Hammer ᛘ ', power: 75 },
+  { name: 'Light Sword ᛁ ', power: 100 },
+  { name: 'Magic Sword ᛂ ', power: 200},
+  { name: 'Wizard Staff ᛙ ', power: 300}
 ];
 const monsters = [
   {
     name: "Slime",
-    level: 3,
+    level: 2,
     health: 80
   },
   {
     name: "Fanged Beast",
-    level: 7,
+    level: 6,
     health: 280
   },
   {
     name: "Dragon",
-    level: 10,
+    level: 12,
     health: 700
   },
   {
@@ -103,7 +104,7 @@ const monsters = [
   },
   {
     name: "Giant Spider",
-    level: 8,
+    level: 4,
     health: 300
   },
   {
@@ -113,19 +114,40 @@ const monsters = [
   },
   {
     name: "Anglerfish",
-    level: 8,
+    level: 6,
     health: 400
   },
   {
     name: "Cave Troll",
-    level: 9,
+    level: 8,
     health: 300
   },
   {
     name: "Werewolf",
     level: 8,
     health: 500
+  },
+  {
+    name: "Strange Ghost",
+    level: 10,
+    health: 500
+  },
+  {
+    name: "Nightmare Shadow",
+    level: 8,
+    health: 100
+  },
+  {
+    name: "Yeti",
+    level: 8,
+    health: 500
+  },
+  {
+    name: "Venomous Snakes",
+    level: 10,
+    health: 400
   }
+  
 ]
 const locations = [
   {
@@ -142,7 +164,7 @@ const locations = [
   },
   {
     name: "cave",
-    "button text": ["Fight Slime", "Fight Fanged beast", "Fight Spider", "Go to town square"],
+    "button text": ["Fight Slime", "Fight Fanged beast", "Fight Spider", "Return to town"],
     "button functions": [fightSlime, fightBeast, fightSpider, goTown],
     text: "You enter the cave. You see some monsters... or is that your friend Nait?"
   },
@@ -168,7 +190,7 @@ const locations = [
     name: "win", 
     "button text": [" --> ", "REPLAY?", "REPLAY?", "REPLAY?"], 
     "button functions": [playselectnull, restart, restart, restart], 
-    text: "CONGRATULATIONS YOU WIN 🎉! You defeat the dragon! The darkness flees as the sun rises on the horizon. A new day is dawning. The mighty have fallen as the humble arise to take their place." 
+    text: "CONGRATULATIONS YOU WIN 🎉! You defeat the dragon and free the kingdom! The darkness flees as the sun rises on the horizon. A new day is dawning. The mighty have fallen as the humble arise to take their place." 
   },
   {
     name: "easter egg",
@@ -178,15 +200,33 @@ const locations = [
   },
   {
     name: "castle",
-    "button text": ["Go left", "Go forward", "Go right", "Go back"],
+    "button text": ["Enter left hall", "Enter dark hall", "Enter right hall", "Return to Town"],
     "button functions": [goChasm, fightghost, fightKnight, goTown],
     text: "You enter a castle. There's a sign that says \"Danger\" to the left and the sound of iron clanging from the room to the right. Ahead you sense something cold and dark. Do you dare to continue?"
   },
   {
     name: "chasm",
-    "button text": ["Jump across", "Wait for a bit", "Fall into the chasm", "Go back"],
-    "button functions": [fightTroll, fightWerewolf, fightAnglerfish, fightDragon],
+    "button text": ["Jump across", "Wait for a bit", "Fall into the chasm", "Return to Castle"],
+    "button functions": [goJump, fightWerewolf, fightAnglerfish, fightDragon],
     text: "There is a massive chasm ahead. You believe you may be able to jump across. Looking down you faintly see some water. Suddenly you hear the sound of wood burning behind you!"
+  },
+  {
+    name: "jump",
+    "button text": ["6", "3", "1", "Return to Chasm"],
+    "button functions": [jumpSix, jumpThree, pickOne, goChasm],
+    text: "You get ready to jump. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you make it across."
+  },
+  {
+    name: "deep caves",
+    "button text": ["Go left", "Go forward", "Face the shadow", "Enter Mine"],
+    "button functions": [fightTroll, fightNightGhost, fightShadow, goMine],
+    text: "You made it! There's no turning back now! You can barely make out anything down the dimly lit crevices. To the left the ground shakes. Ahead there is a strange green glow. You see a Mineshaft entrance to your right. Something from the shadows is quickly approaching behind you!"
+  },
+  {
+    name: "Frozen Mineshaft",
+    "button text": ["Brave the water", "Brave the snow", "Brave the flames", "Run like a coward ⮐"],
+    "button functions": [fightSnakes, fightYeti, fightDragon, lose],
+    text: "It is extremely cold, you shiver as you walk down the abandoned Mineshaft. There are three shaft passageways. The left is overflowing with a water. The middle is filled with ice and snow. The last one is lit with glow of fire."
   }
 ];
 
@@ -196,6 +236,7 @@ button2.onclick = goCave;
 button3.onclick = fightWizard;
 button4.onclick = goCastle;
 
+//Location update
 function update(location) {
   monsterStats.style.display = "none";
   button1.innerText = location["button text"][0];
@@ -206,11 +247,12 @@ function update(location) {
   button2.onclick = location["button functions"][1];
   button3.onclick = location["button functions"][2];
   button4.onclick = location["button functions"][3];
-  text.innerText = location.text;
+  text.innerText = location.text + "\n" + "\n" + "Inventory:\n" + inventory;
   selectfx.currentTime = 0;
   selectfx.play();
 }
 
+//Location update functions
 function goTown() {
   update(locations[0]);
   //Boss
@@ -235,7 +277,6 @@ function goTown() {
   reprise.pause();
 }
 
-// Store functions
 function goStore() {
   update(locations[1]);
   //Town
@@ -243,20 +284,6 @@ function goStore() {
   lovely_town.currentTime = 0;
   //Show
   shop.play();
-}
-
-function goCastle() {
-  update(locations[8]);
-  //Town
-  lovely_town.pause();
-  lovely_town.currentTime = 0;
-  //Castle
-  castle.play();
-}
-
-function goChasm() {
-  update(locations[9]);
-  //Chasm
 }
 
 function goCave() {
@@ -277,6 +304,43 @@ function goCave() {
   defeat_boss.currentTime = 0;
 }
 
+function goCastle() {
+  update(locations[8]);
+  //Town
+  lovely_town.pause();
+  lovely_town.currentTime = 0;
+  //Castle
+  castle.play();
+}
+
+function goChasm() {
+  update(locations[9]);
+  //Chasm
+}
+
+function goJump() {
+  update(locations[10]);
+  //jump
+}
+
+function goMine() {
+  update(locations[12]);
+  //Boss
+  boss_theme.pause();
+  boss_theme.currentTime = 0;
+  //Town
+  lovely_town.pause();
+  lovely_town.currentTime = 0;
+  //Select fx
+  selectfx.currentTime = 0;
+  selectfx.play();
+  //Defeat Boss
+  defeat_boss.pause();
+  defeat_boss.currentTime = 0;
+  //Mine
+}
+
+// Shop functions
 function buyHealth() {
   if (gold >= 10) {
     gold -= 10;
@@ -300,7 +364,7 @@ function buyWeapon() {
       let newWeapon = weapons[currentWeapon].name;
       text.innerText = "You now have a " + newWeapon + ".";
       inventory.push(newWeapon);
-      text.innerText += " In your inventory you have: " + inventory;
+      text.innerText += "\n" + "\n" + " In your inventory you have:\n" + inventory;
       selectfx.currentTime = 0;
       selectfx.play();
     } else {
@@ -319,7 +383,7 @@ function sellWeapon() {
     goldText.innerText = gold;
     let currentWeapon = inventory.shift();
     text.innerText = "You sold a " + currentWeapon + ".";
-    text.innerText += " In your inventory you have: " + inventory;
+    text.innerText += "\n" + "\n" + " In your inventory you have:\n" + inventory;
     selectfx.currentTime = 0;
     selectfx.play();
   } else {
@@ -329,7 +393,7 @@ function sellWeapon() {
 }
 
 function listInventory() {
-      text.innerText += " In your inventory you have: " + inventory;
+      text.innerText += "\n" + "\n" + " In your inventory you have:\n" + inventory;
       selectfx.currentTime = 0;
       selectfx.play();
 
@@ -611,6 +675,70 @@ function fightWerewolf() {
   castle.currentTime = 0;
 }
 
+function fightNightGhost() {
+  fighting = 10;
+  goFight();
+  //Town
+  lovely_town.pause();
+  lovely_town.currentTime = 0;
+  //Cave
+  cave_tune.pause();
+  cave_tune.currentTime = 0;
+  //Boss
+  boss_theme.play();
+  //castle
+  castle.pause();
+  castle.currentTime = 0;
+}
+
+function fightShadow() {
+  fighting = 11;
+  goFight();
+  //Town
+  lovely_town.pause();
+  lovely_town.currentTime = 0;
+  //Cave
+  cave_tune.pause();
+  cave_tune.currentTime = 0;
+  //Boss
+  boss_theme.play();
+  //castle
+  castle.pause();
+  castle.currentTime = 0;
+}
+
+function fightYeti() {
+  fighting = 12;
+  goFight();
+  //Town
+  lovely_town.pause();
+  lovely_town.currentTime = 0;
+  //Cave
+  cave_tune.pause();
+  cave_tune.currentTime = 0;
+  //Boss
+  boss_theme.play();
+  //castle
+  castle.pause();
+  castle.currentTime = 0;
+}
+
+function fightSnakes() {
+  fighting = 13;
+  goFight();
+  //Town
+  lovely_town.pause();
+  lovely_town.currentTime = 0;
+  //Cave
+  cave_tune.pause();
+  cave_tune.currentTime = 0;
+  //Boss
+  boss_theme.play();
+  //castle
+  castle.pause();
+  castle.currentTime = 0;
+}
+
 // document.getElementById("myDIV").style.display = "none";  SAMPLE CODE TO REMOVE BUTTON OPTION
 
 // Fight function
@@ -663,7 +791,7 @@ function xplose() {
 }
 
 function dodge() {
-  text.innerText = "You dodge the attack from the " + monsters[fighting].name;
+  text.innerText = "You dodge the attack from the " + monsters[fighting].name + "." + " You lose 2 xp.";
   if(xp > 0) {
     xplose();
   } else {
@@ -734,6 +862,7 @@ function easterEgg() {
   lovely_town.play();
 }
 
+// Secret game guesses
 function pickThree() {
   pick(3);
 }
@@ -770,5 +899,38 @@ function pick(guess) {
     if (health <= 0) {
       lose();
     }
+  }
+}
+
+//Jump game guesses
+
+function jumpThree() {
+  jumppick(3);
+}
+
+function jumpOne() {
+  jumppick(1);
+}
+
+function jumpSix() {
+  jumppick(6);
+}
+
+//Jump game
+function jumppick(guess) {
+  const numbers = [];
+  while (numbers.length < 10) {
+    numbers.push(Math.floor(Math.random() * 11));
+  }
+  for (let i = 0; i < 10; i++) {
+  
+  }
+  if (numbers.includes(guess)) {
+    text.innerText += "Right! You make it across!";
+    gold += 20;
+    goldText.innerText = gold;
+    update(locations[11]);
+  } else {
+    lose();
   }
 }

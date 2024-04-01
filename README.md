@@ -34,9 +34,9 @@ This version includes the base game and several game music tracks. This is in Be
   <li>Music autoplay</li>
   <li>Music play button on start screen for browsers that have autoplay off</li>
   <li>Background art</li>
-  <li>Two new locations</li>
-  <li>Two new weapons</li>
-  <li>Seven additional enemeies</li>
+  <li>Five new locations</li>
+  <li>Three new weapons</li>
+  <li>Eleven additional enemies</li>
   <li>The Dragon is harder to beat</li>
   <li>Custom cursors on hover</li>
   <li>XP spend function to dodge</li>
@@ -98,4 +98,3 @@ https://support.google.com/chrome/answer/9658361?hl=en&co=GENIE.Platform%3DDeskt
 ## Firefox web app install (N/A)
 
 Unfortunately Firefox dropped support for web apps in 2021. Please use another web browser or an older version of Firefox to install on your system.
-
