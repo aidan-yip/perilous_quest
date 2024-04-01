@@ -35,7 +35,8 @@ This version includes the base game and several game music tracks. This is in Be
   <li>Music play button on start screen for browsers that have autoplay off</li>
   <li>Background art</li>
   <li>Five new locations</li>
-  <li>Eleven new weapons</li>
+  <li>Three new weapons</li>
+  <li>Eleven new enemies</li>
   <li>Seven additional enemeies</li>
   <li>The Dragon is harder to beat</li>
   <li>Custom cursors on hover</li>
