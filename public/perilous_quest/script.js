@@ -213,7 +213,7 @@ const locations = [
   {
     name: "jump",
     "button text": ["6", "3", "1", "Return to Chasm"],
-    "button functions": [jumpSix, jumpThree, pickOne, goChasm],
+    "button functions": [jumpSix, jumpThree, jumpOne, goChasm],
     text: "You get ready to jump. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you make it across."
   },
   {
@@ -930,6 +930,8 @@ function jumppick(guess) {
     gold += 20;
     goldText.innerText = gold;
     update(locations[11]);
+    selectfx.currentTime = 0;
+    selectfx.play();
   } else {
     lose();
   }
