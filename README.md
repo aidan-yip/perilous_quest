@@ -18,9 +18,10 @@ This version includes the base game and several game music tracks. This is in Be
 <ul>
   <li>Responsive Design so it can be played on most screen sizes</li>
   <li>Progressive Web Application support</li>
-  <li>System Notifications (Desktop/Laptop only)</li>
+  <li>System Notifications with the Notifications API (Desktop/Laptop only)</li>
   <li>Are you sure you want to leave? Prompt (Desktop/Laptop only)</li>
   <li>Light/Dark Mode responds to the system theme</li>
+  <li>Added a share button that uses the Web Share API</li>
   <li>Support for temporary offline caching (Safari, Chrome and Firefox)*</li>
   <li>Installs a Service worker for PWA compatibility</li>
   <li>Splash screen for mobile devices</li> 
