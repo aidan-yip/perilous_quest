@@ -21,8 +21,8 @@ This version includes the base game and several game music tracks. This is in Be
   <li>System Notifications with the Notifications API (Desktop/Laptop only)</li>
   <li>Are you sure you want to leave? Prompt (Desktop/Laptop only)</li>
   <li>Light/Dark Mode responds to the system theme</li>
-  <li>Added a share button that uses the Web Share API</li>
-  <li>Support for temporary offline caching (Safari, Chrome and Firefox)*</li>
+  <li>Added a share button that uses the Web Share API (Safari on macOS/iOS and Chrome on Windows/ChromeOS only)</li>
+  <li>Support for temporary offline caching (Safari, Chrome, Firefox and Edge)*</li>
   <li>Installs a Service worker for PWA compatibility</li>
   <li>Splash screen for mobile devices</li> 
   <li>Support for fullscreen on iPhones with the TrueDepth Camera/Dynamic Island</li>
