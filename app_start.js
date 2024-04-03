@@ -39,5 +39,25 @@ document.addEventListener ("visibilitychange", () => {
     function visitPage(){
         window.location='./public/perilous_quest/index.html';
     }
+
+//Share button
+
+const shareData = {
+  title: "Perilous Quest",
+  text: "Share Perilous Quest with a friend!",
+  url: "https://perilous-quest.netlify.app",
+};
+
+const btn = document.getElementById("sharebutton");
+const resultPara = document.querySelector(".result");
+
+// Share must be triggered by "user activation"
+btn.addEventListener("click", async () => {
+  try {
+    await navigator.share(shareData);
+  } catch (err) {
+    alert("Your browser doesn't support the share button");
+  }
+});
     
    

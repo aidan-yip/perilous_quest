@@ -92,6 +92,7 @@ h1 {
 
   div .buttondiv {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
@@ -118,6 +119,17 @@ h1 {
     text-shadow: 0px 0px 25px #008296;
     cursor: cell;
     animation: mymove 2s infinite;
+}
+
+#sharebutton {
+    margin-top: 3%;
+    padding: 15px 100px;
+    animation: none;
+}
+
+.buttondiv button.md {
+  font-size: 130%;
+
 }
 
 .music {
@@ -203,6 +215,11 @@ h1 {
       display: block;
       font-size: 6px;
       margin-top: 30px;
+    }
+
+    #sharebutton {
+      padding: 15px 15px;
+      margin-top: 60%;
     }
   
 
