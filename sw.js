@@ -16,7 +16,6 @@ const STATIC_ASSETS = [
     '/public/selectfx.wav',
     '/public/select_null.wav',
     '/public/lose.wav',
-
 ]
 
 async function preCache() {
@@ -29,6 +28,16 @@ self.addEventListener('install', event => {
     self.skipWaiting()
     event.waitUntil(preCache())
 })
+
+self.addEventListener("fetch", (event) => {
+    event.respondWith(
+      (async () => {
+        const cachedResponse = await caches.match(event.request);
+        if (cachedResponse) return cachedResponse;
+        return fetch(event.request);
+      })(),
+    );
+  });
 
 async function cleanupCache() {
     const keys = await caches.keys()
