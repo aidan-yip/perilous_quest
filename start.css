@@ -306,5 +306,9 @@ a:visited {
   button {
     background: transparent;
   }
+
+  #infodiv {
+    background-color: transparent;
+  }
   
 }
