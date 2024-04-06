@@ -4,12 +4,26 @@ const STATIC_ASSETS = [
     '/start.css',
     '/app_start.js',
     '/manifest.json',
+    '/read/index.html',
     '/public/perilous_quest/index.html',
     '/public/perilous_quest/styles.css',
     '/public/perilous_quest/script.js',
     '/public/perilous_quest/dark_mode.css',
+    '/public/favicon.ico',
+    '/public/wonder.wav',
+    '/public/lovely_town.wav',
+    '/public/selectfx.wav',
+    '/public/select_null.wav',
+    '/public/shop.wav',
+    '/public/cave_tune.wav',
+    '/public/boss_theme.wav',
+    '/public/castle.wav',
+    '/public/lose.wav',
+    '/public/defeat_boss.wav',
+    '/public/wonder_reprise.wav',
     '/public/perilous_quest/install/install.html',
-    '/public/perilous_quest/install/install.css'
+    '/public/perilous_quest/install/install.css',
+
 ]
 
 async function preCache() {
