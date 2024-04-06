@@ -14,13 +14,7 @@ const STATIC_ASSETS = [
     '/public/lovely_town.wav',
     '/public/selectfx.wav',
     '/public/select_null.wav',
-    '/public/shop.wav',
-    '/public/cave_tune.wav',
-    '/public/boss_theme.wav',
-    '/public/castle.wav',
     '/public/lose.wav',
-    '/public/defeat_boss.wav',
-    '/public/wonder_reprise.wav',
     '/public/perilous_quest/install/install.html',
     '/public/perilous_quest/install/install.css',
 
