@@ -29,16 +29,6 @@ self.addEventListener('install', event => {
     event.waitUntil(preCache())
 })
 
-self.addEventListener("fetch", (event) => {
-    event.respondWith(
-      (async () => {
-        const cachedResponse = await caches.match(event.request);
-        if (cachedResponse) return cachedResponse;
-        return fetch(event.request);
-      })(),
-    );
-  });
-
 async function cleanupCache() {
     const keys = await caches.keys()
     const keysToDelete = keys.map(key => {
