@@ -12,11 +12,10 @@ const STATIC_ASSETS = [
     '/public/favicon.ico',
     '/public/wonder.wav',
     '/public/lovely_town.wav',
+    'public/boss_theme.wav',
     '/public/selectfx.wav',
     '/public/select_null.wav',
     '/public/lose.wav',
-    '/public/perilous_quest/install/install.html',
-    '/public/perilous_quest/install/install.css',
 
 ]
 
