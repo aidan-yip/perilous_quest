@@ -61,12 +61,21 @@
 </head>
 <body>
       <div class="back">
-          <p class="version"><a href="read/index.html">v1.0.0</a></p>
-          <p class="hint">You can also use Tab + Enter</p>
+        
+          <div id="infodiv">
+            <p class="version"><a href="read/index.html">v1.0.0</a></p>
+            <p class="hint">You can also use Tab + Enter</p>
+            <p id="clock"></p>
+          </div>
+
           <button onclick="playmusic();" class="music" id="music">Tap to turn audio on 🔊</button>
+
+          <p id="date"></p>
+
           <div class="titlediv">
             <h1>PERILOUS QUEST</h1>
           </div>
+
           <div class="buttondiv">
            <button class="startbutton" id="startbutton" tabindex="1" onclick="visitPage();">CLICK/TAP TO START</button>
            <button class="sharebutton md" id="sharebutton" tabindex="2">
@@ -75,6 +84,7 @@
               </span>
            </button>
           </div>
+
      </div>
 
    <div>

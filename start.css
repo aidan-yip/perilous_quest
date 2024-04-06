@@ -144,6 +144,13 @@ h1 {
     animation: none
 }
 
+#infodiv {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .version {
   color: #ffffff;
   font-family: var(--fontdefault);
@@ -152,12 +159,28 @@ h1 {
 }
 
 .hint {
-  display: block;
-  text-align: center;
-  padding-top: 5px;
+  padding-top: 4%;
+  padding-left: 5%;
   color: #ffffff84;
   font-family: var(--fontdefault);
   font-size: 10px;
+}
+
+#clock {
+  color: #ffffff;
+  text-align: right;
+  font-family: var(--fontdefault);
+  padding-top: 2%;
+  padding-right: 2%;
+}
+
+#date {
+  margin-top: 1%;
+  padding: 0px 50px;
+  text-align: center;
+  font-size: 15px;
+  color: #ffffff;
+  font-family: var(--fontdefault);
 }
 
 a {
@@ -206,7 +229,7 @@ a:visited {
 
     h1 {
         font-size: 40px;
-        padding-top: 15vh;
+        padding-top: 10vh;
     }
 
     button {
@@ -225,6 +248,17 @@ a:visited {
       display: none;
     }
 
+    #clock {
+       font-size: 12px;
+       padding-top: 12%;
+       padding-left: 6%;
+    }
+
+    #date {
+      margin-top: 10%;
+      font-size: 12px;
+    }
+
     .music {
       display: block;
       font-size: 6px;
@@ -233,7 +267,7 @@ a:visited {
 
     #sharebutton {
       padding: 15px 15px;
-      margin-top: 60%;
+      margin-top: 50%;
     }
   
 
@@ -244,6 +278,10 @@ a:visited {
     @media only screen and (min-height: 100px) {
 
       .version {
+        padding-top: 11%;
+      }
+
+      #clock {
         padding-top: 11%;
       }
   
