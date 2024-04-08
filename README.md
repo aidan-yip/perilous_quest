@@ -62,7 +62,7 @@ This version includes the base game and several game music tracks. This is in Be
 
 ## Music
 <ul>
-<li>Music 🎧 "Lovely Town" by  Skremzy (Tristan Forrest)</li> 
+<li>"Lovely Town" and "A Secret" by  Skremzy (Tristan Forrest)</li> 
 <li>"Boss Theme" by Audiophobia (Tanner Marsh)</li>
 <li>Original Soundtrack by Newave Oceans (James Y.)</li>
 </ul>
