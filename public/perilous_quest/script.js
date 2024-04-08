@@ -5,7 +5,7 @@ let notification
 document.addEventListener ("visibilitychange", () => {
     if (document.visibilityState === "hidden") {
       notification = new Notification ("Music Alert", { 
-        body: "Perilous Quest is still running. To stop the audio close the app/webpage",
+        body: "Perilous Quest is still running. To stop the audio close the app",
         icon: "homescreen192.png",
         tag: "Come Back",
       })
