@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#03c7f8" />
+    <title>Page not found</title>
+    <!-- CSS preconnect font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --fontdefault: "Press Start 2P", -apple-system, system-ui,
+        BlinkMacSystemFont;
+    }
+
+    @supports (padding: max(0px)) {
+      body,
+      header,
+      footer {
+        padding-left: min(0vmin, env(safe-area-inset-left));
+        padding-right: min(0vmin, env(safe-area-inset-right));
+      }
+    }
+
+    html,
+    body {
+      cursor: url("/Public/favicon.ico"), default;
+      /* just change the cursor.ico path to your location */
+    }
+
+    @keyframes fadeInAnimation {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    body::-webkit-scrollbar {
+      display: none !important;
+    }
+
+    body {
+      background-color: #000000;
+    }
+
+    .background {
+      background-size: cover;
+      background-position: center;
+      background-repeat: repeat;
+      padding-bottom: 50px;
+      height: auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: var(--fontdefault);
+      font-size: 30px;
+      margin-top: 5%;
+      margin-bottom: 30px;
+      text-shadow: 0px 0px 10px #1fd2ff, 1px 1px #1fd2ff, 2px 2px #1fd2ff,
+        3px 3px #1fd2ff, 4px 4px #1fd2ff, 5px 5px #1fd2ff, 6px 6px #1fd2ff;
+      letter-spacing: normal;
+      /* fade in */
+      transition: width, height, 0.5s ease-in-out 0ms;
+    }
+
+    h2 {
+      text-align: center;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 25px;
+      padding: 20px 20px;
+      background-color: #ffffff80;
+      text-shadow: 1px 1px #ffffff, 2px 2px #ffffff, 3px 3px #ffffff,
+        4px 4px #ffffff;
+      color: #000000;
+      font-family: var(--fontdefault);
+      margin-top: 40px;
+      box-shadow: 0px 0px 50px 0px #0a001d;
+      letter-spacing: normal;
+      transition: margin, 1s ease-in-out 0ms;
+    }
+
+    h6 {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      font-size: 100px;
+    }
+
+    a,
+    #navlink {
+      justify-content: center;
+      color: #03c7f8;
+      font-family: var(--fontdefault);
+      text-decoration: none;
+      padding: 5px;
+      padding-left: 50px;
+      letter-spacing: normal;
+      transition: 1s ease-in-out 0ms;
+      text-shadow: 1px 1px #005c92, 1px 1px #005c92, 2px 2px #005c92,
+        3px 3px #005c92, 0px 0px 10px #ffffff;
+    }
+
+    a,
+    #artlink {
+      color: #22d3ff;
+      padding-left: 0px;
+    }
+
+    a,
+    #artlink:hover {
+      color: #9bebff;
+    }
+
+    #navbar {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding-top: 10px;
+      padding-left: 30px;
+      padding-bottom: 10px;
+      border-bottom: solid #86e3ff;
+    }
+
+    #black {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #0f0f0f;
+    }
+
+    #game {
+      max-width: 700px;
+      min-width: 70%;
+      background-image: url("https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/dragon2.png");
+      color: #ffffff;
+      padding: 10px;
+      border-radius: 25px;
+      border: solid 2px #1fd2ff;
+      /* fade in */
+      animation: fadeInAnimation ease 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      transition: width, height, 1s ease-in-out 0ms;
+    }
+
+    .img_div {
+      background-image: url("./public/icons/homescreen168.png");
+      background-color: #00d9ff;
+      background-position: center;
+      margin-top: 10%;
+      width: 200px;
+      height: 200px;
+      background-repeat: no-repeat;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h3 {
+      color: #ffffff;
+      font-family: var(--fontdefault);
+      text-align: center;
+      text-shadow: 0px 0px 10px #9e69ff, 1px 1px #000000, 2px 2px #000000,
+        3px 3px #000000, 4px 4px #000000;
+      font-size: 30px;
+      padding: 30px 10px 30px 10px;
+      border-bottom: none;
+      letter-spacing: normal;
+      /* fade in */
+      animation: fadeInAnimation ease 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      transition: width, height, 0.5s ease-in-out 0ms;
+    }
+
+    a .md {
+      font-size: 130%;
+    }
+
+    /* desktop */
+    @media only screen and (min-width: 900px) {
+      #game:hover {
+        box-shadow: 0px 0px 25px #03c7f8;
+      }
+
+      h1:hover {
+        letter-spacing: 10px;
+      }
+
+      h3 {
+        text-shadow: 1px 1px #000000, 2px 2px #000000, 3px 3px #000000,
+          4px 4px #000000;
+      }
+
+      h3:hover {
+        letter-spacing: 5px;
+        text-decoration: underline;
+        text-decoration-color: #4b00bb;
+        text-decoration-thickness: 3px;
+      }
+
+      #navlink:hover {
+        color: #63e0ff;
+        text-decoration: underline;
+        text-decoration-color: #00d9ff;
+        text-decoration-thickness: 3px;
+      }
+
+      h2:hover {
+        box-shadow: 0px 0px 50px rgb(255, 255, 255);
+        letter-spacing: 7px;
+      }
+
+      ul:hover {
+        color: #ffcf23;
+      }
+    }
+
+    /* mobile */
+    @media only screen and (max-width: 900px) {
+      a,
+      #navlink {
+        padding-left: 5px;
+      }
+
+      #game {
+        box-shadow: 0px 0px 25px #03c7f8;
+        margin-top: 20%px;
+      }
+
+      .img_div {
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      h1 {
+        font-size: 15px;
+        margin-bottom: 0px;
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      h2 {
+        box-shadow: 0px 0px 50px rgb(255, 255, 255);
+        font-size: 15px;
+      }
+
+      h3 {
+        font-size: 12px;
+      }
+
+      .img_div {
+        width: 200px;
+        height: 200px;
+      }
+
+      #navbar {
+        padding-top: 55px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 2px;
+      }
+
+      a,
+      #link {
+        font-size: small;
+      }
+
+      li {
+        font-size: small;
+      }
+
+      ul {
+        font-size: small;
+      }
+    }
+  </style>
+  <body>
+    <div id="navbar">
+      <a href="/Public/perilous_quest/index.html" target="_self" id="navlink"
+        ><span class="material-symbols-outlined md"> arrow_back_ios</span>
+        Back</a
+      >
+    </div>
+
+    <div id="black">
+      <div id="game">
+        <div class="img_div"></div>
+        <h2>404</h2>
+        <h1>Whoops something went wrong!</h1>
+        <h3>Click/Tap back to return</h3>
+      </div>
+    </div>
+  </body>
+</html>
