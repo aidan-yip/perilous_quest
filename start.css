@@ -261,8 +261,8 @@ a:visited {
       rgba(1, 111, 255, 1) 57%,
       rgba(0, 91, 171, 1) 100%
     );
-    text-shadow: 1px 1px #000000, 2px 2px #000000, 3px 3px #000000,
-    4px 4px #000000;
+    text-shadow: 1px 1px #00638a, 2px 2px #00638a, 3px 3px #00638a,
+    4px 4px #00638a;
   }
 
   button:active {
