@@ -228,7 +228,7 @@ const locations = [
     name: "Frozen Mineshaft",
     "button text": ["Brave the water", "Brave the snow", "Brave the flames", "Run like a coward ⮐"],
     "button functions": [fightSnakes, fightYeti, fightDragon, lose],
-    text: "It is extremely cold, you shiver as you walk down the abandoned Mineshaft. There are three shaft passageways. The left is overflowing with a water. The middle is filled with ice and snow. The last one is lit with glow of fire."
+    text: "It is extremely cold, you shiver as you walk down the abandoned Mineshaft. There are three shaft passageways. The left is overflowing with a water. The middle is filled with ice and snow. The last one is lit with the orange glow of fire."
   }
 ];
 
