@@ -1,135 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS preconnect font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!--Google material symbol icons-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
     <title>Release notes</title>
     <style>
+      body {
+        padding: 10px 50px;
+        background-color: #121212;
+        color: #ffffff;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+
+      div {
+        border: 3px solid #19cdff;
+        margin-top: 10px;
+      }
+
+      img {
+        pointer-events: none;
+      }
+
+      a {
+        color: #ffffff;
+        font-size: 180%;
+        text-decoration-line: none;
+      }
+
+      a:hover {
+        color: #ffffff;
+        font-size: 180%;
+        text-decoration: underline;
+      }
+
+      a:visited {
+        color: #ffffff;
+      }
+
+      @media only screen and (max-width: 900px) {
         body {
-            padding: 10px 50px;
-            background-color: #121212;
-            color: #ffffff;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          padding: 10px 20px;
         }
-
-        div {
-
-            border: 3px solid #19cdff;
-            margin-top: 10px
-        }
-
-        img {
-            pointer-events: none;
-        }
-
-        a {
-            color: #ffffff;
-            font-size: 180%;
-            text-decoration-line: none;
-        }
-
-        a:hover {
-            color: #ffffff;
-            font-size: 180%;
-            text-decoration: underline;
-        }
-
-        a:visited {
-            color: #ffffff;
-        }
-
-        @media only screen and (max-width: 900px) {
-            
-           body {
-            padding: 10px 20px;
-           }
-
-        }
+      }
     </style>
-</head>
-<body>
-    <a href="/index.html" target="_self" id="navlink"><span class="material-symbols-outlined md">arrow_back_ios</span> Back</a>
+  </head>
+  <body>
+    <a href="/index.html" target="_self" id="navlink" title="Go Back"
+      ><span class="material-symbols-outlined md">arrow_back_ios</span> Back</a
+    >
 
     <div></div>
 
-    <h1>PERILOUS QUEST - Version 1.0.0 (latest) </h1>
+    <h1>PERILOUS QUEST - Version 1.0.0 (latest)</h1>
 
     <h2>2024-05-06</h2>
 
-<h4><i>Perilous Quest supports being installed as a Progressive Web Application through most desktop/mobile browsers.</i></h4>
+    <h4>
+      <i
+        >Perilous Quest supports being installed as a Progressive Web
+        Application through most desktop/mobile browsers.</i
+      >
+    </h4>
 
-    <img style="display: flex; justify-content: flex-end;" onContextMenu="return false;" src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/pq_poster.jpg" alt="Perilous Quest poster" width="300"/>
-  
-<h2>Fixes and Changes:</h2>
-<ul>
-  <li>Responsive Design so it can be played on most screen sizes</li>
-  <li>Progressive Web Application support</li>
-  <li>System Notifications with the Notifications API (Desktop/Laptop only)</li>
-  <li>Are you sure you want to leave? Prompt (Desktop/Laptop only)</li>
-  <li>Light/Dark Mode responds to the system theme</li>
-  <li>Added a share button that uses the Web Share API (Safari on macOS/iOS and Chrome on Windows/ChromeOS only)</li>
-  <li>Support for temporary offline caching (Safari, Chrome, Firefox and Edge)*</li>
-  <li>Installs a Service worker for PWA compatibility</li>
-  <li>Splash screen for mobile devices</li> 
-  <li>Support for fullscreen on iPhones with the TrueDepth Camera/Dynamic Island</li>
-  <li>Name input field for player</li>
-  <li>New 3D redesign and text depth</li>
-  <li>Start screen</li>
-  <li>Music jukebox</li> 
-  <li>CD Music Visualiser</li>
-  <li>Sound-FX/Sound design</li> 
-  <li>Music autoplay</li>
-  <li>Music play button on start screen for browsers that have autoplay off</li>
-  <li>Background art</li>
-  <li>Five new locations</li>
-  <li>Three new weapons</li>
-  <li>Eleven additional enemies</li>
-  <li>The Dragon is harder to beat</li>
-  <li>Custom cursors on hover</li>
-  <li>XP spend function to dodge</li>
-  <li>View enemy level on battle stat display</li>
-  <li>Relocating the Easter egg</li>
-  <li>A fourth button option</li>
-  <li>A new number you can guess in the Easter egg</li>
-  <li>The sell weapon function is now self explanatory to the player</li>
-  <li>Added emoji’s for visual cues</li>
-  <li>Stats have an underline on hover</li>
-  <li>Text expands on hover</li>
-</ul>
+    <img
+      style="display: flex; justify-content: flex-end"
+      onContextMenu="return false;"
+      src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/pq_poster.jpg"
+      alt="Perilous Quest poster"
+      width="300"
+    />
 
-<i><b>*Temporary offline functionality is not permanent</b></i>
+    <h2>Fixes and Changes:</h2>
+    <ul>
+      <li>Responsive Design so it can be played on most screen sizes</li>
+      <li>Progressive Web Application support</li>
+      <li>
+        System Notifications with the Notifications API (Desktop/Laptop only)
+      </li>
+      <li>Are you sure you want to leave? Prompt (Desktop/Laptop only)</li>
+      <li>Light/Dark Mode responds to the system theme</li>
+      <li>
+        Added a share button that uses the Web Share API (Safari on macOS/iOS
+        and Chrome on Windows/ChromeOS only)
+      </li>
+      <li>
+        Support for temporary offline caching (Safari, Chrome, Firefox and
+        Edge)*
+      </li>
+      <li>Installs a Service worker for PWA compatibility</li>
+      <li>Splash screen for mobile devices</li>
+      <li>
+        Support for fullscreen on iPhones with the TrueDepth Camera/Dynamic
+        Island
+      </li>
+      <li>Name input field for player</li>
+      <li>New 3D redesign and text depth</li>
+      <li>Start screen</li>
+      <li>Music jukebox</li>
+      <li>CD Music Visualiser</li>
+      <li>Sound-FX/Sound design</li>
+      <li>Music autoplay</li>
+      <li>
+        Music play button on start screen for browsers that have autoplay off
+      </li>
+      <li>Background art</li>
+      <li>Five new locations</li>
+      <li>Three new weapons</li>
+      <li>Eleven additional enemies</li>
+      <li>The Dragon is harder to beat</li>
+      <li>Custom cursors on hover</li>
+      <li>XP spend function to dodge</li>
+      <li>View enemy level on battle stat display</li>
+      <li>Relocating the Easter egg</li>
+      <li>A fourth button option</li>
+      <li>A new number you can guess in the Easter egg</li>
+      <li>The sell weapon function is now self explanatory to the player</li>
+      <li>Added emoji’s for visual cues</li>
+      <li>Stats have an underline on hover</li>
+      <li>Text expands on hover</li>
+    </ul>
 
-<h1> Credits </h1>
+    <i><b>*Temporary offline functionality is not permanent</b></i>
 
-<ul>
-    <li>Original project idea by FreeCodeCamp</li>
-    <li>Game mods, Flat UI redesign, Dark Mode, Notifications and Expanded functionality are by Aidan Y.</li>
-</ul>
+    <h1>Credits</h1>
 
-<h2> Music </h2>
-<ul>
-    <li>"Lovely Town" and "A Secret" by  Skremzy (Tristan Forrest)</li> 
-    <li>"Boss Theme" by Audiophobia (Tanner Marsh)</li>
-    <li>Original Soundtrack by Newave Oceans (James Y.)</li>
-</ul>
+    <ul>
+      <li>Original project idea by FreeCodeCamp</li>
+      <li>
+        Game mods, Flat UI redesign, Dark Mode, Notifications and Expanded
+        functionality are by Aidan Y.
+      </li>
+    </ul>
 
-<h2>Art</h2> 
-<ul>
-    <li>Marsh, Tanner. "Dragon" 2024</li>
-    <li>Display Art. Marsh, Tanner. 2024</li>
-</ul>
+    <h2>Music</h2>
+    <ul>
+      <li>"Lovely Town" and "A Secret" by Skremzy (Tristan Forrest)</li>
+      <li>"Boss Theme" by Audiophobia (Tanner Marsh)</li>
+      <li>Original Soundtrack by Newave Oceans (James Y.)</li>
+    </ul>
 
-<h2> Future ideas </h2>
+    <h2>Art</h2>
+    <ul>
+      <li>Marsh, Tanner. "Dragon" 2024</li>
+      <li>Display Art. Marsh, Tanner. 2024</li>
+    </ul>
 
-<ul>     
-    <li>Location images to be added in a future release.</li>
-    <li>Older versions may remain available for download as they are released.</li>
-</ul>
+    <h2>Future ideas</h2>
 
-</body>
+    <ul>
+      <li>Location images to be added in a future release.</li>
+      <li>
+        Older versions may remain available for download as they are released.
+      </li>
+    </ul>
+  </body>
 </html>
