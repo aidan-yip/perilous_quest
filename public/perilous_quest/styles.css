@@ -102,8 +102,10 @@ body {
   color: #e00000;
   text-shadow: 1px 1px #780000, 2px 2px #780000,
     3px 3px #780000, 4px 4px #780000, 0px 0px 20px #e00000;
-  margin-right: 20px;
-  width: 20px;
+  margin-right: 30px;
+  margin-top: 20px;
+  width: 30px;
+  height: 30px;
   background: transparent;
   border: none;
   box-shadow: none;
@@ -837,8 +839,8 @@ button .md {
   #popup {
     width: 95%;
     margin-top: 45%;
-    padding-left: 30px;
-    padding-right: 5px;
+    padding-left: 40px;
+    padding-right: 0px;
   }
 
   a,
