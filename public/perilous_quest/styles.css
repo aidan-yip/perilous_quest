@@ -88,6 +88,43 @@ body {
   height: auto;
 }
 
+#popback {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  background-color: #00000098;
+  width: 100vw;
+  height: 474%;
+  z-index: 2;
+}
+
+#popclose {
+  color: #e00000;
+  text-shadow: 1px 1px #780000, 2px 2px #780000,
+    3px 3px #780000, 4px 4px #780000, 0px 0px 20px #e00000;
+  margin-right: 20px;
+  width: 20px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+#popup {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  margin: 0 auto;
+  margin-top: 10%;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  width: 60%;
+  z-index: 3;
+  background: linear-gradient(0deg, rgba(60,12,154,1) 0%, rgba(0,212,255,1) 100%);
+  box-shadow: 0px 0px 50px #ffffff;
+  border-radius: 25px;
+  border: solid 1px #292929;
+}
+
 h1 {
   text-align: center;
   font-family: var(--fontdefault);
@@ -372,8 +409,6 @@ button {
     rgba(1, 111, 255, 1) 57%,
     rgba(0, 91, 171, 1) 100%
   );
-  text-shadow: 1px 1px #002c3e, 2px 2px #002c3e, 3px 3px #002c3e,
-    4px 4px #002c3e;
   border: none;
   width: 40%;
   height: 70px;
@@ -409,6 +444,8 @@ ul {
     4px 4px #000000;
   padding-top: 50px;
   padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #gamelogo {
@@ -792,6 +829,18 @@ button .md {
 
 /* mobile */
 @media only screen and (max-width: 900px) {
+
+  #popback {
+    height: 390%;
+  }
+
+  #popup {
+    width: 95%;
+    margin-top: 45%;
+    padding-left: 30px;
+    padding-right: 5px;
+  }
+
   a,
   #navlink {
     padding-left: 5px;

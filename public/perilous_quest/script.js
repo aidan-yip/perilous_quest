@@ -15,6 +15,18 @@ document.addEventListener ("visibilitychange", () => {
 
 })
 
+//Pop up window
+
+const popup = document.getElementById("popback");
+const popclose = document.getElementById("popclose");
+
+popclose.onclick = closepop;
+
+function closepop() {
+  popup.style.display = "none";
+}
+ 
+
 // Quit prompt
 
 window.addEventListener('beforeunload', (event) => {
