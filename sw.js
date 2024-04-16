@@ -16,6 +16,7 @@ const STATIC_ASSETS = [
     '/public/selectfx.wav',
     '/public/select_null.wav',
     '/public/lose.wav',
+    '/404.html'
 ]
 
 async function preCache() {

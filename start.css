@@ -1,59 +1,76 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 *,
 *::before,
-*::after { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-  --fontdefault: "Press Start 2P", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --fontdefault: "Press Start 2P", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
 }
 
-@supports(padding:max(0px)) {
-  body, header, footer {
-      padding-left: min(0vmin, env(safe-area-inset-left));
-      padding-right: min(0vmin, env(safe-area-inset-right));
+@supports (padding: max(0px)) {
+  body,
+  header,
+  footer {
+    padding-left: min(0vmin, env(safe-area-inset-left));
+    padding-right: min(0vmin, env(safe-area-inset-right));
   }
 }
 
-html, body {
+html,
+body {
   cursor: url("/Public/favicon.ico"), default;
   /* just change the cursor.ico path to your location */
 }
 
 @keyframes fadeInAnimation {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
 @keyframes floating {
-  0% { transform: translate(0,  0px); }
-  50%  { transform: translate(0, 15px); }
-  100%   { transform: translate(0, -0px); }    
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
 }
 
 body {
-    background: rgb(11, 0, 85);
-    background: linear-gradient(90deg, rgba(181,0,223,1) 0%, rgba(177,52,5,1) 28%, rgba(9,10,121,1) 61%, rgba(0,251,255,1) 100%);
-    overflow: hidden; /* Hide scrollbars */
+  background: rgb(11, 0, 85);
+  background: linear-gradient(
+    90deg,
+    rgba(181, 0, 223, 1) 0%,
+    rgba(177, 52, 5, 1) 28%,
+    rgba(9, 10, 121, 1) 61%,
+    rgba(0, 251, 255, 1) 100%
+  );
+  overflow: hidden; /* Hide scrollbars */
 }
 
 .back {
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.278);
-    margin-left: auto;
-    margin-right: auto;
-    width: 100vw;
-    height: 110vh;
-    overflow: hidden; /* Hide scrollbars */
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.278);
+  margin-left: auto;
+  margin-right: auto;
+  width: 100vw;
+  height: 110vh;
+  overflow: hidden; /* Hide scrollbars */
 }
 
 .titlediv {
@@ -65,83 +82,75 @@ body {
 }
 
 h1 {
-    text-align: center;
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-top: auto;
-    margin-bottom: auto;
-    font-family: var(--fontdefault);
-    font-size: 100px;
-    color: rgb(73, 228, 255);
-    text-shadow: 0px 0px 25px #008296,
-    1px 1px #1fd2ff,
-    2px 2px #1fd2ff,
-    3px 3px #1fd2ff,
-    4px 4px #1fd2ff,
-    5px 5px #1fd2ff,
-    6px 6px #1fd2ff,
-    7px 7px #1fd2ff,
-    8px 8px #1fd2ff
-    ;
-    /* float */
-    animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-  }
+  text-align: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family: var(--fontdefault);
+  font-size: 100px;
+  color: rgb(73, 228, 255);
+  text-shadow: 0px 0px 25px #008296, 1px 1px #1fd2ff, 2px 2px #1fd2ff,
+    3px 3px #1fd2ff, 4px 4px #1fd2ff, 5px 5px #1fd2ff, 6px 6px #1fd2ff,
+    7px 7px #1fd2ff, 8px 8px #1fd2ff;
+  /* float */
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
 
-  div .buttondiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    /* fade in */
-    animation: fadeInAnimation ease 15s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-  }
+div .buttondiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  /* fade in */
+  animation: fadeInAnimation ease 15s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
 
-  button {
-    display: block;
-    margin: 0 auto;
-    padding-top: 3%;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 3%;
-    margin-top: 5%;
-    font-family: var(--fontdefault);
-    font-size: 20px;
-    color: rgb(73, 228, 255);
-    background-color: transparent;
-    border-radius: 25px;
-    border: solid 3px #4de7ff;
-    text-shadow: 0px 0px 25px #008296;
-    cursor: cell;
-    animation: mymove 2s infinite;
+button {
+  display: block;
+  margin: 0 auto;
+  padding-top: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 3%;
+  margin-top: 5%;
+  font-family: var(--fontdefault);
+  font-size: 20px;
+  color: rgb(73, 228, 255);
+  background-color: transparent;
+  border-radius: 25px;
+  border: solid 3px #4de7ff;
+  text-shadow: 0px 0px 25px #008296;
+  cursor: cell;
+  animation: mymove 2s infinite;
 }
 
 #sharebutton {
-    margin-top: 3%;
-    padding: 15px 100px;
-    animation: none;
+  margin-top: 1%;
+  padding: 15px 100px;
+  animation: none;
 }
 
 .buttondiv button.md {
   font-size: 130%;
-
 }
 
 .music {
-    display: none;
-    padding: 4px;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    font-family: var(--fontdefault);
-    font-size: 12px;
-    color: #ffffff;
-    border: inset 0px #ffffffa9;
-    animation: none
+  display: none;
+  padding: 4px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-family: var(--fontdefault);
+  font-size: 12px;
+  color: #ffffff;
+  border: inset 0px #ffffffa9;
+  animation: none;
 }
 
 #infodiv {
@@ -193,20 +202,59 @@ a:visited {
 }
 
 @keyframes mymove {
-  50% {font-size: 30px;}
+  50% {
+    font-size: 30px;
+  }
 }
-
-
 
 /* Desktop */
 @media only screen and (min-width: 900px) {
+
+  button[title]:hover::after {
+    position: relative;
+    z-index: 1;
+    content: attr(title);
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    background-color: rgb(255, 191, 0);
+    text-shadow: 1px 1px #000000, 2px 2px #000000, 3px 3px #000000,
+    4px 4px #000000;
+    padding: 5px;
+    border-radius: 5px;
+    bottom: -20px;
+  }
+
+  a[title]:hover::after {
+    position: relative;
+    z-index: 1;
+    content: attr(title);
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    background-color: rgb(255, 191, 0);
+    text-shadow: 1px 1px #000000, 2px 2px #000000, 3px 3px #000000,
+    4px 4px #000000;
+    padding: 5px;
+    border-radius: 5px;
+    bottom: -20px;
+  }
 
   h1 {
     padding-top: 20vh;
   }
 
   button:hover {
-    background: linear-gradient(167deg, rgba(0,255,211,1) 0%, rgba(1,111,255,1) 57%, rgba(0,91,171,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(
+      167deg,
+      rgba(0, 255, 211, 1) 0%,
+      rgba(1, 111, 255, 1) 57%,
+      rgba(0, 91, 171, 1) 100%
+    );
   }
 
   button:active {
@@ -217,87 +265,90 @@ a:visited {
     color: #55ebff;
     text-decoration: none;
   }
-  
+
   a:active {
     cursor: progress;
   }
-
 }
 
 /* Mobile */
 @media only screen and (max-width: 900px) {
+  h1 {
+    font-size: 40px;
+    padding-top: 10vh;
+  }
 
-    h1 {
-        font-size: 40px;
-        padding-top: 10vh;
+  button {
+    margin-top: 10%;
+    font-size: 12px;
+    border: solid 2px #00ddff;
+  }
+
+  .version {
+    font-size: 12px;
+    padding-top: 12%;
+    padding-left: 6%;
+  }
+
+  .hint {
+    display: none;
+  }
+
+  #clock {
+    font-size: 12px;
+    padding-top: 12%;
+    padding-left: 6%;
+  }
+
+  #date {
+    margin-top: 10%;
+    font-size: 12px;
+  }
+
+  .music {
+    display: block;
+    font-size: 6px;
+    margin-top: 30px;
+  }
+
+  #sharebutton {
+    padding: 15px 15px;
+    margin-top: 50%;
+  }
+
+  @keyframes mymove {
+    50% {
+      font-size: 17px;
     }
+  }
 
-    button {
-        margin-top: 10%;
-        font-size: 12px;
-        border: solid 2px #00ddff;
-    }
-
+  @media only screen and (min-height: 100px) {
     .version {
-       font-size: 12px;
-       padding-top: 12%;
-       padding-left: 6%;
-    }
-
-    .hint {
-      display: none;
+      padding-top: 11%;
     }
 
     #clock {
-       font-size: 12px;
-       padding-top: 12%;
-       padding-left: 6%;
+      padding-top: 11%;
     }
-
-    #date {
-      margin-top: 10%;
-      font-size: 12px;
-    }
-
-    .music {
-      display: block;
-      font-size: 6px;
-      margin-top: 30px;
-    }
-
-    #sharebutton {
-      padding: 15px 15px;
-      margin-top: 50%;
-    }
-  
-
-    @keyframes mymove {
-        50% {font-size: 17px;}
-    }
-
-    @media only screen and (min-height: 100px) {
-
-      .version {
-        padding-top: 11%;
-      }
-
-      #clock {
-        padding-top: 11%;
-      }
-  
   }
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
-
   body {
-    background: linear-gradient(90deg, rgba(181,0,223,1) 0%, rgba(177,52,5,1) 28%, rgba(9,10,121,1) 61%, rgba(0,251,255,1) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(181, 0, 223, 1) 0%,
+      rgba(177, 52, 5, 1) 28%,
+      rgba(9, 10, 121, 1) 61%,
+      rgba(0, 251, 255, 1) 100%
+    );
   }
 
-  div, .back {
+  div,
+  .back {
     background-color: #000000c9;
-  } 
+  }
 
   .buttondiv {
     background: transparent;
@@ -310,5 +361,4 @@ a:visited {
   #infodiv {
     background-color: transparent;
   }
-  
 }

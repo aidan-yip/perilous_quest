@@ -39,7 +39,9 @@ This version includes the base game and several game music tracks. This is in Be
   <li>Three new weapons</li>
   <li>Eleven additional enemies</li>
   <li>The Dragon is harder to beat</li>
+  <li>Progress Bar</li>
   <li>Custom cursors on hover</li>
+  <li>Help Tips on hover</li>
   <li>XP spend function to dodge</li>
   <li>View enemy level on battle stat display</li>
   <li>Relocating the Easter egg</li>
@@ -49,6 +51,7 @@ This version includes the base game and several game music tracks. This is in Be
   <li>Added emoji’s for visual cues</li>
   <li>Stats have an underline on hover</li>
   <li>Text expands on hover</li>
+  <li>404 Error page</li>
 </ul>
 
 <i><b>*Temporary offline caching functionality is not permanent</b></i>
@@ -70,6 +73,7 @@ This version includes the base game and several game music tracks. This is in Be
 ## Art
 <ul>
 <li>"Dragon" - Tanner Marsh.</li>
+<li>Display Art. Marsh, Tanner. 2024</li>
 </ul>
 
 ## Future ideas

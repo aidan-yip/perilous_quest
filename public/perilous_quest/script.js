@@ -6,7 +6,7 @@ document.addEventListener ("visibilitychange", () => {
     if (document.visibilityState === "hidden") {
       notification = new Notification ("Music Alert", { 
         body: "Perilous Quest is still running. To stop the audio close the app",
-        icon: "homescreen192.png",
+        icon: "./public/icons/homescreen192.png",
         tag: "Come Back",
       })
     } else {
@@ -54,6 +54,8 @@ let fighting;
 let monsterHealth;
 let monsterLevel;
 let inventory = ["stick ᛓ "];
+
+//Constant
 
 const button1 = document.querySelector('#button1');
 const button2 = document.querySelector("#button2");
@@ -154,7 +156,7 @@ const locations = [
     name: "town square",
     "button text": ["Visit shop", "Walk to cave", "Fight Corrupt Wizard", "Enter castle"],
     "button functions": [goStore, goCave, fightWizard, goCastle],
-    text: "You are in the town square. You see a sign that says \"Shop\". Select where you want to go."
+    text: "You are in the town square. You see a sign that says \"Shop\". Select where you want to go.",
   },
   {
     name: "store",
@@ -202,7 +204,7 @@ const locations = [
     name: "castle",
     "button text": ["Enter left hall", "Enter dark hall", "Enter right hall", "Return to Town"],
     "button functions": [goChasm, fightghost, fightKnight, goTown],
-    text: "You enter a castle. There's a sign that says \"Danger\" to the left and the sound of iron clanging from the room to the right. Ahead you sense something cold and dark. Do you dare to continue?"
+    text: "You enter a castle. There's a sign that says \"Danger\" to the left and the sound of iron clanging from the room to the right. Ahead you sense something cold and dark. Do you dare to continue?",
   },
   {
     name: "chasm",
@@ -275,6 +277,7 @@ function goTown() {
   //Reprise
   reprise.currentTime = 0;
   reprise.pause();
+  document.getElementById("game_meter").setAttribute("value", "1");
 }
 
 function goStore() {
@@ -284,6 +287,7 @@ function goStore() {
   lovely_town.currentTime = 0;
   //Show
   shop.play();
+  document.getElementById("game_meter").setAttribute("value", "5");
 }
 
 function goCave() {
@@ -302,6 +306,7 @@ function goCave() {
   //Defeat Boss
   defeat_boss.pause();
   defeat_boss.currentTime = 0;
+  document.getElementById("game_meter").setAttribute("value", "20");
 }
 
 function goCastle() {
@@ -311,16 +316,19 @@ function goCastle() {
   lovely_town.currentTime = 0;
   //Castle
   castle.play();
+  document.getElementById("game_meter").setAttribute("value", "30");
 }
 
 function goChasm() {
   update(locations[9]);
   //Chasm
+  document.getElementById("game_meter").setAttribute("value", "60");
 }
 
 function goJump() {
   update(locations[10]);
   //jump
+  document.getElementById("game_meter").setAttribute("value", "80");
 }
 
 function goMine() {
@@ -338,6 +346,7 @@ function goMine() {
   defeat_boss.pause();
   defeat_boss.currentTime = 0;
   //Mine
+  document.getElementById("game_meter").setAttribute("value", "90");
 }
 
 // Shop functions
@@ -859,6 +868,7 @@ function winGame() {
   //Wonder
   reprise.currentTime = 0;
   reprise.play();
+  document.getElementById("game_meter").setAttribute("value", "100");
   // document.getElementById('credits').click(); <-- Code to link to credits page in the future
 }
 
