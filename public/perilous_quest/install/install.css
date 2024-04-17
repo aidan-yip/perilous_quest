@@ -1,35 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 *,
 *::before,
-*::after { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-  --fontdefault: "Press Start 2P", -apple-system,system-ui,BlinkMacSystemFont;
+  --fontdefault: "Press Start 2P", -apple-system, system-ui, BlinkMacSystemFont;
 }
 
-@supports(padding:max(0px)) {
-  body, header, footer {
-      padding-left: min(0vmin, env(safe-area-inset-left));
-      padding-right: min(0vmin, env(safe-area-inset-right));
+@supports (padding: max(0px)) {
+  body,
+  header,
+  footer {
+    padding-left: min(0vmin, env(safe-area-inset-left));
+    padding-right: min(0vmin, env(safe-area-inset-right));
   }
 }
 
-html, body {
+html,
+body {
   cursor: url("/Public/favicon.ico"), default;
   /* just change the cursor.ico path to your location */
 }
 
 @keyframes fadeInAnimation {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
@@ -42,152 +45,141 @@ body {
 }
 
 .background {
-    background-size: cover;
-    background-position: center;
-    background-repeat: repeat;
-    padding-bottom: 50px;
-    height: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  padding-bottom: 50px;
+  height: auto;
 }
 
-  h1 {
-    text-align: center;
-    font-family: var(--fontdefault);
-    font-size: 30px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    text-shadow: 0px 0px 10px #1fd2ff,
-    1px 1px #1fd2ff,
-    2px 2px #1fd2ff,
-    3px 3px #1fd2ff,
-    4px 4px #1fd2ff,
-    5px 5px #1fd2ff,
-    6px 6px #1fd2ff
-    ;
-    letter-spacing: normal;
-    /* fade in */
-    transition: width, height, 0.5s ease-in-out 0ms;
+h1 {
+  text-align: center;
+  font-family: var(--fontdefault);
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-shadow: 0px 0px 10px #1fd2ff, 1px 1px #1fd2ff, 2px 2px #1fd2ff,
+    3px 3px #1fd2ff, 4px 4px #1fd2ff, 5px 5px #1fd2ff, 6px 6px #1fd2ff;
+  letter-spacing: normal;
+  /* fade in */
+  transition: width, height, 0.5s ease-in-out 0ms;
 }
 
-  h2 {
-    text-align: center;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 25px;
-    padding: 20px 20px;
-    background-color: #ffffff80;
-    text-shadow: 1px 1px #ffffff,
-    2px 2px #ffffff,
-    3px 3px #ffffff,
-    4px 4px #ffffff
-    ;
-    color: #000000;
-    font-family: var(--fontdefault);
-    margin-top: 40px;
-    box-shadow: 0px 0px 50px 0px #0a001d;
-    letter-spacing: normal;
-    transition: margin, 1s ease-in-out 0ms;
+h2 {
+  text-align: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+  padding: 20px 20px;
+  background-color: #ffffff80;
+  text-shadow: 1px 1px #ffffff, 2px 2px #ffffff, 3px 3px #ffffff,
+    4px 4px #ffffff;
+  color: #000000;
+  font-family: var(--fontdefault);
+  margin-top: 40px;
+  box-shadow: 0px 0px 50px 0px #0a001d;
+  letter-spacing: normal;
+  transition: margin, 1s ease-in-out 0ms;
 }
 
- h6 {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+h6 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 100px;
- }
-
-  a, #navlink {
-    justify-content: center;
-    color: #03c7f8;
-    font-family: var(--fontdefault);
-    text-decoration: none;
-    padding: 5px;
-    padding-left: 50px;
-    letter-spacing: normal;
-    transition: 1s ease-in-out 0ms;
-    text-shadow: 1px 1px #005c92,
-    1px 1px #005c92,
-    2px 2px #005c92,
-    3px 3px #005c92,
-    0px 0px 10px #ffffff
-    ;
 }
 
-  a, #artlink {
-    color: #22d3ff;
-    padding-left: 0px;
-  }
-
-  a, #artlink:hover {
-    color: #9bebff;
-  }
-
-  #navbar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-top: 10px;
-    padding-left: 30px;
-    padding-bottom: 10px;
-    background-color: #72deff35;
-  }
-  
-  #game {
-    display: flex;
-    flex-direction: column;
-    max-width: 1300px;
-    min-width: 40%;
-    height: 40%;
-    background: linear-gradient(0deg, rgba(45, 220, 255, 0.8) 0%, rgba(11, 11, 134, 0.8) 35%, rgba(24, 0, 71, 0.8) 100%);
-    color: #ffffff;
-    margin: 30px auto 0px;
-    padding: 10px;
-    border-radius: 25px;
-    /* fade in */
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    transition: width, height, 1s ease-in-out 0ms;
+a,
+#navlink {
+  justify-content: center;
+  color: #03c7f8;
+  font-family: var(--fontdefault);
+  text-decoration: none;
+  padding: 5px;
+  padding-left: 50px;
+  letter-spacing: normal;
+  transition: 1s ease-in-out 0ms;
+  text-shadow: 1px 1px #005c92, 1px 1px #005c92, 2px 2px #005c92,
+    3px 3px #005c92, 0px 0px 10px #ffffff;
 }
 
-  ul {
-    text-align: center;
-    list-style: none;
-    color: #ffffff;
-    font-family: var(--fontdefault);
-    font-size: x-large;
-    font-weight: bolder;
-    text-shadow: 1px 1px #000000,
-    2px 2px #000000,
-    3px 3px #000000,
-    4px 4px #000000
-    ;
-    padding-top: 50px;
-    padding-bottom: 30px;
+a,
+#artlink {
+  color: #22d3ff;
+  padding-left: 0px;
 }
 
-  img {
-    width: 100%;
-    height: 100%; 
-    margin-top: 10px;
-    transition: 1s ease-in-out 0ms;
+a,
+#artlink:hover {
+  color: #9bebff;
 }
 
-  .img_div {
-    padding-top: 30px;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+#navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-bottom: 10px;
+  background-color: #72deff35;
+}
+
+#game {
+  display: flex;
+  flex-direction: column;
+  max-width: 1300px;
+  min-width: 40%;
+  height: 40%;
+  background: linear-gradient(
+    0deg,
+    rgba(45, 220, 255, 0.8) 0%,
+    rgba(11, 11, 134, 0.8) 35%,
+    rgba(24, 0, 71, 0.8) 100%
+  );
+  color: #ffffff;
+  margin: 30px auto 0px;
+  padding: 10px;
+  border-radius: 25px;
+  /* fade in */
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  transition: width, height, 1s ease-in-out 0ms;
+}
+
+ul {
+  text-align: center;
+  list-style: none;
+  color: #ffffff;
+  font-family: var(--fontdefault);
+  font-size: x-large;
+  font-weight: bolder;
+  text-shadow: 1px 1px #000000, 2px 2px #000000, 3px 3px #000000,
+    4px 4px #000000;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+  transition: 1s ease-in-out 0ms;
+}
+
+.img_div {
+  padding-top: 30px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 h3 {
   color: #ffffff;
   font-family: var(--fontdefault);
   text-align: center;
-  text-shadow: 0px 0px 10px #9e69ff,
-        1px 1px #000000,
-        2px 2px #000000,
-        3px 3px #000000,
-        4px 4px #000000
-        ;
+  text-shadow: 0px 0px 10px #9e69ff, 1px 1px #000000, 2px 2px #000000,
+    3px 3px #000000, 4px 4px #000000;
   font-size: 30px;
   padding: 30px 10px 30px 10px;
   border-bottom: none;
@@ -197,132 +189,150 @@ h3 {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   transition: width, height, 0.5s ease-in-out 0ms;
-
 }
 
 a .md {
   font-size: 130%;
 }
+
+/* desktop */
+@media only screen and (min-width: 900px) {
+  #navlink[title]:hover::before {
+    position: absolute;
+    z-index: 4;
+    content: attr(title);
+    font-size: 10px;
+    font-family: var(--fontdefault);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-wrap: nowrap;
+    background-color: rgb(255, 191, 0);
+    text-shadow: 1px 1px #000000, 2px 2px #000000, 3px 3px #000000,
+      4px 4px #000000;
+    padding: 5px;
+    border-radius: 5px;
+    top: 40px;
+  }
+
+  #game:hover {
+    box-shadow: 0px 0px 25px #03c7f8;
+  }
+
+  h1:hover {
+    letter-spacing: 10px;
+  }
+
+  h3 {
+    text-shadow: 1px 1px #000000, 2px 2px #000000, 3px 3px #000000,
+      4px 4px #000000;
+  }
+
+  h3:hover {
+    letter-spacing: 5px;
+    text-decoration: underline;
+    text-decoration-color: #4b00bb;
+    text-decoration-thickness: 3px;
+  }
+
+  #navlink:hover {
+    color: #63e0ff;
+    text-decoration: underline;
+    text-decoration-color: #00d9ff;
+    text-decoration-thickness: 3px;
+  }
+
+  h2:hover {
+    box-shadow: 0px 0px 50px rgb(255, 255, 255);
+    letter-spacing: 7px;
+  }
+
+  ul:hover {
+    color: #ffcf23;
+  }
+
+  /*cursor trail*/
+  #background {
+    background-color: #000066;
+  }
+
+  .cursor-trail {
+    position: absolute;
+    z-index: 10000;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #000000;
+    border-radius: 0px;
+    overflow: hidden;
+    background-color: black;
+    pointer-events: none;
+  }
+
+  .yellow-trail {
+    background-color: rgb(0, 208, 255);
+  }
   
-  /* desktop */
-  @media only screen and (min-width: 900px) {
+}
 
-    #navlink[title]:hover::before {
-      position: absolute;
-      z-index: 4;
-      content: attr(title);
-      font-size: 10px;
-      font-family: var(--fontdefault);
-      color: rgb(255, 255, 255);
-      text-align: center;
-      text-wrap: nowrap;
-      background-color: rgb(255, 191, 0);
-      text-shadow: 1px 1px #000000, 2px 2px #000000, 3px 3px #000000,
-        4px 4px #000000;
-      padding: 5px;
-      border-radius: 5px;
-      top: 40px;
-    }
-
-    #game:hover {
-      box-shadow: 0px 0px 25px #03c7f8;
-    }
-
-    h1:hover {
-      letter-spacing: 10px;
-    }
-
-    h3 {
-      text-shadow: 1px 1px #000000,
-      2px 2px #000000,
-      3px 3px #000000,
-      4px 4px #000000
-      ;
-    }
-
-    h3:hover {
-      letter-spacing: 5px;
-      text-decoration: underline;
-      text-decoration-color: #4b00bb;
-      text-decoration-thickness: 3px;
-    }
-
-    #navlink:hover {
-      color: #63e0ff;
-      text-decoration: underline;
-      text-decoration-color: #00d9ff;
-      text-decoration-thickness: 3px;
-    }
-
-    h2:hover {
-      box-shadow: 0px 0px 50px rgb(255, 255, 255);
-      letter-spacing: 7px;
-    }
-
-    ul:hover {
-      color: #ffcf23;
-    }
-    
+/* mobile */
+@media only screen and (max-width: 900px) {
+  a,
+  #navlink {
+    padding-left: 5px;
   }
 
-  /* mobile */
-  @media only screen and (max-width: 900px) {
-
-    a, #navlink {
-      padding-left: 5px;
-    }
-
-    #game {
-      box-shadow: 0px 0px 25px #03c7f8;
-      margin-top: 10px;
-    }
-
-    .img_div {
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-    h1 {
-      font-size: 12px;
-      margin-bottom: 0px;
-      padding-left: 14px;
-      padding-right: 14px;
-    }
-
-    h2 {
-      box-shadow: 0px 0px 50px rgb(255, 255, 255);
-      font-size: 11px;
-    }
-
-    h3 {
-      font-size: 20px;
-    }
-
-    .img_div {
-        padding-top: 10px;
-      }
-
-      #navbar {
-        justify-content: space-evenly;
-        padding-top: 55px;
-        padding-left: 0px;
-        padding-right: 0px;
-        padding-bottom: 2px;
-        background-color: transparent;
-      }
-
-    a, #link {
-      font-size: small;
-    }
-
-    li {
-      font-size: small;
-    }
-
-    ul {
-      font-size: small;
-    }
-    
-
+  #game {
+    box-shadow: 0px 0px 25px #03c7f8;
+    margin-top: 10px;
   }
+
+  .img_div {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1 {
+    font-size: 12px;
+    margin-bottom: 0px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  h2 {
+    box-shadow: 0px 0px 50px rgb(255, 255, 255);
+    font-size: 11px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .img_div {
+    padding-top: 10px;
+  }
+
+  #navbar {
+    justify-content: space-evenly;
+    padding-top: 55px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 2px;
+    background-color: transparent;
+  }
+
+  a,
+  #link {
+    font-size: small;
+  }
+
+  li {
+    font-size: small;
+  }
+
+  ul {
+    font-size: small;
+  }
+}
