@@ -104,3 +104,24 @@ https://support.google.com/chrome/answer/9658361?hl=en&co=GENIE.Platform%3DDeskt
 ## Firefox web app install (N/A)
 
 Unfortunately Firefox dropped support for web apps in 2021. Please use another web browser or an older version of Firefox to install on your system.
+
+## Privacy:
+
+Perilous Quest is built from HTML, CSS, Vanilla JavaScript, jQuery and JSON these programming languages in it of themselves will not compromise any data. However Perilous Quest utilizes many different software technologies which have their own privacy policies. 
+
+Perilous Quest is built with Google APIs that power the font and icons. Google is a subsidiary of Alphabet Inc. As such use of the Perilous Quest website/app are subject to Google Fonts web API and Google's privacy policies which can be found at:
+
+https://developers.google.com/fonts/faq/privacy
+
+https://policies.google.com/privacy?hl=en-US
+
+The web hosting service used to deploy Perilous Quest is provided by Netlify and the Netlify API. Use of the Perilous Quest website/app will be subject to their privacy policy which can be found here:
+
+https://www.netlify.com/privacy/
+
+Perilous Quest loads in audio and visual content from GitHub a subsidiary of Microsoft Corp. As such use of Perilous Quest website/app is subject to GitHub and Microsoft's privacy policies which can be found at:
+
+https://privacy.microsoft.com/en-ca/privacystatement
+
+https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement
+

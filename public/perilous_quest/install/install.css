@@ -252,7 +252,7 @@ a .md {
 
   /*cursor trail*/
   #background {
-    background-color: #000066;
+    background-color: transparent;
   }
 
   .cursor-trail {
