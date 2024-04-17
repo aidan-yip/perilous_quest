@@ -42,7 +42,7 @@ This version includes the base game and several game music tracks. This is in Be
   <li>Progress Bar</li>
   <li>Custom cursors on hover</li>
   <li>Help Tips on hover</li>
-  <li>8-Bit cursor trail on hover with JQuery</li>
+  <li>8-Bit cursor trail on hover with jQuery</li>
   <li>XP spend function to dodge</li>
   <li>View enemy level on battle stat display</li>
   <li>Relocating the Easter egg</li>
