@@ -104,8 +104,8 @@ body {
 
 #popclose {
   color: #ea1f1f;
-  text-shadow: 1px 1px #780000, 2px 2px #780000,
-    3px 3px #780000, 4px 4px #780000, 0px 0px 20px #e00000;
+  text-shadow: 1px 1px #780000, 2px 2px #780000, 3px 3px #780000,
+    4px 4px #780000, 0px 0px 20px #e00000;
   margin-right: 30px;
   margin-top: 20px;
   width: 30px;
@@ -125,7 +125,12 @@ body {
   padding-bottom: 30px;
   width: 60%;
   z-index: 3;
-  background: linear-gradient(323deg, rgb(39, 8, 95) 0%, rgba(105,30,205,1) 45%, rgb(0, 193, 232) 100%);
+  background: linear-gradient(
+    323deg,
+    rgb(39, 8, 95) 0%,
+    rgba(105, 30, 205, 1) 45%,
+    rgb(0, 193, 232) 100%
+  );
   box-shadow: 0px 0px 75px #ffffff;
   border-radius: 25px;
   border: solid 0.5px #292929;
@@ -643,7 +648,6 @@ button .md {
 
 /* desktop */
 @media only screen and (min-width: 900px) {
-
   .stat[title]:hover::after {
     position: absolute;
     z-index: 1;
@@ -871,11 +875,34 @@ button .md {
     width: 90%;
     margin-bottom: 40px;
   }
+
+  /*cursor trail*/
+  #background {
+    background-color: #000066;
+  }
+
+  .cursor-trail {
+    position: absolute;
+    z-index: 10000;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0;
+    padding: 0;
+    border: 25px;
+    overflow: hidden;
+    background-color: black;
+    pointer-events: none;
+  }
+
+  .yellow-trail {
+    background-color: rgb(0, 208, 255);
+  }
+
 }
 
 /* mobile */
 @media only screen and (max-width: 900px) {
-
   #popclose {
     font-size: 20px;
   }
