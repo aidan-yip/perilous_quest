@@ -47,7 +47,7 @@ button.addEventListener("click", () => {
         if (perm === "granted") {
           new Notification("Game Alert", {
             body: "For the best in game experience please use a desktop",
-            icon: "./public/icons/homescreen192.pngs", 
+            icon: "./public/icons/homescreen192.png", 
             tag: "desktop",
             vibrate: [200, 100, 200], 
           })
