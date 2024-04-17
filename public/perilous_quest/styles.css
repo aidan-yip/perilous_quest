@@ -889,7 +889,8 @@ button .md {
     height: 10px;
     margin: 0;
     padding: 0;
-    border: 25px;
+    border: 1px solid #000000;
+    border-radius: 0px;
     overflow: hidden;
     background-color: black;
     pointer-events: none;
