@@ -56,8 +56,8 @@ window.addEventListener('beforeunload', (event) => {
   $.fn.cursorTrail = function(options) {
       // assign defaults for those options not supplied
       options = $.extend({
-          timeToGrow: 100,
-          timeToShrink: 100,
+          timeToGrow: 200,
+          timeToShrink: 200,
           scale: 1,
           "class": ""
       }, options);
