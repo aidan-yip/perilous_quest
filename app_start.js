@@ -47,7 +47,7 @@ button.addEventListener("click", () => {
         if (perm === "granted") {
           new Notification("Game Alert", {
             body: "For the best in game experience please use a desktop",
-            icon: "homescreen192.png", 
+            icon: "./public/icons/homescreen192.pngs", 
             tag: "desktop",
             vibrate: [200, 100, 200], 
           })
@@ -63,7 +63,7 @@ document.addEventListener ("visibilitychange", () => {
     if (document.visibilityState === "hidden") {
       notification = new Notification ("Music Alert", { 
         body: "Perilous Quest is still running. To stop the audio close the app",
-        icon: "homescreen192.png",
+        icon: "./public/icons/homescreen192.png",
         tag: "Come Back",
       })
     } else {
@@ -97,6 +97,57 @@ btn.addEventListener("click", async () => {
   } catch (err) {
     alert("Share button not supported");
   }
+});
+
+//Cursor trail
+
+(function($) {
+
+  var baseCssClass = "cursor-trail",
+      addPoint = function(pageX, pageY, cssClass, timeToGrow, timeToShrink, scale) {
+          // Create a new point located at the mouse position
+          var point = $("<div>", {
+              "class": cssClass,
+              css: {
+                  left: pageX,
+                  top: pageY
+              }
+          }).appendTo('body');
+
+          // now make the point grow, then shrink and finally disappear
+          point
+              .transition({ scale: scale }, timeToGrow)
+              .transition({ scale: 1 }, timeToShrink, function() { point.remove(); });
+      };
+
+  $.fn.cursorTrail = function(options) {
+      // assign defaults for those options not supplied
+      options = $.extend({
+          timeToGrow: 200,
+          timeToShrink: 200,
+          scale: 1,
+          "class": ""
+      }, options);
+
+      // add the base css class all cursor trail points need.
+      var actualCssClass = baseCssClass;
+      if (options["class"]) {
+          actualCssClass += " " + options["class"];
+      }
+
+      return this.bind("mousemove", function(ev) {
+          addPoint(ev.pageX, ev.pageY, actualCssClass, options.timeToGrow, options.timeToShrink, options.scale);
+      });
+  };
+}(jQuery));
+
+// jQuery.transit has a bug in older IE versions, so switch to jQuery animate
+if (!$.support.transition) {
+  $.fn.transition = $.fn.animate;
+}
+
+$("#background").cursorTrail({
+  "class": "yellow-trail"
 });
 
 
