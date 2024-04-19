@@ -4,7 +4,17 @@
 	<url>
 		<loc>https://perilous-quest.netlify.app/</loc>
 	</url>
+	
 	<url>
 		<loc>https://perilous-quest.netlify.app/read/</loc>
 	</url>
+	
+	<url>
+		<loc>https://perilous-quest.netlify.app/public/perilous_quest/index.html</loc>
+	</url>
+	
+	<url>
+		<loc>https://perilous-quest.netlify.app/public/perilous_quest/install/install</loc>
+	</url>
+	
 </urlset>
