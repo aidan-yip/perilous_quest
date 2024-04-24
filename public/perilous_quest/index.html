@@ -44,413 +44,426 @@
         background-image: url("https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/dragon2.png");
       }
 
-      #gamelogo {
+      div#gamelogo {
         background-image: url("https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/gamelogo.jpg");
       }
 
       #cd {
         background-image: url("https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/cd.png");
       }
+
+      #display {
+        background-image: url("/public/town.png");
+      }
     </style>
   </head>
 
   <body>
-    <div id="background">
-    <div class="background">
-      <!-- Popup box-->
+    <!-- Popup box-->
 
-      <div id="popback">
-        <div id="popup">
-          <ul>
-            <li>Welcome to Perilous Quest!</li>
-            <br />
-            <li>
-              This game is in Beta and is not yet ready for release. Please
-              enjoy the game and report any bugs you see!
-            </li>
-            <br />
-            <li>Use a Desktop for the best experience</li>
-          </ul>
-          <button id="popclose" title="Close">X</button>
-        </div>
+    <div id="popback">
+      <div id="popup">
+        <ul>
+          <li>Welcome to Perilous Quest!</li>
+          <br />
+          <li>
+            This game is in Beta and is not yet ready for release. Please enjoy
+            the game and report any bugs you see!
+          </li>
+          <br />
+          <li>Use a Desktop for the best experience</li>
+        </ul>
+        <button id="popclose" title="Close">X</button>
       </div>
-
-      <!--Navbar-->
-      <div id="navbar">
-        <a href="/index.html" target="_self" id="navlink" title="Go Back"
-          ><span class="material-symbols-outlined md">arrow_back_ios</span>
-          Back</a
-        >
-        <a
-          href="/public/perilous_quest/install/install.html"
-          target="_self"
-          id="navlink"
-          title="Install Perilous Quest App"
-          ><span class="material-symbols-outlined md">download</span> Install</a
-        >
-        <a href="" target="_self" id="navlink" title="Find Help"
-          ><span class="material-symbols-outlined md">help</span> Help</a
-        >
-        <a href="" target="_self" id="navlink" title="Reset Game"
-          ><span class="material-symbols-outlined md">refresh</span></a
-        >
-      </div>
-
-      <!-- Game -->
-      <div id="game">
-        <!-- Player stats -->
-        <div id="stats">
-          <span class="stat" title="XP Level"
-            >XP
-            <span class="material-symbols-outlined md md"> bolt </span>
-            <strong><span id="xpText">0</span></strong></span
-          >
-          <span class="stat" title="Health Level"
-            >Health
-            <span class="material-symbols-outlined md md"> heart_plus </span>
-            <strong><span id="healthText">300</span></strong></span
-          >
-          <span class="stat" title="Gold Level"
-            >Gold
-            <span class="material-symbols-outlined md md"> mintmark </span>
-            <strong><span id="goldText">100</span></strong></span
-          >
-        </div>
-
-        <!--Progress-->
-        <div id="progress">
-          <p id="meter_text">Progress:</p>
-          <meter
-            min="0"
-            max="100"
-            value="1"
-            id="game_meter"
-            title="Progress Meter"
-          ></meter>
-        </div>
-
-        <!-- Display  -->
-        <div id="display" title="Game Display"></div>
-
-        <!-- Controls -->
-        <div id="controls">
-          <button id="button1" class="move" tabindex="0" title="Action One">
-            Visit shop
-          </button>
-          <button id="button2" class="move" tabindex="0" title="Action Two">
-            Walk to cave
-          </button>
-          <button id="button3" class="move" tabindex="0" title="Action Three">
-            Fight Wizard
-          </button>
-          <button id="button4" class="move" tabindex="0" title="Action Four">
-            Enter castle
-          </button>
-        </div>
-
-        <!-- Monster stats -->
-        <div id="monsterStats" title="Enemy-Stat Display">
-          <span class="monstat"
-            >Enemy Name: <strong><span id="monsterName"></span></strong
-          ></span>
-          <span class="monstat"
-            >Health: <strong><span id="monsterHealth"></span></strong
-          ></span>
-          <span class="monstat"
-            >Level: <strong><span id="monsterLevel"></span></strong
-          ></span>
-        </div>
-
-        <!-- Info Text -->
-        <div id="text" title="Info-Text Display">
-          Welcome to Perilous Quest. You must find and defeat the dragon that
-          has brought great darkness over the land. You are in the town square.
-          Where do you want to go? Use the buttons above.
-        </div>
-
-        <!-- Game title header -->
-        <h1>PERILOUS QUEST</h1>
-      </div>
-
-      <!--Enter Player name-->
-
-      <div id="namediv">
-        <button
-          onclick="hello()"
-          id="button0"
-          title="Add a name for Player One"
-        >
-          Add Player Name
-          <span class="material-symbols-outlined md">person_add</span>
-        </button>
-
-        <p id="name"></p>
-      </div>
-
-      <p id="machint">Use "⌘" + "-" or "+" on Mac/iPad to scale the game</p>
-
-      <!-- Audio -->
-      <h2>🎶 Jukebox 🎶</h2>
-      <div class="audio_players">
-        <!--CD-->
-        <div id="cd" title="Perilous Quest CD">
-          <div id="cd_inner">
-            <div id="cd_center"></div>
-          </div>
-        </div>
-
-        <!--CD slot-->
-        <div id="slot" title="CD Slot"></div>
-
-        <!--Red blinking light-->
-        <div id="redlight"></div>
-
-        <!--Audio players-->
-        <div class="audio_play_in" title="Jukebox">
-          <h3>
-            <span class="material-symbols-outlined md"> graphic_eq </span>
-            Wonder
-            <span class="material-symbols-outlined md"> graphic_eq </span>
-          </h3>
-          <audio
-            loop
-            controls
-            controlsList="nodownload"
-            crossorigin="anonymous"
-            tabindex="-1"
-            class="audio"
-            id="wonder"
-            src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/wonder.wav"
-            preload="auto"
-          ></audio>
-        </div>
-
-        <div class="audio_play_in">
-          <h3>
-            <span class="material-symbols-outlined md"> graphic_eq </span>
-            Lovely Town
-            <span class="material-symbols-outlined md"> graphic_eq </span>
-          </h3>
-          <audio
-            autoplay
-            loop
-            controls
-            controlsList="nodownload"
-            crossorigin="anonymous"
-            tabindex="-1"
-            class="audio"
-            id="lovely_town"
-            src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/lovely_town.wav"
-            preload="auto"
-          ></audio>
-        </div>
-
-        <div class="audio_play_in">
-          <h3>
-            <span class="material-symbols-outlined md"> graphic_eq </span>
-            Shop
-            <span class="material-symbols-outlined md"> graphic_eq </span>
-          </h3>
-          <audio
-            loop
-            controls
-            controlsList="nodownload"
-            crossorigin="anonymous"
-            tabindex="-1"
-            class="audio"
-            id="shop"
-            src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/shop.wav"
-            preload="auto"
-          ></audio>
-        </div>
-
-        <div class="audio_play_in">
-          <h3>
-            <span class="material-symbols-outlined md"> graphic_eq </span>
-            Cave Tune
-            <span class="material-symbols-outlined md"> graphic_eq </span>
-          </h3>
-          <audio
-            loop
-            controls
-            controlsList="nodownload"
-            crossorigin="anonymous"
-            tabindex="-1"
-            class="audio"
-            id="cave_tune"
-            src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/cave_tune.wav"
-            preload="auto"
-          ></audio>
-        </div>
-
-        <div class="audio_play_in">
-          <h3>
-            <span class="material-symbols-outlined md"> graphic_eq </span>
-            Castle
-            <span class="material-symbols-outlined md"> graphic_eq </span>
-          </h3>
-          <audio
-            loop
-            controls
-            controlsList="nodownload"
-            crossorigin="anonymous"
-            tabindex="-1"
-            class="audio"
-            id="castle"
-            src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/castle.wav"
-            preload="auto"
-          ></audio>
-        </div>
-
-        <div class="audio_play_in">
-          <h3>
-            <span class="material-symbols-outlined md"> graphic_eq </span>
-            Boss Theme
-            <span class="material-symbols-outlined md"> graphic_eq</span>
-          </h3>
-          <audio
-            loop
-            controls
-            controlsList="nodownload"
-            crossorigin="anonymous"
-            tabindex="-1"
-            class="audio"
-            id="boss_theme"
-            src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/boss_theme.wav"
-            preload="auto"
-          ></audio>
-        </div>
-
-        <audio
-          crossorigin="anonymous"
-          tabindex="-1"
-          class="audio"
-          id="lose"
-          src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/lose.wav"
-          preload="auto"
-        ></audio>
-
-        <audio
-          loop
-          crossorigin="anonymous"
-          tabindex="-1"
-          class="audio"
-          id="reprise"
-          src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/wonder_reprise.wav"
-          preload="auto"
-        ></audio>
-
-        <audio
-          crossorigin="anonymous"
-          tabindex="-1"
-          class="audio"
-          id="selectfx"
-          src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/selectfx.wav"
-          preload="auto"
-        ></audio>
-
-        <audio
-          crossorigin="anonymous"
-          tabindex="-1"
-          class="audio"
-          id="select_null"
-          src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/select_null.wav"
-          preload="auto"
-        ></audio>
-
-        <audio
-          crossorigin="anonymous"
-          tabindex="-1"
-          class="audio"
-          id="defeat_boss"
-          src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/defeat_boss.wav"
-          preload="auto"
-        ></audio>
-
-        <p>
-          <a href="nopage.html" title="Secret Page"
-            >NEWAVE JUKEBOX - MODEL #: A7-23</a
-          >
-        </p>
-      </div>
-
-      <!-- Credits -->
-      <h2>Credits</h2>
-
-      <div id="gamelogo"></div>
-
-      <ul>
-        👾 Newave Media 👾
-        <li>Presents</li>
-        <li>Perilous Quest</li>
-      </ul>
-
-      <ul>
-        <li>Original project idea by FreeCodeCamp</li>
-        <li>Mods and redesign by Aidan Y.</li>
-        <li>Powered by Github and Netlify</li>
-        <li>Made in Visual Studio Code</li>
-        <li>Made with Mac</li>
-        <h6></h6>
-      </ul>
-
-      <ul>
-        🎧 Music 🎧
-        <li>
-          "Lovely Town" by
-          <a
-            href="https://soundcloud.com/skremzy"
-            target="_blank"
-            id="artlink"
-            title="Listen to Skremzy's Music!"
-            >Skremzy</a
-          >
-        </li>
-        <li>
-          "Boss Theme" by
-          <a
-            href="https://soundcloud.com/audiophobiamusic"
-            target="_blank"
-            id="artlink"
-            title="Listen to Audiophobia's Music!"
-            >Audiophobia</a
-          >
-        </li>
-        <li>
-          Original Soundtrack by
-          <a
-            href="https://soundcloud.com/newaveoceans"
-            target="_blank"
-            id="artlink"
-            title="Listen to Newave's Music!"
-            >Newave Oceans</a
-          >
-        </li>
-      </ul>
-
-      <ul>
-        🎨 Art 🎨
-        <li>Marsh, Tanner. "Dragon" 2024</li>
-      </ul>
-
-      <ul>
-        <li>
-          <a
-            href="https://github.com/aidan-yip/perilous_quest/issues"
-            target="_blank"
-            id="navlink"
-            title="Report a bug or request a feature"
-            >Report an issue</a
-          >
-        </li>
-      </ul>
-
-      <p>Ps31:24</p>
-
-      <!-- JS links -->
-      <script src="./script.js" defer></script>
-      <script src="game_autoplay.js" defer></script>
     </div>
-  </div>
+
+    <div id="background">
+      <div class="background">
+        <!--Navbar-->
+        <div id="navbar">
+          <a href="/index.html" target="_self" id="navlink" title="Go Back"
+            ><span class="material-symbols-outlined md">arrow_back_ios</span>
+            Back</a
+          >
+          <a
+            href="/public/perilous_quest/install/install.html"
+            target="_self"
+            id="navlink"
+            title="Install Perilous Quest App"
+            ><span class="material-symbols-outlined md">download</span>
+            Install</a
+          >
+          <a href="" target="_self" id="navlink" title="Find Help"
+            ><span class="material-symbols-outlined md">help</span> Help</a
+          >
+          <a href="" target="_self" id="navlink" title="Reset Game"
+            ><span class="material-symbols-outlined md">refresh</span></a
+          >
+          <!-- Game title header desktop -->
+          <h1 id="navtitle_desk">PERILOUS QUEST</h1>
+        </div>
+
+        <!-- Game -->
+        <div id="game">
+          <!-- Player stats -->
+          <div id="stats">
+            <span class="stat" title="XP Level"
+              >XP
+              <span class="material-symbols-outlined md md"> bolt </span>
+              <strong><span id="xpText">0</span></strong></span
+            >
+            <span class="stat" title="Health Level"
+              >Health
+              <span class="material-symbols-outlined md md"> heart_plus </span>
+              <strong><span id="healthText">300</span></strong></span
+            >
+            <span class="stat" title="Gold Level"
+              >Gold
+              <span class="material-symbols-outlined md md"> mintmark </span>
+              <strong><span id="goldText">100</span></strong></span
+            >
+          </div>
+
+          <!--Progress-->
+          <div id="progress">
+            <p id="meter_text">Progress:</p>
+            <meter
+              min="0"
+              max="100"
+              value="1"
+              id="game_meter"
+              title="Progress Meter"
+            ></meter>
+          </div>
+
+          <!-- Display  -->
+          <div id="display" title="Game Display"></div>
+
+          <!-- Controls -->
+          <div id="controls">
+            <button id="button1" class="move" tabindex="0" title="Action One">
+              Visit shop
+            </button>
+            <button id="button2" class="move" tabindex="0" title="Action Two">
+              Walk to cave
+            </button>
+            <button id="button3" class="move" tabindex="0" title="Action Three">
+              Fight Wizard
+            </button>
+            <button id="button4" class="move" tabindex="0" title="Action Four">
+              Enter castle
+            </button>
+          </div>
+
+          <!-- Monster stats -->
+          <div id="monsterStats" title="Enemy-Stat Display">
+            <span class="monstat"
+              >Enemy Name: <strong><span id="monsterName"></span></strong
+            ></span>
+            <span class="monstat"
+              >Health: <strong><span id="monsterHealth"></span></strong
+            ></span>
+            <span class="monstat"
+              >Level: <strong><span id="monsterLevel"></span></strong
+            ></span>
+          </div>
+
+          <!-- Info Text -->
+          <div id="text" title="Info-Text Display">
+            Welcome to Perilous Quest. You must find and defeat the dragon that
+            has brought great darkness over the land. You are in the town
+            square. Where do you want to go? Use the buttons above.
+          </div>
+
+          <!-- Game title header mobile -->
+          <h1 id="navtitle_mobile">PERILOUS QUEST</h1>
+        </div>
+
+        <!--Enter Player name-->
+
+        <div id="namediv">
+          <button
+            onclick="hello()"
+            id="button0"
+            title="Add a name for Player One"
+          >
+            Add Player Name
+            <span class="material-symbols-outlined md">person_add</span>
+          </button>
+
+          <p id="name"></p>
+        </div>
+
+        <p id="machint">Use "⌘" + "-" or "+" on Mac/iPad to scale the game</p>
+
+        <!-- Audio -->
+        <h2>🎶 Jukebox 🎶</h2>
+        <div class="audio_players">
+          <!--CD-->
+          <div id="cd" title="Perilous Quest CD">
+            <div id="cd_inner">
+              <div id="cd_center"></div>
+            </div>
+          </div>
+
+          <!--CD slot-->
+          <div id="slot" title="CD Slot"></div>
+
+          <!--Red blinking light-->
+          <div id="redlight"></div>
+
+          <!--Audio players-->
+          <div id="audio_players_inner" title="Scroll for more ->">
+            <div class="audio_play_block" title="Jukebox">
+              <h3>
+                <span class="material-symbols-outlined md"> graphic_eq </span>
+                Wonder
+                <span class="material-symbols-outlined md"> graphic_eq </span>
+              </h3>
+              <audio
+                loop
+                controls
+                controlsList="nodownload"
+                crossorigin="anonymous"
+                tabindex="-1"
+                class="audio"
+                id="wonder"
+                src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/wonder.wav"
+                preload="auto"
+              ></audio>
+            </div>
+
+            <div class="audio_play_block">
+              <h3>
+                <span class="material-symbols-outlined md"> graphic_eq </span>
+                Lovely Town
+                <span class="material-symbols-outlined md"> graphic_eq </span>
+              </h3>
+              <audio
+                autoplay
+                loop
+                controls
+                controlsList="nodownload"
+                crossorigin="anonymous"
+                tabindex="-1"
+                class="audio"
+                id="lovely_town"
+                src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/lovely_town.wav"
+                preload="auto"
+              ></audio>
+            </div>
+
+            <div class="audio_play_block">
+              <h3>
+                <span class="material-symbols-outlined md"> graphic_eq </span>
+                Shop
+                <span class="material-symbols-outlined md"> graphic_eq </span>
+              </h3>
+              <audio
+                loop
+                controls
+                controlsList="nodownload"
+                crossorigin="anonymous"
+                tabindex="-1"
+                class="audio"
+                id="shop"
+                src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/shop.wav"
+                preload="auto"
+              ></audio>
+            </div>
+          </div>
+
+          <div id="audio_players_inner" title="Scroll for more ->">
+            <div class="audio_play_block">
+              <h3>
+                <span class="material-symbols-outlined md"> graphic_eq </span>
+                Cave Tune
+                <span class="material-symbols-outlined md"> graphic_eq </span>
+              </h3>
+              <audio
+                loop
+                controls
+                controlsList="nodownload"
+                crossorigin="anonymous"
+                tabindex="-1"
+                class="audio"
+                id="cave_tune"
+                src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/cave_tune.wav"
+                preload="auto"
+              ></audio>
+            </div>
+
+            <div class="audio_play_block">
+              <h3>
+                <span class="material-symbols-outlined md"> graphic_eq </span>
+                Castle
+                <span class="material-symbols-outlined md"> graphic_eq </span>
+              </h3>
+              <audio
+                loop
+                controls
+                controlsList="nodownload"
+                crossorigin="anonymous"
+                tabindex="-1"
+                class="audio"
+                id="castle"
+                src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/castle.wav"
+                preload="auto"
+              ></audio>
+            </div>
+
+            <div class="audio_play_block">
+              <h3>
+                <span class="material-symbols-outlined md"> graphic_eq </span>
+                Boss Theme
+                <span class="material-symbols-outlined md"> graphic_eq</span>
+              </h3>
+              <audio
+                loop
+                controls
+                controlsList="nodownload"
+                crossorigin="anonymous"
+                tabindex="-1"
+                class="audio"
+                id="boss_theme"
+                src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/boss_theme.wav"
+                preload="auto"
+              ></audio>
+            </div>
+          </div>
+
+          <audio
+            crossorigin="anonymous"
+            tabindex="-1"
+            class="audio"
+            id="lose"
+            src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/lose.wav"
+            preload="auto"
+          ></audio>
+
+          <audio
+            loop
+            crossorigin="anonymous"
+            tabindex="-1"
+            class="audio"
+            id="reprise"
+            src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/wonder_reprise.wav"
+            preload="auto"
+          ></audio>
+
+          <audio
+            crossorigin="anonymous"
+            tabindex="-1"
+            class="audio"
+            id="defeat_boss"
+            src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/defeat_boss.wav"
+            preload="auto"
+          ></audio>
+
+          <audio
+            crossorigin="anonymous"
+            tabindex="-1"
+            class="audio"
+            id="selectfx"
+            src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/selectfx.wav"
+            preload="auto"
+          ></audio>
+
+          <audio
+            crossorigin="anonymous"
+            tabindex="-1"
+            class="audio"
+            id="select_null"
+            src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/select_null.wav"
+            preload="auto"
+          ></audio>
+
+          <p>
+            <a href="nopage.html" title="Secret Page" id="model"
+              >JUKEBOX - MODEL #: A7-23</a
+            >
+          </p>
+        </div>
+
+        <!-- Credits -->
+        <h2>Credits</h2>
+
+        <div id="credits">
+          <div id="gamelogo"></div>
+
+          <ul>
+            👾 Newave Media 👾
+            <li>Presents</li>
+            <li>Perilous Quest</li>
+          </ul>
+
+          <ul>
+            <li>Original project idea by FreeCodeCamp</li>
+            <li>Mods and redesign by Aidan Y.</li>
+            <li>Powered by Github and Netlify</li>
+            <li>Made in Visual Studio Code</li>
+            <li>Made with Mac </li>
+          </ul>
+
+          <ul>
+            🎧 Music 🎧
+            <li>
+              "Lovely Town" by
+              <a
+                href="https://soundcloud.com/skremzy"
+                target="_blank"
+                id="artlink"
+                title="Listen to Skremzy's Music!"
+                >Skremzy</a
+              >
+            </li>
+            <li>
+              "Boss Theme" by
+              <a
+                href="https://soundcloud.com/audiophobiamusic"
+                target="_blank"
+                id="artlink"
+                title="Listen to Audiophobia's Music!"
+                >Audiophobia</a
+              >
+            </li>
+            <li>
+              Original Soundtrack by
+              <a
+                href="https://soundcloud.com/newaveoceans"
+                target="_blank"
+                id="artlink"
+                title="Listen to Newave's Music!"
+                >Newave Oceans</a
+              >
+            </li>
+          </ul>
+
+          <ul>
+            🎨 Art 🎨
+            <li>Marsh, Tanner. "Dragon" 2024</li>
+          </ul>
+
+          <ul>
+            <li>
+              <a
+                href="https://github.com/aidan-yip/perilous_quest/issues"
+                target="_blank"
+                id="navlink"
+                title="Report a bug or request a feature"
+                ><span class="material-symbols-outlined md"> flag </span> Report
+                an issue</a
+              >
+            </li>
+          </ul>
+
+          <p>Ps31:24</p>
+        </div>
+
+        <!-- JS links -->
+        <script src="./script.js" defer></script>
+        <script src="game_autoplay.js" defer></script>
+      </div>
+    </div>
   </body>
 </html>
