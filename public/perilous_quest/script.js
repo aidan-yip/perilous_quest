@@ -19,11 +19,26 @@ document.addEventListener ("visibilitychange", () => {
 
 const popup = document.getElementById("popback");
 const popclose = document.getElementById("popclose");
+const background = document.getElementById("background")
 
 popclose.onclick = closepop;
 
 function closepop() {
   popup.style.display = "none";
+  background.style.filter = "blur(0px)";
+}
+
+//Navbar 
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+    document.getElementById("navbar").style.backgroundColor = "#00000080";
+  } else {
+    document.getElementById("navbar").style.backgroundColor = "transparent";
+  }
+
 }
 
 // Quit prompt
@@ -99,14 +114,6 @@ document.getElementById("name").style.display = "block";
 document.getElementById("button0").style.display = "none";
 document.getElementById("name").innerHTML = text;
 }
-
-//Keyboard arrow move
-
-window.addEventListener("keydown", function(e) {
-  if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
-      e.preventDefault();
-  }
-}, false);
 
 // Variables
 
