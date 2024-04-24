@@ -133,32 +133,46 @@
     }
 
     #navbar {
+      position: sticky;
+      top: 0px;
+      width: 100%;
+      z-index: 5;
       display: flex;
       flex-direction: row;
-      align-items: flex-start;
+      align-items: center;
       padding-top: 10px;
       padding-left: 30px;
       padding-bottom: 10px;
-      border-bottom: solid #86e3ff;
+      box-shadow: 0px 0px 10px #0000008f;
+      background-color: transparent;
+      /* fade in */
+      transition: width, height, 0.5s ease-in-out 0ms;
+      animation: fadeInAnimation ease 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
     }
 
     #black {
       display: flex;
-      flex-direction: column;
       justify-content: center;
-      align-items: center;
       height: 100vh;
+      margin-top: -50px;
       background-color: #0f0f0f;
+      background-image: url("https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/dragon2.png");
+      background-size: cover;
+      overflow: hidden;
     }
 
     #game {
       max-width: 700px;
-      min-width: 70%;
-      background-image: url("https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/dragon2.png");
+      min-width: 50%;
+      background-color: #35353593;
+      border-radius: 25px;
+      border: 1px solid #717171;
       color: #ffffff;
       padding: 10px;
+      margin: 100px 0px;
       border-radius: 25px;
-      border: solid 2px #1fd2ff;
       /* fade in */
       animation: fadeInAnimation ease 3s;
       animation-iteration-count: 1;
@@ -240,6 +254,11 @@
 
     /* mobile */
     @media only screen and (max-width: 900px) {
+
+      #black {
+        margin-top: -100px;
+      }
+
       a,
       #navlink {
         padding-left: 5px;
@@ -247,7 +266,7 @@
 
       #game {
         box-shadow: 0px 0px 25px #03c7f8;
-        margin-top: 20%px;
+        margin-top: 50%;
       }
 
       .img_div {

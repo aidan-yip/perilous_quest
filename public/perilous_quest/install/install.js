@@ -48,3 +48,16 @@
   $("#background").cursorTrail({
     "class": "yellow-trail"
   });
+
+//Navbar 
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+    document.getElementById("navbar").style.backgroundColor = "#00000080";
+  } else {
+    document.getElementById("navbar").style.backgroundColor = "transparent";
+  }
+
+}
