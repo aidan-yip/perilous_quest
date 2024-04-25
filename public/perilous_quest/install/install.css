@@ -97,7 +97,7 @@ a,
   font-family: var(--fontdefault);
   text-decoration: none;
   padding: 5px;
-  padding-left: 50px;
+  margin-left: 50px;
   letter-spacing: normal;
   transition: 1s ease-in-out 0ms;
   text-shadow: 1px 1px #005c92, 1px 1px #005c92, 2px 2px #005c92,
@@ -310,7 +310,9 @@ a .md {
 
   a,
   #navlink {
-    padding-left: 5px;
+    font-size: 12px;
+    margin-left: 2px;
+    margin-right: 2px;
   }
 
   #game {
@@ -342,7 +344,7 @@ a .md {
   }
 
   #navbar {
-    position: relative;
+    position: sticky;
     justify-content: space-evenly;
     padding-top: 55px;
     padding-left: 0px;
