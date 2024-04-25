@@ -1177,7 +1177,7 @@ button .md {
   }
 
   #navbar {
-    position: relative;
+    position: sticky;
     justify-content: space-evenly;
     padding-top: 55px;
     padding-left: 0px;
