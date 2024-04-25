@@ -209,7 +209,6 @@ a:visited {
 
 /* Desktop */
 @media only screen and (min-width: 900px) {
-
   button[title]:hover::after {
     position: absolute;
     z-index: 1;
@@ -219,7 +218,7 @@ a:visited {
     text-align: center;
     background-color: rgb(255, 191, 0);
     text-shadow: 1px 1px #000000, 2px 2px #000000, 3px 3px #000000,
-    4px 4px #000000;
+      4px 4px #000000;
     padding: 5px;
     border-radius: 5px;
     top: 180px;
@@ -234,7 +233,7 @@ a:visited {
     text-align: center;
     background-color: rgb(255, 191, 0);
     text-shadow: 1px 1px #000000, 2px 2px #000000, 3px 3px #000000,
-    4px 4px #000000;
+      4px 4px #000000;
     padding: 5px;
     border-radius: 5px;
     top: 50px;
@@ -250,7 +249,7 @@ a:visited {
     text-align: center;
     background-color: rgb(255, 191, 0);
     text-shadow: 1px 1px #000000, 2px 2px #000000, 3px 3px #000000,
-    4px 4px #000000;
+      4px 4px #000000;
     padding: 5px;
     border-radius: 5px;
     top: 50px;
@@ -265,7 +264,7 @@ a:visited {
     text-align: center;
     background-color: rgb(255, 191, 0);
     text-shadow: 1px 1px #000000, 2px 2px #000000, 3px 3px #000000,
-    4px 4px #000000;
+      4px 4px #000000;
     padding: 5px;
     border-radius: 5px;
     top: 110px;
@@ -287,7 +286,7 @@ a:visited {
       rgba(0, 91, 171, 1) 100%
     );
     text-shadow: 1px 1px #00638a, 2px 2px #00638a, 3px 3px #00638a,
-    4px 4px #00638a;
+      4px 4px #00638a;
   }
 
   button:active {
@@ -326,7 +325,6 @@ a:visited {
   .yellow-trail {
     background-color: rgb(0, 208, 255);
   }
-
 }
 
 /* Mobile */
