@@ -72,6 +72,10 @@ body {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body::-webkit-scrollbar {
   display: none !important;
 }
@@ -80,16 +84,25 @@ body {
   background-color: #009ec5;
 }
 
+#nav_arrows {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 20px;
+}
+
+#background {
+  filter: blur(5px);
+  overflow-x: hidden;
+  min-width: 375px;
+}
+
 .background {
   background-size: cover;
   background-position: center;
   background-repeat: repeat;
   padding-bottom: 50px;
   height: auto;
-}
-
-#background {
-  filter: blur(5px);
+  overflow-x: hidden;
 }
 
 #popback {
@@ -283,6 +296,8 @@ a,
   display: flex;
   flex-direction: row;
   align-items: center;
+  overflow-x: visible;
+  white-space: nowrap;
   padding-top: 10px;
   padding-left: 30px;
   padding-bottom: 10px;
@@ -388,7 +403,7 @@ a,
 
 #display {
   width: 98%;
-  height: 220px;
+  height: 200px;
   text-align: center;
   background-color: rgb(67, 64, 255);
   box-shadow: inset 0px 0px 25px #000000;
@@ -628,7 +643,7 @@ h3 {
 }
 
 p a#model {
-  margin: 10px 10px;
+  margin: 20px 10px;
 }
 
 #machint {
@@ -647,6 +662,10 @@ p {
   font-family: var(--fontdefault);
   font-size: 12px;
   color: #ffffff;
+}
+
+#footnote {
+  margin-bottom: 30px;
 }
 
 #cd {
@@ -1050,6 +1069,10 @@ button .md {
     padding-top: 0px;
   }
 
+  #nav_arrows {
+    padding: 5px 10px;
+  }
+
   #popclose {
     font-size: 20px;
   }
@@ -1067,7 +1090,9 @@ button .md {
 
   a,
   #navlink {
+    font-size: 12px;
     margin-left: 5px;
+    margin-right: 5px;
   }
 
   #game {
@@ -1100,7 +1125,7 @@ button .md {
   }
 
   #display {
-    height: 130px;
+    height: 110px;
   }
 
   button {
@@ -1169,6 +1194,7 @@ button .md {
   #navbar {
     position: relative;
     justify-content: space-evenly;
+    overflow-x: scroll;
     padding-top: 55px;
     padding-left: 0px;
     padding-right: 0px;
