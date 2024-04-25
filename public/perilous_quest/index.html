@@ -85,6 +85,12 @@
             ><span class="material-symbols-outlined md">arrow_back_ios</span>
             Back</a
           >
+
+          <a href="#audio_players" target="_self" id="navlink" title="Jukebox"
+            ><span class="material-symbols-outlined md">music_note</span>
+            Music</a
+          >
+
           <a
             href="/public/perilous_quest/install/install.html"
             target="_self"
@@ -93,9 +99,7 @@
             ><span class="material-symbols-outlined md">download</span>
             Install</a
           >
-          <a href="" target="_self" id="navlink" title="Find Help"
-            ><span class="material-symbols-outlined md">help</span> Help</a
-          >
+
           <a href="" target="_self" id="navlink" title="Reset Game"
             ><span class="material-symbols-outlined md">refresh</span></a
           >
@@ -198,7 +202,7 @@
 
         <!-- Audio -->
         <h2>🎶 Jukebox 🎶</h2>
-        <div class="audio_players">
+        <div class="audio_players" id="audio_players">
           <!--CD-->
           <div id="cd" title="Perilous Quest CD">
             <div id="cd_inner">
@@ -214,7 +218,7 @@
 
           <!--Audio players-->
           <div id="audio_players_inner" title="Scroll for more ->">
-            <div class="audio_play_block" title="Jukebox">
+            <div class="audio_play_block" title="Jukebox" id="wonder_div">
               <h3>
                 <span class="material-symbols-outlined md"> graphic_eq </span>
                 Wonder
@@ -253,7 +257,7 @@
               ></audio>
             </div>
 
-            <div class="audio_play_block">
+            <div class="audio_play_block" id="shop_div">
               <h3>
                 <span class="material-symbols-outlined md"> graphic_eq </span>
                 Shop
@@ -273,8 +277,21 @@
             </div>
           </div>
 
+          <div id="nav_arrows">
+            <a href="#wonder_div"
+              ><span class="material-symbols-outlined md">
+                arrow_back_ios_new
+              </span></a
+            >
+            <a href="#shop_div"
+              ><span class="material-symbols-outlined md">
+                arrow_forward_ios
+              </span></a
+            >
+          </div>
+
           <div id="audio_players_inner" title="Scroll for more ->">
-            <div class="audio_play_block">
+            <div class="audio_play_block" id="cave_tune_div">
               <h3>
                 <span class="material-symbols-outlined md"> graphic_eq </span>
                 Cave Tune
@@ -312,7 +329,7 @@
               ></audio>
             </div>
 
-            <div class="audio_play_block">
+            <div class="audio_play_block" id="boss_theme_div">
               <h3>
                 <span class="material-symbols-outlined md"> graphic_eq </span>
                 Boss Theme
@@ -330,6 +347,19 @@
                 preload="auto"
               ></audio>
             </div>
+          </div>
+
+          <div id="nav_arrows">
+            <a href="#cave_tune_div"
+              ><span class="material-symbols-outlined md">
+                arrow_back_ios_new
+              </span></a
+            >
+            <a href="#boss_theme_div"
+              ><span class="material-symbols-outlined md">
+                arrow_forward_ios
+              </span></a
+            >
           </div>
 
           <audio
@@ -457,7 +487,7 @@
             </li>
           </ul>
 
-          <p>Ps31:24</p>
+          <p id="footnote">Ps31:24</p>
         </div>
 
         <!-- JS links -->
