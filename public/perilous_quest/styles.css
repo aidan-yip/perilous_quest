@@ -91,9 +91,7 @@ body {
 }
 
 #background {
-  filter: blur(5px);
-  overflow-x: hidden;
-  min-width: 375px;
+  filter: blur(5px); 
 }
 
 .background {
@@ -102,7 +100,6 @@ body {
   background-repeat: repeat;
   padding-bottom: 50px;
   height: auto;
-  overflow-x: hidden;
 }
 
 #popback {
@@ -662,10 +659,6 @@ p {
   color: #ffffff;
 }
 
-#footnote {
-  margin-bottom: 30px;
-}
-
 #cd {
   display: flex;
   justify-content: center;
@@ -1067,10 +1060,6 @@ button .md {
     padding-top: 0px;
   }
 
-  #nav_arrows {
-    padding: 5px 10px;
-  }
-
   #popclose {
     font-size: 20px;
   }
@@ -1088,9 +1077,7 @@ button .md {
 
   a,
   #navlink {
-    font-size: 12px;
     margin-left: 5px;
-    margin-right: 5px;
   }
 
   #game {
@@ -1192,7 +1179,6 @@ button .md {
   #navbar {
     position: relative;
     justify-content: space-evenly;
-    overflow-x: scroll;
     padding-top: 55px;
     padding-left: 0px;
     padding-right: 0px;
@@ -1236,6 +1222,10 @@ button .md {
     margin-top: 0px;
     width: 300px;
     height: 300px;
+  }
+
+  #nav_arrows {
+    padding: 5px 10px;
   }
 
   #slot {
