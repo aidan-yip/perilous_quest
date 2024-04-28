@@ -131,10 +131,9 @@ body {
 
 #popup {
   display: flex;
-  justify-content: flex-end;
-  position: absolute;
+  position: fixed;
   margin: 0 auto;
-  margin-top: 10%;
+  margin: 10% 0%;
   padding-left: 30px;
   padding-bottom: 30px;
   width: 60%;
