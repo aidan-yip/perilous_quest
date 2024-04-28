@@ -1076,12 +1076,14 @@ button .md {
 
   a,
   #navlink {
-    margin-left: 5px;
+    font-size: 12px;
+    margin-left: 2px;
+    margin-right: 2px;
   }
 
   #game {
     box-shadow: 0px 0px 25px #03c7f8;
-    margin-top: 5px;
+    margin-top: 10px;
     padding-bottom: 0px;
   }
 
@@ -1219,8 +1221,8 @@ button .md {
 
   #cd {
     margin-top: 0px;
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
   }
 
   #nav_arrows {
