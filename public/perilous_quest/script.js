@@ -349,6 +349,9 @@ function goTown() {
   reprise.currentTime = 0;
   reprise.pause();
   document.getElementById("game_meter").setAttribute("value", "1");
+  //Secret
+  secret.pause();
+  secret.currentTime = 0;
 }
 
 function goStore() {
@@ -378,6 +381,9 @@ function goCave() {
   defeat_boss.pause();
   defeat_boss.currentTime = 0;
   document.getElementById("game_meter").setAttribute("value", "20");
+  //Secret
+  secret.pause();
+  secret.currentTime = 0;
 }
 
 function goCastle() {
@@ -388,6 +394,9 @@ function goCastle() {
   //Castle
   castle.play();
   document.getElementById("game_meter").setAttribute("value", "30");
+  //Secret
+  secret.pause();
+  secret.currentTime = 0;
 }
 
 function goChasm() {
@@ -608,6 +617,18 @@ function playcastle() {
 function pausecastle() {
   castle.pause();
   castle.currentTime = 0;
+}
+
+//Secret
+let secret = document.getElementById("secret");
+
+function playsecret() {
+  secret.play();
+}
+
+function pausesecret() {
+  secret.pause();
+  secret.currentTime = 0;
 }
 
 
@@ -871,7 +892,7 @@ function attack() {
     fighting === 2 ? winGame() : defeatMonster();
   }
   if (Math.random() <= .1 && inventory.length !== 1) {
-    text.innerText += " Your " + inventory.pop() + " breaks.";
+    text.innerText += "\n" + "\n" + " Your " + inventory.pop() + " breaks.";
     currentWeapon--;
   }
 }
@@ -961,7 +982,8 @@ function easterEgg() {
   update(locations[7]);
   boss_theme.pause();
   boss_theme.currentTime = 0;
-  lovely_town.play();
+  secret.currentTime = 0;
+  playsecret();
 }
 
 // Secret game guesses
