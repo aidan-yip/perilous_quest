@@ -163,7 +163,7 @@ const monsters = [
   {
     name: "Dragon",
     level: 12,
-    health: 700
+    health: 650
   },
   {
     name: "Knight",
@@ -263,7 +263,7 @@ const locations = [
     name: "win", 
     "button text": [" --> ", "REPLAY?", "REPLAY?", "REPLAY?"], 
     "button functions": [playselectnull, restart, restart, restart], 
-    text: "CONGRATULATIONS YOU WIN 🎉! You defeat the dragon and free the kingdom! The darkness flees as the sun rises on the horizon. A new day is dawning. The mighty have fallen as the humble arise to take their place." 
+    text: "CONGRATULATIONS YOU WIN 🎉! You defeat the dragon and free the kingdom! The darkness flees as the sun rises on the horizon. A new day is dawning. The mighty have fallen as the humble arise to take their place.\n" + "\n" + "(You may skip the music in 30 seconds.)"
   },
   {
     name: "easter egg",
@@ -285,8 +285,8 @@ const locations = [
   },
   {
     name: "jump",
-    "button text": ["6", "3", "1", "Return to Chasm"],
-    "button functions": [jumpSix, jumpThree, jumpOne, goChasm],
+    "button text": ["8", "2", "6", "Return to Chasm"],
+    "button functions": [jumpEight, jumpTwo, jumpSix, goChasm],
     text: "You get ready to jump. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you make it across."
   },
   {
@@ -297,9 +297,15 @@ const locations = [
   },
   {
     name: "Frozen Mineshaft",
-    "button text": ["Brave the water", "Brave the snow", "Brave the flames", "Run like a coward ⮐"],
-    "button functions": [fightSnakes, fightYeti, fightDragon, lose],
-    text: "It is extremely cold, you shiver as you walk down the abandoned Mineshaft. There are three shaft passageways. The left is overflowing with a water. The middle is filled with ice and snow. The last one is lit with the orange glow of fire."
+    "button text": ["Brave the water", "Brave the snow", "Brave the flames", "Leave Mine ⮐"],
+    "button functions": [fightSnakes, fightYeti, fightDragon, norunmine],
+    text: "The Mine entrance collapses behind you! It is extremely cold, you shiver as you walk down the abandoned Mineshaft. There are three shaft passageways. The left is overflowing with a water. The middle is filled with ice and snow. The last one is lit with the orange glow of fire."
+  },
+  {
+    name: "Fight Mine",
+    "button text": ["Attack 🗡️", "Dodge 🛡️", "Surrender 🏳️", "Run like a coward ⮐"],
+    "button functions": [attack, dodge, surrender, norun],
+    text: "You are fighting an enemy ⚔️. LET'S GO!"
   }
 ];
 
@@ -345,13 +351,19 @@ function goTown() {
   //Castle
   castle.pause();
   castle.currentTime = 0;
+  //Chasm
+  chasm.pause();
+  chasm.currentTime = 0;
   //Reprise
   reprise.currentTime = 0;
   reprise.pause();
-  document.getElementById("game_meter").setAttribute("value", "1");
   //Secret
   secret.pause();
   secret.currentTime = 0;
+  //meter style
+  document.getElementById("game_meter").setAttribute("value", "1");
+  //Secret game enable button
+  button_enable_secret();
 }
 
 function goStore() {
@@ -397,11 +409,19 @@ function goCastle() {
   //Secret
   secret.pause();
   secret.currentTime = 0;
+  //Chasm
+  chasm.pause();
+  chasm.currentTime = 0;
 }
 
 function goChasm() {
   update(locations[9]);
+  //Castle
+  castle.pause();
+  castle.currentTime = 0;
   //Chasm
+  chasm.currentTime = 0;
+  chasm.play();
   document.getElementById("game_meter").setAttribute("value", "60");
 }
 
@@ -425,8 +445,13 @@ function goMine() {
   //Defeat Boss
   defeat_boss.pause();
   defeat_boss.currentTime = 0;
-  //Mine
+  //html style
   document.getElementById("game_meter").setAttribute("value", "90");
+}
+
+function norunmine() {
+  document.getElementById("button4").style.filter = "opacity(50%)"
+  text.innerText = "The Mine entrance collapses behind you! It is extremely cold, you shiver as you walk down the abandoned Mineshaft. There are three shaft passageways. The left is overflowing with a water. The middle is filled with ice and snow. The last one is lit with the orange glow of fire." + "\n" + "\n" + "The Mine door is blocked. There's no way out!";
 }
 
 // Shop functions
@@ -440,6 +465,8 @@ function buyHealth() {
     selectfx.play();
   } else {
     text.innerText = "You do not have enough gold ⚜️ to buy health ❤️.";
+    document.getElementById("button1").style.filter = "opacity(50%)"
+    const myTimeout = setTimeout(button_enable, 1000);
     playselectnull();
   }
 }
@@ -456,8 +483,11 @@ function buyWeapon() {
       text.innerText += "\n" + "\n" + " In your inventory you have:\n" + inventory;
       selectfx.currentTime = 0;
       selectfx.play();
+      document.getElementById("button2").style.filter = "opacity(100%)"
     } else {
       text.innerText = "You do not have enough gold ⚜️ to buy a weapon 🗡️.";
+      document.getElementById("button2").style.filter = "opacity(50%)"
+      const myTimeout = setTimeout(button_enable, 1000);
       playselectnull();
     }
   } else {
@@ -475,14 +505,18 @@ function sellWeapon() {
     text.innerText += "\n" + "\n" + " In your inventory you have:\n" + inventory;
     selectfx.currentTime = 0;
     selectfx.play();
+    document.getElementById("button3").style.filter = "opacity(100%)"
   } else {
     text.innerText = "Don't sell your only weapon 🗡️!";
+    document.getElementById("button3").style.filter = "opacity(50%)"
+    const myTimeout = setTimeout(button_enable, 1000);
     playselectnull();
   }
 }
 
 function listInventory() {
       text.innerText += "\n" + "\n" + " In your inventory you have:\n" + inventory;
+      button2.innerText = "List Inventory";
       selectfx.currentTime = 0;
       selectfx.play();
 
@@ -607,6 +641,18 @@ function pauseboss() {
   boss_theme.currentTime = 0;
 }
 
+//Chasm
+let chasm = document.getElementById('chasm');
+
+function playchasm() {
+  chasm.play();
+}
+
+function pausechasm() {
+  chasm.pause();
+  chasm.currentTime = 0;
+}
+
 //Castle
 let castle = document.getElementById('castle');
 
@@ -647,6 +693,9 @@ function fightSlime() {
   //Boss
   setHalfVolume();
   boss_theme.play();
+  //Chasm
+  chasm.pause();
+  chasm.currentTime = 0;
 }
 
 function fightBeast() {
@@ -661,23 +710,9 @@ function fightBeast() {
   //Boss
   setHalfVolume();
   boss_theme.play();
-}
-
-function fightDragon() {
-  fighting = 2;
-  goFight();
-  //Town
-  lovely_town.pause();
-  lovely_town.currentTime = 0;
-  //Cave
-  cave_tune.pause();
-  cave_tune.currentTime = 0;
-  //Boss
-  setHalfVolume();
-  boss_theme.play();
-  //Castle
-  castle.pause();
-  castle.currentTime = 0;
+  //Chasm
+  chasm.pause();
+  chasm.currentTime = 0;
 }
 
 function fightKnight() {
@@ -695,6 +730,9 @@ function fightKnight() {
   //castle
   castle.pause();
   castle.currentTime = 0;
+  //Chasm
+  chasm.pause();
+  chasm.currentTime = 0;
 }
 
 function fightWizard() {
@@ -709,6 +747,9 @@ function fightWizard() {
   //Boss
   setHalfVolume();
   boss_theme.play();
+  //Chasm
+  chasm.pause();
+  chasm.currentTime = 0;
 }
 
 function fightSpider() {
@@ -723,6 +764,9 @@ function fightSpider() {
   //Boss
   setHalfVolume();
   boss_theme.play();
+  //Chasm
+  chasm.pause();
+  chasm.currentTime = 0;
 }
 
 function fightghost() {
@@ -740,6 +784,9 @@ function fightghost() {
   //castle
   castle.pause();
   castle.currentTime = 0;
+  //Chasm
+  chasm.pause();
+  chasm.currentTime = 0;
 }
 
 function fightAnglerfish() {
@@ -757,6 +804,9 @@ function fightAnglerfish() {
   //castle
   castle.pause();
   castle.currentTime = 0;
+  //Chasm
+  chasm.pause();
+  chasm.currentTime = 0;
 }
 
 function fightTroll() {
@@ -774,6 +824,9 @@ function fightTroll() {
   //castle
   castle.pause();
   castle.currentTime = 0;
+  //Chasm
+  chasm.pause();
+  chasm.currentTime = 0;
 }
 
 function fightWerewolf() {
@@ -791,6 +844,9 @@ function fightWerewolf() {
   //castle
   castle.pause();
   castle.currentTime = 0;
+  //Chasm
+  chasm.pause();
+  chasm.currentTime = 0;
 }
 
 function fightNightGhost() {
@@ -808,6 +864,9 @@ function fightNightGhost() {
   //castle
   castle.pause();
   castle.currentTime = 0;
+  //Chasm
+  chasm.pause();
+  chasm.currentTime = 0;
 }
 
 function fightShadow() {
@@ -825,11 +884,14 @@ function fightShadow() {
   //castle
   castle.pause();
   castle.currentTime = 0;
+  //Chasm
+  chasm.pause();
+  chasm.currentTime = 0;
 }
 
 function fightYeti() {
   fighting = 12;
-  goFight();
+  goFight_Norun();
   //Town
   lovely_town.pause();
   lovely_town.currentTime = 0;
@@ -842,11 +904,14 @@ function fightYeti() {
   //castle
   castle.pause();
   castle.currentTime = 0;
+  //Chasm
+  chasm.pause();
+  chasm.currentTime = 0;
 }
 
 function fightSnakes() {
   fighting = 13;
-  goFight();
+  goFight_Norun();
   //Town
   lovely_town.pause();
   lovely_town.currentTime = 0;
@@ -859,6 +924,30 @@ function fightSnakes() {
   //castle
   castle.pause();
   castle.currentTime = 0;
+  //Chasm
+  chasm.pause();
+  chasm.currentTime = 0;
+}
+
+function fightDragon() {
+  fighting = 2;
+  goFight_Norun();
+  //Town
+  lovely_town.pause();
+  lovely_town.currentTime = 0;
+  //Cave
+  cave_tune.pause();
+  cave_tune.currentTime = 0;
+  //Boss
+  setHalfVolume();
+  boss_theme.play();
+  //Castle
+  castle.pause();
+  castle.currentTime = 0;
+  //Chasm
+  chasm.pause();
+  chasm.currentTime = 0;
+  button_enable();
 }
 
 // document.getElementById("myDIV").style.display = "none";  SAMPLE CODE TO REMOVE BUTTON OPTION
@@ -872,6 +961,22 @@ function goFight() {
   monsterName.innerText = monsters[fighting].name;
   monsterHealthText.innerText = monsterHealth;
   monsterLevelText.innerText = monsterLevel;
+}
+
+function goFight_Norun() {
+  update(locations[13]);
+  monsterHealth = monsters[fighting].health;
+  monsterLevel = monsters[fighting].level
+  monsterStats.style.display = "block";
+  monsterName.innerText = monsters[fighting].name;
+  monsterHealthText.innerText = monsterHealth;
+  monsterLevelText.innerText = monsterLevel;
+}
+
+function norun() {
+  document.getElementById("button4").disabled = true;
+  document.getElementById("button4").style.filter = "opacity(50%)"
+  text.innerText = "You may not run now. The enemy is too dangerous.";
 }
 
 // Attack function
@@ -948,11 +1053,18 @@ function lose() {
   //Castle
   castle.pause();
   castle.currentTime = 0;
+  //Chasm
+  chasm.pause();
+  chasm.currentTime = 0;
   //Lose
   playlose();
+  //Enable button
+  button_enable();
 }
 
 function winGame() {
+  button_disable();
+  const myTimeout = setTimeout(button_enable, 30000);
   update(locations[6]);
   //Boss
   boss_theme.pause();
@@ -962,6 +1074,25 @@ function winGame() {
   reprise.play();
   document.getElementById("game_meter").setAttribute("value", "100");
   // document.getElementById('credits').click(); <-- Code to link to credits page in the future
+}
+
+function button_disable() {
+  document.getElementById("button2").disabled = true;
+  document.getElementById("button3").disabled = true;
+  document.getElementById("button4").disabled = true;
+  document.getElementById("button2").style.filter = "opacity(50%)"
+  document.getElementById("button3").style.filter = "opacity(50%)"
+  document.getElementById("button4").style.filter = "opacity(50%)"
+}
+
+function button_enable() {
+  document.getElementById("button2").disabled = false;
+  document.getElementById("button3").disabled = false;
+  document.getElementById("button4").disabled = false;
+  document.getElementById("button1").style.filter = "opacity(100%)"
+  document.getElementById("button2").style.filter = "opacity(100%)"
+  document.getElementById("button3").style.filter = "opacity(100%)"
+  document.getElementById("button4").style.filter = "opacity(100%)"
 }
 
 function restart() {
@@ -1014,11 +1145,13 @@ function pick(guess) {
     gold += 20;
     goldText.innerText = gold;
     const myTimeout = setTimeout(goTown, 3500);
+    button_disable_secret();
   } else {
     text.innerText += "Wrong! You lose 10 health 💔!";
     health -= 10;
     healthText.innerText = health;
     const myTimeout = setTimeout(goTown, 3500);
+    button_disable_secret();
     playselectnull();
     if (health <= 0) {
       lose();
@@ -1026,14 +1159,32 @@ function pick(guess) {
   }
 }
 
-//Jump game guesses
-
-function jumpThree() {
-  jumppick(3);
+function button_disable_secret() {
+  document.getElementById("button1").disabled = true;
+  document.getElementById("button2").disabled = true;
+  document.getElementById("button3").disabled = true;
+  document.getElementById("button1").style.filter = "opacity(50%)"
+  document.getElementById("button2").style.filter = "opacity(50%)"
+  document.getElementById("button3").style.filter = "opacity(50%)"
 }
 
-function jumpOne() {
-  jumppick(1);
+function button_enable_secret() {
+  document.getElementById("button1").disabled = false;
+  document.getElementById("button2").disabled = false;
+  document.getElementById("button3").disabled = false;
+  document.getElementById("button1").style.filter = "opacity(100%)"
+  document.getElementById("button2").style.filter = "opacity(100%)"
+  document.getElementById("button3").style.filter = "opacity(100%)"
+}
+
+//Jump game guesses
+
+function jumpTwo() {
+  jumppick(2);
+}
+
+function jumpEight() {
+  jumppick(8);
 }
 
 function jumpSix() {
