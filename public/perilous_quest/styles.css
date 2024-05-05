@@ -394,11 +394,13 @@ a,
 #game_meter {
   margin-top: 3px;
   width: 90%;
+  /* animate */
+  transition: 1s ease-in-out 0ms;
 }
 
 #display {
   width: 98%;
-  height: 200px;
+  height: 240px;
   text-align: center;
   background-color: rgb(67, 64, 255);
   box-shadow: inset 0px 0px 25px #000000;
@@ -407,7 +409,7 @@ a,
   margin-top: 10px;
   border: solid 0.5px #313131;
   border-radius: 25px;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   /* animate */
@@ -1113,7 +1115,7 @@ button .md {
   }
 
   #display {
-    height: 110px;
+    height: 99px;
   }
 
   button {
