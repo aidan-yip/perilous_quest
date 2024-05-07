@@ -134,6 +134,7 @@ div#poplogo {
   width: 30px;
   height: 30px;
   border: none;
+  cursor: pointer;
   background: transparent;
   box-shadow: none;
 }
