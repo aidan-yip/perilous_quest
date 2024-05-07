@@ -126,7 +126,7 @@ let monsterHealth;
 let monsterLevel;
 let inventory = ["stick ᛓ "];
 
-//Constant
+//Buttons and Stats
 
 const button1 = document.querySelector('#button1');
 const button2 = document.querySelector("#button2");
@@ -140,6 +140,8 @@ const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 const monsterLevelText = document.querySelector("#monsterLevel");
+const meter = document.getElementById("game_meter");
+const display = document.getElementById("display");
 const weapons = [
   { name: 'Stick ᛓ ', power: 5 },
   { name: 'Dagger ᛌ ', power: 30 },
@@ -228,12 +230,14 @@ const locations = [
     "button text": ["Visit shop", "Walk to cave", "Fight Corrupt Wizard", "Enter castle"],
     "button functions": [goStore, goCave, fightWizard, goCastle],
     text: "You are in the town square. You see a sign that says \"Shop\". Select where you want to go.",
+    display_img: "url('https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/town.jpg')"
   },
   {
     name: "store",
     "button text": ["Buy 10 health ❤️ (10 gold)", "Buy weapon 🗡️ (30 gold)", "Sell weapon for 15 gold ⚜️", "Your broke. Leave shop"],
     "button functions": [buyHealth, buyWeapon, sellWeapon, goTown],
-    text: 'You enter the store. "Hello!" -Tanner the shop owner'
+    text: 'You enter the store. "Hello!" -Tanner the shop owner',
+    display_img: "url('https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/shop.jpg')"
   },
   {
     name: "cave",
@@ -276,6 +280,7 @@ const locations = [
     "button text": ["Enter left hall", "Enter dark hall", "Enter right hall", "Return to Town"],
     "button functions": [goChasm, fightghost, fightKnight, goTown],
     text: "You enter a castle. There's a sign that says \"Danger\" to the left and the sound of iron clanging from the room to the right. Ahead you sense something cold and dark. Do you dare to continue?",
+    display_img: "url('https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/castle.jpg')"
   },
   {
     name: "chasm",
@@ -293,7 +298,8 @@ const locations = [
     name: "deep caves",
     "button text": ["Go left", "Go forward", "Face the shadow", "Enter Mine"],
     "button functions": [fightTroll, fightNightGhost, fightShadow, goMine],
-    text: "You made it! There's no turning back now! You can barely make out anything down the dimly lit crevices. To the left the ground shakes. Ahead there is a strange green glow. You see a Mineshaft entrance to your right. Something from the shadows is quickly approaching behind you!"
+    text: "You made it! There's no turning back now! You can barely make out anything down the dimly lit crevices. To the left the ground shakes. Ahead there is a strange green glow. You see a Mineshaft entrance to your right. Something from the shadows is quickly approaching behind you!",
+    display_img: "url('https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/deep_caves.png')"
   },
   {
     name: "Frozen Mineshaft",
@@ -318,6 +324,7 @@ button4.onclick = goCastle;
 //Location update
 function update(location) {
   monsterStats.style.display = "none";
+  display.style.backgroundImage = location.display_img;
   button1.innerText = location["button text"][0];
   button2.innerText = location["button text"][1];
   button3.innerText = location["button text"][2];
@@ -361,7 +368,7 @@ function goTown() {
   secret.pause();
   secret.currentTime = 0;
   //meter style
-  document.getElementById("game_meter").setAttribute("value", "1");
+  meter.setAttribute("value", "1");
   //Secret game enable button
   button_enable_secret();
 }
@@ -373,7 +380,7 @@ function goStore() {
   lovely_town.currentTime = 0;
   //Show
   shop.play();
-  document.getElementById("game_meter").setAttribute("value", "5");
+  meter.setAttribute("value", "5");
 }
 
 function goCave() {
@@ -392,7 +399,7 @@ function goCave() {
   //Defeat Boss
   defeat_boss.pause();
   defeat_boss.currentTime = 0;
-  document.getElementById("game_meter").setAttribute("value", "20");
+  meter.setAttribute("value", "20");
   //Secret
   secret.pause();
   secret.currentTime = 0;
@@ -405,7 +412,7 @@ function goCastle() {
   lovely_town.currentTime = 0;
   //Castle
   castle.play();
-  document.getElementById("game_meter").setAttribute("value", "30");
+  meter.setAttribute("value", "30");
   //Secret
   secret.pause();
   secret.currentTime = 0;
@@ -422,13 +429,13 @@ function goChasm() {
   //Chasm
   chasm.currentTime = 0;
   chasm.play();
-  document.getElementById("game_meter").setAttribute("value", "60");
+  meter.setAttribute("value", "60");
 }
 
 function goJump() {
   update(locations[10]);
   //jump
-  document.getElementById("game_meter").setAttribute("value", "80");
+  meter.setAttribute("value", "80");
 }
 
 function goMine() {
@@ -446,7 +453,7 @@ function goMine() {
   defeat_boss.pause();
   defeat_boss.currentTime = 0;
   //html style
-  document.getElementById("game_meter").setAttribute("value", "90");
+  meter.setAttribute("value", "90");
 }
 
 function norunmine() {
@@ -1072,27 +1079,27 @@ function winGame() {
   //Wonder
   reprise.currentTime = 0;
   reprise.play();
-  document.getElementById("game_meter").setAttribute("value", "100");
+  meter.setAttribute("value", "100");
   // document.getElementById('credits').click(); <-- Code to link to credits page in the future
 }
 
 function button_disable() {
-  document.getElementById("button2").disabled = true;
-  document.getElementById("button3").disabled = true;
-  document.getElementById("button4").disabled = true;
-  document.getElementById("button2").style.filter = "opacity(50%)"
-  document.getElementById("button3").style.filter = "opacity(50%)"
-  document.getElementById("button4").style.filter = "opacity(50%)"
+  button2.disabled = true;
+  button3.disabled = true;
+  button4.disabled = true;
+  button2.style.filter = "opacity(50%)"
+  button3.style.filter = "opacity(50%)"
+  button4.style.filter = "opacity(50%)"
 }
 
 function button_enable() {
-  document.getElementById("button2").disabled = false;
-  document.getElementById("button3").disabled = false;
-  document.getElementById("button4").disabled = false;
-  document.getElementById("button1").style.filter = "opacity(100%)"
-  document.getElementById("button2").style.filter = "opacity(100%)"
-  document.getElementById("button3").style.filter = "opacity(100%)"
-  document.getElementById("button4").style.filter = "opacity(100%)"
+  button2.disabled = false;
+  button3.disabled = false;
+  button4.disabled = false;
+  button1.style.filter = "opacity(100%)"
+  button2.style.filter = "opacity(100%)"
+  button3.style.filter = "opacity(100%)"
+  button4.style.filter = "opacity(100%)"
 }
 
 function restart() {
@@ -1160,21 +1167,21 @@ function pick(guess) {
 }
 
 function button_disable_secret() {
-  document.getElementById("button1").disabled = true;
-  document.getElementById("button2").disabled = true;
-  document.getElementById("button3").disabled = true;
-  document.getElementById("button1").style.filter = "opacity(50%)"
-  document.getElementById("button2").style.filter = "opacity(50%)"
-  document.getElementById("button3").style.filter = "opacity(50%)"
+  button1.disabled = true;
+  button2.disabled = true;
+  button3.disabled = true;
+  button1.style.filter = "opacity(50%)"
+  button2.style.filter = "opacity(50%)"
+  button3.style.filter = "opacity(50%)"
 }
 
 function button_enable_secret() {
-  document.getElementById("button1").disabled = false;
-  document.getElementById("button2").disabled = false;
-  document.getElementById("button3").disabled = false;
-  document.getElementById("button1").style.filter = "opacity(100%)"
-  document.getElementById("button2").style.filter = "opacity(100%)"
-  document.getElementById("button3").style.filter = "opacity(100%)"
+  button1.disabled = false;
+  button2.disabled = false;
+  button3.disabled = false;
+  button1.style.filter = "opacity(100%)"
+  button2.style.filter = "opacity(100%)"
+  button3.style.filter = "opacity(100%)"
 }
 
 //Jump game guesses
