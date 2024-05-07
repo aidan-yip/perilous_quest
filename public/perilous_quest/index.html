@@ -44,6 +44,10 @@
         background-image: url("https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/dragon2.png");
       }
 
+      div#poplogo {
+        background-image: url("https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/icons/homescreen192.png");
+      }
+
       div#gamelogo {
         background-image: url("https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/gamelogo.jpg");
       }
@@ -63,17 +67,25 @@
 
     <div id="popback">
       <div id="popup">
+        <button id="popclose" title="Close">X</button>
+        <div id="poplogo"></div>
         <ul>
           <li>Welcome to Perilous Quest!</li>
           <br />
+          <p>Version 1.0.0 &lpar;Beta build 9.2.6&rpar;</p>
+          <br />
           <li>
-            This game is in Beta and is not yet ready for release. Please enjoy
-            the game and report any bugs you see!
+            This game is currently in beta testing. Please enjoy
+            the game and report any bugs you see.
           </li>
           <br />
           <li>Use a Desktop for the best experience</li>
+          <br />
+          <li>Headphones are recommended</li>
+          <br />
+          <p>Copyright © 2024 Aidan Yip.
+            All rights reserved.</p>
         </ul>
-        <button id="popclose" title="Close">X</button>
       </div>
     </div>
 
@@ -126,11 +138,16 @@
               <span class="material-symbols-outlined md md"> mintmark </span>
               <strong><span id="goldText">100</span></strong></span
             >
+            <span class="stat" title="Score Points"
+              >Score
+              <span class="material-symbols-outlined md md"> speed </span>
+              <strong><span id="goldText">1000</span></strong></span
+            >
           </div>
 
           <!--Progress-->
           <div id="progress">
-            <p id="meter_text">Progress:</p>
+            <p id="meter_text">Progress</p>
             <meter
               min="0"
               max="100"
