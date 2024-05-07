@@ -126,13 +126,18 @@ div#poplogo {
   box-shadow: 0px 0px 25px rgb(0, 0, 0);
 }
 
+div#poplogo_mobile {
+  display: none;
+}
+
 #popclose {
   color: #ea1f1f;
   text-shadow: 1px 1px #780000, 2px 2px #780000, 3px 3px #780000,
     4px 4px #780000, 0px 0px 20px #e00000;
-  margin: 20px 10px;
+  margin: 30px 20px;
   width: 30px;
   height: 30px;
+  font-size: 30px;
   border: none;
   cursor: pointer;
   background: transparent;
@@ -895,6 +900,7 @@ button .md {
     border-radius: 5px;
     bottom: -20px;
     right: 20px;
+    box-shadow: 0px 0px 10px #000000;
   }
 
   #audio_players_inner[title]:hover::after {
@@ -1084,9 +1090,18 @@ button .md {
   }
 
   div#poplogo {
+    display: none;
+  }
+
+  div#poplogo_mobile {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 0px;
-    width: 192px;
-    height: 192px;
+    width: 144px;
+    height: 144px;
+    border-radius: 35px;
+    box-shadow: 0px 0px 25px rgb(0, 0, 0);
   }
 
   #popup {
