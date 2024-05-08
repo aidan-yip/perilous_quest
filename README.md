@@ -21,6 +21,7 @@ This version includes the base game and several game music tracks. This is in Be
   <li>System Notifications with the Notifications API (Desktop/Laptop only)</li>
   <li>Are you sure you want to leave? Prompt (Desktop/Laptop only)</li>
   <li>Light/Dark Mode responds to the system theme</li>
+  <li>Game Location Display</li>
   <li>Added a share button that uses the Web Share API (Safari on macOS/iOS and Chrome on Windows/ChromeOS only)</li>
   <li>Support for temporary offline caching (Safari, Chrome, Firefox and Edge)*</li>
   <li>Installs a Service worker for PWA compatibility</li>
@@ -44,6 +45,7 @@ This version includes the base game and several game music tracks. This is in Be
   <li>Help Tips on hover</li>
   <li>8-Bit cursor trail on hover with jQuery</li>
   <li>XP spend function to dodge</li>
+  <li>Score Point counter</li>
   <li>View enemy level on battle stat display</li>
   <li>Relocating the Easter egg</li>
   <li>A fourth button option</li>
@@ -55,7 +57,7 @@ This version includes the base game and several game music tracks. This is in Be
   <li>404 Error page</li>
 </ul>
 
-<i><b>*Temporary offline caching functionality is not permanent</b></i>
+<i><b>\*Temporary offline caching functionality is not permanent</b></i>
 
 # Credits
 
@@ -65,6 +67,7 @@ This version includes the base game and several game music tracks. This is in Be
 </ul>
 
 ## Music
+
 <ul>
 <li>"Lovely Town" and "A Secret" by  Skremzy (Tristan Forrest)</li> 
 <li>"Boss Theme" by Audiophobia (Tanner Marsh)</li>
@@ -72,6 +75,7 @@ This version includes the base game and several game music tracks. This is in Be
 </ul>
 
 ## Art
+
 <ul>
 <li>"Dragon" - Tanner Marsh.</li>
 <li>Display Art. Marsh, Tanner. 2024</li>
@@ -107,7 +111,7 @@ Unfortunately Firefox dropped support for web apps in 2021. Please use another w
 
 ## Privacy:
 
-Perilous Quest is built from HTML, CSS, Vanilla JavaScript, jQuery and JSON these programming languages in it of themselves will not compromise any data. However Perilous Quest utilizes many different software technologies which have their own privacy policies. 
+Perilous Quest is built from HTML, CSS, Vanilla JavaScript, jQuery and JSON these programming languages in it of themselves will not compromise any data. However Perilous Quest utilizes many different software technologies which have their own privacy policies.
 
 Perilous Quest is built with Google APIs that power the font and icons. Google is a subsidiary of Alphabet Inc. As such use of the Perilous Quest website/app are subject to Google Fonts web API and Google's privacy policies which can be found at:
 
@@ -124,4 +128,3 @@ Perilous Quest loads in audio and visual content from GitHub a subsidiary of Mic
 https://privacy.microsoft.com/en-ca/privacystatement
 
 https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement
-

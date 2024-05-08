@@ -120,6 +120,9 @@ document.getElementById("name").innerHTML = text;
 let xp = 0;
 let health = 300;
 let gold = 100;
+
+let score = 0;
+
 let currentWeapon = 0;
 let fighting;
 let monsterHealth;
@@ -142,6 +145,9 @@ const monsterHealthText = document.querySelector("#monsterHealth");
 const monsterLevelText = document.querySelector("#monsterLevel");
 const meter = document.getElementById("game_meter");
 const display = document.getElementById("display");
+
+const scoreText = document.getElementById("scoreText");
+
 const weapons = [
   { name: 'Stick ᛓ ', power: 5 },
   { name: 'Dagger ᛌ ', power: 30 },
@@ -457,7 +463,7 @@ function goMine() {
 }
 
 function norunmine() {
-  document.getElementById("button4").style.filter = "opacity(50%)"
+  button4.style.filter = "opacity(50%)"
   text.innerText = "The Mine entrance collapses behind you! It is extremely cold, you shiver as you walk down the abandoned Mineshaft. There are three shaft passageways. The left is overflowing with a water. The middle is filled with ice and snow. The last one is lit with the orange glow of fire." + "\n" + "\n" + "The Mine door is blocked. There's no way out!";
 }
 
@@ -466,8 +472,10 @@ function buyHealth() {
   if (gold >= 10) {
     gold -= 10;
     health += 10;
+    score += 10;
     goldText.innerText = gold;
     healthText.innerText = health;
+    scoreText.innerText = score;
     selectfx.currentTime = 0;
     selectfx.play();
   } else {
@@ -483,7 +491,9 @@ function buyWeapon() {
     if (gold >= 30) {
       gold -= 30;
       currentWeapon++;
+      score += 20;
       goldText.innerText = gold;
+      scoreText.innerText = score;
       let newWeapon = weapons[currentWeapon].name;
       text.innerText = "You now have a " + newWeapon + ".";
       inventory.push(newWeapon);
@@ -1039,9 +1049,11 @@ function dodge() {
 
 function defeatMonster() {
   gold += Math.floor(monsters[fighting].level * 6.7);
+  score += 50;
   xp += monsters[fighting].level;
   goldText.innerText = gold;
   xpText.innerText = xp;
+  scoreText.innerText = score;
   update(locations[4]);
   boss_theme.pause();
   boss_theme.currentTime = 0;
@@ -1072,6 +1084,8 @@ function lose() {
 function winGame() {
   button_disable();
   const myTimeout = setTimeout(button_enable, 30000);
+  score += 1000;
+  scoreText.innerText = score;
   update(locations[6]);
   //Boss
   boss_theme.pause();
@@ -1106,11 +1120,13 @@ function restart() {
   xp = 0;
   health = 300;
   gold = 100;
+  score = 0;
   currentWeapon = 0;
   inventory = ["stick"];
   goldText.innerText = gold;
   healthText.innerText = health;
   xpText.innerText = xp;
+  scoreText.innerText = score;
   goTown();
   pauselose();
   lose_wav.currentTime = 0;
@@ -1150,7 +1166,9 @@ function pick(guess) {
   if (numbers.includes(guess)) {
     text.innerText += "Right! You win 20 gold ⚜️!";
     gold += 20;
+    score += 100;
     goldText.innerText = gold;
+    scoreText.innerText = score;
     const myTimeout = setTimeout(goTown, 3500);
     button_disable_secret();
   } else {
@@ -1210,7 +1228,9 @@ function jumppick(guess) {
   if (numbers.includes(guess)) {
     text.innerText += "Right! You make it across!";
     gold += 20;
+    score += 40;
     goldText.innerText = gold;
+    scoreText.innerText = score;
     update(locations[11]);
     selectfx.currentTime = 0;
     selectfx.play();
