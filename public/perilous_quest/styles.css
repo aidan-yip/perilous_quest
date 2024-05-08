@@ -91,7 +91,7 @@ body {
 }
 
 #background {
-  filter: blur(5px); 
+  filter: blur(5px);
 }
 
 .background {
@@ -374,7 +374,6 @@ a,
   transition: width, height, 1s ease-in-out 0ms;
 }
 
-
 #stats {
   display: flex;
   justify-content: center;
@@ -488,7 +487,7 @@ a,
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 4px;
-  font-size: 25px;
+  font-size: 20px;
   font-family: var(--fontdefault);
   color: #ffffff;
   /* fade in */
@@ -1039,7 +1038,6 @@ button .md {
     box-shadow: 0px -20px 0px #ff3700, 0px -30px 0px #ffb300,
       0px -40px 0px #00ff51, 0px -60px 0px #00ffee, 0px -80px 0px #2f00ff,
       0px -100px 0px #8c00ff;
-
   }
 
   .audio {
@@ -1070,12 +1068,10 @@ button .md {
   .yellow-trail {
     background-color: rgb(0, 208, 255);
   }
-
 }
 
 /* mobile */
 @media only screen and (max-width: 900px) {
-
   .background {
     padding-bottom: 50px;
     padding-top: 0px;
@@ -1125,6 +1121,9 @@ button .md {
   }
 
   .stat {
+    font-size: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     text-shadow: 0px 0px 15px #00b9d5, 1px 1px #009ad6, 2px 2px #009ad6,
       3px 3px #009ad6, 4px 4px #009ad6;
   }
@@ -1186,18 +1185,14 @@ button .md {
     padding-right: 20px;
   }
 
-  .stat {
-    font-size: 13px;
-  }
-
   .monstat {
     display: inline;
     font-size: 13px;
   }
 
   #stats {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
   }
 
   #monsterStats {
