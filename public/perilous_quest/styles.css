@@ -57,6 +57,30 @@ body {
   }
 }
 
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+@keyframes floating_two {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, -3px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -119,15 +143,25 @@ body {
 div#poplogo {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
+  margin-bottom: 40px;
   width: 192px;
   height: 192px;
   border-radius: 35px;
   box-shadow: 0px 0px 25px rgb(0, 0, 0);
+  /* float */
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 div#poplogo_mobile {
   display: none;
+  /* float */
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 #popclose {
@@ -193,6 +227,11 @@ h1 {
 
 #navtitle_mobile {
   display: none;
+  /* float */
+  animation-name: floating_two;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 h2 {
@@ -200,7 +239,7 @@ h2 {
   z-index: 1;
   text-align: center;
   width: 50%;
-  max-width: 1200px;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
   padding: 20px 20px;
@@ -242,8 +281,13 @@ h6 {
   font-size: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 40px;
   cursor: copy;
+  /* float */
+  animation-name: floating_two;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 #name {
@@ -321,6 +365,84 @@ a,
   animation-fill-mode: forwards;
 }
 
+#flex {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#block_spin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 100px;
+  height: 100px;
+  background-color: #22d3ff;
+  border: solid 1px #000000;
+  /* animatation */
+  animation-name: spin;
+  animation-duration: 6000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+div#block_spin_inner_1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 80%;
+  padding: 30px;
+  background-color: rgb(3, 124, 145);
+  border: solid 1px #000000;
+  /* animatation */
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+div#block_spin_inner_2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 140%;
+  height: 140%;
+  padding: 30px;
+  background-color: #effcff;
+  border: solid 1px #000000;
+  /* animatation */
+  animation-name: spin;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+div#block_spin_inner_3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: 90%;
+  padding: 30px;
+  background-color: #22d3ff;
+  border: solid 1px #000000;
+  /* animatation */
+  animation-name: spin;
+  animation-duration: 3000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
 #text {
   background: linear-gradient(
     167deg,
@@ -364,6 +486,7 @@ a,
   color: #ffffff;
   margin: 15px auto 0px;
   padding: 10px;
+  padding-top: 10px;
   border-radius: 35px;
   border: 1px solid #5399cb;
   box-shadow: 0px 0px 10px #000000cd;
@@ -568,6 +691,7 @@ ul {
   position: relative;
   width: 200px;
   height: 200px;
+  border-radius: 15px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
@@ -575,6 +699,11 @@ ul {
   background-position: center;
   background-repeat: no-repeat;
   transition: 1s ease-in-out 0ms;
+  /* float */
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 h3 {
@@ -1093,7 +1222,8 @@ button .md {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0px;
+    margin-top: -10px;
+    margin-bottom: 20px;
     width: 144px;
     height: 144px;
     border-radius: 35px;
@@ -1218,6 +1348,27 @@ button .md {
     padding-bottom: 2px;
     background-color: transparent;
     box-shadow: none;
+  }
+
+  #block_spin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 100px;
+    height: 100px;
+  }
+  
+  div#block_spin_inner_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 80%;
+    padding: 40px;
   }
 
   a,
