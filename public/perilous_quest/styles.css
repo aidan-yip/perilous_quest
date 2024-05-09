@@ -383,6 +383,7 @@ a,
   height: 100px;
   background-color: #22d3ff;
   border: solid 1px #000000;
+  cursor: pointer;
   /* animatation */
   animation-name: spin;
   animation-duration: 6000ms;
@@ -401,6 +402,7 @@ div#block_spin_inner_1 {
   padding: 30px;
   background-color: rgb(3, 124, 145);
   border: solid 1px #000000;
+  cursor: pointer;
   /* animatation */
   animation-name: spin;
   animation-duration: 5000ms;
@@ -419,6 +421,7 @@ div#block_spin_inner_2 {
   padding: 30px;
   background-color: #effcff;
   border: solid 1px #000000;
+  cursor: pointer;
   /* animatation */
   animation-name: spin;
   animation-duration: 4000ms;
@@ -437,6 +440,7 @@ div#block_spin_inner_3 {
   padding: 30px;
   background-color: #22d3ff;
   border: solid 1px #000000;
+  cursor: pointer;
   /* animatation */
   animation-name: spin;
   animation-duration: 3000ms;
@@ -472,6 +476,11 @@ div#block_spin_inner_3 {
   animation-fill-mode: forwards;
   transition: font-size 1s ease-in-out 0ms;
   transition: 0.1s ease-in-out 0ms;
+  /* float */
+  animation-name: floating_two;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 #game {
@@ -516,6 +525,11 @@ div#block_spin_inner_3 {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   transition: width, height, 1s ease-in-out 0ms;
+  /* float */
+  animation-name: floating_two;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 #progress {
@@ -586,6 +600,11 @@ div#block_spin_inner_3 {
   font-size: 30px;
   cursor: crosshair;
   transition: 0.1s ease-in-out 0ms;
+  /* float */
+  animation-name: floating_two;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 .monstat {
@@ -1134,6 +1153,42 @@ button .md {
     text-decoration: underline;
     text-decoration-color: #00d9ff;
     text-decoration-thickness: 3px;
+  }
+
+  #block_spin:hover {
+    box-shadow: 0px 0px 25px #00d9ff;
+  }
+  
+  div#block_spin_inner_1:hover {
+    box-shadow: 0px 0px 10px #00d9ff;
+  }
+  
+  div#block_spin_inner_2:hover {
+    box-shadow: 0px 0px 10px #00d9ff;
+  }
+  
+  div#block_spin_inner_3:hover {
+    box-shadow: 0px 0px 10px #00d9ff;
+  }
+
+  #block_spin:active {
+    cursor: not-allowed;
+    animation-play-state: paused
+  }
+  
+  div#block_spin_inner_1:active {
+    cursor: not-allowed;
+    animation-play-state: paused
+  }
+  
+  div#block_spin_inner_2:active {
+    cursor: not-allowed;
+    animation-play-state: paused
+  }
+  
+  div#block_spin_inner_3:active {
+    cursor: not-allowed;
+    animation-play-state: paused
   }
 
   h2:hover {
