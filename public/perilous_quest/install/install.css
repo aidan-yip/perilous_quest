@@ -97,11 +97,13 @@ a,
   font-family: var(--fontdefault);
   text-decoration: none;
   padding: 5px;
-  margin-left: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 40px;
   letter-spacing: normal;
   transition: 1s ease-in-out 0ms;
-  text-shadow: 1px 1px #005c92, 1px 1px #005c92, 2px 2px #005c92,
-    3px 3px #005c92, 0px 0px 10px #ffffff;
+  text-shadow: 1px 1px #0077bc, 1px 1px #0077bc, 2px 2px #0077bc,
+    3px 3px #0077bc, 0px 0px 5px #ffffff;
 }
 
 a,
@@ -143,6 +145,34 @@ a,
   margin-top: 10px;
   margin-bottom: 10px;
   right: 60px;
+}
+
+#menu_button {
+  padding: 5px;
+  margin-left: 50px;
+  text-shadow: 1px 1px #0077bc, 1px 1px #0077bc, 2px 2px #0077bc,
+    3px 3px #0077bc, 0px 0px 5px #ffffff;
+  font-family: var(--fontdefault);
+  color: #03c7f8;
+  transition: 1s ease-in-out 0ms;
+}
+
+#list_menu {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #2a2a2a;
+  box-shadow: inset 0px 0px 10px #000000;
+  transition: 1s ease-in-out 0ms;
+}
+
+#list_menu_link {
+  padding: 20px;
+  border-radius: 30px;
+  transition: 0.5s ease-in-out 0ms;
 }
 
 #game {
@@ -234,6 +264,8 @@ a .md {
     background-color: rgb(255, 191, 0);
     text-shadow: 1px 1px #000000, 2px 2px #000000, 3px 3px #000000,
       4px 4px #000000;
+    margin-top: 10px;
+    margin-left: -20px;
     padding: 5px;
     border-radius: 5px;
     top: 40px;
@@ -261,9 +293,19 @@ a .md {
 
   #navlink:hover {
     color: #63e0ff;
-    text-decoration: underline;
-    text-decoration-color: #00d9ff;
-    text-decoration-thickness: 3px;
+    background-color: #ffffff74;
+    border-radius: 10px;
+  }
+
+  #list_menu_link:hover {
+    color: #63e0ff;
+    background-color: #ffffff74;
+  }
+
+  #menu_button:hover {
+    color: #63e0ff;
+    background-color: #ffffff74;
+    border-radius: 10px;
   }
 
   h2:hover {
@@ -311,6 +353,12 @@ a .md {
   a,
   #navlink {
     font-size: 12px;
+    padding: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  #menu_button {
     margin-left: 2px;
     margin-right: 2px;
   }

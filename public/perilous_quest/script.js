@@ -41,6 +41,21 @@ function scrollFunction() {
 
 }
 
+//Mobile menu
+
+const list_menu = document.getElementById("list_menu");
+const menu_button = document.getElementById("menu_button");
+
+menu_button.onclick = show_menu;
+
+function show_menu() {
+  if (list_menu.style.display === "flex") {
+    list_menu.style.display = "none";
+  } else {
+    list_menu.style.display = "flex";
+  }
+}
+
 // Quit prompt
 
 window.addEventListener('beforeunload', (event) => {
@@ -120,9 +135,7 @@ document.getElementById("name").innerHTML = text;
 let xp = 0;
 let health = 300;
 let gold = 100;
-
 let score = 0;
-
 let currentWeapon = 0;
 let fighting;
 let monsterHealth;
@@ -145,9 +158,7 @@ const monsterHealthText = document.querySelector("#monsterHealth");
 const monsterLevelText = document.querySelector("#monsterLevel");
 const meter = document.getElementById("game_meter");
 const display = document.getElementById("display");
-
 const scoreText = document.getElementById("scoreText");
-
 const weapons = [
   { name: 'Stick ᛓ ', power: 5 },
   { name: 'Dagger ᛌ ', power: 30 },

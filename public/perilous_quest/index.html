@@ -87,7 +87,7 @@
 
     <div id="popback">
       <div id="popup">
-        <button id="popclose" title="Close">X</button>
+        <button id="popclose" tabindex="0" title="Close">X</button>
         <div id="poplogo"></div>
         <div id="poplogo_mobile"></div>
         <ul>
@@ -111,7 +111,7 @@
 
     <div id="background">
       <div class="background">
-        <!--Navbar-->
+        <!--Navbar Desktop-->
         <div id="navbar">
           <a href="/index.html" target="_self" id="navlink" title="Go Back"
             ><span class="material-symbols-outlined md">arrow_back_ios</span>
@@ -123,20 +123,40 @@
             Music</a
           >
 
+          <a href="/help.pdf" target="_self" id="navlink" title="Help"
+            ><span class="material-symbols-outlined md">question_mark</span>
+            Help</a
+          >
+
+          <div id="menu_button">
+            <span class="material-symbols-outlined md"> menu </span>
+          </div>
+          <!-- Game title header desktop -->
+          <h1 id="navtitle_desk">PERILOUS QUEST</h1>
+        </div>
+
+        <!-- Nav Menu -->
+        <div id="list_menu">
           <a
             href="/public/perilous_quest/install/install.html"
             target="_self"
-            id="navlink"
+            id="list_menu_link"
             title="Install Perilous Quest App"
             ><span class="material-symbols-outlined md">download</span>
             Install</a
           >
 
-          <a href="" target="_self" id="navlink" title="Reset Game"
-            ><span class="material-symbols-outlined md">refresh</span></a
+          <a
+            href="#credits"
+            target="_self"
+            id="list_menu_link"
+            title="Credits"
+            ><span class="material-symbols-outlined md">movie</span> Credits</a
           >
-          <!-- Game title header desktop -->
-          <h1 id="navtitle_desk">PERILOUS QUEST</h1>
+
+          <a href="" target="_self" id="list_menu_link" title="Reset Game"
+            ><span class="material-symbols-outlined md">refresh</span> Reset</a
+          >
         </div>
 
         <!-- Game -->
@@ -179,7 +199,7 @@
           </div>
 
           <!-- Display  -->
-          <div id="display" title="Game Display"></div>
+          <div id="display" title="Location Display"></div>
 
           <!-- Controls -->
           <div id="controls">
