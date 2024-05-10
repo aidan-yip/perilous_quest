@@ -190,11 +190,11 @@ div#poplogo_mobile {
   width: 60%;
   z-index: 3;
   background: linear-gradient(
-    323deg,
-    rgb(39, 8, 95) 0%,
-    rgba(105, 30, 205, 1) 45%,
-    rgb(0, 193, 232) 100%
-  );
+      167deg,
+      rgb(37, 26, 119) 10%,
+      rgba(1, 111, 255, 1) 33%,
+      rgba(113, 0, 171, 1) 73%
+    );
   box-shadow: 0px 0px 75px #ffffff;
   border-radius: 25px;
   border: solid 0.5px #292929;
