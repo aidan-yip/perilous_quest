@@ -190,11 +190,11 @@ div#poplogo_mobile {
   width: 60%;
   z-index: 3;
   background: linear-gradient(
-      167deg,
-      rgb(37, 26, 119) 10%,
-      rgba(1, 111, 255, 1) 33%,
-      rgba(113, 0, 171, 1) 73%
-    );
+    167deg,
+    rgb(37, 26, 119) 10%,
+    rgba(1, 111, 255, 1) 33%,
+    rgba(113, 0, 171, 1) 73%
+  );
   box-shadow: 0px 0px 75px #ffffff;
   border-radius: 25px;
   border: solid 0.5px #292929;
@@ -582,6 +582,12 @@ div#block_spin_inner_3 {
   transition: 1s ease-in-out 0ms;
 }
 
+meter::-webkit-meter-optimum-value,
+meter::-webkit-meter-suboptimum-value,
+meter::-webkit-meter-even-less-good-value {
+  transition: 1s width ease-in-out;
+}
+
 #display {
   width: 98%;
   height: 240px;
@@ -918,7 +924,7 @@ p {
   border-radius: 10px;
   border: 3px double #989898;
   background-color: #000000;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   box-shadow: 0px 0px 25px 10px #25f8ff;
 }
 
@@ -928,10 +934,17 @@ p {
   background-color: #ff0000;
   box-shadow: 0px 0px 15px 5px #ff4141;
   border-radius: 100px;
-  margin: 1px;
+  margin: 10px;
+  margin-bottom: 30px;
   animation: blink ease-in-out 3s;
   animation-duration: 3s;
   animation-iteration-count: infinite;
+}
+
+progress {
+  box-shadow: 0px 0px 15px 5px #0aa0fd;
+  width: 300px;
+  margin: 3px;
 }
 
 span .md {
@@ -1201,37 +1214,37 @@ button .md {
   #block_spin:hover {
     box-shadow: 0px 0px 25px #00d9ff;
   }
-  
+
   div#block_spin_inner_1:hover {
     box-shadow: 0px 0px 10px #00d9ff;
   }
-  
+
   div#block_spin_inner_2:hover {
     box-shadow: 0px 0px 10px #00d9ff;
   }
-  
+
   div#block_spin_inner_3:hover {
     box-shadow: 0px 0px 10px #00d9ff;
   }
 
   #block_spin:active {
     cursor: not-allowed;
-    animation-play-state: paused
+    animation-play-state: paused;
   }
-  
+
   div#block_spin_inner_1:active {
     cursor: not-allowed;
-    animation-play-state: paused
+    animation-play-state: paused;
   }
-  
+
   div#block_spin_inner_2:active {
     cursor: not-allowed;
-    animation-play-state: paused
+    animation-play-state: paused;
   }
-  
+
   div#block_spin_inner_3:active {
     cursor: not-allowed;
-    animation-play-state: paused
+    animation-play-state: paused;
   }
 
   h2:hover {
@@ -1465,7 +1478,7 @@ button .md {
     width: 100px;
     height: 100px;
   }
-  
+
   div#block_spin_inner_1 {
     display: flex;
     justify-content: center;
