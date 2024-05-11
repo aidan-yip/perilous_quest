@@ -36,6 +36,10 @@ body {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body::-webkit-scrollbar {
   display: none !important;
 }
@@ -110,6 +114,7 @@ a,
 #artlink {
   color: #22d3ff;
   padding-left: 0px;
+  margin-left: 0px;
 }
 
 a,
@@ -183,7 +188,7 @@ a,
   min-width: 40%;
   height: 40%;
   background-color: #35353593;
-  border-radius: 25px;
+  border-radius: 35px;
   border: 1px solid #717171;
   color: #ffffff;
   box-shadow: 0px 0px 10px #000000;
