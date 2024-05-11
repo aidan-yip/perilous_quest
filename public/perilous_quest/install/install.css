@@ -170,6 +170,8 @@ a,
 }
 
 #list_menu_link {
+  margin-left: 0px;
+  padding: 20px;
   border-radius: 30px;
   transition: 0.5s ease-in-out 0ms;
 }
