@@ -74,5 +74,6 @@ if (list_menu.style.display === "flex") {
   list_menu.style.display = "none";
 } else {
   list_menu.style.display = "flex";
+  location.href = "#background";
 }
 }

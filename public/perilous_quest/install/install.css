@@ -307,6 +307,7 @@ a .md {
     color: #63e0ff;
     background-color: #ffffff74;
     border-radius: 10px;
+    cursor: pointer;
   }
 
   h2:hover {
