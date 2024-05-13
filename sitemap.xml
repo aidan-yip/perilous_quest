@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<!-- created with sitemap-gen https://sitemap-gen.com/ -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://perilous-quest.netlify.app/</loc>
 	</url>
-	
 	<url>
 		<loc>https://perilous-quest.netlify.app/read/</loc>
 	</url>
-	
 	<url>
 		<loc>https://perilous-quest.netlify.app/public/perilous_quest/index.html</loc>
 	</url>
-	
 	<url>
 		<loc>https://perilous-quest.netlify.app/public/perilous_quest/install/install</loc>
 	</url>
-	
+	<url>
+		<loc>https://perilous-quest.netlify.app/help.pdf</loc>
+	</url>
+	<url>
+		<loc></loc>
+	</url>
 </urlset>
