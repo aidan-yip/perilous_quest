@@ -308,9 +308,9 @@ const locations = [
   },
   {
     name: "jump",
-    "button text": ["8", "2", "6", "Return to Chasm"],
-    "button functions": [jumpEight, jumpTwo, jumpSix, goChasm],
-    text: "You get ready to jump. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you make it across."
+    "button text": ["7", "2", "5", "Return to Chasm"],
+    "button functions": [jumpSeven, jumpTwo, jumpFive, goChasm],
+    text: "You get ready to jump. Pick a number above. Seven numbers will be randomly chosen between 0 and 7. If the number you choose matches one of the random numbers, you make it across."
   },
   {
     name: "deep caves",
@@ -1113,19 +1113,19 @@ function button_disable() {
   button2.disabled = true;
   button3.disabled = true;
   button4.disabled = true;
-  button2.style.filter = "opacity(50%)"
-  button3.style.filter = "opacity(50%)"
-  button4.style.filter = "opacity(50%)"
+  button2.style.filter = "opacity(50%)";
+  button3.style.filter = "opacity(50%)";
+  button4.style.filter = "opacity(50%)";
 }
 
 function button_enable() {
   button2.disabled = false;
   button3.disabled = false;
   button4.disabled = false;
-  button1.style.filter = "opacity(100%)"
-  button2.style.filter = "opacity(100%)"
-  button3.style.filter = "opacity(100%)"
-  button4.style.filter = "opacity(100%)"
+  button1.style.filter = "opacity(100%)";
+  button2.style.filter = "opacity(100%)";
+  button3.style.filter = "opacity(100%)";
+  button4.style.filter = "opacity(100%)";
 }
 
 function restart() {
@@ -1200,18 +1200,22 @@ function button_disable_secret() {
   button1.disabled = true;
   button2.disabled = true;
   button3.disabled = true;
-  button1.style.filter = "opacity(50%)"
-  button2.style.filter = "opacity(50%)"
-  button3.style.filter = "opacity(50%)"
+  button4.disabled = true;
+  button1.style.filter = "opacity(50%)";
+  button2.style.filter = "opacity(50%)";
+  button3.style.filter = "opacity(50%)";
+  button4.style.filter = "opacity(50%)";
 }
 
 function button_enable_secret() {
   button1.disabled = false;
   button2.disabled = false;
   button3.disabled = false;
-  button1.style.filter = "opacity(100%)"
-  button2.style.filter = "opacity(100%)"
-  button3.style.filter = "opacity(100%)"
+  button4.disabled = false;
+  button1.style.filter = "opacity(100%)";
+  button2.style.filter = "opacity(100%)";
+  button3.style.filter = "opacity(100%)";
+  button4.style.filter = "opacity(100%)";
 }
 
 //Jump game guesses
@@ -1220,21 +1224,21 @@ function jumpTwo() {
   jumppick(2);
 }
 
-function jumpEight() {
-  jumppick(8);
+function jumpSeven() {
+  jumppick(7);
 }
 
-function jumpSix() {
-  jumppick(6);
+function jumpFive() {
+  jumppick(5);
 }
 
 //Jump game
 function jumppick(guess) {
   const numbers = [];
-  while (numbers.length < 10) {
-    numbers.push(Math.floor(Math.random() * 11));
+  while (numbers.length < 7) {
+    numbers.push(Math.floor(Math.random() * 8));
   }
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 7; i++) {
   
   }
   if (numbers.includes(guess)) {
