@@ -25,6 +25,7 @@ This version includes the base game and several game music tracks. This is in Be
   <li>Added a share button that uses the Web Share API (Safari on macOS/iOS and Chrome on Windows/ChromeOS only)</li>
   <li>Support for temporary offline caching (Safari, Chrome, Firefox and Edge)*</li>
   <li>Installs a Service worker for PWA compatibility</li>
+  <li>Support for Chrome Richer Install UI</li>
   <li>Splash screen for mobile devices</li> 
   <li>Support for fullscreen on iPhones with the TrueDepth Camera/Dynamic Island</li>
   <li>Name input field for player</li>
