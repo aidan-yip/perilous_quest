@@ -1,7 +1,7 @@
 {
   "name": "Perilous Quest",
   "short_name": "Perilous Quest",
-  "start_url": "https://perilous-quest.netlify.app/",
+  "start_url": "https://perilous-quest.netlify.app",
   "display": "standalone",
   "x-robots-tag": "index",
   "background_color": "#03c7f8",
