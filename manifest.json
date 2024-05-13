@@ -12,44 +12,65 @@
       "name": "Skip Start",
       "url": "https://perilous-quest.netlify.app/public/perilous_quest/index.html",
       "description": "Skip the Start Screen page"
+    },
+    {
+      "name": "Jukebox",
+      "url": "https://perilous-quest.netlify.app/public/perilous_quest/index.html#audio_players",
+      "description": "Listen to the soundtrack"
     }
   ],
   "icons": [
-      {
-        "src": "./public/icons/homescreen48.png",
-        "sizes": "48x48",
-        "type": "image/png"
-      },
-      {
-        "src": "./public/icons/homescreen72.png",
-        "sizes": "72x72",
-        "type": "image/png"
-      },
-      {
-        "src": "./public/icons/homescreen96.png",
-        "sizes": "96x96",
-        "type": "image/png"
-      },
-      {
-        "src": "./public/icons/homescreen144.png",
-        "sizes": "144x144",
-        "type": "image/png"
-      },
-      {
-        "src": "./public/icons/homescreen168.png",
-        "sizes": "168x168",
-        "type": "image/png",
-        "purpose": "maskable"
-      },
-      {
-        "src": "./public/icons/homescreen192.png",
-        "sizes": "192x192",
-        "type": "image/png"
-      },
-      {
-        "src": "./public/icons/homescreen512.png",
-        "sizes": "512x512",
-        "type": "image/png"
-      }
-    ]
+    {
+      "src": "./public/icons/homescreen48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "./public/icons/homescreen72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "./public/icons/homescreen96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "./public/icons/homescreen144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "./public/icons/homescreen168.png",
+      "sizes": "168x168",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./public/icons/homescreen192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./public/icons/homescreen512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+     "src": "./public/game.png",
+      "sizes": "1980x1168",
+      "type": "image/gif",
+      "form_factor": "wide",
+      "label": "Perilous Quest"
+    },
+    {
+      "src": "./public/start.png",
+       "sizes": "1980x1168",
+       "type": "image/gif",
+       "form_factor": "wide",
+       "label": "Start Screen"
+     }
+]
 }
