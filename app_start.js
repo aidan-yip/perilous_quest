@@ -19,7 +19,7 @@ function currentTime() {
   mm = mm < 10 ? "0" + mm : mm;
   ss = ss < 10 ? "0" + ss : ss;
 
-  let time = hh + ":" + mm + ":" + ss + " " + session;
+  let time = hh + ":" + mm + " " + session;
 
   document.getElementById("clock").innerText = time;
   let t = setTimeout(function () {

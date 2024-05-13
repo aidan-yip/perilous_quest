@@ -50,6 +50,32 @@ body {
   }
 }
 
+@keyframes colorchange {
+  0% {
+    color: rgb(214, 63, 63);
+  }
+
+  20% {
+    color: #f6b142;
+  }
+
+  40% {
+    color: #96e845;
+  }
+
+  60% {
+    color: #4fe2cc;
+  }
+
+  80% {
+    color: #9840eb;
+  }
+
+  100% {
+    color: #e652e6;
+  }
+}
+
 body {
   background: rgb(11, 0, 85);
   background: linear-gradient(
@@ -128,6 +154,7 @@ button {
   border: solid 3px #4de7ff;
   text-shadow: 0px 0px 25px #008296;
   cursor: cell;
+  /*animate*/
   animation: mymove 2s infinite;
 }
 
@@ -169,7 +196,7 @@ button {
 
 .hint {
   padding-top: 4%;
-  padding-left: 5%;
+  
   color: #ffffff84;
   font-family: var(--fontdefault);
   font-size: 10px;
@@ -294,12 +321,16 @@ a:visited {
   }
 
   a:hover {
-    color: #55ebff;
+    color: #ffffff;
     text-decoration: none;
   }
 
   a:active {
     cursor: progress;
+  }
+
+  p:hover {
+    color: #55ebff;
   }
 
   /*cursor trail*/
@@ -416,5 +447,20 @@ a:visited {
 
   #infodiv {
     background-color: transparent;
+  }
+
+  a {
+    /*animate*/
+    animation: colorchange ease-in-out 7s infinite;
+  }
+
+  p {
+    /*animate*/
+    animation: colorchange ease-in-out 7s infinite;
+  }
+
+  a:hover {
+    color: #ffffff;
+    text-decoration: none;
   }
 }
