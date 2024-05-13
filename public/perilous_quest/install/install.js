@@ -66,14 +66,17 @@ if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
 
 const list_menu = document.getElementById("list_menu");
 const menu_button = document.getElementById("menu_button");
+const menu_button_span = document.getElementById("menu_button_span");
 
 menu_button.onclick = show_menu;
 
 function show_menu() {
 if (list_menu.style.display === "flex") {
   list_menu.style.display = "none";
+  menu_button_span.innerText = "menu";
 } else {
   list_menu.style.display = "flex";
+  menu_button_span.innerText = "close";
   location.href = "#background";
 }
 }
