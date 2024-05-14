@@ -72,12 +72,45 @@ function info_pop() {
   alert("Perilous Quest" + "\n\n" + "Version 1.0.0" + "\n\n" + "(Beta build 9.4.0)" + "\n\n" + "Copyright © 2024 Aidan Yip. All rights reserved.");
 }
 
-// Game reset
+// Game reset popup
 
 function gameReset() {
   let text = "Reset Game?";
   if (confirm(text) == true) {
     location.href = "";
+  } else {
+    null
+  }
+}
+
+// Leave game popup
+
+function leaveGame() {
+  let text = "Quit Game?";
+  if (confirm(text) == true) {
+    location.href = "/index.html";
+  } else {
+    null
+  }
+}
+
+// Get help popup
+
+function getHelp() {
+  let text = "Get Help?";
+  if (confirm(text) == true) {
+    location.href = "/help.pdf";
+  } else {
+    null
+  }
+}
+
+// install game popup
+
+function installGame() {
+  let text = "Leave Game?";
+  if (confirm(text) == true) {
+    location.href = "/public/perilous_quest/install/install.html";
   } else {
     null
   }
