@@ -113,7 +113,7 @@
       <div class="background">
         <!--Navbar Desktop-->
         <div id="navbar">
-          <a href="/index.html" target="_self" id="navlink" title="Go Back"
+          <a target="_self" id="navlink" title="Go Back" onclick="leaveGame();"
             ><span class="material-symbols-outlined md">arrow_back_ios</span>
             Back</a
           >
@@ -123,7 +123,7 @@
             Music</a
           >
 
-          <a href="/help.pdf" target="_self" id="navlink" title="Help"
+          <a target="_self" id="navlink" title="Help" onclick="getHelp();"
             ><span class="material-symbols-outlined md">question_mark</span>
             Help</a
           >
@@ -140,10 +140,10 @@
         <!-- nav menu list -->
         <div id="list_menu">
           <a
-            href="/public/perilous_quest/install/install.html"
             target="_self"
             id="list_menu_link"
             title="Install App"
+            onclick="installGame();"
             ><span class="material-symbols-outlined list_one md">download</span>
             Install</a
           >
@@ -157,7 +157,11 @@
             Credits</a
           >
 
-          <a target="_self" id="list_menu_link" title="Reset Game" onclick="gameReset();"
+          <a
+            target="_self"
+            id="list_menu_link"
+            title="Reset Game"
+            onclick="gameReset();"
             ><span class="material-symbols-outlined list_three md"
               >refresh</span
             >
