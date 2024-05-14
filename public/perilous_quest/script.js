@@ -72,11 +72,16 @@ function info_pop() {
   alert("Perilous Quest" + "\n\n" + "Version 1.0.0" + "\n\n" + "(Beta build 9.4.0)" + "\n\n" + "Copyright © 2024 Aidan Yip. All rights reserved.");
 }
 
-// Quit prompt
+// Game reset
 
-window.addEventListener('beforeunload', (event) => {
-  event.returnValue = `Are you sure you want to leave?`;
-});
+function gameReset() {
+  let text = "Reset Game?";
+  if (confirm(text) == true) {
+    location.href = "";
+  } else {
+    null
+  }
+}
 
 //Cursor trail
 
