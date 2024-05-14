@@ -434,6 +434,25 @@ a,
   animation: slide-right ease-in-out 0.9s;
 }
 
+.list_four {
+  animation: slide-right ease-in-out 1.1s;
+}
+
+#info_alert {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 20px;
+  border-radius: 30px;
+  font-family: var(--fontdefault);
+  color: #63e0ff;
+    text-shadow: 1px 1px #0077bc, 1px 1px #0077bc, 2px 2px #0077bc,
+    3px 3px #0077bc, 0px 0px 5px #ffffff;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  transition: 1s ease-in-out 0ms;
+}
+
 #flex {
   display: flex;
   justify-content: space-between;
@@ -989,6 +1008,10 @@ span .md {
   font-size: 130%;
 }
 
+div .md {
+  font-size: 130%;
+}
+
 #game span.mdsmall {
   font-size: 130%;
   padding-left: 10px;
@@ -1243,6 +1266,11 @@ button .md {
     background-color: #ffffff74;
   }
 
+  #info_alert:hover {
+    color: #63e0ff;
+    background-color: #ffffff74;
+  }
+
   #menu_button:hover {
     color: #63e0ff;
     background-color: #ffffff74;
@@ -1395,6 +1423,11 @@ button .md {
     margin-left: 2px;
     margin-right: 2px;
     text-wrap: nowrap;
+  }
+
+  a,
+  #info_alert {
+    font-size: 12px;
   }
 
   #menu_button {

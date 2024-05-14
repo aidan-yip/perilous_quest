@@ -60,6 +60,16 @@ function show_menu() {
   }
 }
 
+//Info alert
+
+const info_alert = document.getElementById("info_alert");
+
+info_alert.onclick = info_pop;
+
+function info_pop() {
+  alert("Perilous Quest" + "\n\n" + "Version 1.0.0" + "\n\n" + "(Beta build 9.4.0)" + "\n\n" + "Copyright © 2024 Aidan Yip. All rights reserved.");
+}
+
 // Quit prompt
 
 window.addEventListener('beforeunload', (event) => {

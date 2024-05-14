@@ -203,6 +203,25 @@ a,
   animation: slide-right ease-in-out 0.9s;
 }
 
+.list_four {
+  animation: slide-right ease-in-out 1.1s;
+}
+
+#info_alert {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 20px;
+  border-radius: 30px;
+  font-family: var(--fontdefault);
+  color: #63e0ff;
+    text-shadow: 1px 1px #0077bc, 1px 1px #0077bc, 2px 2px #0077bc,
+    3px 3px #0077bc, 0px 0px 5px #ffffff;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  transition: 1s ease-in-out 0ms;
+}
+
 #game {
   display: flex;
   flex-direction: column;
@@ -278,6 +297,10 @@ a .md {
   font-size: 130%;
 }
 
+div .md {
+  font-size: 130%;
+}
+
 /* desktop */
 @media only screen and (min-width: 900px) {
   #navlink[title]:hover::before {
@@ -326,6 +349,11 @@ a .md {
   }
 
   #list_menu_link:hover {
+    color: #63e0ff;
+    background-color: #ffffff74;
+  }
+
+  #info_alert:hover {
     color: #63e0ff;
     background-color: #ffffff74;
   }
@@ -385,6 +413,11 @@ a .md {
     padding: 10px;
     margin-left: 2px;
     margin-right: 2px;
+  }
+
+  a,
+  #info_alert {
+    font-size: 12px;
   }
 
   #menu_button {
