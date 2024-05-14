@@ -53,9 +53,11 @@ function show_menu() {
   if (list_menu.style.display === "flex") {
     list_menu.style.display = "none";
     menu_button_span.innerText = "menu";
+    menu_button.setAttribute("title", "Menu")
   } else {
     list_menu.style.display = "flex";
     menu_button_span.innerText = "close";
+    menu_button.setAttribute("title", "Close")
     location.href = "#background";
   }
 }

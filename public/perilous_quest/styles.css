@@ -411,7 +411,6 @@ a,
   margin-right: auto;
   background-color: #2a2a2a;
   box-shadow: inset 0px 0px 10px #000000;
-  
 }
 
 #list_menu_link {
@@ -446,7 +445,7 @@ a,
   border-radius: 30px;
   font-family: var(--fontdefault);
   color: #63e0ff;
-    text-shadow: 1px 1px #0077bc, 1px 1px #0077bc, 2px 2px #0077bc,
+  text-shadow: 1px 1px #0077bc, 1px 1px #0077bc, 2px 2px #0077bc,
     3px 3px #0077bc, 0px 0px 5px #ffffff;
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
@@ -1049,6 +1048,25 @@ button .md {
   }
 
   #navlink[title]:hover::before {
+    position: absolute;
+    z-index: 4;
+    content: attr(title);
+    font-size: 10px;
+    font-family: var(--fontdefault);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-wrap: nowrap;
+    background-color: rgb(255, 191, 0);
+    text-shadow: 1px 1px #000000, 2px 2px #000000, 3px 3px #000000,
+      4px 4px #000000;
+    margin-top: 10px;
+    margin-left: -20px;
+    padding: 5px;
+    border-radius: 5px;
+    top: 40px;
+  }
+
+  #menu_button[title]:hover::before {
     position: absolute;
     z-index: 4;
     content: attr(title);
