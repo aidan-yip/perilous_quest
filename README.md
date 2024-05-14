@@ -110,7 +110,7 @@ https://support.google.com/chrome/answer/9658361?hl=en&co=GENIE.Platform%3DDeskt
 
 Unfortunately Firefox dropped support for web apps in 2021. Please use another web browser or an older version of Firefox to install on your system.
 
-## Privacy:
+# Privacy:
 
 Perilous Quest is built from HTML, CSS, Vanilla JavaScript, jQuery and JSON these programming languages in it of themselves will not compromise any data. However Perilous Quest utilizes many different software technologies which have their own privacy policies.
 
