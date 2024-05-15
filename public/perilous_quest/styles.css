@@ -1040,9 +1040,9 @@ button .md {
 iframe {
   margin: 0 auto;
   padding: 30px;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16/10;
   width: 90%;
-  border-radius: 10px;
+  border-radius: 50px;
 }
 
 /* desktop */
