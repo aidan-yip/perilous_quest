@@ -220,7 +220,6 @@ div#poplogo_mobile {
 }
 
 h1 {
-  position: relative;
   text-align: center;
   font-family: var(--fontdefault);
   font-size: 40px;
