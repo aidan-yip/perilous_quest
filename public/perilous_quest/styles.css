@@ -220,7 +220,6 @@ div#poplogo_mobile {
 }
 
 h1 {
-  position: relative;
   text-align: center;
   font-family: var(--fontdefault);
   font-size: 40px;
@@ -579,12 +578,13 @@ div#block_spin_inner_3 {
   height: 40%;
   background: linear-gradient(
     0deg,
-    rgba(45, 220, 255, 0.8) 0%,
-    rgba(11, 11, 134, 0.8) 35%,
-    rgba(0, 140, 255, 0.8) 100%
+    rgba(45, 220, 255, 0.7) 0%,
+    rgba(11, 11, 134, 0.7) 35%,
+    rgba(0, 140, 255, 0.7) 100%
   );
   color: #ffffff;
   margin: 15px auto 0px;
+  margin-top: -23%;
   padding: 10px;
   padding-top: 10px;
   border-radius: 35px;
@@ -1045,6 +1045,11 @@ iframe {
   border-radius: 50px;
 }
 
+svg {
+  margin-bottom: -10%;
+  border-radius: 0px;
+}
+
 /* desktop */
 @media only screen and (min-width: 900px) {
   .stat[title]:hover::after {
@@ -1474,8 +1479,14 @@ iframe {
 
   #game {
     box-shadow: 0px 0px 25px #03c7f8;
-    margin-top: 10px;
+    background: linear-gradient(
+      0deg,
+      rgba(45, 220, 255, 0.8) 0%,
+      rgba(11, 11, 134, 0.8) 35%,
+      rgba(0, 140, 255, 0.8) 100%
+    );
     padding-bottom: 0px;
+    margin-top: -22%;
   }
 
   .stat {
@@ -1665,5 +1676,17 @@ iframe {
 
   #machint {
     display: none;
+  }
+
+  svg {
+    margin-bottom: -10%;
+  }
+
+  #wave_bottom {
+    margin-bottom: -15%;
+  }
+
+  #wave_top {
+    opacity: 0;
   }
 }
