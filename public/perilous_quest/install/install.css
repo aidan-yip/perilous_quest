@@ -219,7 +219,7 @@ a,
   border-radius: 30px;
   font-family: var(--fontdefault);
   color: #63e0ff;
-    text-shadow: 1px 1px #0077bc, 1px 1px #0077bc, 2px 2px #0077bc,
+  text-shadow: 1px 1px #0077bc, 1px 1px #0077bc, 2px 2px #0077bc,
     3px 3px #0077bc, 0px 0px 5px #ffffff;
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
@@ -238,6 +238,7 @@ a,
   color: #ffffff;
   box-shadow: 0px 0px 10px #000000;
   margin: 15px auto 0px;
+  margin-top: -23%;
   padding: 10px;
   /* fade in */
   animation: fadeInAnimation ease 3s;
@@ -303,6 +304,11 @@ a .md {
 
 div .md {
   font-size: 130%;
+}
+
+svg {
+  margin-bottom: -10%;
+  border-radius: 0px;
 }
 
 /* desktop */
@@ -420,12 +426,10 @@ div .md {
   .yellow-trail {
     background-color: rgb(0, 208, 255);
   }
-  
 }
 
 /* mobile */
 @media only screen and (max-width: 900px) {
-
   .background {
     padding-top: 0px;
   }
@@ -450,7 +454,7 @@ div .md {
 
   #game {
     box-shadow: 0px 0px 10px #000000;
-    margin-top: 10px;
+    margin-top: -22%;
   }
 
   .img_div {
@@ -502,5 +506,18 @@ div .md {
 
   ul {
     font-size: small;
+  }
+
+  svg {
+    margin-bottom: -10%;
+    border-radius: 25px;
+  }
+
+  #wave_bottom {
+    margin-bottom: -15%;
+  }
+
+  #wave_top {
+    opacity: 0;
   }
 }

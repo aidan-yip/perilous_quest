@@ -41,7 +41,7 @@ function scrollFunction() {
 
 }
 
-//Mobile menu
+//List menu
 
 const list_menu = document.getElementById("list_menu");
 const menu_button = document.getElementById("menu_button");
@@ -105,7 +105,7 @@ function getHelp() {
   }
 }
 
-// install game popup
+// Install game popup
 
 function installGame() {
   let text = "Leave Game?";
