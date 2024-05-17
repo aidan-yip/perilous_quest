@@ -358,7 +358,7 @@ const locations = [
     name: "chasm",
     "button text": ["Jump across", "Wait for a bit", "Fall into the chasm", "Return to Castle"],
     "button functions": [goJump, fightWerewolf, fightAnglerfish, goCastle],
-    text: "There is a massive chasm ahead. You believe you may be able to jump across. Looking down you faintly see some water. Suddenly you hear the sound of wood burning behind you!"
+    text: "There is a massive chasm ahead. You believe you may be able to jump across. Looking down you faintly see some water. You feel exhausted from the journey. Maybe it's time to take a short rest from walking?"
   },
   {
     name: "jump",
