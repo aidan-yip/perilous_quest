@@ -178,6 +178,7 @@ if (person == null || person == "") {
 text = "Hello Guest. You're Player One!" + " Be strong, and let your heart take courage!\n";
 } else {
 text = "Hello " + person + ". You're Player One!" + " Be strong, and let your heart take courage!\n";
+text.innerText = person + location.text;
 }
 document.getElementById("name").style.display = "block";
 document.getElementById("button0").style.display = "none";
@@ -618,6 +619,13 @@ let select_null = document.getElementById("select_null")
 function playselectnull() {
   select_null.currentTime = 0;
   select_null.play();
+}
+
+let attackfx = new Audio("https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/attack.wav");
+
+function play_attack() {
+  attackfx.currentTime = 0;
+  attackfx.play();
 }
 
 // Music
@@ -1067,9 +1075,13 @@ function attack() {
   text.innerText += " You attack with your " + weapons[currentWeapon].name + ".";
   health -= getMonsterAttackValue(monsters[fighting].level);
   if (isMonsterHit()) {
-    monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1;    
+    monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1; 
+    attackfx.currentTime = 0;
+    attackfx.play();  
   } else {
     text.innerText += " You miss.";
+    attackfx.currentTime = 0;
+    attackfx.play();
   }
   healthText.innerText = health;
   monsterHealthText.innerText = monsterHealth;
@@ -1101,10 +1113,14 @@ function xplose() {
 
 function dodge() {
   text.innerText = "You dodge the attack from the " + monsters[fighting].name + "." + " You lose 2 xp.";
+  attackfx.currentTime = 0;
+  attackfx.play();
   if(xp > 0) {
     xplose();
   } else {
     text.innerText = "You dodge the attack from the " + monsters[fighting].name + "." + " You've lost all your xp!";
+    attackfx.currentTime = 0;
+    attackfx.play();
   }
 }
 
