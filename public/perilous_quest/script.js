@@ -167,6 +167,23 @@ $("#background").cursorTrail({
   "class": "yellow-trail"
 });
 
+// Circle cursor
+
+document.body.onmousemove = function(e) {
+  document.documentElement.style.setProperty (
+    '--x', (
+      e.clientX+window.scrollX
+    )
+    + 'px'
+  );
+  document.documentElement.style.setProperty (
+    '--y', (
+      e.clientY+window.scrollY
+    ) 
+    + 'px'
+  );
+}
+
 
 
 //Enter Player Name prompt
@@ -542,8 +559,7 @@ function buyHealth() {
     goldText.innerText = gold;
     healthText.innerText = health;
     scoreText.innerText = score;
-    selectfx.currentTime = 0;
-    selectfx.play();
+    play_attack();
   } else {
     text.innerText = "You do not have enough gold ⚜️ to buy health ❤️.";
     document.getElementById("button1").style.filter = "opacity(50%)"
@@ -564,8 +580,7 @@ function buyWeapon() {
       text.innerText = "You now have a " + newWeapon + ".";
       inventory.push(newWeapon);
       text.innerText += "\n" + "\n" + " In your inventory you have:\n" + inventory;
-      selectfx.currentTime = 0;
-      selectfx.play();
+      play_attack();
       document.getElementById("button2").style.filter = "opacity(100%)"
     } else {
       text.innerText = "You do not have enough gold ⚜️ to buy a weapon 🗡️.";
@@ -586,8 +601,7 @@ function sellWeapon() {
     let currentWeapon = inventory.shift();
     text.innerText = "You sold a " + currentWeapon + ".";
     text.innerText += "\n" + "\n" + " In your inventory you have:\n" + inventory;
-    selectfx.currentTime = 0;
-    selectfx.play();
+    play_attack();
     document.getElementById("button3").style.filter = "opacity(100%)"
   } else {
     text.innerText = "Don't sell your only weapon 🗡️!";
