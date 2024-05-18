@@ -234,11 +234,11 @@ const scoreText = document.getElementById("scoreText");
 const weapons = [
   { name: 'Stick ᛓ ', power: 5 },
   { name: 'Dagger ᛌ ', power: 30 },
-  { name: 'Claw Hammer ᛚ ', power: 50 },
-  { name: 'Viking Hammer ᛘ ', power: 75 },
-  { name: 'Light Sword ᛁ ', power: 100 },
-  { name: 'Magic Sword ᛂ ', power: 200},
-  { name: 'Wizard Staff ᛙ ', power: 300}
+  { name: 'Claw-Hammer ᛚ ', power: 50 },
+  { name: 'Viking-Hammer ᛘ ', power: 75 },
+  { name: 'Light-Sword ᛁ ', power: 100 },
+  { name: 'Magic-Sword ᛂ ', power: 200},
+  { name: 'Wizard-Staff ᛙ ', power: 300}
 ];
 const monsters = [
   {
