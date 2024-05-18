@@ -4,6 +4,10 @@
     background-position: left;
   }
 
+  #invertedcursor {
+    background: #ffffff97;
+  }
+
   h1 {
     color: rgb(135, 237, 255);
     text-shadow: 0px 0px 25px #008fa5, 1px 1px #008fa5, 2px 2px #008fa5,

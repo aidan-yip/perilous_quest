@@ -25,7 +25,21 @@
 
 html,
 body {
-  cursor: url("/Public/favicon.ico"), default;
+  cursor: none;
+}
+
+#invertedcursor {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: #0000008d;
+  border-radius: 50%;
+  top: var(--y, 0);
+  left: var(--x, 0);
+  transform: translate(-50%, -50%);
+  z-index: 7;
+  transition: transform .2s;
+  pointer-events: none;
 }
 
 /* Keyframes */
@@ -191,7 +205,6 @@ div#poplogo_mobile {
   height: 30px;
   font-size: 30px;
   border: none;
-  cursor: pointer;
   background: transparent;
   box-shadow: none;
 }
@@ -418,6 +431,7 @@ a,
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
   transition: 1s ease-in-out 0ms;
+  cursor: none;
 }
 
 .list_one {
@@ -674,7 +688,7 @@ meter::-webkit-meter-even-less-good-value {
   justify-content: space-evenly;
   padding: 10px;
   border-radius: 25px;
-  cursor: cell;
+  cursor: none;
 }
 
 #monsterStats {
@@ -758,7 +772,7 @@ button {
   margin-right: 4px;
   box-shadow: 0px 0px 10px #025678;
   z-index: 1;
-  cursor: cell;
+  cursor: none;
   /* fade in */
   animation: fadeInAnimation ease 3s;
   animation: shake none 3s;
@@ -771,7 +785,7 @@ button {
 button:active {
   width: 37%;
   height: 65px;
-  cursor: wait;
+  cursor: none;
 }
 
 .cleardiv {
@@ -1305,6 +1319,7 @@ svg {
     color: #63e0ff;
     background-color: #ffffff74;
     border-radius: 10px;
+    cursor: none;
   }
 
   #list_menu_link:hover {
@@ -1321,7 +1336,7 @@ svg {
     color: #63e0ff;
     background-color: #ffffff74;
     border-radius: 10px;
-    cursor: pointer;
+    cursor: none;
   }
 
   #block_spin:hover {
@@ -1429,6 +1444,10 @@ svg {
   .background {
     padding-bottom: 50px;
     padding-top: 0px;
+  }
+
+  #invertedcursor {
+    display: none;
   }
 
   #popback {
