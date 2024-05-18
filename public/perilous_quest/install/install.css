@@ -231,6 +231,7 @@ a,
   flex-direction: column;
   max-width: 1200px;
   min-width: 40%;
+  width: 90%;
   height: 40%;
   background-color: #35353593;
   border-radius: 35px;
@@ -309,6 +310,10 @@ div .md {
 svg {
   margin-bottom: -10%;
   border-radius: 0px;
+}
+
+#wave_top {
+  opacity: 0.7;
 }
 
 /* desktop */
@@ -453,8 +458,9 @@ svg {
   }
 
   #game {
-    box-shadow: 0px 0px 10px #000000;
+    width: 100%;
     margin-top: -22%;
+    box-shadow: 0px 0px 10px #000000;
   }
 
   .img_div {
