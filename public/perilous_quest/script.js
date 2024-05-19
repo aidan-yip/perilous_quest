@@ -546,6 +546,7 @@ function goMine() {
 }
 
 function norunmine() {
+  playselectnull();
   button4.style.filter = "opacity(50%)"
   text.innerText = "The Mine entrance collapses behind you! It is extremely cold, you shiver as you walk down the abandoned Mineshaft. There are three shaft passageways. The left is overflowing with a water. The middle is filled with ice and snow. The last one is lit with the orange glow of fire." + "\n" + "\n" + "The Mine door is blocked. There's no way out!";
 }
