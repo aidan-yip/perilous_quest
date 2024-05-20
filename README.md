@@ -78,8 +78,8 @@ This version includes the base game and several game music tracks. This is in Be
 ## Art
 
 <ul>
-<li>"Dragon" - Tanner Marsh.</li>
-<li>Display Art. Marsh, Tanner. 2024</li>
+<li>Marsh, Tanner. <i>"Dragon"</i> 2024</li>
+<li>Marsh, Tanner. <i>"Display Art"</i> 2024</li>
 </ul>
 
 ## Future ideas
