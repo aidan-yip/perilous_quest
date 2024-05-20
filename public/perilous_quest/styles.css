@@ -911,7 +911,7 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 85%;
   margin: 10px;
   padding-top: 10px;
   background: linear-gradient(
@@ -1571,6 +1571,7 @@ svg {
   }
 
   h3 {
+    padding: 30px 80px;
     font-size: 15px;
   }
 
