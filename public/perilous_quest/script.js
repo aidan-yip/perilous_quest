@@ -323,9 +323,9 @@ const locations = [
   },
   {
     name: "store",
-    "button text": ["Buy 10 health ❤️ (10 gold)", "Buy weapon 🗡️ (30 gold)", "Sell weapon for 15 gold ⚜️", "Your broke. Leave shop"],
+    "button text": ["Buy 10 health ❤️ (-10 gold)", "Buy weapon 🗡️ (-30 gold)", "Sell weapon ⚜️ (+15 gold)", "Your broke. Leave shop"],
     "button functions": [buyHealth, buyWeapon, sellWeapon, goTown],
-    text: 'You enter the store. "Hello!" -Tanner the shop owner',
+    text: 'You enter the store. "Hello, buy a weapon to help you on your way!" -Tanner the shop owner',
     display_img: "url('https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/shop.jpg')"
   },
   {
@@ -1096,8 +1096,8 @@ function attack() {
     attackfx.play();  
   } else {
     text.innerText += " You miss.";
-    attackfx.currentTime = 0;
-    attackfx.play();
+    select_null.currentTime = 0;
+    select_null.play();
   }
   healthText.innerText = health;
   monsterHealthText.innerText = monsterHealth;
