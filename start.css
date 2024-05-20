@@ -192,11 +192,13 @@ button {
   font-family: var(--fontdefault);
   padding-top: 2%;
   padding-left: 2%;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 
 .hint {
   padding-top: 4%;
-  
+  padding-left: 2%;
   color: #ffffff84;
   font-family: var(--fontdefault);
   font-size: 10px;
@@ -457,6 +459,11 @@ a:visited {
   p {
     /*animate*/
     animation: colorchange ease-in-out 7s infinite;
+  }
+
+  .hint {
+    /*animate*/
+    animation: colorchange ease-in-out 15s infinite;
   }
 
   a:hover {
