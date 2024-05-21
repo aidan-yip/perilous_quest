@@ -606,6 +606,7 @@ div#block_spin_inner_3 {
   padding: 10px;
   padding-top: 10px;
   border-radius: 35px;
+  z-index: 1;
   border: 1px solid #5399cb;
   box-shadow: 0px 0px 10px #000000cd;
   /* fade in */
@@ -649,6 +650,7 @@ div#block_spin_inner_3 {
   padding-right: 6px;
   margin: 0 auto;
   margin-top: 1%;
+  z-index: 1;
 }
 
 #meter_text {
@@ -677,6 +679,7 @@ meter::-webkit-meter-even-less-good-value {
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
+  z-index: 1;
   border: solid 0.5px #313131;
   border-radius: 25px;
   background-size: cover;
@@ -1035,19 +1038,19 @@ div .md {
   font-size: 130%;
 }
 
-#game span.mdsmall {
-  font-size: 130%;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-}
-
 a .md {
   font-size: 130%;
 }
 
 button .md {
   font-size: 130%;
+}
+
+#game span.mdsmall {
+  font-size: 130%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
 }
 
 #media {
@@ -1071,6 +1074,10 @@ svg {
 
 #wave_top {
   opacity: 0.7;
+}
+
+#footnote {
+  margin-bottom: 30px;
 }
 
 /* desktop */
