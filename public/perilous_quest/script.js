@@ -164,7 +164,7 @@ if (!$.support.transition) {
 }
 
 $("#background").cursorTrail({
-  "class": "yellow-trail"
+  "class": "blue-trail"
 });
 
 // Circle cursor
@@ -195,7 +195,6 @@ if (person == null || person == "") {
 text = "Hello Guest. You're Player One!" + " Be strong, and let your heart take courage!\n";
 } else {
 text = "Hello " + person + ". You're Player One!" + " Be strong, and let your heart take courage!\n";
-text.innerText = person + location.text;
 }
 document.getElementById("name").style.display = "block";
 document.getElementById("button0").style.display = "none";
