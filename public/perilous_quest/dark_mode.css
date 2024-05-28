@@ -68,7 +68,7 @@
       rgb(0, 71, 99) 57%,
       rgb(0, 33, 70) 100%
     );
-    box-shadow: 0px 0px 30px 10px #39bdfb;
+    box-shadow: 0px 0px 20px 0px #c9eeff;
   }
 
   #text {
@@ -117,6 +117,10 @@
 
   #cd_center {
     background-color: #00aa59cc;
+  }
+
+  #wave_top {
+    opacity: 0.5;
   }
 
   /* Desktop */
