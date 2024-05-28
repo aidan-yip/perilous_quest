@@ -324,7 +324,7 @@ h6 {
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 15px;
+  margin-top: 6px;
 }
 
 #button0 {
@@ -336,8 +336,10 @@ h6 {
   padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
   cursor: copy;
   /* float */
+  transition: 1s ease-in-out 0ms;
   animation-name: floating_two;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -350,7 +352,9 @@ h6 {
   font-family: var(--fontdefault);
   font-size: 14px;
   padding: 10px;
-  padding-left: 3%;
+  margin: 10px 10px;
+  margin-top: 2px;
+  margin-bottom: 20px;
   transition: 1s ease-in-out 0ms;
   text-shadow: 1px 1px #0074b7, 1px 1px #0074b7, 2px 2px #0074b7,
     3px 3px #0074b7, 0px 0px 10px #ffffff;
@@ -372,7 +376,7 @@ h6 {
 #profile_container {
   width: 100px;
   height: 100px;
-  margin: 15px auto;
+  margin: 10px auto;
   overflow: hidden;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -380,15 +384,17 @@ h6 {
   -o-border-radius: 50%;
   border-radius: 50%;
   border: 1px solid #3d6a66;
-  animation: fadeInAnimation ease 3s;
-  animation-iteration-count: 1;
-  transition: 1s ease-in-out 0ms;
   background: linear-gradient(
     167deg,
     rgba(0, 255, 211, 1) 0%,
     rgba(1, 111, 255, 1) 57%,
     rgba(0, 91, 171, 1) 100%
   );
+  box-shadow: 0px 0px 30px #0000006d;
+  /* fade in */
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  transition: 1s ease-in-out 0ms;
   /* float */
   animation-name: floating_two;
   animation-duration: 3s;
@@ -751,7 +757,7 @@ meter::-webkit-meter-even-less-good-value {
   box-shadow: inset 0px 0px 25px #000000;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
+  margin-top: 7px;
   z-index: 1;
   border: solid 0.5px #313131;
   border-radius: 25px;
@@ -1670,7 +1676,8 @@ svg {
 
   #navtitle_mobile {
     display: block;
-    font-size: xx-large;
+    margin: 18px 20px;
+    font-size: 25px;
   }
 
   h2 {
@@ -1710,12 +1717,13 @@ svg {
 
   #namediv {
     flex-direction: column;
+    margin-top: 10px;
   }
 
   #name {
     font-size: 12px;
     padding-top: 0px;
-    margin-bottom: 7px;
+    margin-bottom: 9px;
   }
 
   #button0 {
@@ -1723,7 +1731,7 @@ svg {
     width: 70%;
     padding-left: 20px;
     padding-right: 20px;
-    margin-bottom: 7px;
+    margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1731,16 +1739,17 @@ svg {
   /* Profile picture */
 
   #profile_container {
-    width: 50px;
-    height: 50px;
-    margin-top: 1%;
+    width: 90px;
+    height: 90px;
+    margin-top: 0.1%;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 0px 0px 30px 10px #39bdfb;
   }
 
   #profile_container img {
-    width: 50px;
-    height: 50px;
+    width: 90px;
+    height: 90px;
   }
 
 
