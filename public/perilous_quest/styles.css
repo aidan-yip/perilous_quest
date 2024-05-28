@@ -321,7 +321,7 @@ h6 {
   display: flex;
   justify-content: center;
   text-align: center;
-  flex-direction: row;
+  flex-direction: column;
   margin-left: auto;
   margin-right: auto;
   margin-top: 15px;
@@ -330,11 +330,12 @@ h6 {
 #button0 {
   display: block;
   width: 35%;
-  height: 50px;
-  font-size: 20px;
+  height: 45px;
+  font-size: 17px;
   padding-left: 20px;
   padding-right: 20px;
-  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
   cursor: copy;
   /* float */
   animation-name: floating_two;
@@ -347,11 +348,9 @@ h6 {
   display: none;
   color: #ffffff;
   font-family: var(--fontdefault);
-  font-size: 15px;
+  font-size: 14px;
   padding: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin-bottom: 40px;
+  padding-left: 3%;
   transition: 1s ease-in-out 0ms;
   text-shadow: 1px 1px #0074b7, 1px 1px #0074b7, 2px 2px #0074b7,
     3px 3px #0074b7, 0px 0px 10px #ffffff;
@@ -371,9 +370,9 @@ h6 {
 }
 
 #profile_container {
-  width: 50px;
-  height: 50px;
-  margin-left: 3%;
+  width: 100px;
+  height: 100px;
+  margin: 15px auto;
   overflow: hidden;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -398,8 +397,8 @@ h6 {
 }
 
 #profile_container img {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
 }
 
 /* Profile picture end */
@@ -1249,23 +1248,6 @@ svg {
     bottom: -20px;
   }
 
-  #profile_container[title]:hover::after {
-    position: absolute;
-    z-index: 1;
-    content: attr(title);
-    font-size: 10px;
-    font-family: var(--fontdefault);
-    color: rgb(255, 255, 255);
-    text-align: center;
-    text-wrap: nowrap;
-    background-color: rgb(255, 191, 0);
-    text-shadow: 1px 1px #000000, 2px 2px #000000, 3px 3px #000000,
-      4px 4px #000000;
-    padding: 5px;
-    border-radius: 5px;
-    bottom: -20px;
-  }
-
   #monsterStats[title]:hover::after {
     position: relative;
     z-index: 1;
@@ -1749,10 +1731,18 @@ svg {
   /* Profile picture */
 
   #profile_container {
+    width: 50px;
+    height: 50px;
     margin-top: 1%;
     margin-left: auto;
     margin-right: auto;
   }
+
+  #profile_container img {
+    width: 50px;
+    height: 50px;
+  }
+
 
   .monstat {
     display: inline;
