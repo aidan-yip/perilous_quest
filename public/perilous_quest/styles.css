@@ -1594,10 +1594,6 @@ svg {
   #menu_button:hover {
     cursor: pointer;
   }
-
-  #namediv {
-    flex-direction: column;
-  }
 }
 
 /* mobile */
