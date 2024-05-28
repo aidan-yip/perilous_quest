@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
 
 *,
 *::before,
@@ -12,6 +13,9 @@
   --fontdefault: "Press Start 2P", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
+  --fontsecond: "Pixelify Sans", sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 @supports (padding: max(0px)) {
@@ -356,6 +360,50 @@ h6 {
   transition: 1s ease-in-out 0ms;
 }
 
+/* Profile picture */
+
+#imageUpload {
+  display: none;
+}
+
+#profileImage {
+  cursor: pointer;
+}
+
+#profile_container {
+  width: 50px;
+  height: 50px;
+  margin-left: 3%;
+  overflow: hidden;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid #3d6a66;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  transition: 1s ease-in-out 0ms;
+  background: linear-gradient(
+    167deg,
+    rgba(0, 255, 211, 1) 0%,
+    rgba(1, 111, 255, 1) 57%,
+    rgba(0, 91, 171, 1) 100%
+  );
+  /* float */
+  animation-name: floating_two;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#profile_container img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Profile picture end */
+
 a {
   cursor: none;
 }
@@ -511,6 +559,7 @@ a,
   height: 100px;
   background-color: #22d3ff;
   border: solid 1px #000000;
+  border-radius: 10px;
   cursor: pointer;
   /* animatation */
   animation-name: spin;
@@ -530,6 +579,7 @@ div#block_spin_inner_1 {
   padding: 30px;
   background-color: rgb(3, 124, 145);
   border: solid 1px #000000;
+  border-radius: 10px;
   cursor: pointer;
   /* animatation */
   animation-name: spin;
@@ -549,6 +599,7 @@ div#block_spin_inner_2 {
   padding: 30px;
   background-color: #effcff;
   border: solid 1px #000000;
+  border-radius: 10px;
   cursor: pointer;
   /* animatation */
   animation-name: spin;
@@ -568,6 +619,7 @@ div#block_spin_inner_3 {
   padding: 30px;
   background-color: #22d3ff;
   border: solid 1px #000000;
+  border-radius: 10px;
   cursor: pointer;
   /* animatation */
   animation-name: spin;
@@ -583,7 +635,7 @@ div#block_spin_inner_3 {
     rgba(74, 97, 250, 1) 57%,
     rgba(75, 75, 246, 1) 100%
   );
-  border-radius: 25px;
+  border-radius: 35px;
   border: 0.5px solid #b27fff;
   color: #ffffff;
   padding: 30px;
@@ -642,13 +694,13 @@ div#block_spin_inner_3 {
   display: flex;
   justify-content: center;
   justify-content: space-evenly;
-  border: 3px solid #000000;
-  border-radius: 25px;
   margin-top: 10px;
   margin-left: 14px;
   margin-right: 14px;
   padding: 10px;
   color: #ffffff;
+  border: 3px solid #000000;
+  border-radius: 30px;
   background-color: #000000;
   box-shadow: 0px 0px 10px #000000d5;
   /* fade in */
@@ -734,7 +786,7 @@ meter::-webkit-meter-even-less-good-value {
     rgba(255, 55, 1, 1) 57%,
     rgba(159, 0, 0, 1) 100%
   );
-  border-radius: 25px;
+  border-radius: 35px;
   border: 0.5px solid #fd5555;
   box-shadow: 0px 0px 100px 30px #ff0000;
   height: 150px;
@@ -784,24 +836,24 @@ meter::-webkit-meter-even-less-good-value {
 
 button {
   color: #ffffff;
-  background: linear-gradient(
-    167deg,
-    rgba(0, 255, 211, 1) 0%,
-    rgba(1, 111, 255, 1) 57%,
-    rgba(0, 91, 171, 1) 100%
-  );
   border: none;
   width: 40%;
   height: 70px;
-  border-radius: 25px;
   font-size: 17px;
   font-family: var(--fontdefault);
   font-weight: bold;
   font-style: italic;
   margin-left: 4px;
   margin-right: 4px;
-  box-shadow: 0px 0px 10px #025678;
   z-index: 1;
+  background: linear-gradient(
+    167deg,
+    rgba(0, 255, 211, 1) 0%,
+    rgba(1, 111, 255, 1) 57%,
+    rgba(0, 91, 171, 1) 100%
+  );
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px #025678;
   cursor: none;
   /* fade in */
   animation: fadeInAnimation ease 3s;
@@ -1095,7 +1147,7 @@ svg {
 }
 
 #wave_top {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 #footnote {
@@ -1181,6 +1233,23 @@ svg {
   }
 
   #namediv button[title]:hover::after {
+    position: absolute;
+    z-index: 1;
+    content: attr(title);
+    font-size: 10px;
+    font-family: var(--fontdefault);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-wrap: nowrap;
+    background-color: rgb(255, 191, 0);
+    text-shadow: 1px 1px #000000, 2px 2px #000000, 3px 3px #000000,
+      4px 4px #000000;
+    padding: 5px;
+    border-radius: 5px;
+    bottom: -20px;
+  }
+
+  #profile_container[title]:hover::after {
     position: absolute;
     z-index: 1;
     content: attr(title);
@@ -1324,6 +1393,20 @@ svg {
     box-shadow: 0px 0px 50px 30px #39bdfb;
     border: 1px solid #3d6a66;
     border-bottom: 5px solid #3d6a66;
+    transform: translateY(-5px);
+    /* animation */
+    animation: shake 1s ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+  #profile_container:hover {
+    background: linear-gradient(
+      167deg,
+      rgb(161, 255, 239) 0%,
+      rgb(155, 160, 255) 57%,
+      rgb(181, 160, 255) 100%
+    );
+    box-shadow: 0px 0px 50px 30px #39bdfb;
     transform: translateY(-5px);
     /* animation */
     animation: shake 1s ease-in-out;
@@ -1511,6 +1594,10 @@ svg {
   #menu_button:hover {
     cursor: pointer;
   }
+
+  #namediv {
+    flex-direction: column;
+  }
 }
 
 /* mobile */
@@ -1625,6 +1712,10 @@ svg {
   button {
     font-size: medium;
     font-size: 11px;
+    margin-left: 1px;
+    margin-right: 1px;
+    width: 200px;
+    border-radius: 25px;
   }
 
   #progress {
@@ -1640,9 +1731,7 @@ svg {
   }
 
   #namediv {
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
+    flex-direction: column;
   }
 
   #name {
@@ -1655,6 +1744,17 @@ svg {
     width: 70%;
     padding-left: 20px;
     padding-right: 20px;
+    margin-bottom: 7px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Profile picture */
+
+  #profile_container {
+    margin-top: 1%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .monstat {
@@ -1723,16 +1823,7 @@ svg {
   }
 
   #gamelogo {
-    width: 200px;
-  }
-
-  #gamelogo {
     box-shadow: 0px 0px 25px #058aff;
-  }
-
-  button {
-    margin-left: 1px;
-    margin-right: 1px;
     width: 200px;
   }
 

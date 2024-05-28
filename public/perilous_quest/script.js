@@ -1,25 +1,24 @@
 // Notifications
 
-let notification
+let notification;
 
-document.addEventListener ("visibilitychange", () => {
-    if (document.visibilityState === "hidden") {
-      notification = new Notification ("Music Alert", { 
-        body: "Perilous Quest is still running. To stop the audio close the app",
-        icon: "./public/icons/homescreen192.png",
-        tag: "Come Back",
-      })
-    } else {
-        notification.close()
-    }
-
-})
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "hidden") {
+    notification = new Notification("Music Alert", {
+      body: "Perilous Quest is still running. To stop the audio close the app",
+      icon: "./public/icons/homescreen192.png",
+      tag: "Come Back",
+    });
+  } else {
+    notification.close();
+  }
+});
 
 //Pop up window
 
 const popup = document.getElementById("popback");
 const popclose = document.getElementById("popclose");
-const background = document.getElementById("background")
+const background = document.getElementById("background");
 
 popclose.onclick = closepop;
 
@@ -28,9 +27,11 @@ function closepop() {
   background.style.filter = "blur(0px)";
 }
 
-//Navbar 
+//Navbar
 
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () {
+  scrollFunction();
+};
 
 function scrollFunction() {
   if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
@@ -38,7 +39,6 @@ function scrollFunction() {
   } else {
     document.getElementById("navbar").style.backgroundColor = "transparent";
   }
-
 }
 
 //List menu
@@ -53,11 +53,11 @@ function show_menu() {
   if (list_menu.style.display === "flex") {
     list_menu.style.display = "none";
     menu_button_span.innerText = "menu";
-    menu_button.setAttribute("title", "Menu")
+    menu_button.setAttribute("title", "Menu");
   } else {
     list_menu.style.display = "flex";
     menu_button_span.innerText = "close";
-    menu_button.setAttribute("title", "Close")
+    menu_button.setAttribute("title", "Close");
     location.href = "#background";
   }
 }
@@ -69,7 +69,15 @@ const info_alert = document.getElementById("info_alert");
 info_alert.onclick = info_pop;
 
 function info_pop() {
-  alert("Perilous Quest" + "\n\n" + "Version 1.0.0" + "\n\n" + "(Beta build 9.4.0)" + "\n\n" + "Copyright © 2024 Aidan Yip. All rights reserved.");
+  alert(
+    "Perilous Quest" +
+      "\n\n" +
+      "Version 1.0.0" +
+      "\n\n" +
+      "(Beta build 9.4.0)" +
+      "\n\n" +
+      "Copyright © 2024 Aidan Yip. All rights reserved."
+  );
 }
 
 // Game reset popup
@@ -79,7 +87,7 @@ function gameReset() {
   if (confirm(text) == true) {
     location.href = "";
   } else {
-    null
+    null;
   }
 }
 
@@ -90,7 +98,7 @@ function leaveGame() {
   if (confirm(text) == true) {
     location.href = "/index.html";
   } else {
-    null
+    null;
   }
 }
 
@@ -101,7 +109,7 @@ function getHelp() {
   if (confirm(text) == true) {
     location.href = "/help.pdf";
   } else {
-    null
+    null;
   }
 }
 
@@ -112,51 +120,69 @@ function installGame() {
   if (confirm(text) == true) {
     location.href = "/public/perilous_quest/install/install.html";
   } else {
-    null
+    null;
   }
 }
 
 //Cursor trail
 
-(function($) {
-
+(function ($) {
   var baseCssClass = "cursor-trail",
-      addPoint = function(pageX, pageY, cssClass, timeToGrow, timeToShrink, scale) {
-          // Create a new point located at the mouse position
-          var point = $("<div>", {
-              "class": cssClass,
-              css: {
-                  left: pageX,
-                  top: pageY
-              }
-          }).appendTo('body');
+    addPoint = function (
+      pageX,
+      pageY,
+      cssClass,
+      timeToGrow,
+      timeToShrink,
+      scale
+    ) {
+      // Create a new point located at the mouse position
+      var point = $("<div>", {
+        class: cssClass,
+        css: {
+          left: pageX,
+          top: pageY,
+        },
+      }).appendTo("body");
 
-          // now make the point grow, then shrink and finally disappear
-          point
-              .transition({ scale: scale }, timeToGrow)
-              .transition({ scale: 1 }, timeToShrink, function() { point.remove(); });
-      };
+      // now make the point grow, then shrink and finally disappear
+      point
+        .transition({ scale: scale }, timeToGrow)
+        .transition({ scale: 1 }, timeToShrink, function () {
+          point.remove();
+        });
+    };
 
-  $.fn.cursorTrail = function(options) {
-      // assign defaults for those options not supplied
-      options = $.extend({
-          timeToGrow: 200,
-          timeToShrink: 200,
-          scale: 1,
-          "class": ""
-      }, options);
+  $.fn.cursorTrail = function (options) {
+    // assign defaults for those options not supplied
+    options = $.extend(
+      {
+        timeToGrow: 200,
+        timeToShrink: 200,
+        scale: 1,
+        class: "",
+      },
+      options
+    );
 
-      // add the base css class all cursor trail points need.
-      var actualCssClass = baseCssClass;
-      if (options["class"]) {
-          actualCssClass += " " + options["class"];
-      }
+    // add the base css class all cursor trail points need.
+    var actualCssClass = baseCssClass;
+    if (options["class"]) {
+      actualCssClass += " " + options["class"];
+    }
 
-      return this.bind("mousemove", function(ev) {
-          addPoint(ev.pageX, ev.pageY, actualCssClass, options.timeToGrow, options.timeToShrink, options.scale);
-      });
+    return this.bind("mousemove", function (ev) {
+      addPoint(
+        ev.pageX,
+        ev.pageY,
+        actualCssClass,
+        options.timeToGrow,
+        options.timeToShrink,
+        options.scale
+      );
+    });
   };
-}(jQuery));
+})(jQuery);
 
 // jQuery.transit has a bug in older IE versions, so switch to jQuery animate
 if (!$.support.transition) {
@@ -164,42 +190,61 @@ if (!$.support.transition) {
 }
 
 $("#background").cursorTrail({
-  "class": "blue-trail"
+  class: "blue-trail",
 });
 
 // Circle cursor
 
-document.body.onmousemove = function(e) {
-  document.documentElement.style.setProperty (
-    '--x', (
-      e.clientX+window.scrollX
-    )
-    + 'px'
+document.body.onmousemove = function (e) {
+  document.documentElement.style.setProperty(
+    "--x",
+    e.clientX + window.scrollX + "px"
   );
-  document.documentElement.style.setProperty (
-    '--y', (
-      e.clientY+window.scrollY
-    ) 
-    + 'px'
+  document.documentElement.style.setProperty(
+    "--y",
+    e.clientY + window.scrollY + "px"
   );
-}
-
-
+};
 
 //Enter Player Name prompt
 
 function hello() {
-let text;
-let person = prompt("Enter a name for Player One:", "");
-if (person == null || person == "") {
-text = "Hello Guest. You're Player One!" + " Be strong, and let your heart take courage!\n";
-} else {
-text = "Hello " + person + ". You're Player One!" + " Be strong, and let your heart take courage!\n";
+  let text;
+  let person = prompt("Enter a name for Player One:", "");
+  if (person == null || person == "") {
+    text =
+      "Hello Guest. You're Player One!" +
+      " Be strong, and let your heart take courage!\n";
+  } else {
+    text =
+      "Hello " +
+      person +
+      ". You're Player One!" +
+      " Be strong, and let your heart take courage!\n";
+  }
+  document.getElementById("name").style.display = "block";
+  document.getElementById("button0").style.display = "none";
+  document.getElementById("name").innerHTML = text;
 }
-document.getElementById("name").style.display = "block";
-document.getElementById("button0").style.display = "none";
-document.getElementById("name").innerHTML = text;
+
+// Upload profile picture
+
+$("#profileImage").click(function (e) {
+  $("#imageUpload").click();
+});
+
+function fasterPreview(uploader) {
+  if (uploader.files && uploader.files[0]) {
+    $("#profileImage").attr(
+      "src",
+      window.URL.createObjectURL(uploader.files[0])
+    );
+  }
 }
+
+$("#imageUpload").change(function () {
+  fasterPreview(this);
+});
 
 // Variables
 
@@ -215,7 +260,7 @@ let inventory = ["stick ᛓ "];
 
 //Buttons and Stats
 
-const button1 = document.querySelector('#button1');
+const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
 const button4 = document.querySelector("#button4");
@@ -231,176 +276,222 @@ const meter = document.getElementById("game_meter");
 const display = document.getElementById("display");
 const scoreText = document.getElementById("scoreText");
 const weapons = [
-  { name: 'Stick ᛓ ', power: 5 },
-  { name: 'Dagger ᛌ ', power: 30 },
-  { name: 'Claw-Hammer ᛚ ', power: 50 },
-  { name: 'Viking-Hammer ᛘ ', power: 75 },
-  { name: 'Light-Sword ᛁ ', power: 100 },
-  { name: 'Magic-Sword ᛂ ', power: 200},
-  { name: 'Wizard-Staff ᛙ ', power: 300}
+  { name: "Stick ᛓ ", power: 5 },
+  { name: "Dagger ᛌ ", power: 30 },
+  { name: "Claw-Hammer ᛚ ", power: 50 },
+  { name: "Viking-Hammer ᛘ ", power: 75 },
+  { name: "Light-Sword ᛁ ", power: 100 },
+  { name: "Magic-Sword ᛂ ", power: 200 },
+  { name: "Wizard-Staff ᛙ ", power: 300 },
 ];
 const monsters = [
   {
     name: "Slime",
     level: 2,
-    health: 80
+    health: 80,
   },
   {
     name: "Fanged Beast",
     level: 6,
-    health: 280
+    health: 280,
   },
   {
     name: "Dragon",
     level: 12,
-    health: 650
+    health: 650,
   },
   {
     name: "Knight",
     level: 6,
-    health: 220
+    health: 220,
   },
   {
     name: "Corrupted Wizard",
     level: 9,
-    health: 370
+    health: 370,
   },
   {
     name: "Giant Spider",
     level: 4,
-    health: 300
+    health: 300,
   },
   {
     name: "Ghost",
     level: 5,
-    health: 300
+    health: 300,
   },
   {
     name: "Anglerfish",
     level: 6,
-    health: 400
+    health: 400,
   },
   {
     name: "Cave Troll",
     level: 8,
-    health: 300
+    health: 300,
   },
   {
     name: "Werewolf",
     level: 8,
-    health: 500
+    health: 500,
   },
   {
     name: "Strange Ghost",
     level: 10,
-    health: 500
+    health: 500,
   },
   {
     name: "Nightmare Shadow",
     level: 8,
-    health: 100
+    health: 100,
   },
   {
     name: "Yeti",
     level: 8,
-    health: 500
+    health: 500,
   },
   {
     name: "Venomous Snakes",
     level: 10,
-    health: 400
-  }
-  
-]
+    health: 400,
+  },
+];
 const locations = [
   {
     name: "town square",
-    "button text": ["Visit shop", "Walk to cave", "Fight Corrupt Wizard", "Enter castle"],
+    "button text": [
+      "Visit shop",
+      "Walk to cave",
+      "Fight Corrupt Wizard",
+      "Enter castle",
+    ],
     "button functions": [goStore, goCave, fightWizard, goCastle],
-    text: "You are in the town square. You see a sign that says \"Shop\". Select where you want to go.",
-    display_img: "url('https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/town.jpg')"
+    text: 'You are in the town square. You see a sign that says "Shop". Select where you want to go.',
+    display_img:
+      "url('https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/town.jpg')",
   },
   {
     name: "store",
-    "button text": ["Buy 10 health ❤️ (-10 gold)", "Buy weapon 🗡️ (-30 gold)", "Sell weapon ⚜️ (+15 gold)", "Your broke. Leave shop"],
+    "button text": [
+      "Buy 10 health ❤️ (-10 gold)",
+      "Buy weapon 🗡️ (-30 gold)",
+      "Sell weapon ⚜️ (+15 gold)",
+      "Your broke. Leave shop",
+    ],
     "button functions": [buyHealth, buyWeapon, sellWeapon, goTown],
     text: 'You enter the store. "Hello, buy a weapon to help you on your way!" -Tanner the shop owner',
-    display_img: "url('https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/shop.jpg')"
+    display_img:
+      "url('https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/shop.jpg')",
   },
   {
     name: "cave",
-    "button text": ["Fight Slime", "Fight Fanged beast", "Fight Spider", "Return to town"],
+    "button text": [
+      "Fight Slime",
+      "Fight Fanged beast",
+      "Fight Spider",
+      "Return to town",
+    ],
     "button functions": [fightSlime, fightBeast, fightSpider, goTown],
-    text: "You enter the cave. You see some monsters... or is that your friend Nait?"
+    text: "You enter the cave. You see some monsters... or is that your friend Nait?",
   },
   {
     name: "fight",
-    "button text": ["Attack 🗡️", "Dodge 🛡️", "Surrender 🏳️", "Run like a coward ⮐"],
+    "button text": [
+      "Attack 🗡️",
+      "Dodge 🛡️",
+      "Surrender 🏳️",
+      "Run like a coward ⮐",
+    ],
     "button functions": [attack, dodge, surrender, goTown],
-    text: "You are fighting an enemy ⚔️. LET'S GO!"
+    text: "You are fighting an enemy ⚔️. LET'S GO!",
   },
   {
     name: "kill monster",
     "button text": [" --> ", "Go to town square", "Go to cave", "Enter castle"],
     "button functions": [playselectnull, goTown, goCave, easterEgg],
-    text: 'The enemy screams "ARG!" and withers away. You gain experience points and find gold. Nice! you\'re a natural.'
+    text: 'The enemy screams "ARG!" and withers away. You gain experience points and find gold. Nice! you\'re a natural.',
   },
   {
     name: "lose",
     "button text": [" --> ", "RESPAWN?", "RESPAWN?", "RESPAWN?"],
     "button functions": [playselectnull, restart, restart, restart],
-    text: "You died. ☠️ Respawn?"
+    text: "You died. ☠️ Respawn?",
   },
-  { 
-    name: "win", 
-    "button text": [" --> ", "REPLAY?", "REPLAY?", "REPLAY?"], 
-    "button functions": [playselectnull, restart, restart, restart], 
-    text: "CONGRATULATIONS YOU WIN 🎉! You defeat the dragon and free the kingdom! The darkness flees as the sun rises on the horizon. A new day is dawning. The mighty have fallen as the humble arise to take their place.\n" + "\n" + "(You may skip the music in 30 seconds.)"
+  {
+    name: "win",
+    "button text": [" --> ", "REPLAY?", "REPLAY?", "REPLAY?"],
+    "button functions": [playselectnull, restart, restart, restart],
+    text:
+      "CONGRATULATIONS YOU WIN 🎉! You defeat the dragon and free the kingdom! The darkness flees as the sun rises on the horizon. A new day is dawning. The mighty have fallen as the humble arise to take their place.\n" +
+      "\n" +
+      "(You may skip the music in 30 seconds.)",
   },
   {
     name: "easter egg",
     "button text": ["3", "1", "6", "Go to town square?"],
     "button functions": [pickThree, pickOne, pickSix, goTown],
-    text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win gold ⚜️!"
+    text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win gold ⚜️!",
   },
   {
     name: "castle",
-    "button text": ["Enter left hall", "Enter dark hall", "Enter right hall", "Return to Town"],
+    "button text": [
+      "Enter left hall",
+      "Enter dark hall",
+      "Enter right hall",
+      "Return to Town",
+    ],
     "button functions": [goChasm, fightghost, fightKnight, goTown],
-    text: "You enter a castle. There's a sign that says \"Danger\" to the left and the sound of iron clanging from the room to the right. Ahead you sense something cold and dark. Do you dare to continue?",
-    display_img: "url('https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/castle.jpg')"
+    text: 'You enter a castle. There\'s a sign that says "Danger" to the left and the sound of iron clanging from the room to the right. Ahead you sense something cold and dark. Do you dare to continue?',
+    display_img:
+      "url('https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/castle.jpg')",
   },
   {
     name: "chasm",
-    "button text": ["Jump across", "Wait for a bit", "Fall into the chasm", "Return to Castle"],
+    "button text": [
+      "Jump across",
+      "Wait for a bit",
+      "Fall into the chasm",
+      "Return to Castle",
+    ],
     "button functions": [goJump, fightWerewolf, fightAnglerfish, goCastle],
-    text: "There is a massive chasm ahead. You believe you may be able to jump across. Looking down you faintly see some water. You feel exhausted from the journey. Maybe it's time to take a short rest from walking?"
+    text: "There is a massive chasm ahead. You believe you may be able to jump across. Looking down you faintly see some water. You feel exhausted from the journey. Maybe it's time to take a short rest from walking?",
   },
   {
     name: "jump",
     "button text": ["7", "2", "5", "Return to Chasm"],
     "button functions": [jumpSeven, jumpTwo, jumpFive, goChasm],
-    text: "You get ready to jump. Pick a number above. Seven numbers will be randomly chosen between 0 and 7. If the number you choose matches one of the random numbers, you make it across."
+    text: "You get ready to jump. Pick a number above. Seven numbers will be randomly chosen between 0 and 7. If the number you choose matches one of the random numbers, you make it across.",
   },
   {
     name: "deep caves",
     "button text": ["Go left", "Go forward", "Face the shadow", "Enter Mine"],
     "button functions": [fightTroll, fightNightGhost, fightShadow, goMine],
     text: "You made it! There's no turning back now! You can barely make out anything down the dimly lit crevices. To the left the ground shakes. Ahead there is a strange green glow. You see a Mineshaft entrance to your right. Something from the shadows is quickly approaching behind you!",
-    display_img: "url('https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/deep_caves.png')"
+    display_img:
+      "url('https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/deep_caves.png')",
   },
   {
     name: "Frozen Mineshaft",
-    "button text": ["Brave the water", "Brave the snow", "Brave the flames", "Leave Mine ⮐"],
+    "button text": [
+      "Brave the water",
+      "Brave the snow",
+      "Brave the flames",
+      "Leave Mine ⮐",
+    ],
     "button functions": [fightSnakes, fightYeti, fightDragon, norunmine],
-    text: "The Mine entrance collapses behind you! It is extremely cold, you shiver as you walk down the abandoned Mineshaft. There are three shaft passageways. The left is overflowing with a water. The middle is filled with ice and snow. The last one is lit with the orange glow of fire."
+    text: "The Mine entrance collapses behind you! It is extremely cold, you shiver as you walk down the abandoned Mineshaft. There are three shaft passageways. The left is overflowing with a water. The middle is filled with ice and snow. The last one is lit with the orange glow of fire.",
   },
   {
     name: "Fight Mine",
-    "button text": ["Attack 🗡️", "Dodge 🛡️", "Surrender 🏳️", "Run like a coward ⮐"],
+    "button text": [
+      "Attack 🗡️",
+      "Dodge 🛡️",
+      "Surrender 🏳️",
+      "Run like a coward ⮐",
+    ],
     "button functions": [attack, dodge, surrender, norun],
-    text: "You are fighting an enemy ⚔️. LET'S GO!"
-  }
+    text: "You are fighting an enemy ⚔️. LET'S GO!",
+  },
 ];
 
 // initialize buttons
@@ -545,8 +636,12 @@ function goMine() {
 }
 
 function norunmine() {
-  button4.style.filter = "opacity(50%)"
-  text.innerText = "The Mine entrance collapses behind you! It is extremely cold, you shiver as you walk down the abandoned Mineshaft. There are three shaft passageways. The left is overflowing with a water. The middle is filled with ice and snow. The last one is lit with the orange glow of fire." + "\n" + "\n" + "The Mine door is blocked. There's no way out!";
+  button4.style.filter = "opacity(50%)";
+  text.innerText =
+    "The Mine entrance collapses behind you! It is extremely cold, you shiver as you walk down the abandoned Mineshaft. There are three shaft passageways. The left is overflowing with a water. The middle is filled with ice and snow. The last one is lit with the orange glow of fire." +
+    "\n" +
+    "\n" +
+    "The Mine door is blocked. There's no way out!";
   playselectnull();
 }
 
@@ -562,7 +657,7 @@ function buyHealth() {
     play_attack();
   } else {
     text.innerText = "You do not have enough gold ⚜️ to buy health ❤️.";
-    document.getElementById("button1").style.filter = "opacity(50%)"
+    document.getElementById("button1").style.filter = "opacity(50%)";
     const myTimeout = setTimeout(button_enable, 1000);
     playselectnull();
   }
@@ -579,12 +674,13 @@ function buyWeapon() {
       let newWeapon = weapons[currentWeapon].name;
       text.innerText = "You now have a " + newWeapon + ".";
       inventory.push(newWeapon);
-      text.innerText += "\n" + "\n" + " In your inventory you have:\n" + inventory;
+      text.innerText +=
+        "\n" + "\n" + " In your inventory you have:\n" + inventory;
       play_attack();
-      document.getElementById("button2").style.filter = "opacity(100%)"
+      document.getElementById("button2").style.filter = "opacity(100%)";
     } else {
       text.innerText = "You do not have enough gold ⚜️ to buy a weapon 🗡️.";
-      document.getElementById("button2").style.filter = "opacity(50%)"
+      document.getElementById("button2").style.filter = "opacity(50%)";
       const myTimeout = setTimeout(button_enable, 1000);
       playselectnull();
     }
@@ -600,23 +696,23 @@ function sellWeapon() {
     goldText.innerText = gold;
     let currentWeapon = inventory.shift();
     text.innerText = "You sold a " + currentWeapon + ".";
-    text.innerText += "\n" + "\n" + " In your inventory you have:\n" + inventory;
+    text.innerText +=
+      "\n" + "\n" + " In your inventory you have:\n" + inventory;
     play_attack();
-    document.getElementById("button3").style.filter = "opacity(100%)"
+    document.getElementById("button3").style.filter = "opacity(100%)";
   } else {
     text.innerText = "Don't sell your only weapon 🗡️!";
-    document.getElementById("button3").style.filter = "opacity(50%)"
+    document.getElementById("button3").style.filter = "opacity(50%)";
     const myTimeout = setTimeout(button_enable, 1000);
     playselectnull();
   }
 }
 
 function listInventory() {
-      text.innerText += "\n" + "\n" + " In your inventory you have:\n" + inventory;
-      button2.innerText = "List Inventory";
-      selectfx.currentTime = 0;
-      selectfx.play();
-
+  text.innerText += "\n" + "\n" + " In your inventory you have:\n" + inventory;
+  button2.innerText = "List Inventory";
+  selectfx.currentTime = 0;
+  selectfx.play();
 }
 
 //Sound FX
@@ -628,14 +724,16 @@ function playselect() {
   selectfx.play();
 }
 
-let select_null = document.getElementById("select_null")
+let select_null = document.getElementById("select_null");
 
 function playselectnull() {
   select_null.currentTime = 0;
   select_null.play();
 }
 
-let attackfx = new Audio("https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/attack.wav");
+let attackfx = new Audio(
+  "https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/attack.wav"
+);
 
 function play_attack() {
   attackfx.currentTime = 0;
@@ -729,9 +827,9 @@ function pausecave() {
 
 let audio = document.getElementById("boss_theme");
 
-function setHalfVolume() { 
+function setHalfVolume() {
   audio.volume = 0.5;
-} 
+}
 
 //Boss theme
 let boss_theme = document.getElementById("boss_theme");
@@ -746,7 +844,7 @@ function pauseboss() {
 }
 
 //Chasm
-let chasm = document.getElementById('chasm');
+let chasm = document.getElementById("chasm");
 
 function playchasm() {
   chasm.play();
@@ -758,7 +856,7 @@ function pausechasm() {
 }
 
 //Castle
-let castle = document.getElementById('castle');
+let castle = document.getElementById("castle");
 
 function playcastle() {
   castle.play();
@@ -780,8 +878,6 @@ function pausesecret() {
   secret.pause();
   secret.currentTime = 0;
 }
-
-
 
 // Fight
 
@@ -1060,7 +1156,7 @@ function fightDragon() {
 function goFight() {
   update(locations[3]);
   monsterHealth = monsters[fighting].health;
-  monsterLevel = monsters[fighting].level
+  monsterLevel = monsters[fighting].level;
   monsterStats.style.display = "block";
   monsterName.innerText = monsters[fighting].name;
   monsterHealthText.innerText = monsterHealth;
@@ -1070,7 +1166,7 @@ function goFight() {
 function goFight_Norun() {
   update(locations[13]);
   monsterHealth = monsters[fighting].health;
-  monsterLevel = monsters[fighting].level
+  monsterLevel = monsters[fighting].level;
   monsterStats.style.display = "block";
   monsterName.innerText = monsters[fighting].name;
   monsterHealthText.innerText = monsterHealth;
@@ -1079,7 +1175,7 @@ function goFight_Norun() {
 
 function norun() {
   document.getElementById("button4").disabled = true;
-  document.getElementById("button4").style.filter = "opacity(50%)"
+  document.getElementById("button4").style.filter = "opacity(50%)";
   text.innerText = "You may not run now. The enemy is too dangerous.";
   playselectnull();
 }
@@ -1087,12 +1183,14 @@ function norun() {
 // Attack function
 function attack() {
   text.innerText = "The " + monsters[fighting].name + " attacks.";
-  text.innerText += " You attack with your " + weapons[currentWeapon].name + ".";
+  text.innerText +=
+    " You attack with your " + weapons[currentWeapon].name + ".";
   health -= getMonsterAttackValue(monsters[fighting].level);
   if (isMonsterHit()) {
-    monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1; 
+    monsterHealth -=
+      weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1;
     attackfx.currentTime = 0;
-    attackfx.play();  
+    attackfx.play();
   } else {
     text.innerText += " You miss.";
     select_null.currentTime = 0;
@@ -1105,20 +1203,20 @@ function attack() {
   } else if (monsterHealth <= 0) {
     fighting === 2 ? winGame() : defeatMonster();
   }
-  if (Math.random() <= .1 && inventory.length !== 1) {
+  if (Math.random() <= 0.1 && inventory.length !== 1) {
     text.innerText += "\n" + "\n" + " Your " + inventory.pop() + " breaks.";
     currentWeapon--;
   }
 }
 
 function getMonsterAttackValue(level) {
-  const hit = (level * 5) - (Math.floor(Math.random() * xp));
+  const hit = level * 5 - Math.floor(Math.random() * xp);
   console.log(hit);
   return hit > 0 ? hit : 0;
 }
 
 function isMonsterHit() {
-  return Math.random() > .2 || health < 20;
+  return Math.random() > 0.2 || health < 20;
 }
 
 function xplose() {
@@ -1127,21 +1225,29 @@ function xplose() {
 }
 
 function dodge() {
-  text.innerText = "You dodge the attack from the " + monsters[fighting].name + "." + " You lose 2 xp.";
+  text.innerText =
+    "You dodge the attack from the " +
+    monsters[fighting].name +
+    "." +
+    " You lose 2 xp.";
   attackfx.currentTime = 0;
   attackfx.play();
-  if(xp > 0) {
+  if (xp > 0) {
     xplose();
   } else {
-    text.innerText = "You dodge the attack from the " + monsters[fighting].name + "." + " You've lost all your xp!";
+    text.innerText =
+      "You dodge the attack from the " +
+      monsters[fighting].name +
+      "." +
+      " You've lost all your xp!";
     attackfx.currentTime = 0;
     attackfx.play();
   }
 }
 
- function surrender() {
+function surrender() {
   lose();
- }
+}
 
 function defeatMonster() {
   gold += Math.floor(monsters[fighting].level * 6.7);
@@ -1322,9 +1428,7 @@ function jumppick(guess) {
   while (numbers.length < 7) {
     numbers.push(Math.floor(Math.random() * 8));
   }
-  for (let i = 0; i < 7; i++) {
-  
-  }
+  for (let i = 0; i < 7; i++) {}
   if (numbers.includes(guess)) {
     text.innerText += "Right! You make it across!";
     gold += 20;
