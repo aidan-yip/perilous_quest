@@ -316,6 +316,17 @@
         <!--Enter Player name-->
 
         <div id="namediv">
+          <div id="profile_container" title="Upload Photo">
+            <image id="profileImage" src="/public/icons/upload.png" />
+          </div>
+          <input
+            id="imageUpload"
+            type="file"
+            name="profile_photo"
+            placeholder=""
+            required=""
+          />
+
           <button
             onclick="hello()"
             id="button0"
@@ -326,18 +337,6 @@
           </button>
 
           <p id="name"></p>
-
-          <div id="profile_container" title="Upload Photo">
-            
-            <image id="profileImage" src="/public/icons/upload.png" />
-          </div>
-          <input
-            id="imageUpload"
-            type="file"
-            name="profile_photo"
-            placeholder=""
-            required=""
-          />
         </div>
 
         <p id="machint">Use "⌘" + "-" or "+" on Mac to scale the game</p>

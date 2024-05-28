@@ -2,8 +2,6 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/05ef79ba-a166-4aeb-9e08-bba657c2d41a/deploy-status)](https://app.netlify.com/sites/perilous-quest/deploys)
 
-## Perilous Quest supports being installed as a Progressive Web Application through most desktop/mobile browsers.
-
 <i><b>
 Note: The game's main code is stored in the sub folder "perilous_quest" of "public" if you'd like to explore it. The Start/Titlescreen's code is stored in the root folder. The Dark Mode stylesheet is stored alongside the game code.
 </b></i>
@@ -17,7 +15,7 @@ This version includes the base game and several game music tracks. This is in Be
 # Expanded functionality includes: 
 <ul>
   <li>Responsive Design so it can be played on most screen sizes</li>
-  <li>Progressive Web Application support</li>
+  <li>Progressive Web Application support*</li>
   <li>System Notifications with the Notifications API (Desktop/Laptop only)</li>
   <li>Are you sure you want to leave? Prompt (Desktop/Laptop only)</li>
   <li>Light/Dark Mode responds to the system theme</li>
@@ -60,6 +58,7 @@ This version includes the base game and several game music tracks. This is in Be
 </ul>
 
 <i><b>\*Temporary offline caching functionality is not permanent</b></i>
+<i><b>\*Perilous Quest supports being installed as a Progressive Web Application through most desktop/mobile browsers.</b></i>
 
 # Credits
 
