@@ -46,7 +46,7 @@ if (!$.support.transition) {
 }
 
 $("#background").cursorTrail({
-  "class": "yellow-trail"
+  "class": "blue-trail"
 });
 
 //Navbar 
@@ -90,5 +90,5 @@ const info_alert = document.getElementById("info_alert");
 info_alert.onclick = info_pop;
 
 function info_pop() {
-alert("Perilous Quest" + "\n\n" + "Version 1.0.0" + "\n\n" + "(Beta build 9.4.0)" + "\n\n" + "Copyright © 2024 Aidan Yip. All rights reserved.");
+alert("Perilous Quest" + "\n\n" + "Version 1.0.0" + "\n\n" + "(Beta build 9.5.3)" + "\n\n" + "Copyright © 2024 Aidan Yip. All rights reserved.");
 }
