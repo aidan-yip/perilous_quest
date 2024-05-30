@@ -285,6 +285,14 @@ img {
   margin-right: auto;
 }
 
+.shape_div {
+  width: 60%;
+}
+
+#glass {
+  margin-bottom: 0px;
+}
+
 h3 {
   color: #ffffff;
   font-family: var(--fontdefault);
@@ -431,7 +439,7 @@ svg {
     pointer-events: none;
   }
 
-  .yellow-trail {
+  .blue-trail {
     background-color: rgb(0, 208, 255);
   }
 }
