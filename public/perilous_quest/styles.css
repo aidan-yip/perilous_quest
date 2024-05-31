@@ -879,7 +879,7 @@ button:active {
   display: flex;
   flex-direction: column;
   width: 90%;
-  height: 1000px;
+  height: auto;
   max-width: 1200px;
   margin: 20px auto;
   margin-bottom: 50px;
