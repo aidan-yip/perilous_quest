@@ -108,6 +108,18 @@ body {
   }
 }
 
+@keyframes floating_three {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -170,25 +182,10 @@ body {
   animation-fill-mode: forwards;
 }
 
-div#poplogo {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 40px;
-  width: 192px;
-  height: 192px;
-  border-radius: 35px;
-  box-shadow: 0px 0px 25px rgb(0, 0, 0);
-  /* float */
-  animation-name: floating;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-}
-
-div#poplogo_mobile {
-  display: none;
-  /* float */
-  animation-name: floating;
+div.pop_icon_div {
+  padding: 0px;
+  /*animate*/
+  animation-name: floating_three;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -1169,7 +1166,7 @@ svg {
 .img_div {
   padding: 30px;
   width: 30%;
-  max-width: 500px;
+  max-width: 300px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1618,20 +1615,12 @@ svg {
     font-size: 20px;
   }
 
-  div#poplogo {
-    display: none;
+  div.pop_icon_div {
+    padding: 30px;
   }
 
-  div#poplogo_mobile {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -10px;
-    margin-bottom: 20px;
-    width: 144px;
-    height: 144px;
-    border-radius: 35px;
-    box-shadow: 0px 0px 25px rgb(0, 0, 0);
+  #yellow {
+    color: #ffcf23;
   }
 
   #popup {
