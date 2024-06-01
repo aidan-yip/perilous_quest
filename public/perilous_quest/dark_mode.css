@@ -39,14 +39,14 @@
       0deg,
       #2C084Fcc 0%,
       #095B49cc 35%,
-      #1E177B 100%
+      #0f0a71 100%
     );
     color: #ffffff;
     border-radius: 35px;
     border: 1px solid #4E57A9;
   }
   #display {
-    box-shadow: inset 3px 3px 25px #000000;
+    box-shadow: 3px 3px 25px #000000;
   }
 
   button {
@@ -79,7 +79,6 @@
       rgba(1, 111, 255, 1) 33%,
       rgba(113, 0, 171, 1) 73%
     );
-    border-radius: 25px;
     border: 0.5px solid rgba(144, 72, 255, 1);
     color: #f0e4ff;
     box-shadow: 0px 0px 60px #6f00ff;
@@ -94,7 +93,6 @@
       rgb(135, 0, 0) 100%
     );
     color: #ff8c00;
-    border-radius: 25px;
     box-shadow: 0px 0px 100px 30px #ff0000;
   }
 
