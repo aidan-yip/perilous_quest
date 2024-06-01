@@ -27,6 +27,7 @@
 
   #stats {
     background-color: #000000;
+    box-shadow: 0px 0px 35px 5px #1affe483;
   }
 
   .monstat {
@@ -36,13 +37,13 @@
   #game {
     background: linear-gradient(
       0deg,
-      rgba(18, 0, 54, 0.8) 0%,
-      rgba(2, 72, 52, 0.8) 35%,
-      rgba(27, 2, 118, 0.8) 100%
+      #2C084Fcc 0%,
+      #095B49cc 35%,
+      #1E177B 100%
     );
     color: #ffffff;
     border-radius: 35px;
-    border: 1px solid #4651ac;
+    border: 1px solid #4E57A9;
   }
   #display {
     box-shadow: inset 3px 3px 25px #000000;
@@ -57,7 +58,7 @@
       rgb(0, 33, 70) 100%
     );
     border-radius: none;
-    box-shadow: 0px 0px 10px #025678;
+    box-shadow: 0px 0px 25px #1affe4;
   }
 
   #profile_container {
@@ -68,7 +69,7 @@
       rgb(0, 71, 99) 57%,
       rgb(0, 33, 70) 100%
     );
-    box-shadow: 0px 0px 20px 0px #c9eeff;
+    box-shadow: 0px 0px 20px 0px #1affe483;
   }
 
   #text {
@@ -124,7 +125,7 @@
   }
 
   /* Desktop */
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 950px) {
     button:hover {
       background-image: linear-gradient(#1c4d89, #185751);
       box-shadow: 0px 0px 50px 30px #06a2ea;
@@ -136,11 +137,21 @@
       text-shadow: 0px 0px 15px #00b9d5, 1px 1px #009ad6, 2px 2px #009ad6,
         3px 3px #009ad6, 4px 4px #009ad6;
     }
+
+    #profile_container:hover {
+      background-image: linear-gradient(#1c4d89, #185751);
+    }
+
   }
 
-  @media only screen and (max-width: 900px) {
+  /* mobile */
+  @media only screen and (max-width: 950px) {
     .monstat {
       font-size: 13px;
+    }
+
+    #wave_top {
+      opacity: 0;
     }
   }
 }
