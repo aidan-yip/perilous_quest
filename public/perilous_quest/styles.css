@@ -1741,7 +1741,7 @@ svg {
   }
 
   #game_meter {
-    margin-left: 3%;
+    width: 100%;
   }
 
   #namediv {
