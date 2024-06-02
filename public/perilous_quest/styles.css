@@ -317,23 +317,45 @@ h6 {
 #namediv {
   display: flex;
   justify-content: center;
-  text-align: center;
+  height: auto;
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
   margin-top: 6px;
+  text-align: center;
+}
+
+#name_input {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 0px;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  border: none;
+  border-radius: 25px;
+  font-size: 25px;
+  font-family: var(--fontsecond);
+  color: #ffffff;
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  /* float */
+  transition: 1s ease-in-out 0ms;
+  animation-name: floating_two;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 #button0 {
   display: block;
-  width: 35%;
-  height: 45px;
+  width: 30%;
+  height: 60px;
   font-size: 17px;
   padding-left: 20px;
   padding-right: 20px;
-  margin-left: auto;
+  margin-left: 20px;
   margin-right: auto;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   cursor: copy;
   /* float */
   transition: 1s ease-in-out 0ms;
@@ -343,7 +365,7 @@ h6 {
   animation-timing-function: ease-in-out;
 }
 
-#name {
+#player_name {
   display: none;
   color: #ffffff;
   font-family: var(--fontdefault);
@@ -1727,7 +1749,7 @@ svg {
     margin-top: 10px;
   }
 
-  #name {
+  #player_name {
     font-size: 12px;
     padding-top: 0px;
     margin-bottom: 9px;
@@ -1735,11 +1757,11 @@ svg {
 
   #button0 {
     font-size: 12px;
-    width: 70%;
+    width: 20%;
     padding-left: 20px;
     padding-right: 20px;
     margin-bottom: 30px;
-    margin-left: auto;
+    margin-left: 10px;
     margin-right: auto;
   }
 

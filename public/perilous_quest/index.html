@@ -91,10 +91,10 @@
   </head>
 
   <body>
-    <!-- Popup box-->
-
+    <!-- Circle cursor-->
     <div id="invertedcursor"></div>
 
+    <!-- Popup box-->
     <div id="popback">
       <div id="popup">
         <button id="popclose" tabindex="0" title="Close">X</button>
@@ -104,15 +104,15 @@
         <ul>
           <li id="yellow">Welcome to Perilous Quest!</li>
           <br />
-          <p>Version 1.0.0 &lpar;Beta build 9.5.3&rpar;</p>
+          <p>Version 1.0.0 &lpar;Beta build 9.6.0&rpar;</p>
           <br />
           <li id="yellow">
-            <i>This game is currently in beta testing and may be incomplete.</i>
+            This game is currently in beta testing and may be incomplete.
           </li>
           <br />
-          <li id="yellow"><i>Use a Desktop for the best experience</i></li>
+          <li id="yellow">Use a Desktop for the best experience</li>
           <br />
-          <li id="yellow"><i>Headphones are recommended</i></li>
+          <li id="yellow">Headphones are recommended</li>
           <br />
           <p>Copyright © 2024 Aidan Yip. All rights reserved.</p>
         </ul>
@@ -323,7 +323,6 @@
         </div>
 
         <!--Enter Player name-->
-
         <div id="namediv">
           <div id="profile_container" title="Upload Photo">
             <image id="profileImage" src="/public/icons/upload.png" />
@@ -336,16 +335,18 @@
             required=""
           />
 
-          <button
-            onclick="hello()"
-            id="button0"
-            title="Add a name for Player One"
-          >
-            Add Player Name
-            <span class="material-symbols-outlined md">person_add</span>
-          </button>
+          <div id="flex">
+            <input id="name_input" type="text" placeholder="Add Player Name" />
+            <button
+              onclick="hello()"
+              id="button0"
+              title="Add a name for Player One"
+            >
+              <span class="material-symbols-outlined md">person_add</span>
+            </button>
+          </div>
 
-          <p id="name"></p>
+          <p id="player_name"></p>
         </div>
 
         <p id="machint">Use "⌘" + "-" or "+" on Mac to scale the game</p>
@@ -725,8 +726,6 @@
             </div>
             <li>Perilous Quest</li>
           </ul>
-
-          
 
           <ul>
             <li>Original project idea by FreeCodeCamp</li>

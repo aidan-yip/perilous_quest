@@ -74,7 +74,7 @@ function info_pop() {
       "\n\n" +
       "Version 1.0.0" +
       "\n\n" +
-      "(Beta build 9.5.3)" +
+      "(Beta build 9.6.0)" +
       "\n\n" +
       "Copyright © 2024 Aidan Yip. All rights reserved."
   );
@@ -209,22 +209,22 @@ document.body.onmousemove = function (e) {
 //Enter Player Name prompt
 
 function hello() {
-  let text;
-  let person = prompt("Enter a name for Player One:", "");
-  if (person == null || person == "") {
-    text =
-      "Hello Guest. You're Player One!" +
-      " Be strong, and let your heart take courage!\n";
+  let player_name = document.getElementById("player_name");
+  let name_input = document.getElementById("name_input");
+  let name = document.getElementById("name_input").value;
+  if (name == null || name == "") {
+    alert("Please enter a name.");
   } else {
-    text =
+    player_name.innerHTML =
       "Hello " +
-      person +
+      name +
       ". You're Player One!" +
       " Be strong, and let your heart take courage!\n";
+    name_input.style.display = "none";
+    document.getElementById("button0").style.display = "none";
+    document.getElementById("player_name").style.display = "block";
+    console.log(name);
   }
-  document.getElementById("name").style.display = "block";
-  document.getElementById("button0").style.display = "none";
-  document.getElementById("name").innerHTML = text;
 }
 
 // Upload profile picture
