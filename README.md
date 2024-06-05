@@ -58,6 +58,7 @@ This version includes the base game and several game music tracks. This is in Be
 </ul>
 
 <i><b>\*Temporary offline caching functionality is not permanent</b></i>
+<br />
 <i><b>\*Perilous Quest supports being installed as a Progressive Web Application through most desktop/mobile browsers.</b></i>
 
 # Credits
