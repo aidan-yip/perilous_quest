@@ -41,9 +41,9 @@
   #game {
     background: linear-gradient(
       0deg,
-      #2C084Fcc 0%,
-      #095B49cc 35%,
-      #0f0a71 100%
+      rgba(44, 8, 79, 0.7) 0%,
+      rgba(9, 91, 73, 0.7) 35%,
+      rgba(15, 10, 113, 0.7) 100%
     );
     color: #ffffff;
     border-radius: 35px;
