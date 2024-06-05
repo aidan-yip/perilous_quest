@@ -1,7 +1,11 @@
 @media (prefers-color-scheme: dark) {
-  .background {
+  #dragon_back {
     filter: brightness(95%);
     background-position: left;
+  }
+
+  #color_vid_div {
+    filter: brightness(60%);
   }
 
   #invertedcursor {
