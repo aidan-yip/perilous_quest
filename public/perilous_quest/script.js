@@ -393,6 +393,8 @@ const locations = [
     ],
     "button functions": [fightSlime, fightBeast, fightSpider, goTown],
     text: "You enter the cave. You see some monsters... or is that your friend Nait?",
+    display_img:
+      "url('https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/cave.png')",
   },
   {
     name: "fight",
@@ -425,6 +427,8 @@ const locations = [
       "CONGRATULATIONS YOU WIN 🎉! You defeat the dragon and free the kingdom! The darkness flees as the sun rises on the horizon. A new day is dawning. The mighty have fallen as the humble arise to take their place.\n" +
       "\n" +
       "(You may skip the music in 30 seconds.)",
+    display_img:
+      "url('https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/win.png')",
   },
   {
     name: "easter egg",
@@ -480,6 +484,8 @@ const locations = [
     ],
     "button functions": [fightSnakes, fightYeti, fightDragon, norunmine],
     text: "The Mine entrance collapses behind you! It is extremely cold, you shiver as you walk down the abandoned Mineshaft. There are three shaft passageways. The left is overflowing with a water. The middle is filled with ice and snow. The last one is lit with the orange glow of fire.",
+    display_img:
+      "url('https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/ice_mine.png')",
   },
   {
     name: "Fight Mine",
