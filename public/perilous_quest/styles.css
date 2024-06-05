@@ -1211,7 +1211,7 @@ iframe {
   margin: 0 auto;
   padding: 30px;
   aspect-ratio: 16/10;
-  width: 90%;
+  width: 60%;
   border-radius: 50px;
 }
 
@@ -1973,12 +1973,20 @@ iframe {
     display: none;
   }
 
-  #wave_bottom {
-    margin-bottom: -20%;
+  iframe {
+    margin: 0 auto;
+    padding: 30px;
+    aspect-ratio: 16/10;
+    width: 90%;
+    border-radius: 50px;
   }
 
   #wave_top {
     opacity: 0;
+  }
+
+  #wave_bottom {
+    margin-bottom: -20%;
   }
 
   .img_div {
