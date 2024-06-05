@@ -161,6 +161,7 @@ body {
 }
 
 #color_vid_div {
+  top: 0;
   position: fixed;
   margin-left: auto;
   margin-right: auto;
