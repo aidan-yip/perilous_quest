@@ -172,7 +172,7 @@ body {
 video#color_vid { 
   object-fit: cover;
   width: 100%;
-  height: 170vh;
+  height: 155vh;
   margin-left: auto;
   margin-right: auto;
   position: fixed;
@@ -604,7 +604,7 @@ a,
 }
 
 .blocks_top {
-  margin-bottom: 10%;
+  margin-bottom: 4%;
 }
 
 #flex {
