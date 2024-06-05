@@ -470,7 +470,7 @@ const locations = [
     name: "deep caves",
     "button text": ["Go left", "Go forward", "Face the shadow", "Enter Mine"],
     "button functions": [fightTroll, fightNightGhost, fightShadow, goMine],
-    text: "You made it! There's no turning back now! You can barely make out anything down the dimly lit crevices. To the left the ground shakes. Ahead there is a strange green glow. You see a Mineshaft entrance to your right. Something from the shadows is quickly approaching behind you!",
+    text: "You made it! There's no turning back now! You can barely make out anything down the dimly lit crevices. To the right the ground shakes. Ahead there is a strange green glow. You see a Mineshaft entrance to your left. Something from the shadows is quickly approaching behind you!",
     display_img:
       "url('https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/deep_caves.png')",
   },
