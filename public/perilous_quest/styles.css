@@ -1739,6 +1739,10 @@ iframe {
     font-size: 12px;
   }
 
+  .blocks_top {
+    margin-bottom: 10%;
+  }
+
   #menu_button {
     margin-left: 2px;
     margin-right: 2px;
