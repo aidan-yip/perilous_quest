@@ -24,7 +24,7 @@ popclose.onclick = closepop;
 
 function closepop() {
   popup.style.display = "none";
-  background.style.filter = "blur(0px)";
+  background.style.filter = "blur(0px) brightness(100%)";
 }
 
 //Navbar
@@ -74,7 +74,7 @@ function info_pop() {
       "\n\n" +
       "Version 1.0.0" +
       "\n\n" +
-      "(Beta build 9.7.0)" +
+      "(Beta build 9.8.0)" +
       "\n\n" +
       "Copyright © 2024 Aidan Yip. All rights reserved."
   );
@@ -119,6 +119,17 @@ function installGame() {
   let text = "Leave Game?";
   if (confirm(text) == true) {
     location.href = "/public/perilous_quest/install/install.html";
+  } else {
+    null;
+  }
+}
+
+// Art game popup
+
+function art() {
+  let text = "Leave Game?";
+  if (confirm(text) == true) {
+    location.href = "/public/perilous_quest/art/art.html";
   } else {
     null;
   }

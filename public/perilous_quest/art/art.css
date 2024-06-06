@@ -91,7 +91,7 @@ h2 {
     4px 4px #ffffff;
   color: #000000;
   font-family: var(--fontdefault);
-  margin-top: 40px;
+  margin-top: 100px;
   box-shadow: 0px 0px 50px 0px #0a001d;
   letter-spacing: normal;
   transition: margin, 1s ease-in-out 0ms;
@@ -235,7 +235,7 @@ a,
   max-width: 1200px;
   min-width: 40%;
   width: 90%;
-  height: 40%;
+  height: auto;
   background-color: #35353593;
   border-radius: 35px;
   border: 1px solid #717171;
@@ -273,16 +273,22 @@ ul {
 
 img {
   width: 100%;
-  margin-top: 10px;
   transition: 1s ease-in-out 0ms;
   border-radius: 25px;
+  pointer-events: none;
 }
 
 .img_div {
   padding: 30px;
-  width: 43%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 25px;
 }
 
 .shape_div {
@@ -497,6 +503,8 @@ svg {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
     padding-top: 10px;
   }
 
@@ -513,7 +521,7 @@ svg {
   }
 
   h3 {
-    font-size: 15px;
+    font-size: 20px;
   }
 
   a,
