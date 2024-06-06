@@ -280,6 +280,7 @@ img {
   margin-top: 10px;
   transition: 1s ease-in-out 0ms;
   border-radius: 25px;
+  pointer-events: none;
 }
 
 .img_div {
