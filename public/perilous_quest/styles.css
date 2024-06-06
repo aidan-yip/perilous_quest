@@ -29,7 +29,7 @@
 
 html,
 body {
-  cursor: none;
+  cursor: cell;
 }
 
 #invertedcursor {
@@ -157,7 +157,7 @@ body {
 }
 
 #background {
-  filter: blur(5px);
+  filter: blur(5px) brightness(50%);
 }
 
 #color_vid_div {
@@ -204,9 +204,8 @@ video#color_vid {
   position: absolute;
   display: flex;
   justify-content: center;
-  background-color: #00000098;
   width: 100vw;
-  height: 474%;
+  height: 100%;
   z-index: 2;
   /*animate*/
   animation: fadeInAnimation ease 3s;
@@ -234,6 +233,7 @@ div.pop_icon_div {
   border: none;
   background: transparent;
   box-shadow: none;
+  cursor: pointer;
 }
 
 #popup {
@@ -463,7 +463,7 @@ h6 {
 /* Profile picture end */
 
 a {
-  cursor: none;
+  cursor: pointer;
 }
 
 a,
@@ -564,7 +564,8 @@ a,
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
   transition: 1s ease-in-out 0ms;
-  cursor: none;
+  cursor: cell;
+  cursor: pointer;
 }
 
 .list_one {
@@ -601,6 +602,7 @@ a,
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
   transition: 1s ease-in-out 0ms;
+  cursor: pointer;
 }
 
 .blocks_top {
@@ -837,7 +839,7 @@ meter::-webkit-meter-even-less-good-value {
   justify-content: space-evenly;
   padding: 10px;
   border-radius: 25px;
-  cursor: none;
+  cursor: cell;
 }
 
 #monsterStats {
@@ -921,7 +923,7 @@ button {
   );
   border-radius: 25px;
   box-shadow: 0px 0px 25px #14bcff7e;
-  cursor: none;
+  cursor: cell;
   /* fade in */
   animation: fadeInAnimation ease 3s;
   animation: shake none 3s;
@@ -1538,7 +1540,7 @@ iframe {
     color: #63e0ff;
     background-color: #ffffff74;
     border-radius: 10px;
-    cursor: none;
+    cursor: pointer;
   }
 
   #list_menu_link:hover {
@@ -1555,7 +1557,7 @@ iframe {
     color: #63e0ff;
     background-color: #ffffff74;
     border-radius: 10px;
-    cursor: none;
+    cursor: pointer;
   }
 
   #block_spin:hover {
