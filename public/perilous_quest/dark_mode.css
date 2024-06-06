@@ -2,6 +2,12 @@
   #dragon_back {
     filter: brightness(95%);
     background-position: left;
+    border: 1px solid #3e4060;
+  }
+
+  .background {
+    filter: brightness(95%);
+    background-position: left;
   }
 
   #color_vid_div {
