@@ -296,76 +296,91 @@ const weapons = [
   { name: "Wizard-Staff ᛙ ", power: 300 },
 ];
 const monsters = [
+  //0
   {
     name: "Slime",
     level: 2,
     health: 80,
   },
+  //1
   {
     name: "Fanged Beast",
     level: 6,
     health: 280,
   },
+  //2
   {
     name: "Dragon",
     level: 12,
     health: 650,
   },
+  //3
   {
     name: "Knight",
     level: 6,
     health: 220,
   },
+  //4
   {
     name: "Corrupted Wizard",
     level: 9,
     health: 370,
   },
+  //5
   {
     name: "Giant Spider",
     level: 4,
     health: 300,
   },
+  //6
   {
     name: "Ghost",
     level: 5,
     health: 300,
   },
+  //7
   {
     name: "Anglerfish",
     level: 6,
     health: 400,
   },
+  //8
   {
     name: "Cave Troll",
     level: 8,
     health: 300,
   },
+  //9
   {
     name: "Werewolf",
     level: 8,
     health: 500,
   },
+  //10
   {
-    name: "Strange Ghost",
+    name: "Doppelgänger",
     level: 10,
     health: 500,
   },
+  //11
   {
     name: "Nightmare Shadow",
     level: 8,
     health: 100,
   },
+  //12
   {
     name: "Yeti",
     level: 8,
     health: 500,
   },
+  //13
   {
     name: "Venomous Snakes",
     level: 10,
     health: 400,
   },
+  //14
 ];
 const locations = [
   {
@@ -1067,7 +1082,7 @@ function fightWerewolf() {
 }
 
 function fightNightGhost() {
-  fighting = 10;
+  fighting = 11;
   goFight();
   //Town
   lovely_town.pause();
@@ -1087,7 +1102,7 @@ function fightNightGhost() {
 }
 
 function fightShadow() {
-  fighting = 11;
+  fighting = 10;
   goFight();
   //Town
   lovely_town.pause();
