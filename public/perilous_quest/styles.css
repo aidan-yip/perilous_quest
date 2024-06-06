@@ -576,16 +576,20 @@ a,
   animation: slide-right ease-in-out 0.7s;
 }
 
-.list_three {
+.list_two_b {
   animation: slide-right ease-in-out 0.9s;
 }
 
-.list_four {
+.list_three {
   animation: slide-right ease-in-out 1.1s;
 }
 
-.list_five {
+.list_four {
   animation: slide-right ease-in-out 1.3s;
+}
+
+.list_five {
+  animation: slide-right ease-in-out 1.5s;
 }
 
 #info_alert {
