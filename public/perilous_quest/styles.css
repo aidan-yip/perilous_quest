@@ -169,7 +169,7 @@ body {
   height: 110vh;
 }
 
-video#color_vid { 
+video#color_vid {
   object-fit: cover;
   width: 100%;
   height: 155vh;
@@ -184,6 +184,10 @@ video#color_vid {
 
 .background {
   color: transparent;
+}
+
+img {
+  pointer-events: none;
 }
 
 #dragon_back {
@@ -1065,7 +1069,7 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
   width: auto;
   margin: 10px;
   padding-top: 10px;
@@ -1862,7 +1866,6 @@ iframe {
     height: 90px;
   }
 
-
   .monstat {
     display: inline;
     font-size: 13px;
@@ -2001,5 +2004,4 @@ iframe {
     margin-left: auto;
     margin-right: auto;
   }
-
 }
