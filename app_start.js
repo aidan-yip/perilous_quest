@@ -1,3 +1,9 @@
+// Offline Alert
+
+window.addEventListener('offline', function(event){
+  alert("You're offline please reconnect to Wi-Fi to play Perilous Quest.");
+});
+
 // Clock
 
 function currentTime() {
@@ -179,5 +185,5 @@ if (!$.support.transition) {
 }
 
 $("#background").cursorTrail({
-  class: "yellow-trail",
+  class: "blue-trail",
 });
