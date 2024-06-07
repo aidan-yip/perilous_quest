@@ -1,3 +1,10 @@
+// Offline Alert
+
+window.addEventListener('offline', function(event){
+  alert("You're offline please reconnect to Wi-Fi to play Perilous Quest.");
+});
+
+
 // Notifications
 
 let notification;
