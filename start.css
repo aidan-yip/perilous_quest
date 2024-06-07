@@ -355,7 +355,7 @@ a:visited {
     pointer-events: none;
   }
 
-  .yellow-trail {
+  .blue-trail {
     background-color: rgb(0, 208, 255);
   }
 }
