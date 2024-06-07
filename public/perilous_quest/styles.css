@@ -429,6 +429,7 @@ h6 {
 
 #profileImage {
   cursor: copy;
+  pointer-events: all; 
 }
 
 #profile_container {
