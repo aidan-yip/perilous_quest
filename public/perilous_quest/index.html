@@ -111,7 +111,15 @@
 
     <!-- Popup box-->
     <div id="popback">
-      <div id="popup">
+      <div
+        id="popup"
+        title="Location Display"
+        data-tilt
+        data-tilt-max="3"
+        data-tilt-speed="9000"
+        data-tilt-glare
+        data-tilt-max-glare="0.2"
+      >
         <button id="popclose" tabindex="0" title="Close">X</button>
         <div class="img_div pop_icon_div">
           <img
@@ -272,7 +280,15 @@
           </div>
 
           <!-- Display  -->
-          <div id="display" title="Location Display"></div>
+          <div
+            id="display"
+            title="Location Display"
+            data-tilt
+            data-tilt-max="8"
+            data-tilt-speed="9000"
+            data-tilt-glare
+            data-tilt-max-glare="0.5"
+          ></div>
 
           <!-- Controls -->
           <div id="controls">
@@ -304,7 +320,13 @@
           </div>
 
           <!-- Info Text -->
-          <div id="text" title="Info-Text Display">
+
+          <div
+            data-tilt
+            data-tilt-reverse="true"
+            id="text"
+            title="Info-Text Display"
+          >
             Welcome to Perilous Quest. You must find and defeat the dragon that
             has brought great darkness over the land. You are in the town
             square. Where do you want to go? Use the buttons above.
@@ -376,7 +398,15 @@
 
           <h2>🎶 Jukebox 🎶</h2>
 
-          <div class="audio_players" id="audio_players">
+          <div
+            class="audio_players"
+            id="audio_players"
+            data-tilt
+            data-tilt-max="1"
+            data-tilt-speed="9000"
+            data-tilt-glare
+            data-tilt-max-glare="0.3"
+          >
             <!--CD-->
             <div id="cd" title="Perilous Quest CD">
               <div id="cd_inner">
@@ -396,7 +426,13 @@
             <progress></progress>
 
             <!--Audio players-->
-            <div id="audio_players_inner" title="Scroll for more ->">
+            <div
+              id="audio_players_inner"
+              title="Scroll for more ->"
+              data-tilt
+              data-tilt-max="3"
+              data-tilt-speed="9000"
+            >
               <div class="audio_play_block" title="Jukebox" id="wonder_div">
                 <h3>
                   <span class="material-symbols-outlined md"> graphic_eq </span>
@@ -488,7 +524,13 @@
               >
             </div>
 
-            <div id="audio_players_inner" title="Scroll for more ->">
+            <div
+              id="audio_players_inner"
+              title="Scroll for more ->"
+              data-tilt
+              data-tilt-max="3"
+              data-tilt-speed="9000"
+            >
               <div class="audio_play_block" id="castle_div">
                 <h3>
                   <span class="material-symbols-outlined md"> graphic_eq </span>
@@ -662,7 +704,15 @@
 
           <h2>Media</h2>
 
-          <div class="cleardiv" id="media">
+          <div
+            class="cleardiv"
+            id="media"
+            data-tilt
+            data-tilt-max="1"
+            data-tilt-speed="9000"
+            data-tilt-glare
+            data-tilt-max-glare="0.3"
+          >
             <iframe
               src="https://www.youtube-nocookie.com/embed/dw7yyIYdVIM?si=MJjRUgKtzMYZWTwP"
               title="YouTube video player"
@@ -721,7 +771,15 @@
 
           <h2>Credits</h2>
 
-          <div class="cleardiv" id="credits">
+          <div
+            class="cleardiv"
+            id="credits"
+            data-tilt
+            data-tilt-max="1"
+            data-tilt-speed="9000"
+            data-tilt-glare
+            data-tilt-max-glare="0.3"
+          >
             <div id="gamelogo"></div>
 
             <ul>
@@ -880,5 +938,11 @@
         <script src="game_autoplay.js" defer></script>
       </div>
     </div>
+    <!-- Vanilla-Tilt Script -->
+    <script
+      type="text/javascript"
+      src="other_scripts/vanilla-tilt.min.js"
+      defer
+    ></script>
   </body>
 </html>

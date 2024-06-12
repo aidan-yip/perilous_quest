@@ -19,6 +19,8 @@ const STATIC_ASSETS = [
     '/public/lose.wav',
     '/404.html',
     'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0',
+    '/public/video/color_motion.mp4',
+    '/public/perilous_quest/other_scripts/vanilla-tilt.min.js',
 ]
 
 async function preCache() {

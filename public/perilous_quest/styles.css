@@ -198,8 +198,9 @@ img {
   height: auto;
   position: relative;
   z-index: 1;
-  border-top-left-radius: 35px;
-  border-top-right-radius: 35px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  filter: brightness(105%);
   border: 1px solid #4e3e60;
   box-shadow: 0px 0px 50px #000000;
 }
@@ -747,6 +748,7 @@ div#block_spin_inner_3 {
   min-width: 40%;
   width: 90%;
   height: auto;
+  filter: brightness(105%);
   background: linear-gradient(
     0deg,
     rgba(45, 220, 255, 0.7) 0%,
@@ -761,6 +763,8 @@ div#block_spin_inner_3 {
   z-index: 1;
   border: 1px solid #5399cb;
   box-shadow: 0px 0px 10px #000000cd;
+  /* chrome/firefox */
+  backdrop-filter: blur(2px);
   /* fade in */
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
@@ -847,12 +851,14 @@ meter::-webkit-meter-even-less-good-value {
   align-items: center;
   justify-content: space-evenly;
   padding: 10px;
+  z-index: 1;
   border-radius: 25px;
   cursor: cell;
 }
 
 #monsterStats {
   display: none;
+  z-index: 1;
   margin-left: 14px;
   margin-right: 14px;
   margin-bottom: 10px;
@@ -962,6 +968,8 @@ button:active {
   background-color: #35353593;
   border-radius: 25px;
   border: 1px solid #717171;
+  /* chrome/firefox */
+  backdrop-filter: blur(7px);
   /* animate */
   transition: 1s ease-in-out 0ms;
   filter: drop-shadow(10px);
@@ -1462,6 +1470,10 @@ iframe {
   }
 
   #credits:hover {
+    box-shadow: 0px 0px 25px #03c7f8;
+  }
+
+  #media:hover {
     box-shadow: 0px 0px 25px #03c7f8;
   }
 
