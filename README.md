@@ -35,7 +35,8 @@ This version includes the base game and several game music tracks. This is in Be
   <li>Sound-FX/Sound design</li> 
   <li>Music autoplay</li>
   <li>Music play button on start screen for browsers that have autoplay off</li>
-  <li>Background art</li>
+  <li>Dragon background art</li>
+  <li>Color background video</li>
   <li>Five new locations</li>
   <li>Three new weapons</li>
   <li>Eleven additional enemies</li>
@@ -57,9 +58,9 @@ This version includes the base game and several game music tracks. This is in Be
   <li>404 Error page</li>
 </ul>
 
-<i><b>*Temporary offline caching functionality is not permanent</b></i>
-<br/>
-<i><b>*Perilous Quest supports being installed as a Progressive Web Application through most desktop/mobile browsers.</b></i>
+<i><b>\*Temporary offline caching functionality is not permanent</b></i>
+<br />
+<i><b>\*Perilous Quest supports being installed as a Progressive Web Application through most desktop/mobile browsers.</b></i>
 
 # Credits
 
@@ -111,7 +112,7 @@ https://support.google.com/chrome/answer/9658361?hl=en&co=GENIE.Platform%3DDeskt
 
 Unfortunately Firefox dropped support for web apps in 2021. Please use another web browser or an older version of Firefox to install on your system.
 
-# Privacy:
+# Privacy
 
 Perilous Quest is built from HTML, CSS, Vanilla JavaScript, jQuery and JSON these programming languages in it of themselves will not compromise any data. However Perilous Quest utilizes many different software technologies which have their own privacy policies.
 
