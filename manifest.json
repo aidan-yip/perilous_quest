@@ -60,14 +60,14 @@
   "screenshots": [
     {
      "src": "./public/game.png",
-      "sizes": "1980x1168",
+      "sizes": "1000x590",
       "type": "image/gif",
       "form_factor": "wide",
       "label": "Perilous Quest"
     },
     {
       "src": "./public/start.png",
-       "sizes": "1980x1168",
+       "sizes": "1000x590",
        "type": "image/gif",
        "form_factor": "wide",
        "label": "Start Screen"
