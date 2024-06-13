@@ -97,38 +97,24 @@ This version includes the base game and several game music tracks. This is in Be
 # Web app install
 
 ## macOS Safari web app install (requires macOS Sonoma)
-<img src="https://github.com/devicons/devicon/blob/master/icons/safari/safari-original-wordmark.svg" width="40" height="40"></img>
 
 https://support.apple.com/en-ca/104996
 
 ## Windows web app install (works with Windows 10/11 or Edge for MacOS/ChromeOS/Linux)
-<img src="https://github.com/devicons/devicon/blob/master/icons/windows11/windows11-original.svg" width="40" height="40"></img> 
 
 https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/ux
 
 ## ChromeOS web app and shortcut install (requires ChromeOS and/or the Chrome browser for MacOS/Windows/Linux)
-<img src="https://github.com/devicons/devicon/blob/master/icons/chrome/chrome-original-wordmark.svg" width="40" height="40"></img>
 
 https://support.google.com/chrome/answer/9658361?hl=en&co=GENIE.Platform%3DDesktop
 
 ## Firefox web app install (N/A)
-<img src="https://github.com/devicons/devicon/blob/master/icons/firefox/firefox-original-wordmark.svg" width="40" height="40"></img>
 
 Unfortunately Firefox dropped support for web apps in 2021. Please use another web browser or an older version of Firefox to install on your system.
 
 # Privacy
 
-Perilous Quest is built from HTML, CSS, Vanilla JavaScript, XML, JSON and jQuery these programming languages in it of themselves will not compromise any data. However Perilous Quest utilizes many different software technologies which have their own privacy policies. Perilous Quest Native is built from Electron.
-
-<img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original-wordmark.svg" width="40" height="40"></img>
-<img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original-wordmark.svg" width="40" height="40"></img>
-<img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" width="40" height="40"></img>
-<img src="https://github.com/devicons/devicon/blob/master/icons/json/json-original.svg" width="40" height="40"></img>
-<img src="https://github.com/devicons/devicon/blob/master/icons/xml/xml-original.svg" width="40" height="40"></img>
-<img src="https://github.com/devicons/devicon/blob/master/icons/jquery/jquery-original-wordmark.svg" width="40" height="40"></img>
-<img src="https://github.com/devicons/devicon/blob/master/icons/electron/electron-original.svg" width="40" height="40"></img>
-
-https://www.electronjs.org
+Perilous Quest is built from HTML, CSS, Vanilla JavaScript, jQuery and JSON these programming languages in it of themselves will not compromise any data. However Perilous Quest utilizes many different software technologies which have their own privacy policies.
 
 Perilous Quest is built with Google APIs that power the font and icons. Google is a subsidiary of Alphabet Inc. As such use of the Perilous Quest website/app are subject to Google Fonts web API and Google's privacy policies which can be found at:
 
