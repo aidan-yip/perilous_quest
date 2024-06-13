@@ -319,7 +319,7 @@ const monsters = [
   {
     name: "Dragon",
     level: 12,
-    health: 650,
+    health: 600,
   },
   //3
   {
