@@ -227,6 +227,10 @@ div.pop_icon_div {
   animation-timing-function: ease-in-out;
 }
 
+#yellow {
+  font-size: 20px;
+}
+
 #popclose {
   color: #ea1f1f;
   text-shadow: 1px 1px #780000, 2px 2px #780000, 3px 3px #780000,
@@ -1761,6 +1765,7 @@ button .md {
 
   #yellow {
     color: #ffcf23;
+    font-size: 18px;
   }
 
   #popup {
