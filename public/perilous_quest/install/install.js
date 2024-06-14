@@ -85,7 +85,8 @@ function show_menu() {
   } else {
     list_menu.style.display = "flex";
     menu_button_span.innerText = "close";
-    menu_button.setAttribute("title", "Close")
+    menu_button.setAttribute("title", "Close");
+    location.href = "#background";
   }
 }
 
