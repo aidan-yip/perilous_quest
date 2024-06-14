@@ -65,6 +65,7 @@ function show_menu() {
     list_menu.style.display = "flex";
     menu_button_span.innerText = "close";
     menu_button.setAttribute("title", "Close");
+    location.href = "#background";
   }
 }
 
