@@ -649,6 +649,7 @@ iframe#github_btn {
   margin: 20px 5px;
   margin-top: 0px;
   justify-content: space-evenly;
+  border-radius: 5px;
 }
 
 #block_spin {
