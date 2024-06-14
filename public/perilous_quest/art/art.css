@@ -173,14 +173,19 @@ a,
 }
 
 #list_menu {
+  position: fixed;
+  z-index: 3;
   display: none;
   flex-direction: column;
   text-align: center;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-color: #2a2a2a;
+  background-color: #2a2a2ac5;
   box-shadow: inset 0px 0px 10px #000000;
+  -webkit-backdrop-filter: blur(7px);
+  /* chrome/firefox */
+  backdrop-filter: blur(7px);
 }
 
 #list_menu_link {
@@ -248,6 +253,9 @@ a,
   margin: 15px auto 0px;
   margin-top: -23%;
   padding: 10px;
+  -webkit-backdrop-filter: blur(7px);
+  /* chrome/firefox */
+  backdrop-filter: blur(7px);
   /* fade in */
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
@@ -509,7 +517,6 @@ svg {
     margin-right: auto;
     margin-top: 5px;
     margin-bottom: 5px;
-    padding-top: 10px;
   }
 
   h1 {

@@ -555,16 +555,19 @@ a,
 }
 
 #list_menu {
-  position: relative;
-  z-index: 1;
+  position: fixed;
+  z-index: 3;
   display: none;
   flex-direction: column;
   text-align: center;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-color: #2a2a2a;
+  background-color: #2a2a2ac5;
   box-shadow: inset 0px 0px 10px #000000;
+  -webkit-backdrop-filter: blur(7px);
+  /* chrome/firefox */
+  backdrop-filter: blur(7px);
 }
 
 #list_menu_link {
@@ -645,7 +648,7 @@ a,
 iframe#github_btn {
   margin: 20px 5px;
   margin-top: 0px;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
 }
 
 #block_spin {
@@ -783,6 +786,7 @@ div#block_spin_inner_3 {
   z-index: 1;
   border: 1px solid #5399cb;
   box-shadow: 0px 0px 10px #000000cd;
+  -webkit-backdrop-filter: blur(2px);
   /* chrome/firefox */
   backdrop-filter: blur(2px);
   /* fade in */
@@ -988,6 +992,7 @@ button:active {
   background-color: #35353593;
   border-radius: 25px;
   border: 1px solid #717171;
+  -webkit-backdrop-filter: blur(7px);
   /* chrome/firefox */
   backdrop-filter: blur(7px);
   /* animate */
@@ -1077,6 +1082,7 @@ h3 {
   box-shadow: 0px -10px 0px #ff3700, 0px -15px 0px #ffb300,
     0px -20px 0px #00ff51, 0px -25px 0px #00ffee, 0px -30px 0px #2f00ff,
     0px -35px 0px #8c00ff, 0px 0px 25px #000000;
+  -webkit-backdrop-filter: blur(7px);
   /* chrome/firefox */
   backdrop-filter: blur(7px);
   transition: width, height, 0.5s ease-in-out 0ms;
