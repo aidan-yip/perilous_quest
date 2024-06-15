@@ -151,80 +151,98 @@
 
     <div id="background">
       <div class="background">
-        <!--Navbar Desktop-->
-        <div id="navbar">
-          <a target="_self" id="navlink" title="Go Back" onclick="leaveGame();"
-            ><span class="material-symbols-outlined md">arrow_back_ios</span>
-            Back</a
-          >
-
-          <a href="#audio_players" target="_self" id="navlink" title="Jukebox"
-            ><span class="material-symbols-outlined md">music_note</span>
-            Music</a
-          >
-
-          <a target="_self" id="navlink" title="Help" onclick="getHelp();"
-            ><span class="material-symbols-outlined md">question_mark</span>
-            Help</a
-          >
-
-          <div id="menu_button" title="Menu">
-            <span class="material-symbols-outlined md" id="menu_button_span">
-              menu
-            </span>
-          </div>
-          <!-- Game title header desktop -->
-          <h1 id="navtitle_desk">PERILOUS QUEST</h1>
-        </div>
-
-        <!-- nav menu list -->
-        <div id="list_menu">
-          <a
-            target="_self"
-            id="list_menu_link"
-            title="Install App"
-            onclick="installGame();"
-            ><span class="material-symbols-outlined list_one md">download</span>
-            Install</a
-          >
-
-          <a href="#media" target="_self" id="list_menu_link" title="Game Media"
-            ><span class="material-symbols-outlined list_two md">videocam</span>
-            Media</a
-          >
-
-          <a
-            target="_self"
-            id="list_menu_link"
-            title="Art Gallery"
-            onclick="art();"
-            ><span class="material-symbols-outlined list_two_b md"
-              >palette</span
+        <div id="flex_column">
+          <!--Navbar Desktop-->
+          <div id="navbar">
+            <a
+              target="_self"
+              id="navlink"
+              title="Go Back"
+              onclick="leaveGame();"
+              ><span class="material-symbols-outlined md">arrow_back_ios</span>
+              Back</a
             >
-            Art</a
-          >
 
-          <a
-            href="#credits"
-            target="_self"
-            id="list_menu_link"
-            title="Game Credits"
-            ><span class="material-symbols-outlined list_three md">movie</span>
-            Credits</a
-          >
+            <a href="#audio_players" target="_self" id="navlink" title="Jukebox"
+              ><span class="material-symbols-outlined md">music_note</span>
+              Music</a
+            >
 
-          <a
-            target="_self"
-            id="list_menu_link"
-            title="Reset Game"
-            onclick="gameReset();"
-            ><span class="material-symbols-outlined list_four md">refresh</span>
-            Reset</a
-          >
+            <a target="_self" id="navlink" title="Help" onclick="getHelp();"
+              ><span class="material-symbols-outlined md">question_mark</span>
+              Help</a
+            >
 
-          <div id="info_alert" title="About Game">
-            <span class="material-symbols-outlined list_five md"> info </span>
-            About
+            <div id="menu_button" title="Menu">
+              <span class="material-symbols-outlined md" id="menu_button_span">
+                menu
+              </span>
+            </div>
+            <!-- Game title header desktop -->
+            <h1 id="navtitle_desk">PERILOUS QUEST</h1>
+          </div>
+
+          <!-- nav menu list -->
+          <div id="list_menu">
+            <a
+              target="_self"
+              id="list_menu_link"
+              title="Install App"
+              onclick="installGame();"
+              ><span class="material-symbols-outlined list_one md"
+                >download</span
+              >
+              Install</a
+            >
+
+            <a
+              href="#media"
+              target="_self"
+              id="list_menu_link"
+              title="Game Media"
+              ><span class="material-symbols-outlined list_two md"
+                >videocam</span
+              >
+              Media</a
+            >
+
+            <a
+              target="_self"
+              id="list_menu_link"
+              title="Art Gallery"
+              onclick="art();"
+              ><span class="material-symbols-outlined list_two_b md"
+                >palette</span
+              >
+              Art</a
+            >
+
+            <a
+              href="#credits"
+              target="_self"
+              id="list_menu_link"
+              title="Game Credits"
+              ><span class="material-symbols-outlined list_three md"
+                >movie</span
+              >
+              Credits</a
+            >
+
+            <a
+              target="_self"
+              id="list_menu_link"
+              title="Reset Game"
+              onclick="gameReset();"
+              ><span class="material-symbols-outlined list_four md"
+                >refresh</span
+              >
+              Reset</a
+            >
+
+            <div id="info_alert" title="About Game">
+              <span class="material-symbols-outlined list_five md"> info </span>
+              About
+            </div>
           </div>
         </div>
 
