@@ -747,7 +747,7 @@ function sellWeapon() {
 
 function listInventory() {
   text.innerText += "\n" + "\n" + " In your inventory you have:\n" + inventory;
-  button2.innerText = "List Inventory";
+  button2.innerText = "Sold out!";
   selectfx.currentTime = 0;
   selectfx.play();
 }
