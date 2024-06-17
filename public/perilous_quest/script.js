@@ -292,6 +292,18 @@ const monsterLevelText = document.querySelector("#monsterLevel");
 const meter = document.getElementById("game_meter");
 const display = document.getElementById("display");
 const scoreText = document.getElementById("scoreText");
+
+// 2.0 (Color input feature)
+/*
+document.getElementById("color_input").addEventListener("change",function(e){
+  button1.style.background = e.target.value;
+  button2.style.background = e.target.value;
+  button3.style.background = e.target.value;
+  button4.style.background = e.target.value;
+})
+*/
+
+
 const weapons = [
   { name: "Stick ᛓ ", power: 5 },
   { name: "Dagger ᛌ ", power: 30 },
