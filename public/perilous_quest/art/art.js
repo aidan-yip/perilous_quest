@@ -128,7 +128,7 @@ function info_pop() {
       "\n\n" +
       "Version 1.0.0" +
       "\n\n" +
-      "(Beta build 9.9.0)" +
+      "(Beta build 9.9.0-2024)" +
       "\n\n" +
       "Copyright © 2024 Aidan Yip. All rights reserved."
   );
