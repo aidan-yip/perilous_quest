@@ -187,7 +187,8 @@
           <div id="list_menu">
             <a
               target="_self"
-              id="list_menu_link"
+              id="list_one"
+              class="list_menu_link"
               title="Install App"
               onclick="installGame();"
               ><span class="material-symbols-outlined list_one md"
@@ -199,7 +200,8 @@
             <a
               href="#media"
               target="_self"
-              id="list_menu_link"
+              id="list_two"
+              class="list_menu_link"
               title="Game Media"
               ><span class="material-symbols-outlined list_two md"
                 >videocam</span
@@ -209,7 +211,8 @@
 
             <a
               target="_self"
-              id="list_menu_link"
+              id="list_two_b"
+              class="list_menu_link"
               title="Art Gallery"
               onclick="art();"
               ><span class="material-symbols-outlined list_two_b md"
@@ -221,7 +224,8 @@
             <a
               href="#credits"
               target="_self"
-              id="list_menu_link"
+              id="list_three"
+              class="list_menu_link"
               title="Game Credits"
               ><span class="material-symbols-outlined list_three md"
                 >movie</span
@@ -231,7 +235,8 @@
 
             <a
               target="_self"
-              id="list_menu_link"
+              id="list_four"
+              class="list_menu_link"
               title="Reset Game"
               onclick="gameReset();"
               ><span class="material-symbols-outlined list_four md"
@@ -360,21 +365,32 @@
 
           <!-- Game title header mobile -->
           <h1 id="navtitle_mobile">PERILOUS QUEST</h1>
-          <!-- 2.0 
-          <input type="color" id="color_input" list="presetColors" />
-          -->
-          <datalist id="presetColors">
-            <!-- Light colors presets -->
-            <option value="#FF7978"></option>
-            <option value="#37F293"></option>
-            <option value="#ADAFFF"></option>
-            <option value="#FFCA75"></option>
-            <!-- Dark colors presets-->
-            <option value="#EC8CE3"></option>
-            <option value="#ADEC5E"></option>
-            <option value="#73BFFF"></option>
-            <option value="#FF8D2E"></option>
-          </datalist>
+
+          <!--
+          <div id="color_input_div">
+            <span class="material-symbols-outlined md">
+              format_color_fill
+            </span>
+            <input
+              type="color"
+              id="color_input"
+              list="presetColors"
+              title="Change button color"
+            />
+            -->
+            <datalist id="presetColors">
+              <!-- Light colors presets -->
+              <option value="#FF7978"></option>
+              <option value="#73E396"></option>
+              <option value="#ADAFFF"></option>
+              <option value="#FFCA75"></option>
+              <!-- Dark colors presets-->
+              <option value="#EC8CE3"></option>
+              <option value="#AFDD6C"></option>
+              <option value="#73BFFF"></option>
+              <option value="#FF8D2E"></option>
+            </datalist>
+          </div>
         </div>
 
         <!--Enter Player name-->
@@ -409,18 +425,18 @@
         <p id="machint">Use Tab + Space to navigate by keyboard</p>
 
         <div id="flex" class="blocks_top">
-          <div id="block_spin">
-            <div id="block_spin_inner_1">
-              <div id="block_spin_inner_2">
-                <div id="block_spin_inner_3">💿</div>
+          <div class="block_spin">
+            <div class="block_spin_inner_1">
+              <div class="block_spin_inner_2">
+                <div class="block_spin_inner_3">💿</div>
               </div>
             </div>
           </div>
 
-          <div id="block_spin">
-            <div id="block_spin_inner_1">
-              <div id="block_spin_inner_2">
-                <div id="block_spin_inner_3">💿</div>
+          <div class="block_spin">
+            <div class="block_spin_inner_1">
+              <div class="block_spin_inner_2">
+                <div class="block_spin_inner_3">💿</div>
               </div>
             </div>
           </div>
@@ -708,18 +724,18 @@
           </div>
 
           <div id="flex">
-            <div id="block_spin">
-              <div id="block_spin_inner_1">
-                <div id="block_spin_inner_2">
-                  <div id="block_spin_inner_3">💿</div>
+            <div class="block_spin">
+              <div class="block_spin_inner_1">
+                <div class="block_spin_inner_2">
+                  <div class="block_spin_inner_3">💿</div>
                 </div>
               </div>
             </div>
 
-            <div id="block_spin">
-              <div id="block_spin_inner_1">
-                <div id="block_spin_inner_2">
-                  <div id="block_spin_inner_3">💿</div>
+            <div class="block_spin">
+              <div class="block_spin_inner_1">
+                <div class="block_spin_inner_2">
+                  <div class="block_spin_inner_3">💿</div>
                 </div>
               </div>
             </div>
@@ -779,18 +795,18 @@
           </div>
 
           <div id="flex">
-            <div id="block_spin">
-              <div id="block_spin_inner_1">
-                <div id="block_spin_inner_2">
-                  <div id="block_spin_inner_3">💿</div>
+            <div class="block_spin">
+              <div class="block_spin_inner_1">
+                <div class="block_spin_inner_2">
+                  <div class="block_spin_inner_3">💿</div>
                 </div>
               </div>
             </div>
 
-            <div id="block_spin">
-              <div id="block_spin_inner_1">
-                <div id="block_spin_inner_2">
-                  <div id="block_spin_inner_3">💿</div>
+            <div class="block_spin">
+              <div class="block_spin_inner_1">
+                <div class="block_spin_inner_2">
+                  <div class="block_spin_inner_3">💿</div>
                 </div>
               </div>
             </div>
@@ -935,7 +951,7 @@
                   title="Report a bug or request a feature"
                   class="report"
                   ><span class="material-symbols-outlined md"> flag </span>
-                  Report an issue</a
+                  Leave Feedback</a
                 >
               </li>
             </ul>
