@@ -1,9 +1,8 @@
 // Offline Alert
 
-window.addEventListener('offline', function(event){
+window.addEventListener("offline", function (event) {
   alert("You're offline please reconnect to Wi-Fi to play Perilous Quest.");
 });
-
 
 // Notifications
 
@@ -207,7 +206,7 @@ if (!$.support.transition) {
 }
 
 $("#background").cursorTrail({
-  class: "blue-trail",
+  class: "blue_trail",
 });
 
 // Circle cursor
@@ -277,10 +276,12 @@ let inventory = ["stick ᛓ "];
 
 //Buttons and Stats
 
+const button0 = document.querySelector("#button0");
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
 const button4 = document.querySelector("#button4");
+const stats = document.querySelector("#stats");
 const text = document.querySelector("#text");
 const xpText = document.querySelector("#xpText");
 const healthText = document.querySelector("#healthText");
@@ -292,17 +293,154 @@ const monsterLevelText = document.querySelector("#monsterLevel");
 const meter = document.getElementById("game_meter");
 const display = document.getElementById("display");
 const scoreText = document.getElementById("scoreText");
+const profile_container = document.getElementById("profile_container");
+const name_input = document.getElementById("name_input");
+const color_input = document.getElementById("color_input");
 
-// 2.0 (Color input feature)
+//Navbar
+
+const navbar = document.getElementById("navbar");
+
+// List link
+
+const list_one = document.getElementById("list_one");
+const list_two = document.getElementById("list_two");
+const list_two_b = document.getElementById("list_two_b");
+const list_three = document.getElementById("list_three");
+const list_four = document.getElementById("list_four");
+
+//Block spinner
+
+const block_spin = document.querySelectorAll(".block_spin");
+const block_spin_inner_1 = document.querySelectorAll(".block_spin_inner_1");
+const block_spin_inner_3 = document.querySelectorAll(".block_spin_inner_3");
+
+//Audio block
+
+const audio_play_block = document.querySelectorAll(".audio_play_block");
+
+//Player name
+
+const player_name = document.querySelector("#player_name");
+
+//h2
+
+const h2 = document.getElementsByTagName("h2");
+
+// ul
+
+const li = document.getElementsByTagName("li");
+
+// 2.0 (Color Theme Engine)
 /*
-document.getElementById("color_input").addEventListener("change",function(e){
+color_input.addEventListener("change", function (e) {
+  // Navbar
+  navbar.style.color = e.target.value;
+  // List link one color
+  $(list_one).mouseover(() => {
+    list_one.style.background = e.target.value;
+    list_one.style.color = "#ffffff";
+  });
+  $(list_one).mouseleave(() => {
+    list_one.style.background = "none";
+    list_one.style.color = "#63e0ff";
+  });
+  // List link two color
+  $(list_two).mouseover(() => {
+    list_two.style.background = e.target.value;
+    list_two.style.color = "#ffffff";
+  });
+  $(list_two).mouseleave(() => {
+    list_two.style.background = "none";
+    list_two.style.color = "#63e0ff";
+  });
+  // List link two b color
+  $(list_two_b).mouseover(() => {
+    list_two_b.style.background = e.target.value;
+    list_two_b.style.color = "#ffffff";
+  });
+  $(list_two_b).mouseleave(() => {
+    list_two_b.style.background = "none";
+    list_two_b.style.color = "#63e0ff";
+  });
+  // List link three color
+  $(list_three).mouseover(() => {
+    list_three.style.background = e.target.value;
+    list_three.style.color = "#ffffff";
+  });
+  $(list_three).mouseleave(() => {
+    list_three.style.background = "none";
+    list_three.style.color = "#63e0ff";
+  });
+  // List link four color
+  $(list_four).mouseover(() => {
+    list_four.style.background = e.target.value;
+    list_four.style.color = "#ffffff";
+  });
+  $(list_four).mouseleave(() => {
+    list_four.style.background = "none";
+    list_four.style.color = "#63e0ff";
+  });
+  // List link four color
+  $(list_four).mouseover(() => {
+    list_four.style.background = e.target.value;
+    list_four.style.color = "#ffffff";
+  });
+  $(list_four).mouseleave(() => {
+    list_four.style.background = "none";
+    list_four.style.color = "#63e0ff";
+  });
+  // Info alert
+  $(info_alert).mouseover(() => {
+    info_alert.style.background = e.target.value;
+    info_alert.style.color = "#ffffff";
+  });
+  $(info_alert).mouseleave(() => {
+    info_alert.style.background = "none";
+    info_alert.style.color = "#63e0ff";
+  });
+  //Button color
+  button0.style.background = e.target.value;
+  profile_container.style.background = e.target.value;
+  name_input.style.background = e.target.value;
   button1.style.background = e.target.value;
   button2.style.background = e.target.value;
   button3.style.background = e.target.value;
   button4.style.background = e.target.value;
-})
+  stats.style.border = "2px solid" + e.target.value;
+  //Block color
+  for (let i = 0; i < block_spin.length; i++) {
+    block_spin[i].style.background = e.target.value;
+  }
+  for (let i = 0; i < block_spin_inner_1.length; i++) {
+    block_spin_inner_1[i].style.background = "#404a50";
+  }
+  for (let i = 0; i < block_spin_inner_3.length; i++) {
+    block_spin_inner_3[i].style.background = e.target.value;
+  }
+  //Audio color
+  for (let i = 0; i < audio_play_block.length; i++) {
+    audio_play_block[i].style.background = e.target.value;
+  }
+  //Player name color
+  player_name.style.color = e.target.value;
+  // ul color
+  $(li).mouseover(() => {
+    for (let i = 0; i < li.length; i++) {
+      li[i].style.color = e.target.value;
+    }
+  });
+  $(li).mouseleave(() => {
+    for (let i = 0; i < li.length; i++) {
+      li[i].style.color = "#ffffff";
+    }
+  });
+  // h2 color
+  for (let i = 0; i < h2.length; i++) {
+    h2[i].style.backgroundColor = e.target.value;
+  }
+});
 */
-
 
 const weapons = [
   { name: "Stick ᛓ ", power: 5 },
@@ -511,7 +649,7 @@ const locations = [
   },
   {
     name: "deep caves",
-    "button text": ["Enter Mine", "Run left", "Run forward", "Face the shadow",],
+    "button text": ["Enter Mine", "Run left", "Run forward", "Face the shadow"],
     "button functions": [goMine, fightTroll, fightNightGhost, fightShadow],
     text: "You made it! There's no turning back now! You can barely make out anything down the dimly lit crevices. To the left the ground shakes. Ahead there is a strange green glow. You see a Mineshaft entrance to your left as well. Something from the shadows is quickly approaching behind you!",
     display_img:

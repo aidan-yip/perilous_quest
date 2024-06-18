@@ -399,13 +399,18 @@ h6 {
   font-size: 25px;
   font-family: var(--fontsecond);
   color: #ffffff;
-  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
   /* float */
   transition: 1s ease-in-out 0ms;
   animation-name: floating_two;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+}
+
+::placeholder {
+  color: #ffffff;
+  opacity: 1; /* Firefox */
 }
 
 #button0 {
@@ -440,8 +445,8 @@ h6 {
   margin-top: 2px;
   margin-bottom: 20px;
   transition: 1s ease-in-out 0ms;
-  text-shadow: 1px 1px #0074b7, 1px 1px #0074b7, 2px 2px #0074b7,
-    3px 3px #0074b7, 0px 0px 10px #ffffff;
+  text-shadow: 1px 1px #181818, 1px 1px #181818, 2px 2px #181818,
+    3px 3px #181818, 0px 0px 10px #ffffff;
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
   transition: 1s ease-in-out 0ms;
@@ -591,7 +596,8 @@ a,
   backdrop-filter: blur(7px);
 }
 
-#list_menu_link {
+.list_menu_link {
+  background: none;
   font-size: 14px;
   padding: 20px;
   border-radius: 30px;
@@ -664,7 +670,7 @@ iframe#github_btn {
   border-radius: 5px;
 }
 
-#block_spin {
+.block_spin {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -676,6 +682,7 @@ iframe#github_btn {
   border: solid 1px #000000;
   border-radius: 10px;
   cursor: pointer;
+  transition: 1s ease-in-out;
   /* animatation */
   animation-name: spin;
   animation-duration: 6000ms;
@@ -683,7 +690,7 @@ iframe#github_btn {
   animation-timing-function: linear;
 }
 
-div#block_spin_inner_1 {
+div.block_spin_inner_1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -696,6 +703,7 @@ div#block_spin_inner_1 {
   border: solid 1px #000000;
   border-radius: 10px;
   cursor: pointer;
+  transition: 1s ease-in-out;
   /* animatation */
   animation-name: spin;
   animation-duration: 5000ms;
@@ -703,7 +711,7 @@ div#block_spin_inner_1 {
   animation-timing-function: linear;
 }
 
-div#block_spin_inner_2 {
+div.block_spin_inner_2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -716,6 +724,7 @@ div#block_spin_inner_2 {
   border: solid 1px #000000;
   border-radius: 10px;
   cursor: pointer;
+  transition: 1s ease-in-out;
   /* animatation */
   animation-name: spin;
   animation-duration: 4000ms;
@@ -723,7 +732,7 @@ div#block_spin_inner_2 {
   animation-timing-function: linear;
 }
 
-div#block_spin_inner_3 {
+div.block_spin_inner_3 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -735,6 +744,7 @@ div#block_spin_inner_3 {
   background-color: #22d3ff;
   border: solid 1px #000000;
   border-radius: 10px;
+  transition: 1s ease-in-out;
   cursor: pointer;
   /* animatation */
   animation-name: spin;
@@ -818,7 +828,7 @@ div#block_spin_inner_3 {
   margin-right: 14px;
   padding: 10px;
   color: #ffffff;
-  border: 3px solid #000000;
+  border: 2px solid #000000;
   border-radius: 30px;
   background-color: #000000;
   box-shadow: 0px 0px 10px #000000d5;
@@ -863,6 +873,21 @@ meter::-webkit-meter-even-less-good-value {
   transition: 1s width ease-in-out;
 }
 
+#color_input_div {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#color_input {
+  margin-bottom: 10px;
+  margin-left: 5px;
+  z-index: 1;
+  text-align: center;
+  cursor: copy;
+}
+
 #display {
   width: 98%;
   height: 240px;
@@ -883,10 +908,13 @@ meter::-webkit-meter-even-less-good-value {
 }
 
 #controls {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
   padding: 10px;
   z-index: 1;
   border-radius: 25px;
@@ -1055,8 +1083,8 @@ h3 {
   color: #ffffff;
   font-family: var(--fontdefault);
   text-align: center;
-  text-shadow: 0px 0px 10px #9e69ff, 1px 1px #000000, 2px 2px #000000,
-    3px 3px #000000, 4px 4px #000000;
+  text-shadow: 1px 1px #000000, 2px 2px #000000, 3px 3px #000000,
+      4px 4px #000000, 0px 0px 50px #e6e6e6;
   font-size: 25px;
   padding: 30px 200px;
   max-width: 1100px;
@@ -1275,7 +1303,7 @@ button .md {
   margin: 0 auto;
   padding: 30px;
   aspect-ratio: 16/10;
-  width: 60%;
+  width: 65%;
   border-radius: 50px;
 }
 
@@ -1526,15 +1554,10 @@ button .md {
     letter-spacing: 10px;
   }
 
-  h3 {
-    text-shadow: 1px 1px #000000, 2px 2px #000000, 3px 3px #000000,
-      4px 4px #000000;
-  }
-
   h3:hover {
     letter-spacing: 5px;
     text-decoration: underline;
-    text-decoration-color: #844fff;
+    text-decoration-color: #e6e6e6;
     text-decoration-thickness: 3px;
   }
 
@@ -1609,14 +1632,14 @@ button .md {
     cursor: pointer;
   }
 
-  #list_menu_link:hover {
+  .list_menu_link:hover {
     color: #63e0ff;
-    background-color: #ffffff74;
+    background: #ffffff74;
   }
 
   #info_alert:hover {
     color: #63e0ff;
-    background-color: #ffffff74;
+    background: #ffffff74;
   }
 
   #menu_button:hover {
@@ -1642,22 +1665,22 @@ button .md {
     box-shadow: 0px 0px 10px #00d9ff;
   }
 
-  #block_spin:active {
+  .block_spin:active {
     cursor: not-allowed;
     animation-play-state: paused;
   }
 
-  div#block_spin_inner_1:active {
+  div.block_spin_inner_1:active {
     cursor: not-allowed;
     animation-play-state: paused;
   }
 
-  div#block_spin_inner_2:active {
+  div.block_spin_inner_2:active {
     cursor: not-allowed;
     animation-play-state: paused;
   }
 
-  div#block_spin_inner_3:active {
+  div.block_spin_inner_3:active {
     cursor: not-allowed;
     animation-play-state: paused;
   }
@@ -1725,8 +1748,8 @@ button .md {
     pointer-events: none;
   }
 
-  .blue-trail {
-    background-color: rgb(0, 208, 255);
+  .blue_trail {
+    background: #00d0ff;
   }
 }
 
@@ -1817,7 +1840,7 @@ button .md {
     margin-right: 2px;
   }
 
-  #list_menu_link {
+  .list_menu_link {
     font-size: 12px;
   }
 
@@ -1848,7 +1871,7 @@ button .md {
   #navtitle_mobile {
     display: block;
     margin: 18px 20px;
-    font-size: 25px;
+    font-size: 20px;
   }
 
   h2 {
@@ -1935,6 +1958,11 @@ button .md {
     margin-right: 3px;
   }
 
+  #controls {
+    width: 98%;
+    padding: 10px 0px;
+  }
+
   #monsterStats {
     margin-left: 5px;
     margin-right: 5px;
@@ -1961,7 +1989,7 @@ button .md {
     box-shadow: none;
   }
 
-  #block_spin {
+  .block_spin {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1971,7 +1999,7 @@ button .md {
     height: 100px;
   }
 
-  div#block_spin_inner_1 {
+  div.block_spin_inner_1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2045,7 +2073,7 @@ button .md {
     margin: 0 auto;
     padding: 30px;
     aspect-ratio: 16/10;
-    width: 90%;
+    width: 97%;
     border-radius: 50px;
   }
 

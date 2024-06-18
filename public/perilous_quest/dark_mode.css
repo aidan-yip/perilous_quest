@@ -25,8 +25,8 @@
   }
 
   h3 {
-    text-shadow: 0px 0px 10px #9e69ff, 1px 1px #5a01ff, 2px 2px #5a01ff,
-      3px 3px #5a01ff, 4px 4px #5a01ff;
+    text-shadow: 1px 1px #000000, 2px 2px #000000, 3px 3px #000000,
+      4px 4px #000000, 0px 0px 50px #e6e6e6;
   }
 
   .stat {
@@ -53,7 +53,7 @@
     );
     color: #ffffff;
     border-radius: 35px;
-    border: 1px solid #4E57A9;
+    border: 1px solid #4e57a9;
   }
   #display {
     box-shadow: 3px 3px 25px #000000;
@@ -149,7 +149,6 @@
     #profile_container:hover {
       background-image: linear-gradient(#1c4d89, #185751);
     }
-
   }
 
   /* mobile */
