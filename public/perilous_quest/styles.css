@@ -1237,7 +1237,7 @@ p {
   height: 50px;
   border-radius: 200px;
   border: 5px double #ffffff;
-  background-color: rgba(84, 182, 220, 0.772);
+  background-color: rgb(61, 134, 162);
   margin-left: auto;
   margin-right: auto;
 }
