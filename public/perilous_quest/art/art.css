@@ -114,6 +114,7 @@ a,
   padding-left: 20px;
   padding-right: 20px;
   margin-left: 40px;
+  border-radius: 10px;
   letter-spacing: normal;
   transition: 1s ease-in-out 0ms;
   text-shadow: 1px 1px #0077bc, 1px 1px #0077bc, 2px 2px #0077bc,
@@ -165,6 +166,7 @@ a,
 #menu_button {
   padding: 5px;
   margin-left: 50px;
+  border-radius: 10px;
   text-shadow: 1px 1px #0077bc, 1px 1px #0077bc, 2px 2px #0077bc,
     3px 3px #0077bc, 0px 0px 5px #ffffff;
   font-family: var(--fontdefault);
@@ -420,7 +422,6 @@ svg {
   #navlink:hover {
     color: #63e0ff;
     background-color: #ffffff74;
-    border-radius: 10px;
   }
 
   #list_menu_link:hover {
@@ -436,7 +437,6 @@ svg {
   #menu_button:hover {
     color: #63e0ff;
     background-color: #ffffff74;
-    border-radius: 10px;
     cursor: pointer;
   }
 
