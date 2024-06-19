@@ -329,12 +329,13 @@ h1 {
 
 #navtitle_desk {
   display: block;
-  position: absolute;
+  position: relative;
   text-align: center;
+  text-wrap: nowrap;
   font-size: 17px;
   margin-top: 10px;
+  margin-left: auto;
   margin-bottom: 10px;
-  right: 60px;
 }
 
 #navtitle_mobile {
@@ -509,6 +510,7 @@ a,
   font-size: 14px;
   font-family: var(--fontdefault);
   text-decoration: none;
+  text-wrap: nowrap;
   padding: 5px;
   padding-left: 20px;
   padding-right: 20px;
@@ -572,6 +574,7 @@ a,
 #menu_button {
   padding: 5px;
   margin-left: 50px;
+  margin-right: 40px;
   text-shadow: 1px 1px #0077bc, 1px 1px #0077bc, 2px 2px #0077bc,
     3px 3px #0077bc, 0px 0px 5px #ffffff;
   font-family: var(--fontdefault);
@@ -1758,32 +1761,6 @@ button .md {
 
   .blue_trail {
     background: #00d0ff;
-  }
-}
-
-/* tablet */
-
-@media only screen and (max-width: 1194px) {
-  #invertedcursor {
-    display: none;
-  }
-
-  html,
-  body {
-    cursor: default;
-  }
-
-  button:hover {
-    cursor: cell;
-  }
-
-  a,
-  #navlink:hover {
-    cursor: pointer;
-  }
-
-  #menu_button:hover {
-    cursor: pointer;
   }
 }
 
