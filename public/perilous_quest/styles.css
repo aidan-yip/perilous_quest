@@ -513,6 +513,7 @@ a,
   padding-left: 20px;
   padding-right: 20px;
   margin-left: 40px;
+  border-radius: 10px;
   letter-spacing: normal;
   transition: 1s ease-in-out 0ms;
   text-shadow: 1px 1px #0077bc, 1px 1px #0077bc, 2px 2px #0077bc,
@@ -574,6 +575,7 @@ a,
   text-shadow: 1px 1px #0077bc, 1px 1px #0077bc, 2px 2px #0077bc,
     3px 3px #0077bc, 0px 0px 5px #ffffff;
   font-family: var(--fontdefault);
+  border-radius: 10px;
   color: #03c7f8;
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
@@ -1016,6 +1018,7 @@ button {
 button:active {
   width: 37%;
   height: 65px;
+  border: 0.5px solid #3d6a66;
   cursor: none;
 }
 
@@ -1151,7 +1154,6 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   width: auto;
   margin: 10px;
   padding-top: 10px;
@@ -1522,12 +1524,6 @@ button .md {
     left: 100px;
   }
 
-  .audio_play_block:hover {
-    /* animation */
-    animation: shake 1s ease-in-out;
-    animation-iteration-count: infinite;
-  }
-
   .left:hover {
     background-color: #ffffff74;
     cursor: none;
@@ -1630,7 +1626,6 @@ button .md {
   #navlink:hover {
     color: #63e0ff;
     background-color: #ffffff74;
-    border-radius: 10px;
     cursor: pointer;
   }
 
@@ -1647,7 +1642,6 @@ button .md {
   #menu_button:hover {
     color: #63e0ff;
     background-color: #ffffff74;
-    border-radius: 10px;
     cursor: pointer;
   }
 
@@ -1719,6 +1713,17 @@ button .md {
     box-shadow: 0px -20px 0px #ff3700, 0px -30px 0px #ffb300,
       0px -40px 0px #00ff51, 0px -60px 0px #00ffee, 0px -80px 0px #2f00ff,
       0px -100px 0px #8c00ff;
+  }
+
+  .audio_players_inner:hover {
+    cursor: all-scroll;
+  }
+
+  .audio_play_block:hover {
+    cursor: all-scroll;
+    /* animation */
+    animation: shake 1s ease-in-out;
+    animation-iteration-count: infinite;
   }
 
   .audio {
