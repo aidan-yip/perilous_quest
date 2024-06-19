@@ -1731,7 +1731,8 @@ button .md {
     margin-bottom: 40px;
   }
 
-  .report {
+  a#navlink.report {
+    padding: 20px;
     margin-right: 40px;
   }
 
