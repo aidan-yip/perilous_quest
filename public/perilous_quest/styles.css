@@ -1090,7 +1090,7 @@ h3 {
   font-family: var(--fontdefault);
   text-align: center;
   text-shadow: 1px 1px #000000, 2px 2px #000000, 3px 3px #000000,
-      4px 4px #000000, 0px 0px 50px #e6e6e6;
+    4px 4px #000000, 0px 0px 50px #e6e6e6;
   font-size: 25px;
   padding: 30px 200px;
   max-width: 1100px;
@@ -1341,6 +1341,29 @@ button .md {
   max-width: 300px;
   margin-left: auto;
   margin-right: auto;
+}
+
+#___gcse_0 > div {
+  margin-left: auto;
+  margin-right: auto;
+  width: 82%;
+  border-radius: 25px;
+  background-color: #ffffff8d;
+  box-shadow: 0px 0px 25px #000000;
+}
+
+#___gcse_0 > div > div > form > table > tbody > tr > td.gsc-search-button > button {
+  height: 5%;
+  margin-left: 1%;
+  border-radius: 10px;
+}
+
+#gsc-iw-id1 {
+  border-radius: 10px;
+}
+
+#___gcse_0 > div > div > div.gsc-results-wrapper-overlay.gsc-results-wrapper-visible {
+  margin-top: 10vh;
 }
 
 /* desktop */
@@ -1737,6 +1760,10 @@ button .md {
   a#navlink.report {
     padding: 20px;
     margin-right: 40px;
+  }
+
+  #___gcse_0 > div:hover {
+    box-shadow: 0px 0px 25px #03c7f8;
   }
 
   /*cursor trail*/
