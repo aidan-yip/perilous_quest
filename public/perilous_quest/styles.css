@@ -296,7 +296,7 @@ div.pop_icon_div {
 }
 
 #nav_arrows:hover {
-  cursor: none;
+  cursor: cell;
 }
 
 .left {
