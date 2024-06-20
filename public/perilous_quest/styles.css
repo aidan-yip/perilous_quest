@@ -1352,7 +1352,15 @@ button .md {
   box-shadow: 0px 0px 25px #000000;
 }
 
-#___gcse_0 > div > div > form > table > tbody > tr > td.gsc-search-button > button {
+#___gcse_0
+  > div
+  > div
+  > form
+  > table
+  > tbody
+  > tr
+  > td.gsc-search-button
+  > button {
   height: 5%;
   margin-left: 1%;
   border-radius: 10px;
@@ -1362,7 +1370,10 @@ button .md {
   border-radius: 10px;
 }
 
-#___gcse_0 > div > div > div.gsc-results-wrapper-overlay.gsc-results-wrapper-visible {
+#___gcse_0
+  > div
+  > div
+  > div.gsc-results-wrapper-overlay.gsc-results-wrapper-visible {
   margin-top: 10vh;
 }
 
@@ -1552,12 +1563,12 @@ button .md {
 
   .left:hover {
     background-color: #ffffff74;
-    cursor: none;
+    cursor: pointer;
   }
 
   .right:hover {
     background-color: #ffffff74;
-    cursor: none;
+    cursor: pointer;
   }
 
   #game:hover {
