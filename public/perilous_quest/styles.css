@@ -351,7 +351,7 @@ h2 {
   position: relative;
   z-index: 2;
   text-align: center;
-  width: 50%;
+  width: 60%;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
@@ -1899,8 +1899,9 @@ button .md {
 
   h2 {
     box-shadow: 0px 0px 50px #ffffff;
-    font-size: 11px;
     margin-top: 0px;
+    font-size: 15px;
+    text-wrap: nowrap;
   }
 
   h3 {
