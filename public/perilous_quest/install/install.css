@@ -566,6 +566,10 @@ svg {
     padding-top: 10px;
   }
 
+  .iphone_mobile_img {
+    padding: 5px;
+  }
+
   h1 {
     font-size: 20px;
     margin-bottom: 0px;
