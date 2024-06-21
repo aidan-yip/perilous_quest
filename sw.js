@@ -19,6 +19,8 @@ const STATIC_ASSETS = [
     '/public/lose.wav',
     '/404.html',
     'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0',
+    'https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap',
+    'https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap',
     '/public/perilous_quest/other_scripts/vanilla-tilt-min.js',
 ]
 
