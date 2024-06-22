@@ -4,6 +4,17 @@ window.addEventListener("offline", function (event) {
   alert("You're offline please reconnect to Wi-Fi to play Perilous Quest.");
 });
 
+// Mobile Alert
+
+function check_mobile() {
+  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+    alert("Volume slider not suported on mobile");
+    console.log("mobile browser");
+  }else{
+    console.log("desktop browser");
+  }
+};
+
 // Volume
 
 function updateVolume() {
@@ -21,6 +32,7 @@ function updateVolume() {
     null
   }
   console.log(newVolume);
+  check_mobile();
 };
 
 document.addEventListener('DOMContentLoaded', () => {
