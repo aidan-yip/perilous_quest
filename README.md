@@ -58,6 +58,7 @@ This version includes the base game and several game music tracks. This is in Be
   <li>Stats have an underline on hover</li>
   <li>Text expands on hover</li>
   <li>404 Error page</li>
+  <li>Search with Google Programmable Search Engine</li>
 </ul>
 
 <i><b>\*Temporary offline caching functionality is not permanent</b></i>
