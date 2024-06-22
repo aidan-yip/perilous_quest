@@ -878,7 +878,7 @@ meter::-webkit-meter-even-less-good-value {
   transition: 1s width ease-in-out;
 }
 
-#color_input_div {
+#setting_input_div {
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -886,11 +886,37 @@ meter::-webkit-meter-even-less-good-value {
 }
 
 #color_input {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   margin-left: 5px;
   z-index: 1;
   text-align: center;
   cursor: copy;
+}
+
+#color_input_two {
+  margin-bottom: 15px;
+  margin-left: 5px;
+  z-index: 1;
+  text-align: center;
+  cursor: copy;
+}
+
+#color_input_three {
+  margin-bottom: 15px;
+  margin-left: 5px;
+  z-index: 1;
+  text-align: center;
+  cursor: copy;
+}
+
+.settingInput {
+  margin-right: 30px;
+}
+
+#volume {
+  width: 20%;
+  margin-left: 10px;
+  margin-bottom: 11px;
 }
 
 #display {
@@ -1929,6 +1955,23 @@ button .md {
 
   #meter_text {
     margin-left: 3%;
+  }
+
+  .settingInput {
+    margin-right: 5px;
+  }
+
+  #volume {
+    width: 28%;
+  }
+
+  .settingInput {
+    margin-left: 5px;
+    margin-right: 14px;
+  }
+
+  .setting_input_div {
+    width: 98%;
   }
 
   #game_meter {

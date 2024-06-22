@@ -368,17 +368,18 @@
           <h1 id="navtitle_mobile">PERILOUS QUEST</h1>
            -->
 
-          <div id="color_input_div">
+           <!--Input Settings -->
+          <div id="setting_input_div">
             <span class="material-symbols-outlined md">
               format_color_fill
             </span>
             <input
               type="color"
               id="color_input"
+              class="settingInput"
               list="presetColors"
-              title="Change button color"
+              title="Select Color Theme"
             />
-
             <datalist id="presetColors">
               <!-- Light colors presets -->
               <option value="#FF7978"></option>
@@ -391,6 +392,47 @@
               <option value="#73BFFF"></option>
               <option value="#FF8D2E"></option>
             </datalist>
+
+            <span class="material-symbols-outlined md"> format_color_text </span>
+            <input
+              type="color"
+              id="color_input_two"
+              class="settingInput"
+              list="presetColors_two"
+              title="Select Text Theme"
+            />
+            <datalist id="presetColors_two">
+              <!-- Light colors presets -->
+              <option value="#000000"></option>
+              <!-- Dark colors presets -->
+              <option value="#ffffff"></option>
+            </datalist>
+
+            <span class="material-symbols-outlined md"> border_color </span>
+            <input
+              type="color"
+              id="color_input_three"
+              class="settingInput"
+              list="presetColors_three"
+              title="Select Border Theme"
+            />
+            <datalist id="presetColors_three">
+              <!-- Light colors presets -->
+              <option value="#000000"></option>
+              <!-- Dark colors presets -->
+              <option value="#ffffff"></option>
+            </datalist>
+
+            <span class="material-symbols-outlined" id="volume_icon"> volume_up </span>
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+              value="1.0"
+              id="volume"
+              title="Change Volume"
+            />
           </div>
         </div>
 

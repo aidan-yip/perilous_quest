@@ -4,6 +4,29 @@ window.addEventListener("offline", function (event) {
   alert("You're offline please reconnect to Wi-Fi to play Perilous Quest.");
 });
 
+// Volume
+
+function updateVolume() {
+  const newVolume = document.getElementById('volume').value;
+  document.querySelectorAll('video, audio, embed, object').forEach(element => element.volume = newVolume);
+  if (newVolume >= 0 && newVolume <= 0) {
+    document.getElementById("volume_icon").innerText = "no_sound";
+  } else {
+    document.getElementById("volume_icon").innerText = "volume_up";
+  }
+
+  if (newVolume >= 0.1 && newVolume <= 0.4) {
+    document.getElementById("volume_icon").innerText = "volume_down_alt";
+  } else {
+    null
+  }
+  console.log(newVolume);
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('volume').addEventListener('input', updateVolume);
+});
+
 // Notifications
 
 let notification;
@@ -296,6 +319,8 @@ const scoreText = document.getElementById("scoreText");
 const profile_container = document.getElementById("profile_container");
 const name_input = document.getElementById("name_input");
 const color_input = document.getElementById("color_input");
+const color_input_two = document.getElementById("color_input_two");
+const color_input_three = document.getElementById("color_input_three");
 
 //Navbar
 
@@ -440,6 +465,17 @@ color_input.addEventListener("change", function (e) {
     h2[i].style.backgroundColor = e.target.value;
   }
 });
+// Text color
+color_input_two.addEventListener("change", function (e) {
+  button1.style.color = e.target.value;
+  button2.style.color = e.target.value;
+  button3.style.color = e.target.value;
+  button4.style.color = e.target.value;
+});
+// Display border color
+color_input_three.addEventListener("change", function (e) {
+  display.style.border = "2px solid" + e.target.value;
+}); // Color Theme Engine End
 
 const weapons = [
   { name: "Stick ᛓ ", power: 5 },
