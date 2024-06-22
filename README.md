@@ -19,6 +19,7 @@ This version includes the base game and several game music tracks. This is in Be
   <li>System Notifications with the Notifications API (Desktop/Laptop only)</li>
   <li>Are you sure you want to leave? Prompt (Desktop/Laptop only)</li>
   <li>Light/Dark Mode responds to the system theme</li>
+  <li>Color Theme selector using System color UI</li>
   <li>Game Location Display</li>
   <li>Added a share button that uses the Web Share API (Safari on macOS/iOS and Chrome on Windows/ChromeOS only)</li>
   <li>Support for temporary offline caching (Safari, Chrome, Firefox and Edge)*</li>
@@ -116,9 +117,29 @@ Unfortunately Firefox dropped support for web apps in 2021. Please use another w
 <li>Older versions may remain available for download as they are released.</li>
 </ul>
 
+# Web app install
+
+## macOS Safari web app install (requires macOS Sonoma)
+<img src="https://github.com/devicons/devicon/blob/master/icons/safari/safari-original-wordmark.svg" width="40" height="40"></img>
+
+https://support.apple.com/en-ca/104996
+
+## Windows web app install (works with Windows 10/11 or Edge for MacOS/ChromeOS/Linux)
+<img src="https://github.com/devicons/devicon/blob/master/icons/windows11/windows11-original.svg" width="40" height="40"></img> 
+
+https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/ux
+
+## ChromeOS web app and shortcut install (requires ChromeOS and/or the Chrome browser for MacOS/Windows/Linux)
+<img src="https://github.com/devicons/devicon/blob/master/icons/chrome/chrome-original-wordmark.svg" width="40" height="40"></img>
+
+https://support.google.com/chrome/answer/9658361?hl=en&co=GENIE.Platform%3DDesktop
+
+## Firefox web app install (N/A)
+<img src="https://github.com/devicons/devicon/blob/master/icons/firefox/firefox-original-wordmark.svg" width="40" height="40"></img>
+
 # Privacy
 
-Perilous Quest is built from HTML, CSS, Vanilla JavaScript, XML, JSON and jQuery these programming languages in it of themselves will not compromise any data. However Perilous Quest utilizes many different software technologies which have their own privacy policies. Perilous Quest Native is built from Electron.
+Perilous Quest is built from HTML, CSS, Vanilla JavaScript, XML, JSON and jQuery these programming languages and libraries in it of themselves will not compromise any data. However Perilous Quest utilizes many different software technologies which have their own privacy policies. The Perilous Quest Native app is built from Electron.
 
 <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original-wordmark.svg" width="40" height="40"></img>
 <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original-wordmark.svg" width="40" height="40"></img>
