@@ -79,7 +79,7 @@ function info_pop() {
       "\n\n" +
       "Version 1.0.0" +
       "\n\n" +
-      "(Beta build 9.9.0-2024)" +
+      "(Beta build 10.0.0-2024)" +
       "\n\n" +
       "Copyright © 2024 Aidan Yip. All rights reserved."
   );
@@ -331,8 +331,8 @@ const h2 = document.getElementsByTagName("h2");
 
 const li = document.getElementsByTagName("li");
 
-// 2.0 (Color Theme Engine)
-/*
+// Color Theme Engine
+
 color_input.addEventListener("change", function (e) {
   // Navbar
   navbar.style.color = e.target.value;
@@ -440,7 +440,6 @@ color_input.addEventListener("change", function (e) {
     h2[i].style.backgroundColor = e.target.value;
   }
 });
-*/
 
 const weapons = [
   { name: "Stick ᛓ ", power: 5 },

@@ -96,5 +96,5 @@ const info_alert = document.getElementById("info_alert");
 info_alert.onclick = info_pop;
 
 function info_pop() {
-  alert("Perilous Quest" + "\n\n" + "Version 1.0.0" + "\n\n" + "(Beta build 9.9.0-2024)" + "\n\n" + "Copyright © 2024 Aidan Yip. All rights reserved.");
+  alert("Perilous Quest" + "\n\n" + "Version 1.0.0" + "\n\n" + "(Beta build 10.0.0-2024)" + "\n\n" + "Copyright © 2024 Aidan Yip. All rights reserved.");
 }
