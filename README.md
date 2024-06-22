@@ -32,6 +32,7 @@ This version includes the base game and several game music tracks. This is in Be
   <li>New 3D redesign and text depth</li>
   <li>Start screen</li>
   <li>Music jukebox</li> 
+  <li>Master volume control</li>
   <li>CD Music Visualiser</li>
   <li>Sound-FX/Sound design</li> 
   <li>Music autoplay</li>
@@ -62,28 +63,6 @@ This version includes the base game and several game music tracks. This is in Be
 <i><b>\*Temporary offline caching functionality is not permanent</b></i>
 <br />
 <i><b>\*Perilous Quest supports being installed as a Progressive Web Application through most desktop/mobile browsers.</b></i>
-
-# Web app install
-
-## macOS Safari web app install (requires macOS Sonoma)
-<img src="https://github.com/devicons/devicon/blob/master/icons/safari/safari-original-wordmark.svg" width="40" height="40"></img>
-
-https://support.apple.com/en-ca/104996
-
-## Windows web app install (works with Windows 10/11 or Edge for MacOS/ChromeOS/Linux)
-<img src="https://github.com/devicons/devicon/blob/master/icons/windows11/windows11-original.svg" width="40" height="40"></img> 
-
-https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/ux
-
-## ChromeOS web app and shortcut install (requires ChromeOS and/or the Chrome browser for MacOS/Windows/Linux)
-<img src="https://github.com/devicons/devicon/blob/master/icons/chrome/chrome-original-wordmark.svg" width="40" height="40"></img>
-
-https://support.google.com/chrome/answer/9658361?hl=en&co=GENIE.Platform%3DDesktop
-
-## Firefox web app install (N/A)
-<img src="https://github.com/devicons/devicon/blob/master/icons/firefox/firefox-original-wordmark.svg" width="40" height="40"></img>
-
-Unfortunately Firefox dropped support for web apps in 2021. Please use another web browser or an older version of Firefox to install on your system.
 
 # Credits
 
@@ -136,6 +115,8 @@ https://support.google.com/chrome/answer/9658361?hl=en&co=GENIE.Platform%3DDeskt
 
 ## Firefox web app install (N/A)
 <img src="https://github.com/devicons/devicon/blob/master/icons/firefox/firefox-original-wordmark.svg" width="40" height="40"></img>
+
+Unfortunately Firefox dropped support for web apps in 2021. Please use another web browser or an older version of Firefox to install on your system.
 
 # Privacy
 
