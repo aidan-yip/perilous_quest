@@ -1517,6 +1517,10 @@ button .md {
   margin-top: 10vh;
 }
 
+#gsc-i-id1 {
+  background-color: #ffffff;
+}
+
 /* desktop */
 @media only screen and (min-width: 950px) {
   .stat[title]:hover::after {
