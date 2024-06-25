@@ -7,19 +7,25 @@ window.addEventListener("offline", function (event) {
 // Mobile Alert
 
 function check_mobile() {
-  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  ) {
     alert("Volume slider not suported on mobile");
     console.log("mobile browser");
-  }else{
+  } else {
     console.log("desktop browser");
   }
-};
+}
 
 // Volume
 
 function updateVolume() {
-  const newVolume = document.getElementById('volume').value;
-  document.querySelectorAll('video, audio, embed, object').forEach(element => element.volume = newVolume);
+  const newVolume = document.getElementById("volume").value;
+  document
+    .querySelectorAll("video, audio, embed, object")
+    .forEach((element) => (element.volume = newVolume));
   if (newVolume >= 0 && newVolume <= 0) {
     document.getElementById("volume_icon").innerText = "no_sound";
   } else {
@@ -29,14 +35,14 @@ function updateVolume() {
   if (newVolume >= 0.1 && newVolume <= 0.4) {
     document.getElementById("volume_icon").innerText = "volume_down_alt";
   } else {
-    null
+    null;
   }
   console.log(newVolume);
   check_mobile();
-};
+}
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('volume').addEventListener('input', updateVolume);
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("volume").addEventListener("input", updateVolume);
 });
 
 // Notifications
@@ -643,7 +649,7 @@ const locations = [
   },
   {
     name: "lose",
-    "button text": [" --> ", "RESPAWN?", "RESPAWN?", "RESPAWN?"],
+    "button text": [" --> ", "RESTART?", "RESTART?", "RESTART?"],
     "button functions": [playselectnull, restart, restart, restart],
     text: "You died. ☠️ Respawn?",
   },
@@ -656,13 +662,15 @@ const locations = [
       "\n" +
       "(You may skip the music in 30 seconds.)",
     display_img:
-      "url('https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/win.png')",
+      "url('https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/win.jpg')",
   },
   {
     name: "easter egg",
     "button text": ["3", "1", "6", "Go to town square?"],
     "button functions": [pickThree, pickOne, pickSix, goTown],
     text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win gold ⚜️!",
+    display_img:
+      "url('https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/easter_egg.jpg')",
   },
   {
     name: "castle",
@@ -687,6 +695,8 @@ const locations = [
     ],
     "button functions": [goJump, fightWerewolf, fightAnglerfish, goCastle],
     text: "There is a massive chasm ahead. You believe you may be able to jump across. Looking down you faintly see some water. You feel exhausted from the journey. Maybe it's time to take a short rest from walking?",
+    display_img:
+      "url('https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/chasm.jpg')",
   },
   {
     name: "jump",
