@@ -643,7 +643,7 @@ const locations = [
   },
   {
     name: "kill monster",
-    "button text": [" --> ", "Go to town square", "Go to cave", "Enter castle"],
+    "button text": [" --> ", "Return to town square", "Return to cave", "Return to castle"],
     "button functions": [playselectnull, goTown, goCave, easterEgg],
     text: 'The enemy screams "ARG!" and withers away. You gain experience points and find gold. Nice! you\'re a natural.',
   },
