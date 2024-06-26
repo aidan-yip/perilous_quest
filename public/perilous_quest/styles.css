@@ -284,7 +284,6 @@ div.pop_icon_div {
   width: 100px;
   height: 100px;
   margin: 10px auto;
-  overflow: hidden;
   border-radius: 50%;
   background: linear-gradient(
     167deg,
@@ -1778,7 +1777,7 @@ button .md {
 
   #open_settings[title]:hover::after {
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     content: attr(title);
     font-size: 10px;
     font-family: var(--fontdefault);
@@ -1796,7 +1795,7 @@ button .md {
 
   #close_settings[title]:hover::after {
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     content: attr(title);
     font-size: 10px;
     font-family: var(--fontdefault);
