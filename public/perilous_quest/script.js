@@ -250,10 +250,10 @@ $("#background").cursorTrail({
   class: "blue_trail",
 });
 
-// Mouse drag game window
+// Mouse drag div block
 
 $(".dragme").draggable({
-	containment: ".container"
+  containment: ".container",
 });
 
 // Circle cursor
@@ -309,6 +309,41 @@ $("#imageUpload").change(function () {
   fasterPreview(this);
 });
 
+// Settings button
+
+open_settings = document.getElementById("open_settings");
+close_settings = document.getElementById("close_settings");
+
+open_settings.onclick = () => {
+  setting_input_div.style.display = "flex";
+  close_settings.style.display = "block";
+  open_settings.style.display = "none";
+}
+
+close_settings.onclick = () => {
+  setting_input_div.style.display = "none";
+  close_settings.style.display = "none";
+  open_settings.style.display = "block";
+}
+
+// Settings animate
+
+setting_input_div = document.getElementById("setting_input_div");
+expand = document.getElementById("expand");
+collapse = document.getElementById("collapse");
+
+expand.onclick = () => {
+  setting_input_div.style.width = "98%";
+  expand.style.display = "none";
+  collapse.style.display = "block";
+};
+
+collapse.onclick = () => {
+  setting_input_div.style.width = "50%";
+  expand.style.display = "block";
+  collapse.style.display = "none";
+};
+
 // Variables
 
 let xp = 0;
@@ -345,7 +380,7 @@ const name_input = document.getElementById("name_input");
 const color_input = document.getElementById("color_input");
 const color_input_two = document.getElementById("color_input_two");
 const color_input_three = document.getElementById("color_input_three");
-const help = document.getElementById("help");
+const settings = document.getElementById("settings");
 
 //Navbar
 
@@ -452,7 +487,7 @@ color_input.addEventListener("change", function (e) {
   //Button color
   button0.style.background = e.target.value;
   profile_container.style.background = e.target.value;
-  help.style.background = e.target.value;
+  settings.style.background = e.target.value;
   name_input.style.background = e.target.value;
   button1.style.background = e.target.value;
   button2.style.background = e.target.value;

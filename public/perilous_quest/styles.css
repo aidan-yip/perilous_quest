@@ -270,10 +270,9 @@ div.pop_icon_div {
   box-shadow: 0px 0px 75px #ffffff;
   border-radius: 25px;
   border: solid 0.5px #292929;
-  transition: 1s ease-in-out 0ms;
 }
 
-#help {
+#settings {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -295,10 +294,10 @@ div.pop_icon_div {
     rgba(0, 91, 171, 1) 100%
   );
   box-shadow: 0px 0px 30px #0000006d;
+  cursor: grab;
   /* fade in */
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
-  transition: 1s ease-in-out 0ms;
   /* float */
   animation-name: floating_two;
   animation-duration: 3s;
@@ -306,14 +305,15 @@ div.pop_icon_div {
   animation-timing-function: ease-in-out;
 }
 
-a#help_button {
-  padding: 0;
+a#open_settings, a#close_settings {
+  padding: 15px;
   color: #ffffff;
   font-family: var(--fontdefault);
   text-shadow: none;
 }
 
-span.md_help {
+
+span.md_help{
   margin: 0 auto;
   font-size: 45px;
 }
@@ -865,7 +865,6 @@ div.block_spin_inner_3 {
   z-index: 2;
   border: 1px solid #5399cb;
   box-shadow: 0px 0px 10px #000000cd;
-  cursor: grab;
   -webkit-backdrop-filter: blur(2px);
   /* chrome/firefox */
   backdrop-filter: blur(2px);
@@ -882,6 +881,7 @@ div.block_spin_inner_3 {
   margin-top: 10px;
   margin-left: 14px;
   margin-right: 14px;
+  z-index: 2;
   padding: 10px;
   color: #ffffff;
   border: 2px solid #000000;
@@ -893,7 +893,7 @@ div.block_spin_inner_3 {
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  transition: width, height, 1s ease-in-out 0ms;
+
   /* float */
   animation-name: floating_two;
   animation-duration: 3s;
@@ -930,11 +930,32 @@ meter::-webkit-meter-even-less-good-value {
   transition: 1s width ease-in-out;
 }
 
+#close_settings {
+  display: none;
+}
+
 #setting_input_div {
-  display: flex;
+  display: none;
+  position: relative;
+  z-index: 2;
   justify-content: center;
-  margin: 0 auto;
-  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  padding-top: 15px;
+  width: 98%;
+  background-color: #35353593;
+  border-radius: 25px;
+  border: 1px solid #717171;
+  overflow-x: scroll;
+  overflow-y: visible;
+  cursor: grab;
+  -webkit-backdrop-filter: blur(7px);
+  /* chrome/firefox */
+  backdrop-filter: blur(7px);
+  border: 1px solid #717171;
+  border-radius: 35px;
+  transition: 1s width ease-in-out;
 }
 
 #color_input {
@@ -969,6 +990,23 @@ meter::-webkit-meter-even-less-good-value {
   width: 20%;
   margin-left: 10px;
   margin-bottom: 11px;
+}
+
+#expand {
+  margin: 3px;
+  margin-left: 20px;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+#collapse {
+  margin: 3px;
+  margin-left: 20px;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
 }
 
 /* Custom Volume range */
@@ -1100,8 +1138,6 @@ input[type="range"]:focus::-ms-fill-upper {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* animate */
-  transition: 1s ease-in-out 0ms;
 }
 
 #controls {
@@ -1633,25 +1669,6 @@ button .md {
     top: 40px;
   }
 
-  #game[title]:hover::after {
-    position: absolute;
-    z-index: 4;
-    content: attr(title);
-    font-size: 10px;
-    font-family: var(--fontdefault);
-    color: rgb(255, 255, 255);
-    text-align: center;
-    text-wrap: nowrap;
-    background-color: rgb(255, 191, 0);
-    text-shadow: 1px 1px #000000, 2px 2px #000000, 3px 3px #000000,
-      4px 4px #000000;
-    padding: 5px;
-    border-radius: 5px;
-    bottom: 30px;
-    left: 30px;
-    box-shadow: 0px 0px 10px #000000;
-  }
-
   button[title]:hover::after {
     position: absolute;
     z-index: 4;
@@ -1760,7 +1777,25 @@ button .md {
     box-shadow: 0px 0px 10px #000000;
   }
 
-  #help_button[title]:hover::after {
+  #open_settings[title]:hover::after {
+    position: absolute;
+    z-index: 1;
+    content: attr(title);
+    font-size: 10px;
+    font-family: var(--fontdefault);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-wrap: nowrap;
+    background-color: rgb(255, 191, 0);
+    text-shadow: 1px 1px #000000, 2px 2px #000000, 3px 3px #000000,
+      4px 4px #000000;
+    padding: 5px;
+    border-radius: 5px;
+    bottom: 100px;
+    box-shadow: 0px 0px 10px #000000;
+  }
+
+  #close_settings[title]:hover::after {
     position: absolute;
     z-index: 1;
     content: attr(title);
@@ -1795,7 +1830,29 @@ button .md {
     left: 100px;
   }
 
-  #help:hover {
+  #settings_out[title]:hover::after {
+    position: absolute;
+    z-index: 1;
+    content: attr(title);
+    font-size: 10px;
+    font-family: var(--fontdefault);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-wrap: nowrap;
+    background-color: rgb(255, 191, 0);
+    text-shadow: 1px 1px #000000, 2px 2px #000000, 3px 3px #000000,
+      4px 4px #000000;
+    padding: 5px;
+    border-radius: 5px;
+    left: -40px;
+    bottom: 50px;
+  }
+
+  #setting_input_div:active {
+    cursor: grabbing;
+  }
+
+  #settings:hover {
     background: linear-gradient(
       167deg,
       rgb(161, 255, 239) 0%,
@@ -1807,6 +1864,10 @@ button .md {
     /* animation */
     animation: shake 1s ease-in-out;
     animation-iteration-count: infinite;
+  }
+
+  #settings:active {
+    cursor: grabbing;
   }
 
   .left:hover {
@@ -1821,10 +1882,6 @@ button .md {
 
   #game:hover {
     box-shadow: 0px 0px 25px #03c7f8;
-  }
-
-  #game:active {
-    cursor: grabbing;
   }
 
   #credits:hover {
@@ -2058,10 +2115,6 @@ button .md {
     padding-top: 0px;
   }
 
-  #help {
-    display: none;
-  }
-
   #color_vid_div {
     height: 30%;
   }
@@ -2199,8 +2252,17 @@ button .md {
     margin-right: 14px;
   }
 
-  .setting_input_div {
+  #setting_input_div {
     width: 98%;
+    margin-bottom: 15px;
+  }
+
+  #expand {
+    display: none;
+  }
+  
+  #collapse {
+    display: none;
   }
 
   #game_meter {

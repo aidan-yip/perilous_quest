@@ -15,7 +15,10 @@
     <!--JQuery-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
     <!--JQuery UI-->
-    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" defer></script>
+    <script
+      src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"
+      defer
+    ></script>
     <!--Favicon-->
     <link
       rel="icon"
@@ -156,10 +159,13 @@
       </div>
     </div>
 
-    <!-- Help float button -->
-    <div id="help">
-      <a target="_self" id="help_button" title="Get Help" onclick="getHelp();"
-        ><span class="material-symbols-outlined md_help"> support </span></a
+    <!-- Settings float button -->
+    <div id="settings" class="dragme">
+      <a target="_self" id="open_settings" title="Settings"
+        ><span class="material-symbols-outlined md_help"> settings </span></a
+      >
+      <a target="_self" id="close_settings" title="Close"
+        ><span class="material-symbols-outlined md_help "> close </span></a
       >
     </div>
 
@@ -298,9 +304,9 @@
         </div>
 
         <!-- Game -->
-        <div id="game" class="dragme" title="Click Here to Drag Up/Down">
+        <div id="game">
           <!-- Player stats -->
-          <div id="stats">
+          <div id="stats" class="dragme">
             <span class="stat" title="XP Level"
               >XP
               <span class="material-symbols-outlined md"> bolt </span>
@@ -325,7 +331,7 @@
           </div>
 
           <!--Progress-->
-          <div id="progress">
+          <div id="progress" class="dragme">
             <p id="meter_text">Progress</p>
             <meter
               min="0"
@@ -395,7 +401,11 @@
            -->
 
           <!--Input Settings -->
-          <div id="setting_input_div">
+          <div
+            id="setting_input_div"
+            class="dragme"
+            title="Click and drag to move"
+          >
             <span class="material-symbols-outlined md">
               format_color_fill
             </span>
@@ -463,6 +473,14 @@
               id="volume"
               title="Change Volume"
             />
+            <div id="expand" title="Click to Expand">
+              <span class="material-symbols-outlined md"> open_in_full </span>
+            </div>
+            <div id="collapse" title="Click to Collapse">
+              <span class="material-symbols-outlined md">
+                close_fullscreen
+              </span>
+            </div>
           </div>
         </div>
 
