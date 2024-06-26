@@ -82,6 +82,17 @@
     box-shadow: 0px 0px 20px 0px #1affe483;
   }
 
+  #help {
+    color: #0bf5de;
+    background: linear-gradient(
+      167deg,
+      rgba(0, 255, 229, 1) 0%,
+      rgb(0, 71, 99) 57%,
+      rgb(0, 33, 70) 100%
+    );
+    box-shadow: 0px 0px 20px 0px #1affe483;
+  }
+
   #text {
     background: linear-gradient(
       167deg,
@@ -149,6 +160,10 @@
     }
 
     #profile_container:hover {
+      background-image: linear-gradient(#1c4d89, #185751);
+    }
+
+    #help:hover {
       background-image: linear-gradient(#1c4d89, #185751);
     }
   }

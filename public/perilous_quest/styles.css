@@ -268,6 +268,45 @@ div.pop_icon_div {
   transition: 1s ease-in-out 0ms;
 }
 
+#help {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  overflow: visible;
+  right: 15px;
+  top: 72vh;
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+  border-radius: 50%;
+  background: linear-gradient(
+    167deg,
+    rgba(0, 255, 211, 1) 0%,
+    rgba(1, 111, 255, 1) 57%,
+    rgba(0, 91, 171, 1) 100%
+  );
+  box-shadow: 0px 0px 30px #0000006d;
+  cursor: grab;
+  transition: 1s ease-in-out 0ms;
+}
+
+a#help_button {
+  padding: 0;
+  color: #ffffff;
+  font-family: var(--fontdefault);
+  text-shadow: none;
+}
+
+span.md_help {
+  margin: 0 auto;
+  font-size: 45px;
+}
+
 #flex {
   position: relative;
   z-index: 1;
@@ -384,7 +423,7 @@ h6 {
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 6px;
+  margin-top: 15px;
   text-align: center;
 }
 
@@ -465,14 +504,14 @@ h6 {
 }
 
 #profile_container {
+  position: fixed;
+  right: 15px;
+  top: 85vh;
+  z-index: 2;
   width: 100px;
   height: 100px;
   margin: 10px auto;
   overflow: hidden;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
   border-radius: 50%;
   background: linear-gradient(
     167deg,
@@ -1706,6 +1745,24 @@ button .md {
     left: 100px;
   }
 
+  #help:active {
+    cursor: grabbing;
+  }
+
+  #help:hover {
+    background: linear-gradient(
+      167deg,
+      rgb(161, 255, 239) 0%,
+      rgb(155, 160, 255) 57%,
+      rgb(181, 160, 255) 100%
+    );
+    box-shadow: 0px 0px 50px 30px #39bdfb;
+    transform: translateY(-5px);
+    /* animation */
+    animation: shake 1s ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
   .left:hover {
     background-color: #ffffff74;
     cursor: pointer;
@@ -1885,8 +1942,6 @@ button .md {
     cursor: not-allowed;
     animation-play-state: paused;
     box-shadow: 0px 0px 30px #ffffff;
-    width: 430px;
-    height: 430px;
     /* animate */
     transition: 1s ease-in-out 0ms;
   }
@@ -1951,6 +2006,10 @@ button .md {
 @media only screen and (max-width: 950px) {
   .background {
     padding-top: 0px;
+  }
+
+  #help {
+    display: none;
   }
 
   #color_vid_div {
@@ -2099,7 +2158,7 @@ button .md {
 
   #namediv {
     flex-direction: column;
-    margin-top: 10px;
+    margin-top: 20px;
   }
 
   #player_name {
