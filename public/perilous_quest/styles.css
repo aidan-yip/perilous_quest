@@ -254,13 +254,13 @@ div.pop_icon_div {
   display: flex;
   flex-direction: column;
   position: fixed;
+  z-index: 10;
   margin: 0 auto;
   margin: 3% 0%;
   padding-bottom: 30px;
   padding-left: 10px;
   padding-right: 10px;
   width: 60%;
-  z-index: 3;
   background: linear-gradient(
     167deg,
     rgb(37, 26, 119) 10%,
@@ -274,18 +274,17 @@ div.pop_icon_div {
 
 #settings {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 0;
   z-index: 2;
   overflow: visible;
+  bottom: 0;
   left: 15px;
   width: 100px;
   height: 100px;
   margin: 10px auto;
-  background-color: #ffffff;
+  overflow: hidden;
   border-radius: 50%;
   background: linear-gradient(
     167deg,
@@ -294,10 +293,10 @@ div.pop_icon_div {
     rgba(0, 91, 171, 1) 100%
   );
   box-shadow: 0px 0px 30px #0000006d;
-  cursor: grab;
   /* fade in */
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
+  transition: 1s ease-in-out 0ms;
   /* float */
   animation-name: floating_two;
   animation-duration: 3s;
@@ -1830,24 +1829,6 @@ button .md {
     left: 100px;
   }
 
-  #settings_out[title]:hover::after {
-    position: absolute;
-    z-index: 1;
-    content: attr(title);
-    font-size: 10px;
-    font-family: var(--fontdefault);
-    color: rgb(255, 255, 255);
-    text-align: center;
-    text-wrap: nowrap;
-    background-color: rgb(255, 191, 0);
-    text-shadow: 1px 1px #000000, 2px 2px #000000, 3px 3px #000000,
-      4px 4px #000000;
-    padding: 5px;
-    border-radius: 5px;
-    left: -40px;
-    bottom: 50px;
-  }
-
   #setting_input_div:active {
     cursor: grabbing;
   }
@@ -1864,10 +1845,6 @@ button .md {
     /* animation */
     animation: shake 1s ease-in-out;
     animation-iteration-count: infinite;
-  }
-
-  #settings:active {
-    cursor: grabbing;
   }
 
   .left:hover {
