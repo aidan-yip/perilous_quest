@@ -276,13 +276,12 @@ div.pop_icon_div {
   position: fixed;
   z-index: 2;
   overflow: visible;
-  right: 15px;
-  top: auto;
+  left: 15px;
+  bottom: 20px;
   width: 100px;
   height: 100px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 65vh;
   background-color: #ffffff;
   border-radius: 50%;
   background: linear-gradient(
@@ -293,7 +292,6 @@ div.pop_icon_div {
   );
   box-shadow: 0px 0px 30px #0000006d;
   cursor: grab;
-  transition: 1s ease-in-out 0ms;
 }
 
 a#help_button {
@@ -963,29 +961,29 @@ meter::-webkit-meter-even-less-good-value {
 /* Custom Volume range */
 
 /*      Dot       */
-input[type=range] {
+input[type="range"] {
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
   width: 100%; /* Specific width is required for Firefox. */
   background: transparent; /* Otherwise white in Chrome */
 }
 
-input[type=range]::-webkit-slider-thumb {
+input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
 }
 
-input[type=range]:focus {
-  outline: none; 
+input[type="range"]:focus {
+  outline: none;
 }
 
-input[type=range]::-ms-track {
+input[type="range"]::-ms-track {
   width: 100%;
   cursor: pointer;
-  background: transparent; 
+  background: transparent;
   border-color: transparent;
   color: transparent;
 }
 
-input[type=range]::-webkit-slider-thumb {
+input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: 1px solid #000000;
   height: 20px;
@@ -998,7 +996,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 /* All the same stuff for Firefox */
-input[type=range]::-moz-range-thumb {
+input[type="range"]::-moz-range-thumb {
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   border: 1px solid #000000;
   height: 20px;
@@ -1009,7 +1007,7 @@ input[type=range]::-moz-range-thumb {
 }
 
 /* All the same stuff for IE */
-input[type=range]::-ms-thumb {
+input[type="range"]::-ms-thumb {
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   border: 1px solid #000000;
   height: 20px;
@@ -1020,7 +1018,7 @@ input[type=range]::-ms-thumb {
 }
 
 /*       Track      */
-input[type=range]::-webkit-slider-runnable-track {
+input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
   height: 7px;
   cursor: pointer;
@@ -1030,11 +1028,11 @@ input[type=range]::-webkit-slider-runnable-track {
   border: 0.2px solid #010101;
 }
 
-input[type=range]:focus::-webkit-slider-runnable-track {
+input[type="range"]:focus::-webkit-slider-runnable-track {
   background: #1793ff;
 }
 
-input[type=range]::-moz-range-track {
+input[type="range"]::-moz-range-track {
   width: 100%;
   height: 7px;
   cursor: pointer;
@@ -1044,7 +1042,7 @@ input[type=range]::-moz-range-track {
   border: 0.2px solid #010101;
 }
 
-input[type=range]::-ms-track {
+input[type="range"]::-ms-track {
   width: 100%;
   height: 7px;
   cursor: pointer;
@@ -1053,22 +1051,22 @@ input[type=range]::-ms-track {
   border-width: 16px 0;
   color: transparent;
 }
-input[type=range]::-ms-fill-lower {
+input[type="range"]::-ms-fill-lower {
   background: #1793ff;
   border: 0.2px solid #010101;
   border-radius: 10px;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
-input[type=range]:focus::-ms-fill-lower {
+input[type="range"]:focus::-ms-fill-lower {
   background: #1793ff;
 }
-input[type=range]::-ms-fill-upper {
+input[type="range"]::-ms-fill-upper {
   background: #1793ff;
   border: 0.2px solid #010101;
   border-radius: 10px;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
-input[type=range]:focus::-ms-fill-upper {
+input[type="range"]:focus::-ms-fill-upper {
   background: #1793ff;
 }
 
