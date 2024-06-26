@@ -250,50 +250,11 @@ $("#background").cursorTrail({
   class: "blue_trail",
 });
 
-// Mouse drag window
+// Mouse drag game window
 
-dragElement(document.getElementById("help"));
-
-function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "header")) {
-    // if present, the header is where you move the DIV from:
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-  } else {
-    // otherwise, move the DIV from anywhere inside the DIV:
-    elmnt.onmousedown = dragMouseDown;
-  }
-
-  function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // get the mouse cursor position at startup:
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
-
-  function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    // set the element's new position:
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  }
-
-  function closeDragElement() {
-    // stop moving when mouse button is released:
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
-}
+$(".dragme").draggable({
+	containment: ".container"
+});
 
 // Circle cursor
 
@@ -360,7 +321,7 @@ let monsterHealth;
 let monsterLevel;
 let inventory = ["stick ᛓ "];
 
-//Buttons and Stats
+//Buttons, Stats and Displays
 
 const button0 = document.querySelector("#button0");
 const button1 = document.querySelector("#button1");
@@ -384,6 +345,7 @@ const name_input = document.getElementById("name_input");
 const color_input = document.getElementById("color_input");
 const color_input_two = document.getElementById("color_input_two");
 const color_input_three = document.getElementById("color_input_three");
+const help = document.getElementById("help");
 
 //Navbar
 
@@ -490,6 +452,7 @@ color_input.addEventListener("change", function (e) {
   //Button color
   button0.style.background = e.target.value;
   profile_container.style.background = e.target.value;
+  help.style.background = e.target.value;
   name_input.style.background = e.target.value;
   button1.style.background = e.target.value;
   button2.style.background = e.target.value;
@@ -688,7 +651,12 @@ const locations = [
   },
   {
     name: "kill monster",
-    "button text": [" --> ", "Return to town square", "Return to cave", "Return to castle"],
+    "button text": [
+      " --> ",
+      "Return to town square",
+      "Return to cave",
+      "Return to castle",
+    ],
     "button functions": [playselectnull, goTown, goCave, easterEgg],
     text: 'The enemy screams "ARG!" and withers away. You gain experience points and find gold. Nice! you\'re a natural.',
   },

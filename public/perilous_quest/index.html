@@ -13,10 +13,9 @@
     <meta charset="utf-8" />
     <meta name="theme-color" content="#03c7f8" />
     <!--JQuery-->
-    <script
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      defer
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    <!--JQuery UI-->
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" defer></script>
     <!--Favicon-->
     <link
       rel="icon"
@@ -157,8 +156,27 @@
       </div>
     </div>
 
+    <!-- Help float button -->
+    <div id="help">
+      <a target="_self" id="help_button" title="Get Help" onclick="getHelp();"
+        ><span class="material-symbols-outlined md_help"> support </span></a
+      >
+    </div>
+
+    <!--Upload Player photo -->
+    <div id="profile_container" title="Upload Photo">
+      <image id="profileImage" src="/public/icons/upload.png" />
+    </div>
+    <input
+      id="imageUpload"
+      type="file"
+      name="profile_photo"
+      placeholder=""
+      required=""
+    />
+
     <div id="background">
-      <div class="background">
+      <div class="background container">
         <!--Navbar Desktop-->
         <div id="flex_column">
           <!--Navbar Desktop inner-->
@@ -261,29 +279,6 @@
           </div>
         </div>
 
-        <!-- Help float button -->
-        <div id="help">
-          <a
-            target="_self"
-            id="help_button"
-            title="Get Help"
-            onclick="getHelp();"
-            ><span class="material-symbols-outlined md_help"> support </span></a
-          >
-        </div>
-
-        <!--Upload Player photo -->
-        <div id="profile_container" title="Upload Photo">
-          <image id="profileImage" src="/public/icons/upload.png" />
-        </div>
-        <input
-          id="imageUpload"
-          type="file"
-          name="profile_photo"
-          placeholder=""
-          required=""
-        />
-
         <!-- color video -->
         <div id="color_vid_div">
           <video
@@ -303,7 +298,7 @@
         </div>
 
         <!-- Game -->
-        <div id="game">
+        <div id="game" class="dragme" title="Click Here to Drag Up/Down">
           <!-- Player stats -->
           <div id="stats">
             <span class="stat" title="XP Level"
