@@ -316,12 +316,14 @@ close_settings = document.getElementById("close_settings");
 
 open_settings.onclick = () => {
   setting_input_div.style.display = "flex";
+  open_settings.style.rotate = "45deg";
   close_settings.style.display = "block";
   open_settings.style.display = "none";
-}
+};
 
 close_settings.onclick = () => {
   setting_input_div.style.display = "none";
+  open_settings.style.rotate = "0deg";
   close_settings.style.display = "none";
   open_settings.style.display = "block";
 }
