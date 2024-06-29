@@ -716,8 +716,13 @@ const locations = [
   },
   {
     name: "win",
-    "button text": [" --> ", "Replay?", "Replay?", "Continue"],
-    "button functions": [playselectnull, restart, restart, goCredits_one],
+    "button text": [" --> ", "Continue", "Continue", "Continue"],
+    "button functions": [
+      playselectnull,
+      goCredits_one,
+      goCredits_one,
+      goCredits_one,
+    ],
     text:
       "CONGRATULATIONS YOU WIN 🎉! You defeat the dragon and free the kingdom! The darkness flees as the sun rises on the horizon. A new day is dawning. The mighty have fallen as the humble arise to take their place.\n" +
       "\n" +
@@ -924,7 +929,12 @@ const locations = [
   {
     name: "Credits 8",
     "button text": ["<--", "Download the soundtrack", "Replay?", "Main Menu"],
-    "button functions": [goCredits_seven, playselectnull, restart, leaveGame],
+    "button functions": [
+      goCredits_seven,
+      playselectnull,
+      restart_alert,
+      leaveGame,
+    ],
     text:
       "THANKS FOR PLAYING!!!" +
       "\n" +
@@ -1792,6 +1802,15 @@ function button_enable() {
   button2.style.filter = "opacity(100%)";
   button3.style.filter = "opacity(100%)";
   button4.style.filter = "opacity(100%)";
+}
+
+function restart_alert() {
+  let text = "Replay Game?";
+  if (confirm(text) == true) {
+    restart();
+  } else {
+    null;
+  }
 }
 
 function restart() {
