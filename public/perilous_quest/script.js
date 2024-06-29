@@ -181,6 +181,17 @@ function art() {
   }
 }
 
+// Bandcamp link
+
+function goBandcamp() {
+  let text = "Leave Game and go to Bandcamp?";
+  if (confirm(text) == true) {
+    location.href = "";
+  } else {
+    null;
+  }
+}
+
 //Cursor trail
 
 (function ($) {
@@ -326,7 +337,7 @@ close_settings.onclick = () => {
   open_settings.style.rotate = "0deg";
   close_settings.style.display = "none";
   open_settings.style.display = "block";
-}
+};
 
 // Settings animate
 
@@ -699,14 +710,14 @@ const locations = [
   },
   {
     name: "lose",
-    "button text": [" --> ", "RESTART?", "RESTART?", "RESTART?"],
+    "button text": [" --> ", "Restart?", "Restart?", "Restart?"],
     "button functions": [playselectnull, restart, restart, restart],
     text: "You died. ☠️ Respawn?",
   },
   {
     name: "win",
-    "button text": [" --> ", "REPLAY?", "REPLAY?", "REPLAY?"],
-    "button functions": [playselectnull, restart, restart, restart],
+    "button text": [" --> ", "Replay?", "Replay?", "Continue"],
+    "button functions": [playselectnull, restart, restart, goCredits_one],
     text:
       "CONGRATULATIONS YOU WIN 🎉! You defeat the dragon and free the kingdom! The darkness flees as the sun rises on the horizon. A new day is dawning. The mighty have fallen as the humble arise to take their place.\n" +
       "\n" +
@@ -786,6 +797,143 @@ const locations = [
     "button functions": [attack, dodge, surrender, norun],
     text: "You are fighting an enemy ⚔️. LET'S GO!",
   },
+  {
+    name: "Credits 1",
+    "button text": ["<--", "Download the soundtrack", "🎉", "-->"],
+    "button functions": [
+      playselectnull,
+      playselectnull,
+      playdefeat,
+      goCredits_two,
+    ],
+    text:
+      "Newave Oceans & Newave Media Presents..." + "\n" + "\n" + "\n" + "\n",
+  },
+  {
+    name: "Credits 2",
+    "button text": ["<--", "Download the soundtrack", "🎉", "-->"],
+    "button functions": [
+      goCredits_one,
+      playselectnull,
+      playdefeat,
+      goCredits_three,
+    ],
+    text: "Perilous Quest" + "\n" + "\n" + "\n" + "\n",
+  },
+  {
+    name: "Credits 3",
+    "button text": ["<--", "Download the soundtrack", "🎉", "-->"],
+    "button functions": [
+      goCredits_two,
+      playselectnull,
+      playdefeat,
+      goCredits_four,
+    ],
+    text:
+      "Original project idea by FreeCodeCamp" +
+      "\n" +
+      "3D graphics made with Spline.design" +
+      "\n" +
+      "Mods and redesign by Aidan Y." +
+      "\n" +
+      "Powered by Github" +
+      "\n" +
+      "Made in Visual Studio Code" +
+      "\n" +
+      "\n" +
+      "\n" +
+      "\n",
+  },
+  {
+    name: "Credits 4",
+    "button text": ["<--", "Download the soundtrack", "🎉", "-->"],
+    "button functions": [
+      goCredits_three,
+      playselectnull,
+      playdefeat,
+      goCredits_five,
+    ],
+    text: "Made with Mac " + "\n" + "\n" + "\n" + "\n",
+  },
+  {
+    name: "Credits 5",
+    "button text": ["<--", "Download the soundtrack", "🎉", "-->"],
+    "button functions": [
+      goCredits_four,
+      playselectnull,
+      playdefeat,
+      goCredits_six,
+    ],
+    text:
+      "🎧 Music 🎧" +
+      "\n" +
+      '"Lovely Town" by Skremzy' +
+      "\n" +
+      '"Boss Theme" by Audiophobia' +
+      "\n" +
+      "Original Soundtrack by Newave Oceans" +
+      "\n" +
+      "\n" +
+      "\n" +
+      "\n",
+  },
+  {
+    name: "Credits 6",
+    "button text": ["<--", "Download the soundtrack", "🎉", "-->"],
+    "button functions": [
+      goCredits_five,
+      playselectnull,
+      playdefeat,
+      goCredits_seven,
+    ],
+    text:
+      "🎨 Art 🎨" +
+      "\n" +
+      'Marsh, Tanner. "Dragon" 2024' +
+      "\n" +
+      'Marsh, Tanner. "Display Art" 2024' +
+      "\n" +
+      "\n" +
+      "\n" +
+      "\n",
+  },
+  {
+    name: "Credits 7",
+    "button text": ["<--", "Download the soundtrack", "🎉", "-->"],
+    "button functions": [
+      goCredits_six,
+      playselectnull,
+      playdefeat,
+      goCredits_eight,
+    ],
+    text:
+      "🧪 Beta Testers 🧪" +
+      "\n" +
+      "Daniel G. - macOS" +
+      "\n" +
+      "Nait Welsh - macOS" +
+      "\n" +
+      "Benjamin Marsh - iOS" +
+      "\n" +
+      "Mackenzie Dy - Windows" +
+      "\n" +
+      "\n" +
+      "\n" +
+      "\n",
+  },
+  {
+    name: "Credits 8",
+    "button text": ["<--", "Download the soundtrack", "Replay?", "Main Menu"],
+    "button functions": [goCredits_seven, playselectnull, restart, leaveGame],
+    text:
+      "THANKS FOR PLAYING!!!" +
+      "\n" +
+      "Did you find the secret..? 👀" +
+      "\n" +
+      "\n" +
+      "\n" +
+      "\n",
+  },
 ];
 
 // initialize buttons
@@ -841,6 +989,7 @@ function goTown() {
   secret.pause();
   secret.currentTime = 0;
   //meter style
+  text.style.textAlign = "justify";
   meter.setAttribute("value", "1");
   //Secret game enable button
   button_enable_secret();
@@ -927,6 +1076,42 @@ function goMine() {
   defeat_boss.currentTime = 0;
   //html style
   meter.setAttribute("value", "90");
+}
+
+function goCredits_one() {
+  update(locations[14]);
+  text.style.textAlign = "center";
+  //Wonder
+  reprise.currentTime = 0;
+  reprise.pause();
+}
+
+function goCredits_two() {
+  update(locations[15]);
+}
+
+function goCredits_three() {
+  update(locations[16]);
+}
+
+function goCredits_four() {
+  update(locations[17]);
+}
+
+function goCredits_five() {
+  update(locations[18]);
+}
+
+function goCredits_six() {
+  update(locations[19]);
+}
+
+function goCredits_seven() {
+  update(locations[20]);
+}
+
+function goCredits_eight() {
+  update(locations[21]);
 }
 
 function norunmine() {
@@ -1444,8 +1629,6 @@ function fightDragon() {
   button_enable();
 }
 
-// document.getElementById("myDIV").style.display = "none";  SAMPLE CODE TO REMOVE BUTTON OPTION
-
 // Fight function
 function goFight() {
   update(locations[3]);
@@ -1590,7 +1773,6 @@ function winGame() {
   reprise.currentTime = 0;
   reprise.play();
   meter.setAttribute("value", "100");
-  // document.getElementById('credits').click(); <-- Code to link to credits page in the future
 }
 
 function button_disable() {
