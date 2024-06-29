@@ -998,9 +998,12 @@ function goTown() {
   //Secret
   secret.pause();
   secret.currentTime = 0;
+  //Home
+  pauseHome();
   //meter style
-  text.style.textAlign = "justify";
   meter.setAttribute("value", "1");
+  //Text justify
+  text.style.textAlign = "justify";
   //Secret game enable button
   button_enable_secret();
 }
@@ -1094,6 +1097,8 @@ function goCredits_one() {
   //Wonder
   reprise.currentTime = 0;
   reprise.pause();
+  //Home
+  playHome();
 }
 
 function goCredits_two() {
@@ -1254,42 +1259,6 @@ function pausetown() {
   lovely_town.pause();
 }
 
-//Defeat Boss theme
-let defeat_boss = document.getElementById("defeat_boss");
-
-function playdefeat() {
-  defeat_boss.currentTime = 0;
-  defeat_boss.play();
-}
-
-function pausedefeat() {
-  defeat_boss.pause();
-}
-
-//Lose theme
-let lose_wav = document.getElementById("lose");
-
-function playlose() {
-  lose_wav.currentTime = 0;
-  lose_wav.play();
-}
-
-function pauselose() {
-  lose_wav.pause();
-}
-
-//Win (Wonder reprise)
-let reprise = document.getElementById("reprise");
-
-function playreprise() {
-  reprise.play();
-}
-
-function pausereprise() {
-  reprise.pause();
-  reprise.currentTime = 0;
-}
-
 //Shop theme
 let shop = document.getElementById("shop");
 
@@ -1366,6 +1335,53 @@ function playsecret() {
 function pausesecret() {
   secret.pause();
   secret.currentTime = 0;
+}
+
+//Defeat Boss theme
+let defeat_boss = document.getElementById("defeat_boss");
+
+function playdefeat() {
+  defeat_boss.currentTime = 0;
+  defeat_boss.play();
+}
+
+function pausedefeat() {
+  defeat_boss.pause();
+}
+
+//Lose theme
+let lose_wav = document.getElementById("lose");
+
+function playlose() {
+  lose_wav.currentTime = 0;
+  lose_wav.play();
+}
+
+function pauselose() {
+  lose_wav.pause();
+}
+
+//Win (Wonder reprise)
+let reprise = document.getElementById("reprise");
+
+function playreprise() {
+  reprise.play();
+}
+
+function pausereprise() {
+  reprise.pause();
+  reprise.currentTime = 0;
+}
+
+let home = document.getElementById("home");
+
+function playHome() {
+  home.play();
+}
+
+function pauseHome() {
+  home.pause();
+  home.currentTime = 0;
 }
 
 // Fight
