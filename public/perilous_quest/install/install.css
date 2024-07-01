@@ -157,6 +157,7 @@ a,
 
 .link {
   font-family: var(--fontsecond);
+  border: solid 2px #22d3ff;
   padding: 30px;
 }
 
@@ -307,6 +308,19 @@ a,
   transition: width, height, 1s ease-in-out 0ms;
 }
 
+#inner_clear {
+  width: 90%;
+  height: auto;
+  padding: 10px;
+  padding-bottom: 20px;
+  margin: 30px auto;
+  background-color: #35353593;
+  border-radius: 35px;
+  border: 1px solid #717171;
+  color: #ffffff;
+  box-shadow: 0px 0px 25px #ffffff;
+}
+
 ul {
   text-align: center;
   list-style: none;
@@ -369,7 +383,7 @@ h3 {
   text-shadow: 0px 0px 10px #9e69ff, 1px 1px #000000, 2px 2px #000000,
     3px 3px #000000, 4px 4px #000000;
   font-size: 20px;
-  padding: 30px 10px 30px 10px;
+  padding: 50px 10px 30px 10px;
   border-bottom: none;
   letter-spacing: normal;
   /* fade in */
