@@ -27,7 +27,7 @@ html,
 body {
   cursor: url("/Public/favicon.ico"), default;
   /* just change the cursor.ico path to your location */
-  margin:0;
+  margin: 0;
 }
 
 @keyframes fadeInAnimation {
@@ -112,8 +112,7 @@ h1 {
   text-align: center;
   padding-left: 5%;
   padding-right: 5%;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin: auto;
   font-family: var(--fontdefault);
   font-size: 100px;
   color: rgb(73, 228, 255);
@@ -160,8 +159,8 @@ button {
 }
 
 #sharebutton {
-  margin-top: 1%;
-  padding: 20px 100px;
+  margin-top: 6%;
+  padding: 20px 20px;
   animation: none;
 }
 
@@ -234,6 +233,22 @@ a:visited {
 @keyframes mymove {
   50% {
     font-size: 30px;
+  }
+}
+
+/* Desktop Wide */
+
+@media only screen and (min-width: 1500px) {
+
+  h1 {
+    width: 65%;
+  }
+
+  button {
+    padding-top: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 2%;
   }
 }
 
