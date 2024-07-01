@@ -619,6 +619,7 @@ svg {
 
   .link {
     padding: 10px;
+    border: none;
   }
 
   a,
