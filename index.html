@@ -1,1135 +1,309 @@
-<!--
-//
-//  Perilous Quest
-//
-//  Created by Aidan Yip on 2024-01-22.
-//  Copyright Aidan Yip 2024.
-//
--->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="theme-color" content="#03c7f8" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="description"
+      content="A text-based 8-Bit RPG game. Journey, Fight, Discover a new world!"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <!--JQuery-->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
-    <!--JQuery UI-->
-    <script
-      src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"
-      defer
-    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!--Favicon-->
     <link
       rel="icon"
       type="image/x-icon"
       href="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/favicon.ico"
     />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-    />
     <meta name="color-scheme" content="dark light" />
     <!--Apple idevice touch icon-->
     <link rel="apple-touch-icon" href="./public/icons/homescreen192.png" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
     <!--Apple idevice fullscreen-->
     <meta
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
     />
-    <!-- CSS link -->
-    <link rel="stylesheet preload" href="./styles.css" as="style" />
-    <link rel="stylesheet preload" href="./dark_mode.css" as="style" />
+    <!--Apple idevice splash screen-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-2048-2732.jpg"
+      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-2732-2048.jpg"
+      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-1668-2388.jpg"
+      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-2388-1668.jpg"
+      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-1536-2048.jpg"
+      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-2048-1536.jpg"
+      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-1488-2266.jpg"
+      media="(device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-2266-1488.jpg"
+      media="(device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-1640-2360.jpg"
+      media="(device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-2360-1640.jpg"
+      media="(device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-1668-2224.jpg"
+      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-2224-1668.jpg"
+      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-1620-2160.jpg"
+      media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-2160-1620.jpg"
+      media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-1290-2796.jpg"
+      media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-2796-1290.jpg"
+      media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-1179-2556.jpg"
+      media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-2556-1179.jpg"
+      media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-1284-2778.jpg"
+      media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-2778-1284.jpg"
+      media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-1170-2532.jpg"
+      media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-2532-1170.jpg"
+      media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-1125-2436.jpg"
+      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-2436-1125.jpg"
+      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-1242-2688.jpg"
+      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-2688-1242.jpg"
+      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-828-1792.jpg"
+      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-1792-828.jpg"
+      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-1242-2208.jpg"
+      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-2208-1242.jpg"
+      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-750-1334.jpg"
+      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-1334-750.jpg"
+      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-640-1136.jpg"
+      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="public/splash/apple-splash-1136-640.jpg"
+      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    />
+    <!--CSS link-->
+    <link rel="stylesheet preload" href="./start.css" as="style" />
+    <!-- Manifest JSON -->
+    <link rel="manifest" href="./manifest.json" />
     <!-- CSS preconnect font-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Google Search Console verification-->
+    <meta name="google-site-verification" content="PGgMGySezatn_a9zqEHbn8lgbGvwszESTK1gDrNe4Kk" />
     <!--Google material symbol icons-->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
-    <!-- Manifest JSON -->
-    <link rel="manifest" href="/manifest.json" as="fetch" />
     <title>Perilous Quest</title>
-    <!-- Display image prefetch-->
-    <link
-      rel="prefetch"
-      href="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/town.jpg"
-    />
-    <link
-      rel="prefetch"
-      href="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/shop.jpg"
-    />
-    <link
-      rel="prefetch"
-      href="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/cave.png"
-    />
-    <link
-      rel="prefetch"
-      href="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/castle.jpg"
-    />
-    <link
-      rel="prefetch"
-      href="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/chasm.jpg"
-    />
-    <link
-      rel="prefetch"
-      href="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/deep_caves.png"
-    />
-    <link
-      rel="prefetch"
-      href="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/ice_mine.png"
-    />
-    <link
-      rel="prefetch"
-      href="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/win.jpg"
-    />
-    <link
-      rel="prefetch"
-      href="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/easter_egg.jpg"
-    />
-    <!-- HTML style -->
-    <style>
-      #dragon_back {
-        background-image: url("https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/dragon2.png");
-      }
-
-      div#poplogo {
-        background-image: url("https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/icons/homescreen192.png");
-      }
-      div#poplogo_mobile {
-        background-image: url("https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/icons/homescreen144.png");
-      }
-
-      div#gamelogo {
-        background-image: url("https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/gamelogo.jpg");
-      }
-
-      #cd {
-        background-image: url("https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/cd.png");
-      }
-
-      #display {
-        background-image: url("https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/town.jpg");
-      }
-    </style>
   </head>
-
   <body>
-    <!-- Circle cursor-->
-    <!--
-    <div id="invertedcursor"></div>
-    -->
-
-    <!-- Popup box-->
-    <div id="popback">
-      <div
-        id="popup"
-        title="Location Display"
-        data-tilt
-        data-tilt-max="3"
-        data-tilt-speed="9000"
-        data-tilt-glare
-        data-tilt-max-glare="0.2"
-      >
-        <button id="popclose" tabindex="0" title="Close">X</button>
-        <div class="img_div pop_icon_div">
-          <img
-            onContextMenu="return false;"
-            src="/Public/3d/app_icon_square.png"
-            id="shape"
-          />
-        </div>
-        <ul>
-          <li id="yellow">Welcome to Perilous Quest!</li>
-          <br />
-          <p>Version 1.0.0 &lpar;Beta build 10.0.0-2024&rpar;</p>
-          <br />
-          <li id="yellow">
-            This game is currently in beta testing and may be incomplete.
-          </li>
-          <br />
-          <li id="yellow">Use a Desktop for the best experience</li>
-          <br />
-          <li id="yellow">Headphones are recommended</li>
-          <br />
-          <p>Copyright © 2024 Aidan Yip. All rights reserved.</p>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Settings float button -->
-    <div id="settings">
-      <a target="_self" id="open_settings" title="Settings"
-        ><span class="material-symbols-outlined md_help"> settings </span></a
-      >
-      <a target="_self" id="close_settings" title="Close"
-        ><span class="material-symbols-outlined md_help"> close </span></a
-      >
-    </div>
-
-    <!--Upload Player photo -->
-    <div id="profile_container" title="Upload Photo">
-      <image id="profileImage" src="/public/icons/upload.png" />
-    </div>
-    <input
-      id="imageUpload"
-      type="file"
-      name="profile_photo"
-      placeholder=""
-      required=""
-    />
-
     <div id="background">
-      <div class="background container">
-        <!--Navbar Desktop-->
-        <div id="flex_column">
-          <!--Navbar Desktop inner-->
-          <div id="navbar">
-            <a
-              target="_self"
-              id="navlink"
-              title="Go Back"
-              onclick="leaveGame();"
-              ><span class="material-symbols-outlined md">arrow_back_ios</span>
-              Back</a
-            >
-
-            <a href="#audio_players" target="_self" id="navlink" title="Jukebox"
-              ><span class="material-symbols-outlined md">music_note</span>
-              Music</a
-            >
-
-            <a target="_self" id="navlink" title="Help" onclick="getHelp();"
-              ><span class="material-symbols-outlined md">question_mark</span>
-              Help</a
-            >
-
-            <!-- Game title header desktop -->
-            <h1 id="navtitle_desk">PERILOUS QUEST</h1>
-
-            <div id="menu_button" title="Menu">
-              <span class="material-symbols-outlined md" id="menu_button_span">
-                menu
-              </span>
-            </div>
-          </div>
-
-          <!-- nav menu list -->
-          <div id="list_menu">
-            <a
-              target="_self"
-              id="list_one"
-              class="list_menu_link"
-              title="Install App"
-              onclick="installGame();"
-              ><span class="material-symbols-outlined list_one md"
-                >download</span
-              >
-              Install</a
-            >
-
-            <a
-              href="#media"
-              target="_self"
-              id="list_two"
-              class="list_menu_link"
-              title="Game Media"
-              ><span class="material-symbols-outlined list_two md"
-                >videocam</span
-              >
-              Media</a
-            >
-
-            <a
-              target="_self"
-              id="list_two_b"
-              class="list_menu_link"
-              title="Art Gallery"
-              onclick="art();"
-              ><span class="material-symbols-outlined list_two_b md"
-                >palette</span
-              >
-              Art</a
-            >
-
-            <a
-              href="#credits"
-              target="_self"
-              id="list_three"
-              class="list_menu_link"
-              title="Game Credits"
-              ><span class="material-symbols-outlined list_three md"
-                >movie</span
-              >
-              Credits</a
-            >
-
-            <a
-              target="_self"
-              id="list_four"
-              class="list_menu_link"
-              title="Reset Game"
-              onclick="gameReset();"
-              ><span class="material-symbols-outlined list_four md"
-                >refresh</span
-              >
-              Reset</a
-            >
-
-            <div id="info_alert" title="About Game">
-              <span class="material-symbols-outlined list_five md"> info </span>
-              About
-            </div>
-          </div>
+      <div class="back">
+        <div id="infodiv">
+          <p class="version">
+            <a href="read/index.html" tabindex="0" title="Release Notes">v1.0.0</a>
+          </p>
+          <p class="hint">You can also use Tab + Space</p>
+          <p id="clock" title="Current Time"></p>
         </div>
 
-        <!-- color video -->
-        <div id="color_vid_div">
-          <video
-            autoplay
-            muted
-            loop
-            disablePictureInPicture
-            playsinline
-            controlsList="nodownload"
-            id="color_vid"
+        <button onclick="playmusic();" class="music" id="music">
+          (Tap here to turn audio on 🔊)
+        </button>
+
+        <p id="date" title="Today's Date"></p>
+
+        <div class="titlediv">
+          <h1>PERILOUS QUEST</h1>
+        </div>
+
+        <div class="buttondiv">
+          <button
+            class="startbutton"
+            id="startbutton"
+            tabindex="0"
+            title="New Game"
           >
-            <source
-              src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/video/color_motion.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div>
-
-        <!-- Game -->
-        <div id="game">
-          <!-- Player stats -->
-          <div id="stats" class="dragme">
-            <span class="stat" title="XP Level"
-              >XP
-              <span class="material-symbols-outlined md"> bolt </span>
-              <strong><span id="xpText">0</span></strong></span
-            >
-            <span class="stat" title="Health Level"
-              >Health
-              <span class="material-symbols-outlined md"> heart_plus </span>
-              <strong><span id="healthText">300</span></strong></span
-            >
-            <span class="stat" title="Gold Level"
-              >Gold
-              <span class="material-symbols-outlined md"> mintmark </span>
-              <strong><span id="goldText">100</span></strong></span
-            >
-
-            <span class="stat" title="Score Points"
-              >Score
-              <span class="material-symbols-outlined md"> speed </span>
-              <strong><span id="scoreText">00</span></strong></span
-            >
-          </div>
-
-          <!--Progress-->
-          <div id="progress" class="dragme">
-            <p id="meter_text">Progress</p>
-            <meter
-              min="0"
-              max="100"
-              value="1"
-              id="game_meter"
-              title="Progress Meter"
-            ></meter>
-          </div>
-
-          <!-- Display  -->
-          <div
-            id="display"
-            title="Location Display"
-            data-tilt
-            data-tilt-max="8"
-            data-tilt-speed="9000"
-            data-tilt-glare
-            data-tilt-max-glare="0.5"
-            data-tilt-transition="false"
-          ></div>
-
-          <!-- Controls -->
-          <div id="controls">
-            <button id="button1" class="move" tabindex="0" title="Action One">
-              Visit shop
-            </button>
-            <button id="button2" class="move" tabindex="0" title="Action Two">
-              Walk to cave
-            </button>
-            <button id="button3" class="move" tabindex="0" title="Action Three">
-              Fight Wizard
-            </button>
-            <button id="button4" class="move" tabindex="0" title="Action Four">
-              Enter castle
-            </button>
-          </div>
-
-          <!-- Monster stats -->
-          <div id="monsterStats" title="Enemy-Stat Display">
-            <span class="monstat"
-              >Enemy Name: <strong><span id="monsterName"></span></strong
-            ></span>
-            <span class="monstat"
-              >Health: <strong><span id="monsterHealth"></span></strong
-            ></span>
-            <span class="monstat"
-              >Level: <strong><span id="monsterLevel"></span></strong
-            ></span>
-          </div>
-
-          <!-- Info Text -->
-
-          <div
-            data-tilt
-            data-tilt-reverse="true"
-            id="text"
-            title="Info-Text Display"
+            CLICK/TAP TO START
+          </button>
+          <button
+            class="sharebutton md"
+            id="sharebutton"
+            tabindex="0"
+            title="Share"
           >
-            Welcome to Perilous Quest. You must find and defeat the dragon that
-            has brought great darkness over the land. You are in the town
-            square. Where do you want to go? Use the buttons above.
-          </div>
-
-          <!-- Game title header mobile
-          <h1 id="navtitle_mobile">PERILOUS QUEST</h1>
-           -->
-
-          <!--Input Settings -->
-          <div
-            id="setting_input_div"
-            class="dragme"
-            title="Click and drag to move"
-          >
-            <span class="material-symbols-outlined md">
-              format_color_fill
-            </span>
-            <input
-              type="color"
-              id="color_input"
-              class="settingInput"
-              list="presetColors"
-              title="Select Color Theme"
-            />
-            <datalist id="presetColors">
-              <!-- Light colors presets -->
-              <option value="#FF7978"></option>
-              <option value="#73E396"></option>
-              <option value="#ADAFFF"></option>
-              <option value="#FFCA75"></option>
-              <!-- Dark colors presets -->
-              <option value="#EC8CE3"></option>
-              <option value="#AFDD6C"></option>
-              <option value="#73BFFF"></option>
-              <option value="#FF8D2E"></option>
-            </datalist>
-
-            <span class="material-symbols-outlined md">
-              format_color_text
-            </span>
-            <input
-              type="color"
-              id="color_input_two"
-              class="settingInput"
-              list="presetColors_two"
-              title="Select Text Theme"
-            />
-            <datalist id="presetColors_two">
-              <!-- Light colors presets -->
-              <option value="#111111"></option>
-              <!-- Dark colors presets -->
-              <option value="#ffffff"></option>
-            </datalist>
-
-            <span class="material-symbols-outlined md"> border_color </span>
-            <input
-              type="color"
-              id="color_input_three"
-              class="settingInput"
-              list="presetColors_three"
-              title="Select Display Border Theme"
-            />
-            <datalist id="presetColors_three">
-              <!-- Light colors presets -->
-              <option value="#000000"></option>
-              <!-- Dark colors presets -->
-              <option value="#ffffff"></option>
-            </datalist>
-
-            <span class="material-symbols-outlined" id="volume_icon">
-              volume_up
-            </span>
-            <input
-              type="range"
-              min="0"
-              max="1"
-              step="0.1"
-              value="1.0"
-              id="volume"
-              title="Change Volume"
-            />
-            <div id="expand" title="Click to Expand">
-              <span class="material-symbols-outlined md"> open_in_full </span>
-            </div>
-            <div id="collapse" title="Click to Collapse">
-              <span class="material-symbols-outlined md">
-                close_fullscreen
-              </span>
-            </div>
-          </div>
+            <span class="material-symbols-outlined"> share </span>
+          </button>
         </div>
+      </div>
 
-        <!--Enter Player name-->
-        <div id="namediv">
-          <div id="flex">
-            <input
-              id="name_input"
-              type="text"
-              placeholder="Add Player Name"
-              title="Enter a name for Player One"
-            />
-            <button onclick="hello()" id="button0" title="Click/Tap to Add">
-              <span class="material-symbols-outlined md">person_add</span>
-            </button>
-          </div>
-
-          <p id="player_name"></p>
-        </div>
-
-        <p id="machint">Use "⌘" + "-" or "+" on Mac to scale the game</p>
-        <p id="machint">Use Tab + Space to navigate by keyboard</p>
-
-        <div id="flex" class="blocks_top">
-          <div class="block_spin">
-            <div class="block_spin_inner_1">
-              <div class="block_spin_inner_2">
-                <div class="block_spin_inner_3"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="block_spin">
-            <div class="block_spin_inner_1">
-              <div class="block_spin_inner_2">
-                <div class="block_spin_inner_3"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="dragon_back">
-          <!-- Audio -->
-
-          <div class="img_div">
-            <img
-              onContextMenu="return false;"
-              src="/Public/3d/piano_img.png"
-              id="shape"
-            />
-          </div>
-
-          <h2>🎶 Jukebox 🎶</h2>
-
-          <div class="audio_players" id="audio_players">
-            <!--CD-->
-            <div id="cd" title="Perilous Quest CD">
-              <div id="cd_inner">
-                <div id="cd_center"></div>
-              </div>
-            </div>
-
-            <!--CD slot-->
-            <div id="slot" title="CD Slot"></div>
-
-            <!--Red blinking light-->
-            <p>Read</p>
-            <div id="redlight"></div>
-
-            <!-- Loading light -->
-            <p>Load</p>
-            <progress></progress>
-
-            <!--Audio players-->
-            <div
-              id="audio_players_inner"
-              title="Scroll for more ->"
-              data-tilt
-              data-tilt-max="2"
-              data-tilt-speed="9000"
-            >
-              <div class="audio_play_block" title="Jukebox" id="wonder_div">
-                <h3>
-                  <span class="material-symbols-outlined md"> graphic_eq </span>
-                  Wonder
-                  <span class="material-symbols-outlined md"> graphic_eq </span>
-                </h3>
-                <audio
-                  loop
-                  controls
-                  controlsList="nodownload"
-                  crossorigin="anonymous"
-                  tabindex="-1"
-                  class="audio"
-                  id="wonder"
-                  src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/wonder.wav"
-                  preload="auto"
-                ></audio>
-              </div>
-
-              <div class="audio_play_block">
-                <h3>
-                  <span class="material-symbols-outlined md"> graphic_eq </span>
-                  Lovely Town
-                  <span class="material-symbols-outlined md"> graphic_eq </span>
-                </h3>
-                <audio
-                  autoplay
-                  loop
-                  controls
-                  controlsList="nodownload"
-                  crossorigin="anonymous"
-                  tabindex="-1"
-                  class="audio"
-                  id="lovely_town"
-                  src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/lovely_town.wav"
-                  preload="auto"
-                ></audio>
-              </div>
-
-              <div class="audio_play_block" id="shop_div">
-                <h3>
-                  <span class="material-symbols-outlined md"> graphic_eq </span>
-                  Shop
-                  <span class="material-symbols-outlined md"> graphic_eq </span>
-                </h3>
-                <audio
-                  loop
-                  controls
-                  controlsList="nodownload"
-                  crossorigin="anonymous"
-                  tabindex="-1"
-                  class="audio"
-                  id="shop"
-                  src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/shop.wav"
-                  preload="auto"
-                ></audio>
-              </div>
-
-              <div class="audio_play_block" id="cave_tune_div">
-                <h3>
-                  <span class="material-symbols-outlined md"> graphic_eq </span>
-                  Cave Tune
-                  <span class="material-symbols-outlined md"> graphic_eq </span>
-                </h3>
-                <audio
-                  loop
-                  controls
-                  controlsList="nodownload"
-                  crossorigin="anonymous"
-                  tabindex="-1"
-                  class="audio"
-                  id="cave_tune"
-                  src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/cave_tune.wav"
-                  preload="auto"
-                ></audio>
-              </div>
-            </div>
-
-            <div id="nav_arrows">
-              <a href="#wonder_div"
-                ><span class="material-symbols-outlined md left">
-                  arrow_back_ios_new
-                </span></a
-              >
-              <a href="#cave_tune_div"
-                ><span class="material-symbols-outlined md right">
-                  arrow_forward_ios
-                </span></a
-              >
-            </div>
-
-            <div
-              id="audio_players_inner"
-              title="Scroll for more ->"
-              data-tilt
-              data-tilt-max="2"
-              data-tilt-speed="9000"
-            >
-              <div class="audio_play_block" id="castle_div">
-                <h3>
-                  <span class="material-symbols-outlined md"> graphic_eq </span>
-                  Castle
-                  <span class="material-symbols-outlined md"> graphic_eq </span>
-                </h3>
-                <audio
-                  loop
-                  controls
-                  controlsList="nodownload"
-                  crossorigin="anonymous"
-                  tabindex="-1"
-                  class="audio"
-                  id="castle"
-                  src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/castle.wav"
-                  preload="auto"
-                ></audio>
-              </div>
-
-              <div class="audio_play_block" id="chasm_div">
-                <h3>
-                  <span class="material-symbols-outlined md"> graphic_eq </span>
-                  Chasm
-                  <span class="material-symbols-outlined md"> graphic_eq</span>
-                </h3>
-                <audio
-                  loop
-                  controls
-                  controlsList="nodownload"
-                  crossorigin="anonymous"
-                  tabindex="-1"
-                  class="audio"
-                  id="chasm"
-                  src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/chasm.wav"
-                  preload="auto"
-                ></audio>
-              </div>
-
-              <div class="audio_play_block" id="boss_theme_div">
-                <h3>
-                  <span class="material-symbols-outlined md"> graphic_eq </span>
-                  Boss Theme
-                  <span class="material-symbols-outlined md"> graphic_eq</span>
-                </h3>
-                <audio
-                  loop
-                  controls
-                  controlsList="nodownload"
-                  crossorigin="anonymous"
-                  tabindex="-1"
-                  class="audio"
-                  id="boss_theme"
-                  src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/boss_theme.wav"
-                  preload="auto"
-                ></audio>
-              </div>
-
-              <div class="audio_play_block" id="secret_div">
-                <h3>
-                  <span class="material-symbols-outlined md"> graphic_eq </span>
-                  A Secret
-                  <span class="material-symbols-outlined md"> graphic_eq</span>
-                </h3>
-                <audio
-                  loop
-                  controls
-                  controlsList="nodownload"
-                  crossorigin="anonymous"
-                  tabindex="-1"
-                  class="audio"
-                  id="secret"
-                  src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/a_secret.mp3"
-                  preload="auto"
-                ></audio>
-              </div>
-            </div>
-
-            <div id="nav_arrows">
-              <a href="#castle_div"
-                ><span class="material-symbols-outlined md left">
-                  arrow_back_ios_new
-                </span></a
-              >
-              <a href="#secret_div"
-                ><span class="material-symbols-outlined md right">
-                  arrow_forward_ios
-                </span></a
-              >
-            </div>
-
-            <audio
-              crossorigin="anonymous"
-              tabindex="-1"
-              class="audio"
-              id="lose"
-              src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/lose.wav"
-              preload="auto"
-            ></audio>
-
-            <audio
-              loop
-              crossorigin="anonymous"
-              tabindex="-1"
-              class="audio"
-              id="reprise"
-              src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/wonder_reprise.wav"
-              preload="auto"
-            ></audio>
-
-            <audio
-              loop
-              crossorigin="anonymous"
-              tabindex="-1"
-              class="audio"
-              id="home"
-              src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/home.wav"
-              preload="auto"
-            ></audio>
-
-            <audio
-              crossorigin="anonymous"
-              tabindex="-1"
-              class="audio"
-              id="defeat_boss"
-              src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/defeat_boss.wav"
-              preload="auto"
-            ></audio>
-
-            <audio
-              crossorigin="anonymous"
-              tabindex="-1"
-              class="audio"
-              id="selectfx"
-              src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/selectfx.wav"
-              preload="auto"
-            ></audio>
-
-            <audio
-              crossorigin="anonymous"
-              tabindex="-1"
-              class="audio"
-              id="select_null"
-              src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/select_null.wav"
-              preload="auto"
-            ></audio>
-
-            <p>
-              <a href="nopage.html" title="Secret Page" id="model"
-                >JUKEBOX - MODEL #: A7-23</a
-              >
-            </p>
-          </div>
-
-          <div id="flex">
-            <div class="block_spin">
-              <div class="block_spin_inner_1">
-                <div class="block_spin_inner_2">
-                  <div class="block_spin_inner_3"></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="block_spin">
-              <div class="block_spin_inner_1">
-                <div class="block_spin_inner_2">
-                  <div class="block_spin_inner_3"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Media -->
-
-          <div class="img_div">
-            <img
-              onContextMenu="return false;"
-              src="/Public/3d/media.png"
-              id="shape"
-            />
-          </div>
-
-          <h2>🎥 Media 🎥</h2>
-
-          <div class="cleardiv" id="media">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/8oG__e_yYWs?si=_zGULsEJerDKlJ7A"
-              id="youtube_frame"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-              data-tilt
-              data-tilt-max="7"
-              data-tilt-speed="9000"
-            ></iframe>
-
-            <iframe
-              src="https://www.youtube.com/embed/O1ojeuH8izM?si=XHcDJNTz13WLtqYo"
-              id="youtube_frame"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-              data-tilt
-              data-tilt-max="7"
-              data-tilt-speed="9000"
-            ></iframe>
-
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/dw7yyIYdVIM?si=MJjRUgKtzMYZWTwP"
-              id="youtube_frame"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-              data-tilt
-              data-tilt-max="7"
-              data-tilt-speed="9000"
-            ></iframe>
-          </div>
-
-          <div id="flex">
-            <div class="block_spin">
-              <div class="block_spin_inner_1">
-                <div class="block_spin_inner_2">
-                  <div class="block_spin_inner_3"></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="block_spin">
-              <div class="block_spin_inner_1">
-                <div class="block_spin_inner_2">
-                  <div class="block_spin_inner_3"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Credits -->
-
-          <div class="img_div">
-            <img
-              onContextMenu="return false;"
-              src="/Public/3d/stack_img.png"
-              id="shape"
-            />
-          </div>
-
-          <h2>🎬 Credits 🎬</h2>
-
-          <div class="cleardiv" id="credits">
-            <div id="gamelogo"></div>
-
-            <ul>
-              👾 Newave Media 👾
-              <li>Presents</li>
-              <div class="img_div">
-                <img
-                  onContextMenu="return false;"
-                  src="/Public/3d/app_icon_small.png"
-                  id="shape"
-                />
-              </div>
-              <li>Perilous Quest</li>
-            </ul>
-
-            <ul>
-              <li>Original project idea by FreeCodeCamp</li>
-              <li>3D graphics made with Spline.design</li>
-              <li>Mods and redesign by Aidan Y.</li>
-              <li>Powered by Github and Netlify</li>
-              <li>Made in Visual Studio Code</li>
-
-              <div class="img_div shape_div">
-                <img
-                  onContextMenu="return false;"
-                  src="/Public/3d/macbook_pro.png"
-                  id="shape"
-                />
-              </div>
-
-              <li>Made with Mac </li>
-            </ul>
-
-            <ul>
-              🎧 Music 🎧
-              <li>
-                <i>"Lovely Town"</i> by
-                <a
-                  href="https://soundcloud.com/skremzy"
-                  target="_blank"
-                  id="artlink"
-                  title="Listen to Skremzy's Music!"
-                  >Skremzy</a
-                >
-              </li>
-              <li>
-                <i>"Boss Theme"</i> by
-                <a
-                  href="https://soundcloud.com/audiophobiamusic"
-                  target="_blank"
-                  id="artlink"
-                  title="Listen to Audiophobia's Music!"
-                  >Audiophobia</a
-                >
-              </li>
-              <li>
-                <i>Original Soundtrack</i> by
-                <a
-                  href="https://soundcloud.com/newaveoceans"
-                  target="_blank"
-                  id="artlink"
-                  title="Listen to Newave's Music!"
-                  >Newave Oceans</a
-                >
-              </li>
-            </ul>
-
-            <ul>
-              🎨 Art 🎨
-              <li>Marsh, Tanner. <i>"Dragon"</i> 2024</li>
-              <li>Marsh, Tanner. <i>"Display Art"</i> 2024</li>
-            </ul>
-            <ul>
-              🧪 Beta Testers 🧪
-              <li>Daniel G. - macOS</li>
-              <li>Nait Welsh - macOS</li>
-              <li>Benjamin Marsh - iOS</li>
-              <li>
-                <a
-                  href="https://github.com/dymackenzie"
-                  target="_blank"
-                  id="artlink"
-                  title="Follow Mackenzie on Github!"
-                  >Mackenzie Dy</a
-                >- Windows
-              </li>
-            </ul>
-
-            <div class="img_div">
-              <img
-                onContextMenu="return false;"
-                src="/public/instagram_code/newave_insta.png"
-                id="shape"
-              />
-            </div>
-
-            <div id="flex_github">
-              <iframe
-                src="https://ghbtns.com/github-btn.html?user=aidan-yip&type=follow&count=none"
-                frameborder="0"
-                scrolling="0"
-                width="130"
-                height="20"
-                id="github_btn"
-                title="GitHub"
-              ></iframe>
-              <iframe
-                src="https://ghbtns.com/github-btn.html?user=aidan-yip&repo=perilous_quest&type=star&count=none"
-                frameborder="0"
-                scrolling="0"
-                width="50"
-                height="20"
-                id="github_btn"
-                title="GitHub"
-              ></iframe>
-            </div>
-
-            <ul>
-              <li>
-                <a
-                  href="https://forms.gle/ynErGR6z6Py1uYXd8"
-                  target="_blank"
-                  id="navlink"
-                  title="Report a bug or request a feature"
-                  class="report"
-                  ><span class="material-symbols-outlined md">
-                    open_in_new
-                  </span>
-                  Leave Feedback</a
-                >
-              </li>
-            </ul>
-
-            <p id="footnote">Ps31:24</p>
-          </div>
-
-          <script
-            async
-            src="https://cse.google.com/cse.js?cx=b47e2484774134a91"
-          ></script>
-          <div class="gcse-search"></div>
-
-          <svg
-            id="wave_bottom"
-            style="transform: rotate(0deg); transition: 0.3s"
-            viewBox="0 0 1440 440"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs>
-              <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
-                <stop stop-color="rgba(184.498, 62, 243, 1)" offset="0%"></stop>
-                <stop
-                  stop-color="rgba(101.747, 11, 255, 1)"
-                  offset="100%"
-                ></stop>
-              </linearGradient>
-            </defs>
-            <path
-              style="transform: translate(0, 0px); opacity: 1"
-              fill="url(#sw-gradient-0)"
-              d="M0,308L40,278.7C80,249,160,191,240,183.3C320,176,400,220,480,198C560,176,640,88,720,110C800,132,880,264,960,322.7C1040,381,1120,367,1200,344.7C1280,323,1360,293,1440,249.3C1520,205,1600,147,1680,117.3C1760,88,1840,88,1920,124.7C2000,161,2080,235,2160,286C2240,337,2320,367,2400,330C2480,293,2560,191,2640,168.7C2720,147,2800,205,2880,205.3C2960,205,3040,147,3120,139.3C3200,132,3280,176,3360,176C3440,176,3520,132,3600,161.3C3680,191,3760,293,3840,286C3920,279,4000,161,4080,154C4160,147,4240,249,4320,264C4400,279,4480,205,4560,183.3C4640,161,4720,191,4800,183.3C4880,176,4960,132,5040,124.7C5120,117,5200,147,5280,190.7C5360,235,5440,293,5520,293.3C5600,293,5680,235,5720,205.3L5760,176L5760,440L5720,440C5680,440,5600,440,5520,440C5440,440,5360,440,5280,440C5200,440,5120,440,5040,440C4960,440,4880,440,4800,440C4720,440,4640,440,4560,440C4480,440,4400,440,4320,440C4240,440,4160,440,4080,440C4000,440,3920,440,3840,440C3760,440,3680,440,3600,440C3520,440,3440,440,3360,440C3280,440,3200,440,3120,440C3040,440,2960,440,2880,440C2800,440,2720,440,2640,440C2560,440,2480,440,2400,440C2320,440,2240,440,2160,440C2080,440,2000,440,1920,440C1840,440,1760,440,1680,440C1600,440,1520,440,1440,440C1360,440,1280,440,1200,440C1120,440,1040,440,960,440C880,440,800,440,720,440C640,440,560,440,480,440C400,440,320,440,240,440C160,440,80,440,40,440L0,440Z"
-            ></path>
-            <defs>
-              <linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0">
-                <stop stop-color="rgba(80.266, 62, 243, 1)" offset="0%"></stop>
-                <stop stop-color="rgba(11, 85.56, 255, 1)" offset="100%"></stop>
-              </linearGradient>
-            </defs>
-            <path
-              style="transform: translate(0, 50px); opacity: 0.9"
-              fill="url(#sw-gradient-1)"
-              d="M0,176L40,154C80,132,160,88,240,110C320,132,400,220,480,234.7C560,249,640,191,720,176C800,161,880,191,960,190.7C1040,191,1120,161,1200,176C1280,191,1360,249,1440,278.7C1520,308,1600,308,1680,308C1760,308,1840,308,1920,315.3C2000,323,2080,337,2160,330C2240,323,2320,293,2400,300.7C2480,308,2560,352,2640,374C2720,396,2800,396,2880,396C2960,396,3040,396,3120,352C3200,308,3280,220,3360,205.3C3440,191,3520,249,3600,227.3C3680,205,3760,103,3840,102.7C3920,103,4000,205,4080,249.3C4160,293,4240,279,4320,256.7C4400,235,4480,205,4560,168.7C4640,132,4720,88,4800,117.3C4880,147,4960,249,5040,256.7C5120,264,5200,176,5280,117.3C5360,59,5440,29,5520,51.3C5600,73,5680,147,5720,183.3L5760,220L5760,440L5720,440C5680,440,5600,440,5520,440C5440,440,5360,440,5280,440C5200,440,5120,440,5040,440C4960,440,4880,440,4800,440C4720,440,4640,440,4560,440C4480,440,4400,440,4320,440C4240,440,4160,440,4080,440C4000,440,3920,440,3840,440C3760,440,3680,440,3600,440C3520,440,3440,440,3360,440C3280,440,3200,440,3120,440C3040,440,2960,440,2880,440C2800,440,2720,440,2640,440C2560,440,2480,440,2400,440C2320,440,2240,440,2160,440C2080,440,2000,440,1920,440C1840,440,1760,440,1680,440C1600,440,1520,440,1440,440C1360,440,1280,440,1200,440C1120,440,1040,440,960,440C880,440,800,440,720,440C640,440,560,440,480,440C400,440,320,440,240,440C160,440,80,440,40,440L0,440Z"
-            ></path>
-            <defs>
-              <linearGradient id="sw-gradient-2" x1="0" x2="0" y1="1" y2="0">
-                <stop stop-color="rgba(62, 215.409, 243, 1)" offset="0%"></stop>
-                <stop
-                  stop-color="rgba(11, 135.152, 255, 1)"
-                  offset="100%"
-                ></stop>
-              </linearGradient>
-            </defs>
-            <path
-              style="transform: translate(0, 100px); opacity: 0.8"
-              fill="url(#sw-gradient-2)"
-              d="M0,220L40,205.3C80,191,160,161,240,161.3C320,161,400,191,480,198C560,205,640,191,720,176C800,161,880,147,960,124.7C1040,103,1120,73,1200,117.3C1280,161,1360,279,1440,308C1520,337,1600,279,1680,271.3C1760,264,1840,308,1920,300.7C2000,293,2080,235,2160,242C2240,249,2320,323,2400,359.3C2480,396,2560,396,2640,330C2720,264,2800,132,2880,124.7C2960,117,3040,235,3120,300.7C3200,367,3280,381,3360,381.3C3440,381,3520,367,3600,322.7C3680,279,3760,205,3840,161.3C3920,117,4000,103,4080,146.7C4160,191,4240,293,4320,293.3C4400,293,4480,191,4560,183.3C4640,176,4720,264,4800,249.3C4880,235,4960,117,5040,124.7C5120,132,5200,264,5280,264C5360,264,5440,132,5520,80.7C5600,29,5680,59,5720,73.3L5760,88L5760,440L5720,440C5680,440,5600,440,5520,440C5440,440,5360,440,5280,440C5200,440,5120,440,5040,440C4960,440,4880,440,4800,440C4720,440,4640,440,4560,440C4480,440,4400,440,4320,440C4240,440,4160,440,4080,440C4000,440,3920,440,3840,440C3760,440,3680,440,3600,440C3520,440,3440,440,3360,440C3280,440,3200,440,3120,440C3040,440,2960,440,2880,440C2800,440,2720,440,2640,440C2560,440,2480,440,2400,440C2320,440,2240,440,2160,440C2080,440,2000,440,1920,440C1840,440,1760,440,1680,440C1600,440,1520,440,1440,440C1360,440,1280,440,1200,440C1120,440,1040,440,960,440C880,440,800,440,720,440C640,440,560,440,480,440C400,440,320,440,240,440C160,440,80,440,40,440L0,440Z"
-            ></path>
-            <defs>
-              <linearGradient id="sw-gradient-3" x1="0" x2="0" y1="1" y2="0">
-                <stop stop-color="rgba(62, 221.541, 243, 1)" offset="0%"></stop>
-                <stop
-                  stop-color="rgba(11, 255, 226.071, 1)"
-                  offset="100%"
-                ></stop>
-              </linearGradient>
-            </defs>
-            <path
-              style="transform: translate(0, 150px); opacity: 0.7"
-              fill="url(#sw-gradient-3)"
-              d="M0,308L40,278.7C80,249,160,191,240,176C320,161,400,191,480,190.7C560,191,640,161,720,124.7C800,88,880,44,960,29.3C1040,15,1120,29,1200,80.7C1280,132,1360,220,1440,220C1520,220,1600,132,1680,80.7C1760,29,1840,15,1920,51.3C2000,88,2080,176,2160,234.7C2240,293,2320,323,2400,315.3C2480,308,2560,264,2640,242C2720,220,2800,220,2880,220C2960,220,3040,220,3120,227.3C3200,235,3280,249,3360,220C3440,191,3520,117,3600,80.7C3680,44,3760,44,3840,88C3920,132,4000,220,4080,242C4160,264,4240,220,4320,227.3C4400,235,4480,293,4560,315.3C4640,337,4720,323,4800,293.3C4880,264,4960,220,5040,183.3C5120,147,5200,117,5280,95.3C5360,73,5440,59,5520,44C5600,29,5680,15,5720,7.3L5760,0L5760,440L5720,440C5680,440,5600,440,5520,440C5440,440,5360,440,5280,440C5200,440,5120,440,5040,440C4960,440,4880,440,4800,440C4720,440,4640,440,4560,440C4480,440,4400,440,4320,440C4240,440,4160,440,4080,440C4000,440,3920,440,3840,440C3760,440,3680,440,3600,440C3520,440,3440,440,3360,440C3280,440,3200,440,3120,440C3040,440,2960,440,2880,440C2800,440,2720,440,2640,440C2560,440,2480,440,2400,440C2320,440,2240,440,2160,440C2080,440,2000,440,1920,440C1840,440,1760,440,1680,440C1600,440,1520,440,1440,440C1360,440,1280,440,1200,440C1120,440,1040,440,960,440C880,440,800,440,720,440C640,440,560,440,480,440C400,440,320,440,240,440C160,440,80,440,40,440L0,440Z"
-            ></path>
-          </svg>
-        </div>
-
-        <!-- JS links -->
-        <script src="./script.js" defer></script>
-        <script src="game_autoplay.js" defer></script>
+      <div>
+        <audio
+          autoplay
+          loop
+          crossorigin="anonymous"
+          tabindex="-1"
+          id="titletrack"
+          src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/wonder.wav"
+          preload="auto"
+        ></audio>
+        <audio
+          crossorigin="anonymous"
+          tabindex="-1"
+          id="selectfx"
+          src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/selectfx.wav"
+          preload="auto"
+        ></audio>
       </div>
     </div>
-    <!-- Vanilla-Tilt Script -->
-    <script
-      type="text/javascript"
-      src="other_scripts/vanilla-tilt-min.js"
-      defer
-    ></script>
+
+    <script>
+      const registerServiceWorker = async () => {
+        if ("serviceWorker" in navigator) {
+          try {
+            const registration = await navigator.serviceWorker.register(
+              "/sw.js",
+              {
+                scope: "/",
+              }
+            );
+            if (registration.installing) {
+              console.log("Service worker installing");
+            } else if (registration.waiting) {
+              console.log("Service worker installed");
+            } else if (registration.active) {
+              console.log("Service worker active");
+            }
+          } catch (error) {
+            console.error(`Registration failed with ${error}`);
+          }
+        }
+      };
+
+      registerServiceWorker();
+    </script>
+
+    <script src="./app_start.js" defer></script>
+    <script src="./music_start.js" defer></script>
   </body>
 </html>
