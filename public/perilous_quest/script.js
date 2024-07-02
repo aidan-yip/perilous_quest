@@ -186,7 +186,10 @@ function art() {
 function goBandcamp() {
   let text = "Leave Game and Download Soundtrack?";
   if (confirm(text) == true) {
-    location.href = "https://newaveoceans.bandcamp.com/album/perilous-quest-soundtrack";
+    window.open(
+      "https://newaveoceans.bandcamp.com/album/perilous-quest-soundtrack",
+      "_blank"
+    );
   } else {
     null;
   }
@@ -805,12 +808,7 @@ const locations = [
   {
     name: "Credits 1",
     "button text": ["<--", "Download the soundtrack", "🎉", "-->"],
-    "button functions": [
-      playselectnull,
-      goBandcamp,
-      playdefeat,
-      goCredits_two,
-    ],
+    "button functions": [playselectnull, goBandcamp, playdefeat, goCredits_two],
     text:
       "Newave Oceans & Newave Media Presents..." + "\n" + "\n" + "\n" + "\n",
   },
@@ -828,12 +826,7 @@ const locations = [
   {
     name: "Credits 3",
     "button text": ["<--", "Download the soundtrack", "🎉", "-->"],
-    "button functions": [
-      goCredits_two,
-      goBandcamp,
-      playdefeat,
-      goCredits_four,
-    ],
+    "button functions": [goCredits_two, goBandcamp, playdefeat, goCredits_four],
     text:
       "Original project idea by FreeCodeCamp" +
       "\n" +
@@ -863,12 +856,7 @@ const locations = [
   {
     name: "Credits 5",
     "button text": ["<--", "Download the soundtrack", "🎉", "-->"],
-    "button functions": [
-      goCredits_four,
-      goBandcamp,
-      playdefeat,
-      goCredits_six,
-    ],
+    "button functions": [goCredits_four, goBandcamp, playdefeat, goCredits_six],
     text:
       "🎧 Music 🎧" +
       "\n" +
@@ -929,12 +917,7 @@ const locations = [
   {
     name: "Credits 8",
     "button text": ["<--", "Download the soundtrack", "Replay?", "Main Menu"],
-    "button functions": [
-      goCredits_seven,
-      goBandcamp,
-      restart_alert,
-      leaveGame,
-    ],
+    "button functions": [goCredits_seven, goBandcamp, restart_alert, leaveGame],
     text:
       "THANKS FOR PLAYING!!!" +
       "\n" +
