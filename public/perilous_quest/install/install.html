@@ -203,12 +203,22 @@
         </svg>
 
         <div id="game">
-          <div class="img_div">
-            <img
-              onContextMenu="return false;"
-              src="/Public/3d/app_icon.png"
-              id="glass"
-            />
+          <div id="pq_vid_div">
+            <video
+              autoplay
+              muted
+              loop
+              disablePictureInPicture
+              playsinline
+              controlsList="nodownload"
+              oncontextmenu="return false;"
+              id="pq_vid"
+            >
+              <source
+                src="https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/video/pq_animate_all.mp4"
+                type="video/mp4"
+              />
+            </video>
           </div>
 
           <h1>Downloads</h1>
