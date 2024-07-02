@@ -184,9 +184,9 @@ function art() {
 // Bandcamp link
 
 function goBandcamp() {
-  let text = "Leave Game and go to Bandcamp?";
+  let text = "Leave Game and Download Soundtrack?";
   if (confirm(text) == true) {
-    location.href = "";
+    location.href = "https://newaveoceans.bandcamp.com/album/perilous-quest-soundtrack";
   } else {
     null;
   }
@@ -807,7 +807,7 @@ const locations = [
     "button text": ["<--", "Download the soundtrack", "🎉", "-->"],
     "button functions": [
       playselectnull,
-      playselectnull,
+      goBandcamp,
       playdefeat,
       goCredits_two,
     ],
@@ -819,7 +819,7 @@ const locations = [
     "button text": ["<--", "Download the soundtrack", "🎉", "-->"],
     "button functions": [
       goCredits_one,
-      playselectnull,
+      goBandcamp,
       playdefeat,
       goCredits_three,
     ],
@@ -830,7 +830,7 @@ const locations = [
     "button text": ["<--", "Download the soundtrack", "🎉", "-->"],
     "button functions": [
       goCredits_two,
-      playselectnull,
+      goBandcamp,
       playdefeat,
       goCredits_four,
     ],
@@ -854,7 +854,7 @@ const locations = [
     "button text": ["<--", "Download the soundtrack", "🎉", "-->"],
     "button functions": [
       goCredits_three,
-      playselectnull,
+      goBandcamp,
       playdefeat,
       goCredits_five,
     ],
@@ -865,7 +865,7 @@ const locations = [
     "button text": ["<--", "Download the soundtrack", "🎉", "-->"],
     "button functions": [
       goCredits_four,
-      playselectnull,
+      goBandcamp,
       playdefeat,
       goCredits_six,
     ],
@@ -887,7 +887,7 @@ const locations = [
     "button text": ["<--", "Download the soundtrack", "🎉", "-->"],
     "button functions": [
       goCredits_five,
-      playselectnull,
+      goBandcamp,
       playdefeat,
       goCredits_seven,
     ],
@@ -907,7 +907,7 @@ const locations = [
     "button text": ["<--", "Download the soundtrack", "🎉", "-->"],
     "button functions": [
       goCredits_six,
-      playselectnull,
+      goBandcamp,
       playdefeat,
       goCredits_eight,
     ],
@@ -931,7 +931,7 @@ const locations = [
     "button text": ["<--", "Download the soundtrack", "Replay?", "Main Menu"],
     "button functions": [
       goCredits_seven,
-      playselectnull,
+      goBandcamp,
       restart_alert,
       leaveGame,
     ],
