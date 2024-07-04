@@ -648,6 +648,9 @@ a,
   -webkit-backdrop-filter: blur(7px);
   /* chrome/firefox */
   backdrop-filter: blur(7px);
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .list_menu_link {
@@ -956,6 +959,9 @@ meter::-webkit-meter-even-less-good-value {
   backdrop-filter: blur(7px);
   border: 1px solid #717171;
   border-radius: 35px;
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
   transition: 1s width ease-in-out;
 }
 
