@@ -285,6 +285,84 @@
           </div>
         </div>
 
+        <!--Input Settings -->
+        <div
+          id="setting_input_div"
+          class="dragme"
+          title="Click and drag to move"
+        >
+          <span class="material-symbols-outlined md"> format_color_fill </span>
+          <input
+            type="color"
+            id="color_input"
+            class="settingInput"
+            list="presetColors"
+            title="Select Color Theme"
+          />
+          <datalist id="presetColors">
+            <!-- Light colors presets -->
+            <option value="#FF7978"></option>
+            <option value="#73E396"></option>
+            <option value="#ADAFFF"></option>
+            <option value="#FFCA75"></option>
+            <!-- Dark colors presets -->
+            <option value="#EC8CE3"></option>
+            <option value="#AFDD6C"></option>
+            <option value="#73BFFF"></option>
+            <option value="#FF8D2E"></option>
+          </datalist>
+
+          <span class="material-symbols-outlined md"> format_color_text </span>
+          <input
+            type="color"
+            id="color_input_two"
+            class="settingInput"
+            list="presetColors_two"
+            title="Select Text Theme"
+          />
+          <datalist id="presetColors_two">
+            <!-- Light colors presets -->
+            <option value="#111111"></option>
+            <!-- Dark colors presets -->
+            <option value="#ffffff"></option>
+          </datalist>
+
+          <span class="material-symbols-outlined md"> border_color </span>
+          <input
+            type="color"
+            id="color_input_three"
+            class="settingInput"
+            list="presetColors_three"
+            title="Select Display Border Theme"
+          />
+          <datalist id="presetColors_three">
+            <!-- Light colors presets -->
+            <option value="#000000"></option>
+            <!-- Dark colors presets -->
+            <option value="#ffffff"></option>
+          </datalist>
+
+          <span class="material-symbols-outlined" id="volume_icon">
+            volume_up
+          </span>
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.1"
+            value="1.0"
+            id="volume"
+            title="Change Volume"
+          />
+
+          <div id="expand" title="Click to Expand">
+            <span class="material-symbols-outlined md"> open_in_full </span>
+          </div>
+          <div id="collapse" title="Click to Collapse">
+            <span class="material-symbols-outlined md"> close_fullscreen </span>
+          </div>
+        </div>
+
         <!-- color video -->
         <div id="color_vid_div">
           <video
@@ -399,90 +477,6 @@
           <!-- Game title header mobile
           <h1 id="navtitle_mobile">PERILOUS QUEST</h1>
            -->
-
-          <!--Input Settings -->
-          <div
-            id="setting_input_div"
-            class="dragme"
-            title="Click and drag to move"
-          >
-            <span class="material-symbols-outlined md">
-              format_color_fill
-            </span>
-            <input
-              type="color"
-              id="color_input"
-              class="settingInput"
-              list="presetColors"
-              title="Select Color Theme"
-            />
-            <datalist id="presetColors">
-              <!-- Light colors presets -->
-              <option value="#FF7978"></option>
-              <option value="#73E396"></option>
-              <option value="#ADAFFF"></option>
-              <option value="#FFCA75"></option>
-              <!-- Dark colors presets -->
-              <option value="#EC8CE3"></option>
-              <option value="#AFDD6C"></option>
-              <option value="#73BFFF"></option>
-              <option value="#FF8D2E"></option>
-            </datalist>
-
-            <span class="material-symbols-outlined md">
-              format_color_text
-            </span>
-            <input
-              type="color"
-              id="color_input_two"
-              class="settingInput"
-              list="presetColors_two"
-              title="Select Text Theme"
-            />
-            <datalist id="presetColors_two">
-              <!-- Light colors presets -->
-              <option value="#111111"></option>
-              <!-- Dark colors presets -->
-              <option value="#ffffff"></option>
-            </datalist>
-
-            <span class="material-symbols-outlined md"> border_color </span>
-            <input
-              type="color"
-              id="color_input_three"
-              class="settingInput"
-              list="presetColors_three"
-              title="Select Display Border Theme"
-            />
-            <datalist id="presetColors_three">
-              <!-- Light colors presets -->
-              <option value="#000000"></option>
-              <!-- Dark colors presets -->
-              <option value="#ffffff"></option>
-            </datalist>
-
-            <span class="material-symbols-outlined" id="volume_icon">
-              volume_up
-            </span>
-            <input
-              type="range"
-              min="0"
-              max="1"
-              step="0.1"
-              value="1.0"
-              id="volume"
-              title="Change Volume"
-            />
-
-            <div id="expand" title="Click to Expand">
-              <span class="material-symbols-outlined md"> open_in_full </span>
-            </div>
-            <div id="collapse" title="Click to Collapse">
-              <span class="material-symbols-outlined md">
-                close_fullscreen
-              </span>
-            </div>
-          </div>
         </div>
 
         <!--Enter Player name-->

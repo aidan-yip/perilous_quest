@@ -867,6 +867,7 @@ div.block_spin_inner_3 {
   /* chrome/firefox */
   backdrop-filter: blur(2px);
   /* fade in */
+  transition: 1s ease-in-out 0ms;
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -934,14 +935,16 @@ meter::-webkit-meter-even-less-good-value {
 
 #setting_input_div {
   display: none;
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 5;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
   padding-top: 15px;
-  width: 98%;
+  width: 81%;
+  max-width: 1200px;
   background-color: #35353593;
   border-radius: 25px;
   border: 1px solid #717171;
@@ -954,6 +957,14 @@ meter::-webkit-meter-even-less-good-value {
   border: 1px solid #717171;
   border-radius: 35px;
   transition: 1s width ease-in-out;
+}
+
+#setting_input_div > span:nth-child(1), #setting_input_div > span:nth-child(4), #setting_input_div > span:nth-child(7) {
+  color: #ffffff;
+}
+
+#volume_icon, #collapse > span, #expand > span {
+  color: #ffffff;
 }
 
 #color_input {
@@ -1514,6 +1525,10 @@ a .md {
 }
 
 button .md {
+  font-size: 130%;
+}
+
+#setting_input_div span.md {
   font-size: 130%;
 }
 
