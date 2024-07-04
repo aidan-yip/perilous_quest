@@ -167,7 +167,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  height: 110vh;
+  height: 170vh;
   overflow: hidden;
 }
 
@@ -935,7 +935,7 @@ meter::-webkit-meter-even-less-good-value {
 
 #setting_input_div {
   display: none;
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 5;
   justify-content: center;
