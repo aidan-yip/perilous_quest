@@ -174,7 +174,7 @@ body {
 video#color_vid {
   object-fit: cover;
   width: 100%;
-  height: 176vh;
+  height: 190vh;
   margin-left: auto;
   margin-right: auto;
   position: fixed;
@@ -935,7 +935,7 @@ meter::-webkit-meter-even-less-good-value {
 #setting_input_div {
   display: none;
   position: relative;
-  z-index: 2;
+  z-index: 5;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
