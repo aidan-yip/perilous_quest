@@ -547,6 +547,7 @@ color_input.addEventListener("change", function (e) {
 });
 // Text color
 color_input_two.addEventListener("change", function (e) {
+  button0.style.color = e.target.value;
   button1.style.color = e.target.value;
   button2.style.color = e.target.value;
   button3.style.color = e.target.value;

@@ -1017,6 +1017,9 @@ meter::-webkit-meter-even-less-good-value {
   height: 10px;
   cursor: pointer;
   display: none;
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 #collapse {
@@ -1025,6 +1028,9 @@ meter::-webkit-meter-even-less-good-value {
   width: 10px;
   height: 10px;
   cursor: pointer;
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 /* Custom Volume range */
