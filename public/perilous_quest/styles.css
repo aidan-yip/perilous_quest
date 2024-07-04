@@ -1204,6 +1204,10 @@ input[type="range"]:focus::-ms-fill-upper {
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+  /* fade */
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .monstat {
@@ -1214,11 +1218,11 @@ input[type="range"]:focus::-ms-fill-upper {
   font-family: var(--fontdefault);
   text-shadow: 1px 1px #7e0000, 2px 2px #7e0000, 3px 3px #7e0000,
     4px 4px #7e0000;
-  /* fade in */
-  animation: fadeInAnimation ease 3s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  transition: font-size 1s ease-in-out 0ms;
+   /* float */
+   animation-name: floating_two;
+   animation-duration: 3s;
+   animation-iteration-count: infinite;
+   animation-timing-function: ease-in-out;
 }
 
 .stat {
@@ -2335,6 +2339,7 @@ button .md {
   }
 
   #monsterStats {
+    border-radius: 25px;
     margin-left: 5px;
     margin-right: 5px;
     padding: 5px;
