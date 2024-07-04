@@ -349,7 +349,8 @@ expand = document.getElementById("expand");
 collapse = document.getElementById("collapse");
 
 expand.onclick = () => {
-  setting_input_div.style.width = "98%";
+  location.href = "#setting_input_div";
+  setting_input_div.style.width = "81%";
   expand.style.display = "none";
   collapse.style.display = "block";
 };
