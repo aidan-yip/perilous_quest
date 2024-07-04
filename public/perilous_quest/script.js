@@ -329,6 +329,9 @@ open_settings = document.getElementById("open_settings");
 close_settings = document.getElementById("close_settings");
 
 open_settings.onclick = () => {
+  $(document).ready(function () {
+    $(window).scrollTop(0);
+  });
   setting_input_div.style.display = "flex";
   open_settings.style.rotate = "45deg";
   close_settings.style.display = "block";
@@ -349,7 +352,6 @@ expand = document.getElementById("expand");
 collapse = document.getElementById("collapse");
 
 expand.onclick = () => {
-  location.href = "#setting_input_div";
   setting_input_div.style.width = "81%";
   expand.style.display = "none";
   collapse.style.display = "block";
