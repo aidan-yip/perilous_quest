@@ -190,6 +190,9 @@ a,
   -webkit-backdrop-filter: blur(7px);
   /* chrome/firefox */
   backdrop-filter: blur(7px);
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 #list_menu_link {
