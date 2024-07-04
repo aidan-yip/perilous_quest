@@ -314,6 +314,9 @@ a#open_settings, a#close_settings {
 span.md_help{
   margin: 0 auto;
   font-size: 45px;
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 /* Profile picture */
