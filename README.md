@@ -6,9 +6,9 @@
 Note: The game's main code is stored in the sub folder "perilous_quest" of "public" if you'd like to explore it. The Start/Titlescreen's code is stored in the root folder. The Dark Mode stylesheet is stored alongside the game code.
 </b></i>
 
-## Version Beta (latest)
+## Version 1.0.0 (latest)
 
-This version includes the base game and several game music tracks. This is in Beta development currently so any feedback is appreciated and can be left at "Issues". Gameplay is fully functional and working. The game's style is subject to change in future versions.
+This version includes the base game and several game music tracks. The game's style is subject to change in future versions.
 
 <img src="https://raw.githubusercontent.com/aidan-yip/dragon_slayer/main/public/pq_poster.jpg?raw=true" alt="Perilous Quest poster" width="300"/>
   
@@ -100,21 +100,25 @@ This version includes the base game and several game music tracks. This is in Be
 # Web app install
 
 ## macOS Safari web app install (requires macOS Sonoma)
+
 <img src="https://github.com/devicons/devicon/blob/master/icons/safari/safari-original-wordmark.svg" width="40" height="40"></img>
 
 https://support.apple.com/en-ca/104996
 
 ## Windows web app install (works with Windows 10/11 or Edge for MacOS/ChromeOS/Linux)
-<img src="https://github.com/devicons/devicon/blob/master/icons/windows11/windows11-original.svg" width="40" height="40"></img> 
+
+<img src="https://github.com/devicons/devicon/blob/master/icons/windows11/windows11-original.svg" width="40" height="40"></img>
 
 https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/ux
 
 ## ChromeOS web app and shortcut install (requires ChromeOS and/or the Chrome browser for MacOS/Windows/Linux)
+
 <img src="https://github.com/devicons/devicon/blob/master/icons/chrome/chrome-original-wordmark.svg" width="40" height="40"></img>
 
 https://support.google.com/chrome/answer/9658361?hl=en&co=GENIE.Platform%3DDesktop
 
 ## Firefox web app install (N/A)
+
 <img src="https://github.com/devicons/devicon/blob/master/icons/firefox/firefox-original-wordmark.svg" width="40" height="40"></img>
 
 Unfortunately Firefox dropped support for web apps in 2021. Please use another web browser or an older version of Firefox to install on your system.
