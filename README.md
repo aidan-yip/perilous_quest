@@ -59,6 +59,7 @@ This version includes the base game and several game music tracks. The game's st
   <li>Text expands on hover</li>
   <li>404 Error page</li>
   <li>Search with Google Programmable Search Engine</li>
+  <li>Scroll to top button</li>
 </ul>
 
 <i><b>\*Temporary offline caching functionality is not permanent</b></i>
