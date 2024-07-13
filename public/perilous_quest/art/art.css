@@ -133,6 +133,11 @@ a,
   color: #9bebff;
 }
 
+#bold_icon {
+  font-weight: bolder;
+  font-size: 180%;
+}
+
 #scroll_top_button {
   display: none;
   justify-content: center;
