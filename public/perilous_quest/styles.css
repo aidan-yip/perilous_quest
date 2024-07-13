@@ -272,6 +272,28 @@ div.pop_icon_div {
   border: solid 0.5px #292929;
 }
 
+#bold_icon {
+  font-weight: bolder;
+  font-size: 180%;
+}
+
+#scroll_top_button {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  overflow: visible;
+  top: 100px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  margin: 10px auto;
+  color: #ffffff;
+  background-color: #00d9ff;
+  border-radius: 10px;
+}
+
 #settings {
   display: flex;
   justify-content: center;
@@ -303,15 +325,15 @@ div.pop_icon_div {
   animation-timing-function: ease-in-out;
 }
 
-a#open_settings, a#close_settings {
+a#open_settings,
+a#close_settings {
   padding: 15px;
   color: #ffffff;
   font-family: var(--fontdefault);
   text-shadow: none;
 }
 
-
-span.md_help{
+span.md_help {
   margin: 0 auto;
   font-size: 45px;
   animation: fadeInAnimation ease 1s;
@@ -968,11 +990,15 @@ meter::-webkit-meter-even-less-good-value {
   transition: 1s width ease-in-out;
 }
 
-#setting_input_div > span:nth-child(1), #setting_input_div > span:nth-child(4), #setting_input_div > span:nth-child(7) {
+#setting_input_div > span:nth-child(1),
+#setting_input_div > span:nth-child(4),
+#setting_input_div > span:nth-child(7) {
   color: #ffffff;
 }
 
-#volume_icon, #collapse > span, #expand > span {
+#volume_icon,
+#collapse > span,
+#expand > span {
   color: #ffffff;
 }
 
@@ -1218,11 +1244,11 @@ input[type="range"]:focus::-ms-fill-upper {
   font-family: var(--fontdefault);
   text-shadow: 1px 1px #7e0000, 2px 2px #7e0000, 3px 3px #7e0000,
     4px 4px #7e0000;
-   /* float */
-   animation-name: floating_two;
-   animation-duration: 3s;
-   animation-iteration-count: infinite;
-   animation-timing-function: ease-in-out;
+  /* float */
+  animation-name: floating_two;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 .stat {
@@ -1863,6 +1889,12 @@ button .md {
     left: 100px;
   }
 
+  #scroll_top_button:hover {
+    background-color: #ffffff;
+    color: #00d9ff;
+    cursor: pointer;
+  }
+
   #setting_input_div:active {
     cursor: grabbing;
   }
@@ -2271,7 +2303,7 @@ button .md {
   #expand {
     display: none;
   }
-  
+
   #collapse {
     display: none;
   }

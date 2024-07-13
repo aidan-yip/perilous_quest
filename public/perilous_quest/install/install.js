@@ -56,17 +56,34 @@ window.addEventListener('offline', function(event){
     "class": "blue-trail"
   });
 
-//Navbar 
+// Scroll top button
 
-window.onscroll = function() {scrollFunction()};
+const scroll_button = document.getElementById("scroll_top_button");
+
+scroll_button.onclick = scrollTop;
+
+// Scroll top function
+
+function scrollTop() {
+  $(document).ready(function () {
+    $(window).scrollTop(0);
+  });
+}
+
+//Navbar
+
+window.onscroll = function () {
+  scrollFunction();
+};
 
 function scrollFunction() {
   if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
     document.getElementById("navbar").style.backgroundColor = "#00000080";
+    scroll_button.style.display = "flex";
   } else {
     document.getElementById("navbar").style.backgroundColor = "transparent";
+    scroll_button.style.display = "none";
   }
-
 }
 
 //Mobile menu

@@ -133,6 +133,23 @@ a,
   color: #9bebff;
 }
 
+#scroll_top_button {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  overflow: visible;
+  top: 100px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  margin: 10px auto;
+  color: #ffffff;
+  background-color: #00d9ff;
+  border-radius: 10px;
+}
+
 #navbar {
   position: sticky;
   top: 0px;
@@ -402,6 +419,12 @@ svg {
     padding: 5px;
     border-radius: 5px;
     top: 40px;
+  }
+
+  #scroll_top_button:hover {
+    background-color: #ffffff;
+    color: #00d9ff;
+    cursor: pointer;
   }
 
   #game:hover {

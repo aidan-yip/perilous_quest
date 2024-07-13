@@ -73,18 +73,33 @@ $("#background").cursorTrail({
   class: "blue-trail",
 });
 
+// Scroll top button
+
+const scroll_button = document.getElementById("scroll_top_button");
+
+scroll_button.onclick = scrollTop;
+
+// Scroll top function
+
+function scrollTop() {
+  $(document).ready(function () {
+    $(window).scrollTop(0);
+  });
+}
+
 //Navbar
 
 window.onscroll = function () {
   scrollFunction();
-  play_art();
 };
 
 function scrollFunction() {
   if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
     document.getElementById("navbar").style.backgroundColor = "#00000080";
+    scroll_button.style.display = "flex";
   } else {
     document.getElementById("navbar").style.backgroundColor = "transparent";
+    scroll_button.style.display = "none";
   }
 }
 
