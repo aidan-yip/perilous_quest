@@ -153,6 +153,9 @@ a,
   color: #ffffff;
   background-color: #00d9ff;
   border-radius: 10px;
+  /* fade in */
+  animation: fadeInAnimation ease 1.5s;
+  animation-iteration-count: 1;
 }
 
 #navbar {
