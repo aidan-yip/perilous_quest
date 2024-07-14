@@ -399,7 +399,7 @@ document.getElementById("startTimer").addEventListener("click", (e) => {
     e.target.innerHTML = "Start";
   } else {
     int = setInterval(displayTimer, 10);
-    e.target.innerHTML = "Pause";
+    e.target.innerHTML = "Stop";
   }
 });
 
