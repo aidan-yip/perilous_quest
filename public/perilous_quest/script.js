@@ -468,6 +468,8 @@ const color_input = document.getElementById("color_input");
 const color_input_two = document.getElementById("color_input_two");
 const color_input_three = document.getElementById("color_input_three");
 const settings = document.getElementById("settings");
+const startTimer = document.getElementById("startTimer");
+const resetTimer = document.getElementById("resetTimer");
 
 //Navbar
 
@@ -576,6 +578,8 @@ color_input.addEventListener("change", function (e) {
   profile_container.style.background = e.target.value;
   settings.style.background = e.target.value;
   name_input.style.background = e.target.value;
+  startTimer.style.background = e.target.value;
+  resetTimer.style.background = e.target.value;
   button1.style.background = e.target.value;
   button2.style.background = e.target.value;
   button3.style.background = e.target.value;
