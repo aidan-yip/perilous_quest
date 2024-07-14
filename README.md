@@ -6,7 +6,7 @@
 Note: The game's main code is stored in the sub folder "perilous_quest" of "public" if you'd like to explore it. The Start/Titlescreen's code is stored in the root folder. The Dark Mode stylesheet is stored alongside the game code.
 </b></i>
 
-## Version 1.0.2 (latest)
+## Version 1.1.0 (latest)
 
 This version includes the base game and several game music tracks. The game's style is subject to change in future versions.
 
@@ -60,6 +60,7 @@ This version includes the base game and several game music tracks. The game's st
   <li>404 Error page</li>
   <li>Search with Google Programmable Search Engine</li>
   <li>Scroll to top button</li>
+  <li>Speedrun timer</li>
 </ul>
 
 <i><b>\*Temporary offline caching functionality is not permanent</b></i>
