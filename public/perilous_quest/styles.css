@@ -297,6 +297,56 @@ div.pop_icon_div {
   animation-iteration-count: 1;
 }
 
+.timerDisplay {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  overflow: visible;
+  bottom: 37px;
+  right: 132.5px;
+  width: 120px;
+  height: 50px;
+  margin: 10px auto;
+  font-family: var(--fontsecond);
+  color: #ffffff;
+  text-shadow: 1px 1px #181818, 1px 1px #181818, 2px 2px #181818,
+  3px 3px #181818, 0px 0px 10px #ffffff;
+}
+
+#startTimer {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  overflow: visible;
+  bottom: 20px;
+  right: 200px;
+  width: 60px;
+  height: 40px;
+  margin: 10px auto;
+  font-family: var(--fontsecond);
+  color: #ffffff;
+}
+
+#resetTimer {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  overflow: visible;
+  bottom: 20px;
+  right: 130px;
+  width: 60px;
+  height: 40px;
+  margin: 10px auto;
+  font-family: var(--fontsecond);
+  color: #ffffff;
+}
+
 #settings {
   display: flex;
   justify-content: center;
