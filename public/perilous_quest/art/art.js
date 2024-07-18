@@ -141,7 +141,7 @@ function info_pop() {
   alert(
     "Perilous Quest" +
       "\n\n" +
-      "Version 1.1.0" +
+      "Version 1.2.0" +
       "\n\n" +
       "(Build 10.1.0-2024)" +
       "\n\n" +

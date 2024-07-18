@@ -6,7 +6,7 @@
 Note: The game's main code is stored in the sub folder "perilous_quest" of "public" if you'd like to explore it. The Start/Titlescreen's code is stored in the root folder. The Dark Mode stylesheet is stored alongside the game code.
 </b></i>
 
-## Version 1.1.0 (latest)
+## Version 1.2.0 (latest)
 
 This version includes the base game and several game music tracks. The game's style is subject to change in future versions.
 
@@ -39,9 +39,9 @@ This version includes the base game and several game music tracks. The game's st
   <li>Music play button on start screen for browsers that have autoplay off</li>
   <li>Dragon background art</li>
   <li>Color background video</li>
-  <li>Five new locations</li>
+  <li>Seven new locations</li>
   <li>Three new weapons</li>
-  <li>Eleven additional enemies</li>
+  <li>Twelve additional enemies</li>
   <li>The Dragon is harder to beat</li>
   <li>Progress Bar</li>
   <li>Custom cursors on hover</li>

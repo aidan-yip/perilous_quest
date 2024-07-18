@@ -140,7 +140,7 @@ function info_pop() {
   alert(
     "Perilous Quest" +
       "\n\n" +
-      "Version 1.1.0" +
+      "Version 1.2.0" +
       "\n\n" +
       "(Build 10.1.0-2024)" +
       "\n\n" +
@@ -436,7 +436,6 @@ const displayTimer = () => {
   timerRef.innerHTML = `${h} : ${m} : ${s} : ${ms}`;
 };
 
-
 // Variables
 
 let xp = 0;
@@ -730,6 +729,12 @@ const monsters = [
     level: 10,
     health: 400,
   },
+  //14
+  {
+    name: "Cursed Skeleton",
+    level: 10,
+    health: 200,
+  },
 ];
 const locations = [
   {
@@ -761,12 +766,12 @@ const locations = [
   {
     name: "cave",
     "button text": [
+      "Go further",
       "Fight Slime",
       "Fight Fanged beast",
-      "Fight Spider",
       "Return to town",
     ],
-    "button functions": [fightSlime, fightBeast, fightSpider, goTown],
+    "button functions": [goCave_two, fightSlime, fightBeast, goTown],
     text: "You enter the cave. You see some monsters... or is that your friend Nait?",
     display_img:
       "url('https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/cave.png')",
@@ -1009,6 +1014,27 @@ const locations = [
       "\n" +
       "\n",
   },
+  {
+    name: "Caves 2",
+    "button text": ["Walk to Gate", "Fight Skeleton", "Fight Spider", "Return"],
+    "button functions": [goGate, fightSkeleton, fightSpider, goCave],
+    text: "You go deeper into the cave. You can't make out anything but a wall mounted torch next to a locked gate.",
+    display_img:
+      "url('https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/cave.png')",
+  },
+  {
+    name: "Gate",
+    "button text": ["Unlock Gate ⚜️ (-8 xp)", "<--", "-->", "Return"],
+    "button functions": [openGate, playselectnull, playselectnull, goCave_two],
+    text:
+      'The gate guard looks over at you. "Is thee worthy to pass? A level of 8 one must possess."' +
+      "\n" +
+      "\n" +
+      "Unlock gate?" +
+      "\n",
+    display_img:
+      "url('https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/display/cave.png')",
+  },
 ];
 
 // initialize buttons
@@ -1105,6 +1131,50 @@ function goCave() {
   secret.currentTime = 0;
 }
 
+function goCave_two() {
+  update(locations[22]);
+  //Boss
+  boss_theme.pause();
+  boss_theme.currentTime = 0;
+  //Town
+  lovely_town.pause();
+  lovely_town.currentTime = 0;
+  //Cave
+  cave_tune.play();
+  //Select fx
+  selectfx.currentTime = 0;
+  selectfx.play();
+  //Defeat Boss
+  defeat_boss.pause();
+  defeat_boss.currentTime = 0;
+  meter.setAttribute("value", "30");
+  //Secret
+  secret.pause();
+  secret.currentTime = 0;
+}
+
+function goGate() {
+  update(locations[23]);
+  //Boss
+  boss_theme.pause();
+  boss_theme.currentTime = 0;
+  //Town
+  lovely_town.pause();
+  lovely_town.currentTime = 0;
+  //Cave
+  cave_tune.play();
+  //Select fx
+  selectfx.currentTime = 0;
+  selectfx.play();
+  //Defeat Boss
+  defeat_boss.pause();
+  defeat_boss.currentTime = 0;
+  meter.setAttribute("value", "40");
+  //Secret
+  secret.pause();
+  secret.currentTime = 0;
+}
+
 function goCastle() {
   update(locations[8]);
   //Town
@@ -1126,6 +1196,9 @@ function goChasm() {
   //Castle
   castle.pause();
   castle.currentTime = 0;
+  //Cave
+  cave_tune.pause();
+  cave_tune.currentTime = 0;
   //Chasm
   chasm.currentTime = 0;
   chasm.play();
@@ -1202,6 +1275,22 @@ function norunmine() {
     "\n" +
     "The Mine door is blocked. There's no way out!";
   playselectnull();
+}
+
+function openGate() {
+  if (xp >= 8) {
+    xp -= 8;
+    score += 300;
+    xpText.innerText = xp;
+    scoreText.innerText = score;
+    update(locations[11]);
+    playselect();
+  } else {
+    text.innerText = "You do not have enough xp ⚡️ to pass ❌.";
+    document.getElementById("button1").style.filter = "opacity(50%)";
+    const myTimeout = setTimeout(button_enable, 1000);
+    playselectnull();
+  }
 }
 
 // Shop functions
@@ -1699,6 +1788,26 @@ function fightSnakes() {
   chasm.currentTime = 0;
 }
 
+function fightSkeleton() {
+  fighting = 14;
+  goFight();
+  //Town
+  lovely_town.pause();
+  lovely_town.currentTime = 0;
+  //Cave
+  cave_tune.pause();
+  cave_tune.currentTime = 0;
+  //Boss
+  setHalfVolume();
+  boss_theme.play();
+  //castle
+  castle.pause();
+  castle.currentTime = 0;
+  //Chasm
+  chasm.pause();
+  chasm.currentTime = 0;
+}
+
 function fightDragon() {
   fighting = 2;
   goFight_Norun();
@@ -1800,7 +1909,7 @@ function dodge() {
     " You lose 2 xp.";
   attackfx.currentTime = 0;
   attackfx.play();
-  if (xp > 0) {
+  if (xp >= 2) {
     xplose();
   } else {
     text.innerText =
