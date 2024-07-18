@@ -2021,8 +2021,12 @@ function restart() {
 
 function easterEgg() {
   update(locations[7]);
+  //Boss
   boss_theme.pause();
   boss_theme.currentTime = 0;
+  //Cave
+  cave_tune.pause();
+  cave_tune.currentTime = 0;
   secret.currentTime = 0;
   playsecret();
 }
