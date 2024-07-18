@@ -795,7 +795,7 @@ const locations = [
       "Return to cave",
       "Return to castle",
     ],
-    "button functions": [playselectnull, goTown, goCave, easterEgg],
+    "button functions": [playselectnull, goTown, goCave, goCastle],
     text: 'The enemy screams "ARG!" and withers away. You gain experience points and find gold. Nice! you\'re a natural.',
   },
   {
@@ -1025,7 +1025,7 @@ const locations = [
   {
     name: "Gate",
     "button text": ["Unlock Gate ⚜️ (-8 xp)", "<--", "-->", "Return"],
-    "button functions": [openGate, playselectnull, playselectnull, goCave_two],
+    "button functions": [openGate, easterEgg, easterEgg, goCave_two],
     text:
       'The gate guard looks over at you. "Is thee worthy to pass? A level of 8 one must possess."' +
       "\n" +
