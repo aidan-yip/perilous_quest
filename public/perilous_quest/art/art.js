@@ -145,6 +145,6 @@ function info_pop() {
       "\n\n" +
       "(Build 10.1.1-2025)" +
       "\n\n" +
-      "Copyright © 2024 Aidan Yip. All rights reserved."
+      "Copyright © 2025 Aidan Yip. All rights reserved."
   );
 }
