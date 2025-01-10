@@ -1380,7 +1380,7 @@ function playselectnull() {
 }
 
 let attackfx = new Audio(
-  "https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/attack.wav"
+  "https://raw.githubusercontent.com/aidan-yip/perilous_quest/main/public/attack.mp3"
 );
 
 function play_attack() {
