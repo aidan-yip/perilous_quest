@@ -61,25 +61,6 @@ document.addEventListener("visibilitychange", () => {
   }
 });
 
-//Pop up window
-
-const popup = document.getElementById("popback");
-const popclose = document.getElementById("popclose");
-const background = document.getElementById("background");
-const timerDisplay = document.querySelector(".timerDisplay");
-
-popclose.onclick = closepop;
-
-function closepop() {
-  popup.style.display = "none";
-  background.style.filter = "blur(0px) brightness(100%)";
-  profile_container.style.filter = "blur(0px) brightness(100%)";
-  settings.style.filter = "blur(0px) brightness(100%)";
-  timerDisplay.style.filter = "blur(0px) brightness(100%)";
-  startTimer.style.filter = "blur(0px) brightness(100%)";
-  resetTimer.style.filter = "blur(0px) brightness(100%)";
-}
-
 // Scroll top button
 
 const scroll_button = document.getElementById("scroll_top_button");
@@ -140,7 +121,7 @@ function info_pop() {
   alert(
     "Perilous Quest" +
       "\n\n" +
-      "Version 1.2.1" +
+      "Version 1.2.2" +
       "\n\n" +
       "(Build 10.1.1-2025)" +
       "\n\n" +
